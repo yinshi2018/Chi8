@@ -72,11 +72,11 @@ WBchix=np.loadtxt('data1/WB_chix.dat')
 hotQCDR62=np.loadtxt('data1/hotQCD_R62.dat')
 hotQCDb=np.loadtxt('data1/hotQCDR62_b.dat')
 hotQCDg=np.loadtxt('data1/hotQCDR62_g.dat')
-T=np.loadtxt('mub0/Tem1/buffer/TMeV.dat')
+T=np.loadtxt('TMeV.dat')
 R62erro=WBchi6erro/WBchi2
 R82erro=WBchi8erro/WBchi2
 
-T1=T/195
+T1=T/191.5
 # Create figure
 fig=plt.figure(figsize=(13., 3.5))
 #fig=plt.figure()

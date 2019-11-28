@@ -74,3 +74,17 @@ for a in {1..51}
 do
 mv Tem$a/buffer/Vtotal.dat data/V$a.dat
 done
+cd final
+rm *.o
+rm *.out
+rm exe
+cd buffer
+rm *.dat
+cd ..
+make
+rm *.o
+./exe
+cd ..
+cd ..
+python3 R.py
+

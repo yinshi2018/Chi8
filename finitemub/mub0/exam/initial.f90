@@ -22,7 +22,7 @@ subroutine initial(Nflow,yflow,kappa)
   Nz=N_str(3)
   Nck=N_str(4)
 
-  lambda=11
+  lambda=9.
   nu=(830./hc)**2
 
   h=10.18

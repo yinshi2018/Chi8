@@ -268,7 +268,7 @@ subroutine selfEQ(kappa_UV_i,l_i,lb_i,kappa_UV,l,lb,rho0,mPion,mSigma,mf,Vtotal,
 
 
 !  T_r=T/T0
-  T_r=0.70*(T-T0)/T0+1.
+  T_r=0.67*(T-T0)/T0+1.
 
   aPolya=(a1+a2/T_r+a3/T_r**2)/(1.+a4/T_r+a5/T_r**2)
   cPolya=(c1+c2/T_r+c3/T_r**2)/(1.+c4/T_r+c5/T_r**2)
