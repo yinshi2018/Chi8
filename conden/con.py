@@ -14,11 +14,11 @@ mpl.style.use('classic')
 T=np.loadtxt('./TMeV.dat')
 dRl=np.loadtxt('./deltaRlat.dat')
 dRf=np.loadtxt('./deltaR.dat')
-n=335100625
+n=145100625
 dRf1=dRf/n
 
 
-T1=T/225
+T1=T/209
 
 # Create figure
 fig=plt.figure(figsize=(4.5, 3.5))
