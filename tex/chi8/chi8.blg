@@ -23,46 +23,47 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
+Warning--missing journal in Yin:2019ebz
 Warning--missing journal in fQCD
-You've used 17 entries,
+You've used 5 entries,
             5847 wiz_defined-function locations,
-            1747 strings with 18284 characters,
-and the built_in function-call counts, 17498 in all, are:
-= -- 1045
-> -- 472
-< -- 138
-+ -- 151
-- -- 131
-* -- 2899
-:= -- 1640
-add.period$ -- 15
-call.type$ -- 17
-change.case$ -- 60
-chr.to.int$ -- 23
-cite$ -- 18
-duplicate$ -- 1655
-empty$ -- 1241
-format.name$ -- 274
-if$ -- 3408
-int.to.chr$ -- 3
-int.to.str$ -- 24
-missing$ -- 217
-newline$ -- 111
-num.names$ -- 45
-pop$ -- 637
+            1624 strings with 15340 characters,
+and the built_in function-call counts, 4905 in all, are:
+= -- 191
+> -- 173
+< -- 61
++ -- 55
+- -- 61
+* -- 841
+:= -- 419
+add.period$ -- 3
+call.type$ -- 5
+change.case$ -- 12
+chr.to.int$ -- 13
+cite$ -- 7
+duplicate$ -- 493
+empty$ -- 298
+format.name$ -- 93
+if$ -- 899
+int.to.chr$ -- 1
+int.to.str$ -- 12
+missing$ -- 72
+newline$ -- 63
+num.names$ -- 9
+pop$ -- 221
 preamble$ -- 1
-purify$ -- 75
+purify$ -- 15
 quote$ -- 0
-skip$ -- 597
+skip$ -- 144
 stack$ -- 0
-substring$ -- 423
-swap$ -- 1629
-text.length$ -- 53
+substring$ -- 68
+swap$ -- 483
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 233
-warning$ -- 2
-while$ -- 53
+type$ -- 66
+warning$ -- 3
+while$ -- 16
 width$ -- 0
-write$ -- 198
-(There were 2 warnings)
+write$ -- 76
+(There were 3 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  3 DEC 2019 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  5 DEC 2019 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,6 +230,7 @@ LaTeX Info: Redefining \bm on input line 207.
 Package: bbold 1994/04/06 Bbold symbol package
 LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
 )
+(/usr/local/texlive/2018/texmf-dist/tex/latex/braket/braket.sty)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
@@ -368,37 +369,37 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip56
 \subfig@bottom=\skip57
 )
-Package color Info: Redefining color blue on input line 66.
-Package color Info: Redefining color green on input line 68.
-Package color Info: Redefining color red on input line 70.
+Package color Info: Redefining color blue on input line 67.
+Package color Info: Redefining color green on input line 69.
+Package color Info: Redefining color red on input line 71.
 Class revtex4-1 Info: Unrecognized array package. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 136.
+lass! (Proceeding with fingers crossed.) on input line 137.
 
 
 Class revtex4-1 Warning: Repair the float package.
 
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 136
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 137
 .
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 136.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 136.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 136.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 137.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 137.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 137.
 (./chi8.aux)
 \openout1 = `chi8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -431,7 +432,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 137.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -441,115 +442,85 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 
 (./chi8.out) (./chi8.out)
 \@outlinefile=\write4
 \openout4 = `chi8.out'.
 
-Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 136.
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 137.
 \openout3 = `chi8Notes.bib'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 167.
+LaTeX Font Info:    Try loading font information for U+msa on input line 158.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 167.
+LaTeX Font Info:    Try loading font information for U+msb on input line 158.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (4.18263pt too wide) detected at line 204
-[]
+)
+LaTeX Font Info:    Try loading font information for U+bbold on input line 188.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd) [1{/usr/local/te
+xlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<./figures/mub0.pdf, id=65, 939.51pt x 252.945pt>
+File: ./figures/mub0.pdf Graphic file (type pdf)
+<use ./figures/mub0.pdf>
+Package pdftex.def Info: ./figures/mub0.pdf  used on input line 259.
+(pdftex.def)             Requested size: 510.0pt x 137.30615pt.
+<./figures/finmub.pdf, id=66, 939.51pt x 252.945pt>
+File: ./figures/finmub.pdf Graphic file (type pdf)
+<use ./figures/finmub.pdf>
+Package pdftex.def Info: ./figures/finmub.pdf  used on input line 267.
+(pdftex.def)             Requested size: 510.0pt x 137.30615pt.
+ (./chi8.bbl
+Underfull \hbox (badness 1742) in paragraph at lines 70--81
+ []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
 
-LaTeX Font Info:    Try loading font information for U+bbold on input line 215.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd)
-
-LaTeX Warning: Reference `eaction' on page 2 undefined on input line 220.
-
-[2]
-
-LaTeX Warning: Reference `tab:cut' on page 3 undefined on input line 247.
-
-<./figures/cp.pdf, id=88, 325.215pt x 252.945pt>
-File: ./figures/cp.pdf Graphic file (type pdf)
-<use ./figures/cp.pdf>
-Package pdftex.def Info: ./figures/cp.pdf  used on input line 251.
-(pdftex.def)             Requested size: 255.0pt x 198.3384pt.
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 251--252
- [][] 
+Underfull \hbox (badness 5231) in paragraph at lines 70--81
+ \OT1/cmr/m/n/9 and C. Sasaki, []Phys. Rev. \OT1/cmr/bx/n/9 D88\OT1/cmr/m/n/9 ,
+ 074502 (2013)[],
  []
 
-<./figures/phasediagram.pdf, id=95, 325.215pt x 252.945pt>
-File: ./figures/phasediagram.pdf Graphic file (type pdf)
-<use ./figures/phasediagram.pdf>
-Package pdftex.def Info: ./figures/phasediagram.pdf  used on input line 259.
-(pdftex.def)             Requested size: 255.0pt x 198.3384pt.
+) [2] [3 <./figures/mub0.pdf> <./figures/finmub.pdf
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 259--260
- [][] 
- []
-
-[3 <./figures/cp.pdf> <./figures/phasediagram.pdf
-
-pdfTeX warning: pdflatex (file ./figures/phasediagram.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->] (./chi8.bbl
-Underfull \hbox (badness 3568) in paragraph at lines 105--113
- \OT1/cmr/m/n/9 B. J. Schae-fer, []Phys. Rev. \OT1/cmr/bx/n/9 D82\OT1/cmr/m/n/9
- , 034029 (2010)[],
- []
-
-) [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
+pdfTeX warning: pdflatex (file ./figures/finmub.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
  (./chi8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
-
-
-Package rerunfilecheck Warning: File `chi8.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `chi8.out':
-(rerunfilecheck)             Before: DAD147D4BE979CBF4468B9F8B2987433;427
-(rerunfilecheck)             After:  6FDBAB31D08CA668E3F7CF1F3620452B;590.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
+Package rerunfilecheck Info: File `chi8.out' has not changed.
+(rerunfilecheck)             Checksum: 8BE85055E2253F6E2FA58C8B3BB93CB6;544.
  ) 
 Here is how much of TeX's memory you used:
- 8316 strings out of 492649
- 116600 string characters out of 6129607
- 243549 words of memory out of 5000000
- 12034 multiletter control sequences out of 15000+600000
- 17735 words of font info for 67 fonts, out of 8000000 for 9000
+ 8290 strings out of 492649
+ 115893 string characters out of 6129607
+ 261941 words of memory out of 5000000
+ 12011 multiletter control sequences out of 15000+600000
+ 17389 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,18n,32p,3623b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{equation.2.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ 34i,12n,29p,1292b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
 ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/
@@ -557,13 +528,12 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on chi8.pdf (4 pages, 292813 bytes).
+st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on chi8.pdf (3 pages, 319057 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
