@@ -222,6 +222,28 @@ and the form of $b$ is
 b(T)=b_1 t_c^{-b_4}(1-e^{b_2/t_c^{b_3}}),
 \end{align}
 the values of the parameters are fixed by the thermodynamics and can be found at \cite{Lo:2013hla}. The temperature $t_c$ is reduced temperature by $t_c=(T-T_c)/T_c$. We rescale the reduced temperature to make the glue potential accord with the Yang-Mills theory by $(t_c)_{YM}\rightarrow \alpha(t_c)_{glue}$, and $(t_c)_{glue}=(T-T^{glue}_c)/T^{glue}_c$. Here we choose $\alpha=0.7$ and $T^{glue}_c=270\,\mathrm{MeV}$ by fitting the kertosis of the baryon number fluctuation with the lattice results.\par
+After the preparation above we derive the flow equation of the effective potential
+\begin{align}
+  \partial_t V_k(\rho)=&\frac{k^4}{4\pi^2} \bigg [\big(N^2_f-1\big) l^{(B,4)}_{0}(\bar{m}^{2}_{\pi,k},\eta_{\phi,k};T)\nonumber\\[2ex]
+&+l^{(B,4)}_{0}(\bar{m}^{2}_{\sigma,k},\eta_{\phi,k};T)\nonumber\\[2ex]
+&-4N_c N_f l^{(F,4)}_{0}(\bar{m}^{2}_{q,k},\eta_{q,k};T,\mu)\bigg]\,, \label{eq:flowV}
+\end{align}
+The definitions of the meson mass and constituent light quark mass are given by
+\begin{align}
+  \bar{m}^{2}_{\pi,k}&=\frac{V'_k(\rho)}{k^2Z_{\phi,k}}\,,\\[2ex]
+  \bar{m}^{2}_{\sigma,k}&=\frac{V'_k(\rho)+2\rho V''_k(\rho)}{k^2 Z_{\phi,k}}\,,\\[2ex]
+  \bar{m}^{2}_{q,k}&=\frac{h^{2}_{k}\rho}{2k^2Z^{2}_{q,k}}\,.
+\end{align}\par
+Under the beyond LPA truncation we adopt in our calculation, the flow equations of wave function renormalisations and Yukawa coupling should be involved. The flow equations of the meson and quark wave function renormalisations i.e. the anomalous dimensions as follows
+\begin{align}
+  \eta_{\phi,k}&=-\frac{\partial_t Z_{\phi,k}}{Z_{\phi,k}}\,,\qquad
+  \eta_{\psi,k}=-\frac{\partial_t Z_{\psi,k}}{Z_{\psi,k}}\,.
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{thermodynamics and baryon number fluctuation}
+\label{sec:BNF}
 For the purpose of calculating the thermodynamics of our system we give the definition of the thermodynamical potential density 
 \begin{align}
 \Omega[T,\mu]=U_{k=0}(\rho)-c\sigma+U_{glue}(L,\bar{L}),
@@ -242,14 +264,22 @@ We can also express the generalized susceptibilities by the cumulants of the bar
 \chi^B_3=&\frac{1}{VT^3}\braket{(\delta N_B)^3},\\
 \chi^B_4=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\big),\\
 \chi^B_6=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\
-&-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\big),
+&-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\big)\\
+\chi^B_8=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^8}-28\braket{(\delta N_B)^6}\braket{(\delta N_B)^2}\nonumber\\
+&-56\braket{(\delta N_B)^3}\braket{(\delta N_B)^5}-70\braket{(\delta N_B)^4}^2\nonumber\\
+&-640\braket{(\delta N_B)^2}^4\big).
 \end{align}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{thermodynamics and baryon number fluctuation}
-\label{sec:BNF}
-Here 
+The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\braket{N_B}$. To compare the results with the lattice simulation further with the experiments we consider the kurtosis $\kappa\sigma^2=\chi^B_4/\chi^B_2$, $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{initial consitions and numarical results}
+\label{sec:NR}
+For the purpose of solving the flow equation of the effective potential \Eq{eq:flowV} we use the Tylor expansion approach around the expansion point $\kappa$. The effective potential under the expansion form is
+\begin{align}
+U_k(\rho)=\sum^{N_u}_{n=0}\frac{\lambda_{n,k}}{n!}(\rho-\kappa_k)^n.
+\end{align}
 
 
 
@@ -273,7 +303,7 @@ Here
 
 \begin{acknowledgments}
 
-We thank the members of the fQCD collaboration \cite{fQCD} for work on related projects. The work was supported by the National Natural Science Foundation of China under Contracts Nos. 11775041.
+The work was supported by the National Natural Science Foundation of China under Contracts Nos. 11775041.
 
 \end{acknowledgments}
 
