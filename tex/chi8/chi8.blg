@@ -11,6 +11,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: chi8Notes.bib
 Database file #2: ref-lib.bib
+Repeated entry---line 978 of file ref-lib.bib
+ : @article{Borsanyi:2018grb
+ :                          ,
+I'm skipping whatever remains of this entry
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -24,45 +28,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--missing journal in Yin:2019ebz
-You've used 5 entries,
+You've used 8 entries,
             5847 wiz_defined-function locations,
-            1632 strings with 15330 characters,
-and the built_in function-call counts, 4069 in all, are:
-= -- 206
-> -- 97
-< -- 52
-+ -- 33
-- -- 39
-* -- 644
-:= -- 368
-add.period$ -- 3
-call.type$ -- 5
-change.case$ -- 12
-chr.to.int$ -- 13
-cite$ -- 6
-duplicate$ -- 420
-empty$ -- 247
-format.name$ -- 51
-if$ -- 732
-int.to.chr$ -- 1
-int.to.str$ -- 12
-missing$ -- 63
-newline$ -- 64
-num.names$ -- 9
-pop$ -- 189
+            1661 strings with 16102 characters,
+and the built_in function-call counts, 7510 in all, are:
+= -- 421
+> -- 194
+< -- 73
++ -- 64
+- -- 63
+* -- 1228
+:= -- 693
+add.period$ -- 6
+call.type$ -- 8
+change.case$ -- 24
+chr.to.int$ -- 15
+cite$ -- 9
+duplicate$ -- 736
+empty$ -- 502
+format.name$ -- 110
+if$ -- 1419
+int.to.chr$ -- 2
+int.to.str$ -- 15
+missing$ -- 102
+newline$ -- 76
+num.names$ -- 18
+pop$ -- 298
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 30
 quote$ -- 0
-skip$ -- 138
+skip$ -- 255
 stack$ -- 0
-substring$ -- 87
-swap$ -- 388
-text.length$ -- 10
+substring$ -- 174
+swap$ -- 706
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 55
+type$ -- 100
 warning$ -- 2
-while$ -- 17
+while$ -- 26
 width$ -- 0
-write$ -- 80
-(There were 2 warnings)
+write$ -- 110
+(There was 1 error message)
