@@ -24,45 +24,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--missing journal in Yin:2019ebz
-You've used 4 entries,
+You've used 5 entries,
             5847 wiz_defined-function locations,
-            1621 strings with 15098 characters,
-and the built_in function-call counts, 3099 in all, are:
-= -- 135
-> -- 78
-< -- 46
-+ -- 27
-- -- 35
-* -- 494
-:= -- 272
-add.period$ -- 2
-call.type$ -- 4
-change.case$ -- 8
-chr.to.int$ -- 12
-cite$ -- 5
-duplicate$ -- 331
-empty$ -- 174
-format.name$ -- 38
-if$ -- 539
+            1632 strings with 15330 characters,
+and the built_in function-call counts, 4069 in all, are:
+= -- 206
+> -- 97
+< -- 52
++ -- 33
+- -- 39
+* -- 644
+:= -- 368
+add.period$ -- 3
+call.type$ -- 5
+change.case$ -- 12
+chr.to.int$ -- 13
+cite$ -- 6
+duplicate$ -- 420
+empty$ -- 247
+format.name$ -- 51
+if$ -- 732
 int.to.chr$ -- 1
-int.to.str$ -- 11
-missing$ -- 52
-newline$ -- 60
-num.names$ -- 6
-pop$ -- 154
+int.to.str$ -- 12
+missing$ -- 63
+newline$ -- 64
+num.names$ -- 9
+pop$ -- 189
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 15
 quote$ -- 0
-skip$ -- 100
+skip$ -- 138
 stack$ -- 0
-substring$ -- 55
-swap$ -- 303
-text.length$ -- 8
+substring$ -- 87
+swap$ -- 388
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 42
+type$ -- 55
 warning$ -- 2
-while$ -- 14
+while$ -- 17
 width$ -- 0
-write$ -- 70
+write$ -- 80
 (There were 2 warnings)
