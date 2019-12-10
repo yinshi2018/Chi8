@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  9 DEC 2019 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  10 DEC 2019 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -468,26 +468,53 @@ LaTeX Font Info:    Try loading font information for U+bbold on input line 188.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd) [1{/usr/local/te
 xlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<./figures/mub0.pdf, id=73, 939.51pt x 252.945pt>
+<./figures/mub0.pdf, id=78, 939.51pt x 252.945pt>
 File: ./figures/mub0.pdf Graphic file (type pdf)
 <use ./figures/mub0.pdf>
-Package pdftex.def Info: ./figures/mub0.pdf  used on input line 282.
+Package pdftex.def Info: ./figures/mub0.pdf  used on input line 284.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
-<./figures/finmub.pdf, id=80, 939.51pt x 252.945pt>
+<./figures/finmub.pdf, id=85, 939.51pt x 252.945pt>
 File: ./figures/finmub.pdf Graphic file (type pdf)
 <use ./figures/finmub.pdf>
-Package pdftex.def Info: ./figures/finmub.pdf  used on input line 290.
+Package pdftex.def Info: ./figures/finmub.pdf  used on input line 292.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
  [2] [3 <./figures/mub0.pdf> <./figures/finmub.pdf
 
 pdfTeX warning: pdflatex (file ./figures/finmub.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-Underfull \hbox (badness 1308) in paragraph at lines 331--332
+Underfull \hbox (badness 1308) in paragraph at lines 333--334
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-(./chi8.bbl
+
+Overfull \hbox (12.68265pt too wide) detected at line 374
+[]
+ []
+
+[4]
+
+LaTeX Warning: Reference `eq:dth2' on page 5 undefined on input line 442.
+
+
+LaTeX Warning: Reference `eq:etaphiperp' on page 5 undefined on input line 452.
+
+
+
+LaTeX Warning: Reference `eq:etaphipara' on page 5 undefined on input line 452.
+
+
+
+LaTeX Warning: Reference `eq:Gphi' on page 5 undefined on input line 452.
+
+
+LaTeX Warning: Reference `eq:dth' on page 5 undefined on input line 466.
+
+
+Package natbib Warning: Citation `Fu:2015naa' on page 5 undefined on input line
+ 477.
+
+(./chi8.bbl [5]
 Underfull \hbox (badness 1742) in paragraph at lines 70--78
  []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
@@ -504,47 +531,56 @@ Underfull \hbox (badness 1014) in paragraph at lines 81--89
 v. \OT1/cmr/bx/n/9 D95\OT1/cmr/m/n/9 , 054504 (2017)[],
  []
 
-) [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 348.
+)
+
+Package natbib Warning: There were undefined citations.
+
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 490.
  (./chi8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 348.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 348.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
 Package rerunfilecheck Info: File `chi8.out' has not changed.
-(rerunfilecheck)             Checksum: 65CA0087D41AE442EEFC85024949DA3B;695.
+(rerunfilecheck)             Checksum: C6E8258FBA3E20868EFA66762819E160;781.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 8326 strings out of 492649
- 116498 string characters out of 6129607
- 245364 words of memory out of 5000000
- 12030 multiletter control sequences out of 15000+600000
+ 8369 strings out of 492649
+ 116969 string characters out of 6129607
+ 281675 words of memory out of 5000000
+ 12047 multiletter control sequences out of 15000+600000
  17389 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,13n,32p,1292b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,32p,1292b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on chi8.pdf (4 pages, 333785 bytes).
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on chi8.pdf (6 pages, 360389 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
