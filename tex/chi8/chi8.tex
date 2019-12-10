@@ -267,9 +267,7 @@ We can also express the generalized susceptibilities by the cumulants of the bar
 \chi^B_4=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\big),\\
 \chi^B_6=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\
 &-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\big)\\
-\chi^B_8=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^8}-28\braket{(\delta N_B)^6}\braket{(\delta N_B)^2}\nonumber\\
-&-56\braket{(\delta N_B)^3}\braket{(\delta N_B)^5}-70\braket{(\delta N_B)^4}^2\nonumber\\
-&-640\braket{(\delta N_B)^2}^4\big).
+\chi^B_8=&????.
 \end{align}
 The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\braket{N_B}$. To compare the results with the lattice simulation further with the experiments we consider the kurtosis $\kappa\sigma^2=\chi^B_4/\chi^B_2$, $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$.
 
@@ -370,7 +368,7 @@ The flow of the Yukawa coupling reads
 \begin{align}
 \partial_t\bar h_k=&(\frac{\eta_{\phi,k}}{2}+\eta_{\psi,k})\bar h_k+\frac{1}{4\pi^2 N_f}\bar h^3_k\nonumber\\[2ex]
 &\times \bigg\{-(N_f^2-1)L^{(4)}_{(1,1)}(\bar m^2_{\psi,k},\bar m^2_{\pi,k},\eta_{\psi,k},\eta_{\phi,k};T,\mu,p_0)\nonumber\\[2ex]
-&+L^{(4)}_{(1,1)}(\bar m^2_{\psi,k},\bar m^2_{\sigma,k},\eta_{\psi,k},\eta_{\phi,k};T,\mu,p_0)\bigg\}.
+&+L^{(4)}_{(1,1)}(\bar m^2_{\psi,k},\bar m^2_{\sigma,k},\eta_{\psi,k},\eta_{\phi,k};T,\mu,p_0)\bigg\}.\label{eq:yukawa}
 \end{align}
 Now we give the threshold functions which are used in the flow equations. The definition of the pure boson and fermion threshold functions are
 \begin{align}
@@ -404,77 +402,47 @@ with the variable $x=k\sqrt{1+\bar{m}^{2}_{q,k}}-\mu$. From the first order thre
   \mathcal{F}_{(n+1)}(\bar{m}^{2}_{\psi,k};T,\mu)&=-\frac{1}{n}\frac{\partial}{\partial \bar{m}^{2}_{\psi,k}}
                                     \mathcal{F}_{(n)}(\bar{m}^{2}_{\psi,k};T,\mu)\,. 
 \end{align}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The threshold functions in the flow of effective potential in \Eq{eq:flowV} are given by
+With the boson and fermion threshold functions we can reach the corresponding threshold function in the effective potential flow
 \begin{align}
   &l_0^{(B,d)}(\bar{m}^{2}_{\phi,k},\eta^\perp_{\phi,k},z_\phi;T)\nonumber\\[2ex]
-  =&\frac{2}{d-1}\left( 1- \frac{\eta^{\bot}_{\phi,k}}{d+1}\right)\mathcal{B}_{(1)}(\bar{m}^{2}_{\phi,k},z_\phi;T)\,,\label{eq:l0B}
+  =&\frac{2}{d-1}\left( 1- \frac{\eta_{\phi,k}}{d+1}\right)\mathcal{B}_{(1)}(\bar{m}^{2}_{\phi,k};T)\,,\label{eq:l0B}
 \end{align} 
 and
 \begin{align}
-  &l_0^{(F,d)}(\bar{m}^{2}_{q,k},\eta_{q,k};T,\mu)\nonumber\\[2ex]
-  =&\frac{2}{d-1}\left( 1-\frac{\eta_{q,k}}{d} \right)\mathcal{F}_{(1)}(\bar{m}^{2}_{q,k};T,\mu)\,.\label{eq:l0F}
+  &l_0^{(F,d)}(\bar{m}^{2}_{\psi,k},\eta_{\psi,k};T,\mu)\nonumber\\[2ex]
+  =&\frac{2}{d-1}\left( 1-\frac{\eta_{\psi,k}}{d} \right)\mathcal{F}_{(1)}(\bar{m}^{2}_{\psi,k};T,\mu)\,.\label{eq:l0F}
 \end{align} 
-In \Eq{eq:dth2}, one also needs $l^{(B,4)}_{1}$, which is obtained from 
-\begin{align}
-  l_1^{(B/F,d)}(m^{2})=&-\frac{\partial}{\partial m^{2}}l_0^{(B/F,d)}(m^{2})\,.\label{}
-\end{align} 
-
-Furthermore, we also need other threshold functions, such as
+The high order of $l^{B/F,d}_0$ can also be obtained by derivate of the square of mass see \cite{Yin:2019ebz}. \par
+In addition, the threshold functions in the anomalous dimensions have the combination of boson and fermion as follow
 \begin{align}
   &\mathcal{BB}_{(n_1,n_2)}(m_1^2,m_2^2;T)\nonumber\\[2ex]
-=&\frac{T}{k}\sum_{n_q}\Big(G_\phi(q,\bar{m}^{2}_{\phi_a,k})\Big)^{n_1} \Big(G_\phi(q,\bar{m}^{2}_{\phi_b,k})\Big)^{n_2}\,.\label{eq:BBn1n2}
+=&\frac{T}{k}\sum_{n}\Big(G_\phi(q,\bar{m}^{2}_{\phi_a,k})\Big)^{n_1} \Big(G_\phi(q,\bar{m}^{2}_{\phi_b,k})\Big)^{n_2}\,.\label{eq:BBn1n2}
 \end{align}
-in the expressions of the mesonic anomalous dimension in Eqs. (\ref{eq:etaphiperp}) and (\ref{eq:etaphipara}). Inserting \Eq{eq:Gphi} into \Eq{eq:BBn1n2}, one is led to
+The threshold function of two boson in the meson anomalous dimension is
 \begin{align}
   &\mathcal{BB}_{(1,1)}(\bar{m}^{2}_{\phi_a,k},\bar{m}^{2}_{\phi_b,k};T)\nonumber\\[2ex]
-  =&-\frac{1}{z^{1/2}_{\phi}}\Bigg\{\left(\frac{1}{2}+n_B(\bar{m}^{2}_{\phi_a,k},z_\phi;T) \right)\frac{1}{(1+\bar{m}^{2}_{\phi_a,k})^{1/2}} \nonumber\\[2ex]
-&\times \frac{1}{\bar{m}^{2}_{\phi_a,k}-\bar{m}^{2}_{\phi_b,k}}+\left( \frac{1}{2}+n_B(\bar{m}^{2}_{\phi_b,k},z_\phi;T) 
+  =&-\Bigg\{\left(\frac{1}{2}+n_B(\bar{m}^{2}_{\phi_a,k};T) \right)\frac{1}{(1+\bar{m}^{2}_{\phi_a,k})^{1/2}} \nonumber\\[2ex]
+&\times \frac{1}{\bar{m}^{2}_{\phi_a,k}-\bar{m}^{2}_{\phi_b,k}}+\left( \frac{1}{2}+n_B(\bar{m}^{2}_{\phi_b,k};T) 
 \right)\nonumber\\[2ex]
 &\times \frac{1}{(1+\bar{m}^{2}_{\phi_b,k})^{1/2}}\frac{1}{\bar{m}^{2}_{\phi_b,k}-\bar{m}^{2}_{\phi_a,k}}\Bigg\}\,.\label{eq:BB11}
 \end{align} 
-In the same way, one could obtain higher-order ones by employing, e.g.,
+Then we use the mass derivation of the boson mass
 \begin{align}
   &\mathcal{BB}_{(n_1+1,n_2)}(\bar{m}^{2}_{\phi_a,k},\bar{m}^{2}_{\phi_b,k};T)\nonumber\\[2ex]
   =&-\frac{1}{n_1}\frac{\partial}{\partial \bar{m}^{2}_{\phi_a,k}}\mathcal{BB}_{(n_1,n_2)}(\bar{m}^{2}_{\phi_a,k},\bar{m}^{2}_{\phi_b,k};T)\,.
 \end{align}
-
-In the flow of the Yukawa coupling in (\ref{eq:dth}), the threshold function $L$ is introduced, which reads
+Finally we come to the Yukawa coupling flow \Eq{eq:yukawa}. It contains the threshold function that combine the boson and fermion as follow
 \begin{align}
-  &L^{(4)}_{(1,1)}(\bar{m}^{2}_{q,k},\bar{m}^{2}_{\phi,k},\eta_{q,k},\eta_{\phi,k};T,\mu,p_0)\nonumber\\[2ex]
-  =&\frac{2}{3}\bigg[\left(1-\frac{\eta_{\phi,k}^{\perp}}{5}\right)\mathcal{FB}_{(1,2)}(\bar{m}^{2}_{q,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\nonumber\\[2ex]
-&+\left(1-\frac{\eta_{q,k}}{4}\right)\mathcal{FB}_{(2,1)}(\bar{m}^{2}_{q,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\bigg]\,,
+  &L^{(4)}_{(1,1)}(\bar{m}^{2}_{\psi,k},\bar{m}^{2}_{\phi,k},\eta_{\psi,k},\eta_{\phi,k};T,\mu,p_0)\nonumber\\[2ex]
+  =&\frac{2}{3}\bigg[\left(1-\frac{\eta_{\phi,k}}{5}\right)\mathcal{FB}_{(1,2)}(\bar{m}^{2}_{\psi,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\nonumber\\[2ex]
+&+\left(1-\frac{\eta_{\psi,k}}{4}\right)\mathcal{FB}_{(2,1)}(\bar{m}^{2}_{\psi,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\bigg]\,,
 \end{align} 
-where the fermionic and bosonic mixing threshold functions $\mathcal{FB}$'s are given by
+and the definition of $\mathcal{FB}$ reads
 \begin{align}
- &\mathcal{FB}_{(n_f,n_b)}(\bar{m}^{2}_{q,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\nonumber \\[2ex] 
-  =&\frac{T}{k}\sum_{n_q}\Big(G_{q}(q,\bar{m}^{2}_{q,k})\Big)^{n_f}\Big(G_{\phi}(q-p,\bar{m}^{2}_{\phi,k})\Big)^{n_b}\,.\label{eq:FB}
+ &\mathcal{FB}_{(n_f,n_b)}(\bar{m}^{2}_{\psi,k},\bar{m}^{2}_{\phi,k};T,\mu,p_0)\nonumber \\[2ex] 
+  =&\frac{T}{k}\sum_{n}\Big(G_{q}(q,\bar{m}^{2}_{q,k})\Big)^{n_f}\Big(G_{\phi}(q-p,\bar{m}^{2}_{\phi,k})\Big)^{n_b}\,.\label{eq:FB}
 \end{align}
-The explicit expression for $\mathcal{FB}_{(1,1)}$ is readily obtained after summing the Matsubara frequency, which can be found in, e.g. \cite{Fu:2015naa}. Higher-order $\mathcal{FB}$'s are obtained from $\mathcal{FB}_{(1,1)}$ by performing derivatives w.r.t. relevant masses as same as other threshold functions mentioned above.
+The mixing threshold functions are given in the previous work, see \cite{Fu:2015naa}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The \nocite command causes all entries in a bibliography to be
