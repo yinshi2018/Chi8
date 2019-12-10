@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  10 DEC 2019 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  10 DEC 2019 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,10 +518,10 @@ Package rerunfilecheck Info: File `chi8.out' has not changed.
 (rerunfilecheck)             Checksum: C6E8258FBA3E20868EFA66762819E160;781.
  ) 
 Here is how much of TeX's memory you used:
- 8370 strings out of 492649
- 117000 string characters out of 6129607
- 277737 words of memory out of 5000000
- 12048 multiletter control sequences out of 15000+600000
+ 8369 strings out of 492649
+ 116990 string characters out of 6129607
+ 281737 words of memory out of 5000000
+ 12047 multiletter control sequences out of 15000+600000
  17389 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,13n,32p,1292b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -546,10 +546,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on chi8.pdf (6 pages, 350899 bytes).
+Output written on chi8.pdf (6 pages, 351167 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
  76 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
