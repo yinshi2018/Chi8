@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  10 DEC 2019 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.23)  21 DEC 2019 10:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,68 +463,57 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 158.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+bbold on input line 188.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 191.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd) [1{/usr/local/te
-xlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<./figures/mub0.pdf, id=78, 939.51pt x 252.945pt>
+xlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<./figures/mub0.pdf, id=103, 939.51pt x 252.945pt>
 File: ./figures/mub0.pdf Graphic file (type pdf)
 <use ./figures/mub0.pdf>
-Package pdftex.def Info: ./figures/mub0.pdf  used on input line 282.
+Package pdftex.def Info: ./figures/mub0.pdf  used on input line 288.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
-<./figures/finmub.pdf, id=85, 939.51pt x 252.945pt>
+<./figures/finmub.pdf, id=110, 939.51pt x 252.945pt>
 File: ./figures/finmub.pdf Graphic file (type pdf)
 <use ./figures/finmub.pdf>
-Package pdftex.def Info: ./figures/finmub.pdf  used on input line 290.
+Package pdftex.def Info: ./figures/finmub.pdf  used on input line 296.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
- [2] [3 <./figures/mub0.pdf> <./figures/finmub.pdf
-
-pdfTeX warning: pdflatex (file ./figures/finmub.pdf): PDF inclusion: multiple p
-dfs with page group included in a single page
->]
-Underfull \hbox (badness 1308) in paragraph at lines 331--332
+ [3]
+Underfull \hbox (badness 1308) in paragraph at lines 343--344
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-
-Overfull \hbox (12.68265pt too wide) detected at line 372
-[]
- []
-
-[4] (./chi8.bbl
-Underfull \hbox (badness 1742) in paragraph at lines 70--78
+(./chi8.bbl
+Underfull \hbox (badness 1137) in paragraph at lines 90--97
  []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 70--78
+Underfull \hbox (badness 3635) in paragraph at lines 90--97
  \OT1/cmr/m/n/9 and C. Sasaki, []Phys. Rev. \OT1/cmr/bx/n/9 D88\OT1/cmr/m/n/9 ,
  074502 (2013)[],
  []
 
-[5]
-Underfull \hbox (badness 1014) in paragraph at lines 81--89
- []\OT1/cmr/m/n/9 A. Baza-vov \OT1/cmr/m/it/9 et al.\OT1/cmr/m/n/9 , []Phys. Re
-v. \OT1/cmr/bx/n/9 D95\OT1/cmr/m/n/9 , 054504 (2017)[],
- []
+[4 <./figures/mub0.pdf> <./figures/finmub.pdf
 
-) [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+pdfTeX warning: pdflatex (file ./figures/finmub.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>]) [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
  (./chi8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
 Package rerunfilecheck Info: File `chi8.out' has not changed.
-(rerunfilecheck)             Checksum: C6E8258FBA3E20868EFA66762819E160;781.
+(rerunfilecheck)             Checksum: 65CA0087D41AE442EEFC85024949DA3B;695.
  ) 
 Here is how much of TeX's memory you used:
- 8369 strings out of 492649
- 116990 string characters out of 6129607
- 281737 words of memory out of 5000000
- 12047 multiletter control sequences out of 15000+600000
+ 8345 strings out of 492649
+ 116830 string characters out of 6129607
+ 242540 words of memory out of 5000000
+ 12044 multiletter control sequences out of 15000+600000
  17389 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,13n,32p,1292b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,32p,1419b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -546,10 +535,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on chi8.pdf (6 pages, 351167 bytes).
+Output written on chi8.pdf (5 pages, 340235 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
