@@ -153,6 +153,9 @@ Central China Normal University, Wuhan 430079, China}
 \affiliation{Institut f\"ur Theoretische Physik, Universit\"at Heidelberg, Philosophenweg 16, 69120 Heidelberg, Germany}
 \affiliation{ExtreMe Matter Institute EMMI, GSI, Planckstra{\ss}e 1, D-64291 Darmstadt, Germany}
 
+\author{Fabian Rennecke}
+\affiliation{Physics Department, Brookhaven National Laboratory, Upton, NY 11973, USA}
+
 \author{Nu Xu}
 \affiliation{Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA}
 \affiliation{Institute of Modern Physics of CAS, Lanzhou 730000, China}
@@ -218,7 +221,7 @@ the Polyakov loop has the form of
 \begin{align}
 \mathcal{P}(\bm x)=\mathcal{P}\exp\bigg( ig\int_{0}^{\beta}d\tau A_0(\bm x,\tau) \bigg)\,.\label{}
 \end{align}
-The glue potential which we emploied in the model, see \cite{Lo:2013hla}, is parameterized as the form below
+The glue potential which we employed in the model, see \cite{Lo:2013hla}, is parameterized as the form below
 \begin{align}
 U_{glue}(L,\bar{L})/T^4=&-\frac{a(T)}{2}\bar{L}L+b(T)\mathrm{ln}M_H(L,\bar{L})\nonumber \\ 
 &+\frac{c(T)}{2}(L^3+\bar{L}^3)+d(T)(\bar{L}L)^2.
@@ -235,7 +238,7 @@ and the form of $b$ is
 \begin{align}
 b(T)=b_1 t_c^{-b_4}(1-e^{b_2/t_c^{b_3}}),
 \end{align}
-the values of the parameters are fixed by the thermodynamics and can be found at \cite{Lo:2013hla}. The temperature $t_c$ is reduced temperature by $t_c=(T-T_c)/T_c$. We rescale the reduced temperature to make the glue potential accord with the Yang-Mills theory by $(t_c)_{YM}\rightarrow \alpha(t_c)_{glue}$, and $(t_c)_{glue}=(T-T^{glue}_c)/T^{glue}_c$. Here we choose $\alpha=0.7$ and $T^{glue}_c=270\,\mathrm{MeV}$ by fitting the kertosis of the baryon number fluctuation with the lattice results. The effect of the Polyakov loop is working on the fermion distribution function see \cite{Fu:2015naa}. 
+the values of the parameters are fixed by the thermodynamics and can be found at \cite{Lo:2013hla}. The temperature $t_c$ is reduced temperature by $t_c=(T-T_c)/T_c$. We rescale the reduced temperature to make the glue potential accord with the Yang-Mills theory by $(t_c)_{YM}\rightarrow \alpha(t_c)_{glue}$, and $(t_c)_{glue}=(T-T^{glue}_c)/T^{glue}_c$. Here we choose $\alpha=0.7$ and $T^{glue}_c=270\,\mathrm{MeV}$ by fitting the kurtosis of the baryon number fluctuation with the lattice results. The effect of the Polyakov loop is working on the fermion distribution function see \cite{Fu:2015naa}. 
 
 \par
 After the preparation above we derive the flow equation of the effective potential
@@ -299,7 +302,9 @@ The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\bra
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \includegraphics[width=1\textwidth]{chi468-zeromuB}
-\caption{This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.}\label{fig:mub0}
+\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within the fRG approach are compared with those of lattice QCD, where the green bands show the extrapolated continuum value obtained from the HotQCD Collaboration \cite{Bazavov:2017dus,Bazavov:2017tot} and the blue dots show the results from the Wuppertal-Budapest Collaboration \cite{Borsanyi:2018grb}.
+%This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.
+}\label{fig:chi468-zeromuB}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -308,7 +313,7 @@ The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\bra
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \includegraphics[width=1\textwidth]{chi468-muBS}
-\caption{The results under baryon chemical potential from $0$ to $400MeV$.}\label{fig:finmu}
+\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:finmu}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -317,7 +322,7 @@ The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\bra
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \includegraphics[width=1\textwidth]{chi468-muBL}
-\caption{The results under baryon chemical potential from $0$ to $400MeV$.}\label{fig:finmu}
+\caption{Evolution of the dependence of $\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) on the temperature, with the increasing $\mu_B$ from 0 to 400 MeV.}\label{fig:finmu}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -326,7 +331,16 @@ The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\bra
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \includegraphics[width=1\textwidth]{chi357-muBS}
-\caption{The results under baryon chemical potential from $0$ to $400MeV$.}\label{fig:finmu}
+\caption{$\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:finmu}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=1\textwidth]{chi357-muBL}
+\caption{Evolution of the dependence of $\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) on the temperature, with the increasing $\mu_B$ from 20 to 400 MeV.}\label{fig:finmu}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -342,7 +356,7 @@ Here we take $N_u=5$ for the well convergence of effective potential. The runnin
 &\partial^n_{\bar{\rho}}\bigg(\partial_t |_\rho\bar{U}_k(\bar{\rho})\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}\nonumber\\[2ex]
 =&(\partial_t-n\eta_{\phi,k})\bar{\lambda}_{n,k}-(\partial_t\bar{\kappa}_k+\eta_{\phi,k}\bar{\kappa}_k)\bar{\lambda}_{n+1,k}\,.\label{eq:drhodu}
 \end{align}
-There is another chosen of the expansion point i.e. fixed point which the bare $\kappa$ is independent on the cutoff scale which has a good convergency property of $N_u$, see, e.g.\cite{Pawlowski:2014zaa,Yin:2019ebz}. However, the fixed point expansion may introduce temperature dependence into the Tylor expansion and the thermaldynamics will be influence by this property, so we choose the running point expansion in this work. The running point is the solution of the equation of motion
+There is another chosen of the expansion point i.e. fixed point which the bare $\kappa$ is independent on the cutoff scale which has a good convergence property of $N_u$, see, e.g.\cite{Pawlowski:2014zaa,Yin:2019ebz}. However, the fixed point expansion may introduce temperature dependence into the Tylor expansion and the thermodynamics will be influence by this property, so we choose the running point expansion in this work. The running point is the solution of the equation of motion
 \begin{align}
 \frac{\partial}{\partial \bar{\rho}}\bigg( \bar{U}_k(\bar{\rho})-\bar{c}_k(2\bar{\rho})^{\frac{1}{2}}\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}=0\,.\label{eq:EoM}
 \end{align}
@@ -357,7 +371,7 @@ Now we give the ultraviolet of the flow equations i.e. the initial conditions of
 U_{k=\Lambda}(\rho)=\frac{\lambda_{k=\Lambda}}{2}\rho^2+\nu_{k=\Lambda}\rho\,,
 \end{align}
 The values of the parameters in the effective potential are $\lambda_{k=\Lambda}=11$ and $\nu_{k=\Lambda}=(0.830\,\mathrm{GeV})^2$. In addition, the initial values of the explicit chiral symmetry breaking strength and Yukawa coupling are $c=2.82\times 10^{-3}\,\mathrm{GeV}^3$ and $h_{k=\Lambda}=10.18$. These parameters are fixed by fitting the vacuum physical observables, i.e., $f_\pi=92\,\mathrm{MeV}$, $m_\psi=300\,\mathrm{MeV}$, $m_\pi=136\,\mathrm{MeV}$,and $m_\sigma=479\,\mathrm{MeV}$.\par  
-The results we show in \Fig{fig:mub0} is the kurtosis, i.e., the ratio of $\chi^B_4$ to $\chi^B_2$, then the ratio of $\chi^B_6$, $\chi^B_8$ to $\chi^B_2$ are given on the right. We use the kurtosis as a benchmark to fix our reduced temperature $T^{glue}_c$ and $\alpha$ in the gluon potential and the rescale $T_c$ of \Fig{fig:mub0}. On the basis of a well tally of the kurtosis, the $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$ are compared. We introduce a rescale temperature $T_c=194$ MeV to remove the temperature difference between the lattice and the low energy effective model. We choose the $T_c$ by fitting the kurtosis with the lattice results. We find that the value of $T_c$ is related to the difference between the chiral phase transition temperature and deconfinement phase transition temperature. With the rising of the $T_c^{glue}$ and $\alpha$ in the glue potential, the difference between chiral phase transition temperature and deconfinement phase transition temperature decreases at the same time the rescale $T_c$ is rising. From the left diagram in the \Fig{fig:mub0} we can clearly see, the FRG result is better match with the Wuppertal-Budapest Collaboration results, but a little higher than the HotQCD Collaboration results, especially around the $T/T_c=0.9$ and $T/T_c=1.2$. In another word, the FRG result has a slow change rate compared with HotQCD result.\par
+The results we show in \Fig{fig:mub0} is the kurtosis, i.e., the ratio of $\chi^B_4$ to $\chi^B_2$, then the ratio of $\chi^B_6$, $\chi^B_8$ to $\chi^B_2$ are given on the right. We use the kurtosis as a benchmark to fix our reduced temperature $T^{glue}_c$ and $\alpha$ in the gluon potential and the rescale $T_c$ of \Fig{fig:mub0}. On the basis of a well tally of the kurtosis, the $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$ are compared. We introduce a rescale temperature $T_c=194$ MeV to remove the temperature difference between the lattice and the low energy effective model. We choose the $T_c$ by fitting the kurtosis with the lattice results. We find that the value of $T_c$ is related to the difference between the chiral phase transition temperature and confinement-deconfinement phase transition temperature. With the rising of the $T_c^{glue}$ and $\alpha$ in the glue potential, the difference between chiral phase transition temperature and deconfinement phase transition temperature decreases at the same time the rescale $T_c$ is rising. From the left diagram in the \Fig{fig:mub0} we can clearly see, the FRG result is better match with the Wuppertal-Budapest Collaboration results, but a little higher than the HotQCD Collaboration results, especially around the $T/T_c=0.9$ and $T/T_c=1.2$. In another word, the FRG result has a slow change rate compared with HotQCD result.\par
 The middle picture of \Fig{fig:mub0} is the comparision of the $\chi^B_6/\chi^B_2$. The FRG result is better match with two lattice results at low and high temperature. However, the values of the FRG around $T/T_c=1.0$ are not small enough to fit the lattice $\chi^B_6/\chi^B_2$. The valley depth of the FRG curve is related with the change rate of the kurtosis, i.e. the slow change rate of the kurtosis causes the shallow valley in the 6th order.\par
 The last picture in \Fig{fig:mub0} is the 8th order baryon number fluctuation. Here we only have the Wuppertal-Budapest Collaboration results. We can easily see from the picture, FRG is match well with lattice, except around $T/T_c=1.2$, FRG curve is lower than the lattice. We believe the reason of the difference is also the slow change rate of the kurtosis.\par
 The three pictures in \Fig{fig:finmu} is the FRG results under finite baryon chemical potential from $0$ to $400$ MeV. As seen in left picture, the kurtosis grow high around $T/T_c=0.8$ and become lower around $T/T_c=0.95$. The behavior of the kurtosis under PQM model is also discussed in \cite{Fu:2015amv}. The change of the peak and valley values of the kurtosis lead to the slope change of kurtosis. So it is obvious that the 6th and 8th order fluctuations gradually increase to big values.
