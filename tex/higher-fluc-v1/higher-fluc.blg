@@ -11,10 +11,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: higher-flucNotes.bib
 Database file #2: ref-lib.bib
-Repeated entry---line 978 of file ref-lib.bib
- : @article{Borsanyi:2018grb
- :                          ,
-I'm skipping whatever remains of this entry
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -27,46 +23,47 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
+Warning--missing journal in Braun:2020ada
 Warning--missing journal in Yin:2019ebz
-You've used 12 entries,
+You've used 37 entries,
             5847 wiz_defined-function locations,
-            1699 strings with 16889 characters,
-and the built_in function-call counts, 11247 in all, are:
-= -- 691
-> -- 268
-< -- 96
-+ -- 88
-- -- 79
-* -- 1799
-:= -- 1070
-add.period$ -- 10
-call.type$ -- 12
-change.case$ -- 40
-chr.to.int$ -- 19
-cite$ -- 13
-duplicate$ -- 1083
-empty$ -- 785
-format.name$ -- 156
-if$ -- 2161
-int.to.chr$ -- 2
-int.to.str$ -- 19
-missing$ -- 146
-newline$ -- 92
-num.names$ -- 30
-pop$ -- 437
+            1937 strings with 22523 characters,
+and the built_in function-call counts, 35873 in all, are:
+= -- 2386
+> -- 808
+< -- 245
++ -- 263
+- -- 203
+* -- 5749
+:= -- 3513
+add.period$ -- 35
+call.type$ -- 37
+change.case$ -- 141
+chr.to.int$ -- 43
+cite$ -- 39
+duplicate$ -- 3387
+empty$ -- 2647
+format.name$ -- 469
+if$ -- 7026
+int.to.chr$ -- 3
+int.to.str$ -- 44
+missing$ -- 432
+newline$ -- 189
+num.names$ -- 105
+pop$ -- 1322
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 175
 quote$ -- 0
-skip$ -- 398
+skip$ -- 1291
 stack$ -- 0
-substring$ -- 290
-swap$ -- 1033
-text.length$ -- 28
+substring$ -- 974
+swap$ -- 3244
+text.length$ -- 90
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 152
-warning$ -- 2
-while$ -- 38
+type$ -- 489
+warning$ -- 3
+while$ -- 112
 width$ -- 0
-write$ -- 149
-(There was 1 error message)
+write$ -- 398
+(There were 3 warnings)
