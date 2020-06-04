@@ -143,7 +143,7 @@ prd,
 
 \preprint{}
 
-\title{Higher order baryon number fluctuations at finite temperature and density}
+\title{Hyper-order baryon number fluctuations at finite temperature and density}
 
 
 \author{Wei-jie Fu}
@@ -270,153 +270,71 @@ where the threshold functions $l^{(B/F,4)}_{0}$ are presented in \app{app:thresh
   \tilde{m}^{2}_{q,k}=&\frac{h^{2}_{k}\rho}{2k^2Z^{2}_{q,k}}\,, \qquad \tilde{m}^{2}_{\pi,k}=\frac{V'_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,, \\[2ex]
   \tilde{m}^{2}_{\sigma,k}=&\frac{V'_{\mathrm{mat},k}(\rho)+2\rho V''_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,.\label{}
 \end{align}
-The anomalous dimensions for the quark and meson fields are given by
+
+The anomalous dimensions for the quark and meson fields in \Eq{eq:flowV} are defined as
 \begin{align}
  \eta_{q,k}&=-\frac{\partial_t Z_{q,k}}{Z_{q,k}}\,,\qquad
   \eta_{\phi,k}=-\frac{\partial_t Z_{\phi,k}}{Z_{\phi,k}}\,,
 \end{align}
-respectively. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The core issue of the PQM model is to investigate the thermodynamical of the system which is related to the meson effective potential for the information of the chiral symmetry breaking it carries. If we only consider the flow equation of the effective potential without the flow of the wave function renormalisation and Yukawa coupling we get the result of the local potential approximation (LPA). Here we give the results of beyond LPA that we take all the quantum fluctuations into account, the running of the $Z_{\phi/\psi,k}$ and $h_{k}$ are completly calculated. The meson and quark wave function renormalisations are split into $Z^{\|}_{\phi/\psi}$ and $Z^{\bot}_{\phi/\psi}$ for the breaking of the $O(4)$ symmetry of the heat bath. However, the spatial components play the most significant role of the physical fluctuations, see \cite{Yin:2019ebz}, so it is reasonable to assume $Z^{\|}_{\phi/\psi}=Z^{\bot}_{\phi/\psi}$ in our work to simplify calculation. \par
-Now come to the gluon part, we involve the gluon effect by the glue potential which is related to the Polyakov loop with temporal gluonic background $A_0$
+respectively. Accordingly, projecting the flow in \Eq{eq:LEFTflow} onto the one-particle irreducible (1PI) two-point function of the meson, one is readily to obtain 
 \begin{align}
-L(\bm x)=\frac{1}{N_c}\langle \Tr{\mathcal{P}(\bm x)} \rangle ,\qquad \bar{L} (\bm x)=\frac{1}{N_c}\langle \Tr{\mathcal{P}^{\dagger}(\bm x)} \rangle\,,\label{}
+  \eta_{\phi,k}&=-\frac{1}{3Z_{\phi,k}}\delta_{ij}\frac{\partial}{\partial (|\bm{p}|^2)}\frac{\delta^2 \partial_t \Gamma_k}{\delta \pi_i(-p) \delta \pi_j(p)}\Bigg|_{\substack{p_0=0\\ \bm{p}=0}}\,,\label{eq:etaphi}
 \end{align}
-the Polyakov loop has the form of
+where the spacial component is employed. Note that in the case of finite temperature and density, the $\mathrm{O}(4)$ rotation symmetry in the 4-$d$ Euclidean space is broken, and as a matter of fact, the mesonic anomalous dimension extracted above is different from that projected onto the temporal component. In another word, $\eta_{\phi,k}$ is split into $\eta_{\phi,k}^{\perp}$ and $\eta_{\phi,k}^{\parallel}$, which are transverse and longitudinal to the heat bath, respectively, at finite temperature and density. The influences of the splitting of $\eta_{\phi,k}$ on the thermodynamics and baryon number fluctuations have been investigated in detail \cite{Yin:2019ebz}, and it has been found that the impact is small. Therefore, it is reasonable to disregard the splitting of anomalous dimensions, and $\eta_{\phi,k}=\eta_{\phi,k}^{\perp}=\eta_{\phi,k}^{\parallel}$, as well as that for the quark anomalous dimension in the following, is assumed throughout this work. In the same way, the quark anomalous dimension is obtained by projecting the relevant flow onto the vector channel of the 1PI quark-antiquark correlation function, as follows
 \begin{align}
-\mathcal{P}(\bm x)=\mathcal{P}\exp\bigg( ig\int_{0}^{\beta}d\tau A_0(\bm x,\tau) \bigg)\,.\label{}
+  \eta_{q}&=\frac{1}{4 Z_{q,k}}\nonumber\\[2ex]
+&\times\mathrm{Re}\left[\frac{\partial}{\partial (|\bm{p}|^2)}\mathrm{tr}
+            \left(i \bm{\gamma}\cdot\bm{p}\left(-\frac{\delta^2}{\delta\bar{q}(p)
+            \delta q(p)}\partial_t \Gamma_k\right)\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,,  \label{eq:etapsi}
 \end{align}
-The glue potential which we employed in the model, see \cite{Lo:2013hla}, is parameterized as the form below
+where the external spacial momentum is chosen to be zero as same as the mesonic one, since the vanishing momentum is most relevant to the flow of effective potential in \Eq{eq:flowV}. Note that the lowest mode of the fermionic Matsubara frequency is nonvanishing and we designate it here as $p_{0,ex}$, to be described in \app{app:thresholdfun}. Moreover, the expression in the square bracket in \eq{eq:etapsi} is complex-valued, rather than real, when the chemical potential is nonzero. This artifact stems from the naive truncation of the external frequency, that is resolved through a resummation of the external frequency of quark  \cite{Fu:2016tey}. The flow equation of the Yukawa coupling is readily obtained via the projection of the 1PI quark-antiquark correlation function on the scalar channel, which reads
 \begin{align}
-U_{glue}(L,\bar{L})/T^4=&-\frac{a(T)}{2}\bar{L}L+b(T)\mathrm{ln}M_H(L,\bar{L})\nonumber \\ 
-&+\frac{c(T)}{2}(L^3+\bar{L}^3)+d(T)(\bar{L}L)^2.
+  \partial_t h_k&=\frac{1}{2 \sigma}\mathrm{Re}\left[\mathrm{tr}\left(-\frac{\delta^2}{\delta\bar{q}(p)
+            \delta q(p)}\partial_t \Gamma_k\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,.  \label{eq:dth}
 \end{align}
-$M_H(L,\bar{L})$ stands for the Haar measure which is defined as
-\begin{align}
-M_H(L,\bar{L})=1-6\bar{L}L+4(L^3+\bar{L}^3)-3(\bar{L}L)^2.
-\end{align}
-Then we give the parametric form of the factors of the $a,b,c,d$. The factor $a,c,d$ have the same form
-\begin{align}
-x(T)=\frac{x_1+x_2/t_c+x_3/t_c^2}{1+x_4/t_c+x_5/t_c^2},
-\end{align}
-and the form of $b$ is
-\begin{align}
-b(T)=b_1 t_c^{-b_4}(1-e^{b_2/t_c^{b_3}}),
-\end{align}
-the values of the parameters are fixed by the thermodynamics and can be found at \cite{Lo:2013hla}. The temperature $t_c$ is reduced temperature by $t_c=(T-T_c)/T_c$. We rescale the reduced temperature to make the glue potential accord with the Yang-Mills theory by $(t_c)_{YM}\rightarrow \alpha(t_c)_{glue}$, and $(t_c)_{glue}=(T-T^{glue}_c)/T^{glue}_c$. Here we choose $\alpha=0.7$ and $T^{glue}_c=270\,\mathrm{MeV}$ by fitting the kurtosis of the baryon number fluctuation with the lattice results. The effect of the Polyakov loop is working on the fermion distribution function see \cite{Fu:2015naa}. 
-
-
-
-
-\par
-After the preparation above we derive the flow equation of the effective potential
-\begin{align}
-  \partial_t V_k(\rho)=&\frac{k^4}{4\pi^2} \bigg [\big(N^2_f-1\big) l^{(B,4)}_{0}(\bar{m}^{2}_{\pi,k},\eta_{\phi,k};T)\nonumber\\[2ex]
-&+l^{(B,4)}_{0}(\bar{m}^{2}_{\sigma,k},\eta_{\phi,k};T)\nonumber\\[2ex]
-&-4N_c N_f l^{(F,4)}_{0}(\bar{m}^{2}_{q,k},\eta_{q,k};T,\mu)\bigg]\,, \label{eq:flowV}
-\end{align}
-The $l_0^{(B/F,n)}$ is the threshold function. The definitions of the meson mass and constituent light quark mass are given by
-\begin{align}
-  \bar{m}^{2}_{\pi,k}&=\frac{V'_k(\rho)}{k^2Z_{\phi,k}}\,,\\[2ex]
-  \bar{m}^{2}_{\sigma,k}&=\frac{V'_k(\rho)+2\rho V''_k(\rho)}{k^2 Z_{\phi,k}}\,,\\[2ex]
-  \bar{m}^{2}_{q,k}&=\frac{h^{2}_{k}\rho}{2k^2Z^{2}_{q,k}}\,.
-\end{align}\par
-Under the beyond LPA truncation we adopt in our calculation, the flow equations of wave function renormalisations and Yukawa coupling should be involved. The flow equations of the meson and quark wave function renormalisations i.e. the anomalous dimensions as follows
-\begin{align}
-  \eta_{\phi,k}&=-\frac{\partial_t Z_{\phi,k}}{Z_{\phi,k}}\,,\qquad
-  \eta_{\psi,k}=-\frac{\partial_t Z_{\psi,k}}{Z_{\psi,k}}\,.
-\end{align}
-The high order quark meson scattering which leads to the field dependent of the Yukawa coupling dosen't involve in our calculation here related research see \cite{Pawlowski:2014zaa}. The analytical form of the anomalous dimensions and the flow of the Yukawa coupling and the threshold functions see \cite{Fu:2015naa}.
+The explicit expressions for the meson and quark anomalous dimensions, and the flow of the Yukawa coupling can be found in \app{app:thresholdfun}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{thermodynamics and baryon number fluctuation}
-\label{sec:BNF}
-For the purpose of calculating the thermodynamics of our system we give the definition of the thermodynamical potential density 
+\section{Thermodynamics and Hyper-order baryon number fluctuations}
+\label{sec:hyper-fluc}
+
+The thermodynamical potential density in the LEFT at finite temperature and nonzero baryon chemical potential is readily obtained from the effective action in \Eq{eq:action}, which reads
 \begin{align}
-\Omega[T,\mu]=U_{k=0}(\rho)-c\sigma+U_{glue}(L,\bar{L}),
-\end{align} 
-it can be solved through the equation of motion $\partial_L\Omega=0$.
-From the thermodynamical potential density one can obtain the pressure of the system
-\begin{align}
-p=-\Omega[T,\mu],
+  \Omega[T,\mu_B]=&V_{\mathrm{glue}}(L, \bar L)+V_{\mathrm{mat},k=0}(\rho)-c\sigma\,,\label{eq:Omega}
 \end{align}
-then the baryon number fluctuations can also be computed through the pressure. We give the general expression of the baryon number fluctuation
+where the gluonic background field $A_0$ has been reformulated in terms of the Polyakov loop $L$ and its complex conjugate $\bar L$. The matter sector of the effective potential is integrated out towards the IR limit $k=0$, while the glue sector is independent of $k$, see \app{app:gluepot}. Note that the Polyakov loop and the meson field are on their respective equations of motion, and the effective potential in \Eq{eq:Omega} is normalized to zero in vacuum. The pressure of the system is directly related to the thermodynamical potential, as follows
 \begin{align}
-\chi^B_n=\frac{\partial^n}{\partial(\mu_B/T)^n}\frac{p}{T^4}.
+  p=&-\Omega[T,\mu_B]\,.\label{}
 \end{align}
-We can also express the generalized susceptibilities by the cumulants of the baryon number distributions
+The generalized susceptibility of the baryon number $\chi^B_n$ is defined through the $n$-order derivative of the pressure w.r.t. the baryon chemical potential, to wit,
 \begin{align}
-\chi^B_1=&\frac{1}{VT^3}\braket{N_B},\\
-\chi^B_2=&\frac{1}{VT^3}\braket{(\delta N_B)^2},\\
-\chi^B_3=&\frac{1}{VT^3}\braket{(\delta N_B)^3},\\
-\chi^B_4=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\big),\\
-\chi^B_6=&\frac{1}{VT^3}\big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\
-&-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\big)\\
-\chi^B_8=&????.
+  \chi_n^{B}&=\frac{\partial^n}{\partial (\mu_B/T)^n}\frac{p}{T^4}\,.\label{eq:suscept}
 \end{align}
-The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\braket{N_B}$. To compare the results with the lattice simulation further with the experiments we consider the kurtosis $\kappa\sigma^2=\chi^B_4/\chi^B_2$, $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$.
+The generalized susceptibilities are related to various cumulants of the baryon number distribution, which can be measured in heavy-ion collision experiments through the cumulants of its proxy, i.e., the net proton distribution, see, e.g. \cite{Luo:2017faz} for details. For the lowest four orders, one is led to
+\begin{align}
+\chi^B_1=&\frac{1}{VT^3}\braket{N_B}\,,\quad \chi^B_2=\frac{1}{VT^3}\braket{(\delta N_B)^2}\,,\label{eq:chiB1}\\[2ex]
+\chi^B_3=&\frac{1}{VT^3}\braket{(\delta N_B)^3}\,,\\[2ex]
+\chi^B_4=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\Big)\,,\label{eq:chiB4}
+\end{align}
+with $\braket{\cdots}$ denoting the ensemble average and $\delta N_B=N_B-\braket{N_B}$. Thus the mean value of the net baryon number of the system is given by $M=VT^3\chi_1^{B}$, the variance $\sigma^2=VT^3\chi_2^{B}$, skewness $S=\chi_3^{B}/(\chi_2^{B}\sigma)$, and the kurtosis $\kappa=\chi_4^{B}/(\chi_2^{B}\sigma^2)$, respectively.
+
+In this work emphasis is, however, put on the baryon number fluctuations of order higher than the fourth, i.e., $\chi_n^{B}$'s ($n>4$), which we name them hyper-order baryon number fluctuations. As same as the low-order ones, the hyper-order susceptibilities are also connected to their respective cumulants, and their relations, taking the fifth through eighth ones for instance, are given as follows
+\begin{align}
+\chi^B_5=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^5}-10\braket{(\delta N_B)^2}\braket{(\delta N_B)^3}\Big)\,,\\[2ex]
+\chi^B_6=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\Big)\,,
+\end{align}
+\begin{align}
+\chi^B_7=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^7}-21\braket{(\delta N_B)^5}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-35\braket{(\delta N_B)^4}\braket{(\delta N_B)^3}\nonumber\\[2ex]
+&+210\braket{(\delta N_B)^3}\braket{(\delta N_B)^2}^2\Big)\,,\\[2ex]
+\chi^B_8=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^8}-28\braket{(\delta N_B)^6}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-56\braket{(\delta N_B)^5}\braket{(\delta N_B)^3}-35\braket{(\delta N_B)^4}^2\nonumber\\[2ex]
+&+420\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}^2\nonumber\\[2ex]
+&+560\braket{(\delta N_B)^3}^2\braket{(\delta N_B)^2}-630\braket{(\delta N_B)^2}^4\Big)\,.
+\end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -474,31 +392,11 @@ The angle brackets stand for the ensemble average value and $\delta N_B=N_B-\bra
 %
 
 
-For the purpose of solving the flow equation of the effective potential \Eq{eq:flowV} we use the Tylor expansion approach around the expansion point $\kappa$. The renormalised effective potential under the Tylor expansion is
-\begin{align}
-\bar{U}_k(\bar{\rho})=\sum^{N_u}_{n=0}\frac{\bar{\lambda}_{n,k}}{n!}(\bar{\rho}-\bar{\kappa}_k)^n,\label{eq:Tylor}
-\end{align}
-with $\bar{U}_k(\bar{\rho})=U_k(\rho)$, $\bar{\lambda}_{n,k}=\lambda_{n,k}/(Z_{\phi,k})^n$, $\bar{\rho}=Z_{\phi,k}\rho$, $\bar{\kappa}_k=Z_{\phi,k}\kappa_k$.
-Here we take $N_u=5$ for the well convergence of effective potential. The running cutoff scale dependent expansion point $\kappa_k$ is emploied in our numerical calculation. Then we can get the Tylor expansion flow equation from \Eq{eq:flowV} and \Eq{eq:Tylor} 
-\begin{align}
-&\partial^n_{\bar{\rho}}\bigg(\partial_t |_\rho\bar{U}_k(\bar{\rho})\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}\nonumber\\[2ex]
-=&(\partial_t-n\eta_{\phi,k})\bar{\lambda}_{n,k}-(\partial_t\bar{\kappa}_k+\eta_{\phi,k}\bar{\kappa}_k)\bar{\lambda}_{n+1,k}\,.\label{eq:drhodu}
-\end{align}
-There is another chosen of the expansion point i.e. fixed point which the bare $\kappa$ is independent on the cutoff scale which has a good convergence property of $N_u$, see, e.g.\cite{Pawlowski:2014zaa,Yin:2019ebz}. However, the fixed point expansion may introduce temperature dependence into the Tylor expansion and the thermodynamics will be influence by this property, so we choose the running point expansion in this work. The running point is the solution of the equation of motion
-\begin{align}
-\frac{\partial}{\partial \bar{\rho}}\bigg( \bar{U}_k(\bar{\rho})-\bar{c}_k(2\bar{\rho})^{\frac{1}{2}}\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}=0\,.\label{eq:EoM}
-\end{align}
-We emphasize that the equation of motion must be satisfied under every value of the infrared cutoff. The renormalised explicit symmetry breaking term is $\bar{c}_k=c/(Z_{\phi,k})^{1/2}$, with the flow $\partial_t \bar{c}_k=(1/2)\eta_{\phi,k}\bar{c}_k$. From \Eq{eq:drhodu} and \Eq{eq:EoM} we can obtain the flow of the renormalised running expansion point
-\begin{align}
-  \partial_t \bar \kappa_k&=-\frac{\bar c_k^2}{\bar{\lambda}_{1,k}^3+\bar c_k^2\bar{\lambda}_{2,k}}\bigg[\partial_{\bar \rho}\left(\partial_t\big|_{\rho} \bar U_k(\bar \rho)\right)\bigg|_{\bar \rho=\bar \kappa_k}\nonumber \\[2ex]
-  &+\eta_{\phi,k}\left(\frac{\bar{\lambda}_{1,k}}{2}+\bar\kappa_k\bar{\lambda}_{2,k}\right)\bigg]\,.\label{}
-\end{align}
-In this work we don't consider the field dependence of the Yukawa coupling and the renormalised Yukawa coupling is $\bar{h}_k=h_k/(Z_{\psi,k}Z^{1/2}_{\phi,k})$.\par
-Now we give the ultraviolet of the flow equations i.e. the initial conditions of the differential equations. The ultraviolet cutoff scale is set to $\Lambda=700\,\mathrm{MeV}$. The parameterized effective potential at UV point is
-\begin{align}
-U_{k=\Lambda}(\rho)=\frac{\lambda_{k=\Lambda}}{2}\rho^2+\nu_{k=\Lambda}\rho\,,
-\end{align}
-The values of the parameters in the effective potential are $\lambda_{k=\Lambda}=11$ and $\nu_{k=\Lambda}=(0.830\,\mathrm{GeV})^2$. In addition, the initial values of the explicit chiral symmetry breaking strength and Yukawa coupling are $c=2.82\times 10^{-3}\,\mathrm{GeV}^3$ and $h_{k=\Lambda}=10.18$. These parameters are fixed by fitting the vacuum physical observables, i.e., $f_\pi=92\,\mathrm{MeV}$, $m_\psi=300\,\mathrm{MeV}$, $m_\pi=136\,\mathrm{MeV}$,and $m_\sigma=479\,\mathrm{MeV}$.\par  
+
+
+
+
+
 The results we show in \Fig{fig:mub0} is the kurtosis, i.e., the ratio of $\chi^B_4$ to $\chi^B_2$, then the ratio of $\chi^B_6$, $\chi^B_8$ to $\chi^B_2$ are given on the right. We use the kurtosis as a benchmark to fix our reduced temperature $T^{glue}_c$ and $\alpha$ in the gluon potential and the rescale $T_c$ of \Fig{fig:mub0}. On the basis of a well tally of the kurtosis, the $\chi^B_6/\chi^B_2$ and $\chi^B_8/\chi^B_2$ are compared. We introduce a rescale temperature $T_c=194$ MeV to remove the temperature difference between the lattice and the low energy effective model. We choose the $T_c$ by fitting the kurtosis with the lattice results. We find that the value of $T_c$ is related to the difference between the chiral phase transition temperature and confinement-deconfinement phase transition temperature. With the rising of the $T_c^{glue}$ and $\alpha$ in the glue potential, the difference between chiral phase transition temperature and deconfinement phase transition temperature decreases at the same time the rescale $T_c$ is rising. From the left diagram in the \Fig{fig:mub0} we can clearly see, the FRG result is better match with the Wuppertal-Budapest Collaboration results, but a little higher than the HotQCD Collaboration results, especially around the $T/T_c=0.9$ and $T/T_c=1.2$. In another word, the FRG result has a slow change rate compared with HotQCD result.\par
 The middle picture of \Fig{fig:mub0} is the comparision of the $\chi^B_6/\chi^B_2$. The FRG result is better match with two lattice results at low and high temperature. However, the values of the FRG around $T/T_c=1.0$ are not small enough to fit the lattice $\chi^B_6/\chi^B_2$. The valley depth of the FRG curve is related with the change rate of the kurtosis, i.e. the slow change rate of the kurtosis causes the shallow valley in the 6th order.\par
 The last picture in \Fig{fig:mub0} is the 8th order baryon number fluctuation. Here we only have the Wuppertal-Budapest Collaboration results. We can easily see from the picture, FRG is match well with lattice, except around $T/T_c=1.2$, FRG curve is lower than the lattice. We believe the reason of the difference is also the slow change rate of the kurtosis.\par
@@ -528,6 +426,34 @@ The work was supported by the National Natural Science Foundation of China under
 \label{app:gluepot}
 
 
+Now come to the gluon part, we involve the gluon effect by the glue potential which is related to the Polyakov loop with temporal gluonic background $A_0$
+\begin{align}
+L(\bm x)=\frac{1}{N_c}\langle \Tr{\mathcal{P}(\bm x)} \rangle ,\qquad \bar{L} (\bm x)=\frac{1}{N_c}\langle \Tr{\mathcal{P}^{\dagger}(\bm x)} \rangle\,,\label{}
+\end{align}
+the Polyakov loop has the form of
+\begin{align}
+\mathcal{P}(\bm x)=\mathcal{P}\exp\bigg( ig\int_{0}^{\beta}d\tau A_0(\bm x,\tau) \bigg)\,.\label{}
+\end{align}
+The glue potential which we employed in the model, see \cite{Lo:2013hla}, is parameterized as the form below
+\begin{align}
+U_{glue}(L,\bar{L})/T^4=&-\frac{a(T)}{2}\bar{L}L+b(T)\mathrm{ln}M_H(L,\bar{L})\nonumber \\ 
+&+\frac{c(T)}{2}(L^3+\bar{L}^3)+d(T)(\bar{L}L)^2.
+\end{align}
+$M_H(L,\bar{L})$ stands for the Haar measure which is defined as
+\begin{align}
+M_H(L,\bar{L})=1-6\bar{L}L+4(L^3+\bar{L}^3)-3(\bar{L}L)^2.
+\end{align}
+Then we give the parametric form of the factors of the $a,b,c,d$. The factor $a,c,d$ have the same form
+\begin{align}
+x(T)=\frac{x_1+x_2/t_c+x_3/t_c^2}{1+x_4/t_c+x_5/t_c^2},
+\end{align}
+and the form of $b$ is
+\begin{align}
+b(T)=b_1 t_c^{-b_4}(1-e^{b_2/t_c^{b_3}}),
+\end{align}
+the values of the parameters are fixed by the thermodynamics and can be found at \cite{Lo:2013hla}. The temperature $t_c$ is reduced temperature by $t_c=(T-T_c)/T_c$. We rescale the reduced temperature to make the glue potential accord with the Yang-Mills theory by $(t_c)_{YM}\rightarrow \alpha(t_c)_{glue}$, and $(t_c)_{glue}=(T-T^{glue}_c)/T^{glue}_c$. Here we choose $\alpha=0.7$ and $T^{glue}_c=270\,\mathrm{MeV}$ by fitting the kurtosis of the baryon number fluctuation with the lattice results. The effect of the Polyakov loop is working on the fermion distribution function see \cite{Fu:2015naa}. 
+
+
 
 
 
@@ -536,6 +462,32 @@ The work was supported by the National Natural Science Foundation of China under
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Threshold functions}
 \label{app:thresholdfun}
+
+For the purpose of solving the flow equation of the effective potential \Eq{eq:flowV} we use the Tylor expansion approach around the expansion point $\kappa$. The renormalised effective potential under the Tylor expansion is
+\begin{align}
+\bar{U}_k(\bar{\rho})=\sum^{N_u}_{n=0}\frac{\bar{\lambda}_{n,k}}{n!}(\bar{\rho}-\bar{\kappa}_k)^n,\label{eq:Tylor}
+\end{align}
+with $\bar{U}_k(\bar{\rho})=U_k(\rho)$, $\bar{\lambda}_{n,k}=\lambda_{n,k}/(Z_{\phi,k})^n$, $\bar{\rho}=Z_{\phi,k}\rho$, $\bar{\kappa}_k=Z_{\phi,k}\kappa_k$.
+Here we take $N_u=5$ for the well convergence of effective potential. The running cutoff scale dependent expansion point $\kappa_k$ is emploied in our numerical calculation. Then we can get the Tylor expansion flow equation from \Eq{eq:flowV} and \Eq{eq:Tylor} 
+\begin{align}
+&\partial^n_{\bar{\rho}}\bigg(\partial_t |_\rho\bar{U}_k(\bar{\rho})\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}\nonumber\\[2ex]
+=&(\partial_t-n\eta_{\phi,k})\bar{\lambda}_{n,k}-(\partial_t\bar{\kappa}_k+\eta_{\phi,k}\bar{\kappa}_k)\bar{\lambda}_{n+1,k}\,.\label{eq:drhodu}
+\end{align}
+There is another chosen of the expansion point i.e. fixed point which the bare $\kappa$ is independent on the cutoff scale which has a good convergence property of $N_u$, see, e.g.\cite{Pawlowski:2014zaa,Yin:2019ebz}. However, the fixed point expansion may introduce temperature dependence into the Tylor expansion and the thermodynamics will be influence by this property, so we choose the running point expansion in this work. The running point is the solution of the equation of motion
+\begin{align}
+\frac{\partial}{\partial \bar{\rho}}\bigg( \bar{U}_k(\bar{\rho})-\bar{c}_k(2\bar{\rho})^{\frac{1}{2}}\bigg)\bigg|_{\bar{\rho}=\bar{\kappa}_k}=0\,.\label{eq:EoM}
+\end{align}
+We emphasize that the equation of motion must be satisfied under every value of the infrared cutoff. The renormalised explicit symmetry breaking term is $\bar{c}_k=c/(Z_{\phi,k})^{1/2}$, with the flow $\partial_t \bar{c}_k=(1/2)\eta_{\phi,k}\bar{c}_k$. From \Eq{eq:drhodu} and \Eq{eq:EoM} we can obtain the flow of the renormalised running expansion point
+\begin{align}
+  \partial_t \bar \kappa_k&=-\frac{\bar c_k^2}{\bar{\lambda}_{1,k}^3+\bar c_k^2\bar{\lambda}_{2,k}}\bigg[\partial_{\bar \rho}\left(\partial_t\big|_{\rho} \bar U_k(\bar \rho)\right)\bigg|_{\bar \rho=\bar \kappa_k}\nonumber \\[2ex]
+  &+\eta_{\phi,k}\left(\frac{\bar{\lambda}_{1,k}}{2}+\bar\kappa_k\bar{\lambda}_{2,k}\right)\bigg]\,.\label{}
+\end{align}
+In this work we don't consider the field dependence of the Yukawa coupling and the renormalised Yukawa coupling is $\bar{h}_k=h_k/(Z_{\psi,k}Z^{1/2}_{\phi,k})$.\par
+Now we give the ultraviolet of the flow equations i.e. the initial conditions of the differential equations. The ultraviolet cutoff scale is set to $\Lambda=700\,\mathrm{MeV}$. The parameterized effective potential at UV point is
+\begin{align}
+U_{k=\Lambda}(\rho)=\frac{\lambda_{k=\Lambda}}{2}\rho^2+\nu_{k=\Lambda}\rho\,,
+\end{align}
+The values of the parameters in the effective potential are $\lambda_{k=\Lambda}=11$ and $\nu_{k=\Lambda}=(0.830\,\mathrm{GeV})^2$. In addition, the initial values of the explicit chiral symmetry breaking strength and Yukawa coupling are $c=2.82\times 10^{-3}\,\mathrm{GeV}^3$ and $h_{k=\Lambda}=10.18$. These parameters are fixed by fitting the vacuum physical observables, i.e., $f_\pi=92\,\mathrm{MeV}$, $m_\psi=300\,\mathrm{MeV}$, $m_\pi=136\,\mathrm{MeV}$,and $m_\sigma=479\,\mathrm{MeV}$.
 
 
 

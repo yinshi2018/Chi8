@@ -24,46 +24,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--missing journal in Braun:2020ada
-Warning--missing journal in Yin:2019ebz
-You've used 37 entries,
+You've used 39 entries,
             5847 wiz_defined-function locations,
-            1937 strings with 22523 characters,
-and the built_in function-call counts, 35873 in all, are:
-= -- 2386
-> -- 808
-< -- 245
-+ -- 263
-- -- 203
-* -- 5749
-:= -- 3513
-add.period$ -- 35
-call.type$ -- 37
-change.case$ -- 141
-chr.to.int$ -- 43
-cite$ -- 39
-duplicate$ -- 3387
-empty$ -- 2647
-format.name$ -- 469
-if$ -- 7026
+            1958 strings with 23015 characters,
+and the built_in function-call counts, 38135 in all, are:
+= -- 2547
+> -- 861
+< -- 259
++ -- 279
+- -- 215
+* -- 6121
+:= -- 3726
+add.period$ -- 37
+call.type$ -- 39
+change.case$ -- 149
+chr.to.int$ -- 45
+cite$ -- 40
+duplicate$ -- 3590
+empty$ -- 2813
+format.name$ -- 501
+if$ -- 7484
 int.to.chr$ -- 3
-int.to.str$ -- 44
-missing$ -- 432
-newline$ -- 189
-num.names$ -- 105
-pop$ -- 1322
+int.to.str$ -- 46
+missing$ -- 458
+newline$ -- 195
+num.names$ -- 111
+pop$ -- 1388
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 185
 quote$ -- 0
-skip$ -- 1291
+skip$ -- 1380
 stack$ -- 0
-substring$ -- 974
-swap$ -- 3244
-text.length$ -- 90
+substring$ -- 1048
+swap$ -- 3452
+text.length$ -- 96
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 489
-warning$ -- 3
-while$ -- 112
+type$ -- 517
+warning$ -- 2
+while$ -- 119
 width$ -- 0
-write$ -- 398
-(There were 3 warnings)
+write$ -- 418
+(There were 2 warnings)
