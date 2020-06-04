@@ -431,17 +431,6 @@
   {http://arxiv.org/abs/1805.04445} {arXiv:1805.04445 [hep-lat]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1805.04445;%%
-\bibitem [{\citenamefont {Pawlowski}\ and\ \citenamefont
-  {Rennecke}(2014)}]{Pawlowski:2014zaa}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Pawlowski}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Rennecke}},\ }\href {\doibase 10.1103/PhysRevD.90.076002} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
-  {D90}},\ \bibinfo {pages} {076002} (\bibinfo {year} {2014})},\ \Eprint
-  {http://arxiv.org/abs/1403.1179} {arXiv:1403.1179 [hep-ph]} \BibitemShut
-  {NoStop}%
-%%CITATION = ARXIV:1403.1179;%%
 \bibitem [{\citenamefont {Fu}\ and\ \citenamefont
   {Pawlowski}(2016)}]{Fu:2015amv}%
   \BibitemOpen
@@ -478,4 +467,15 @@
   {http://arxiv.org/abs/1508.06504} {arXiv:1508.06504 [hep-ph]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1508.06504;%%
+\bibitem [{\citenamefont {Pawlowski}\ and\ \citenamefont
+  {Rennecke}(2014)}]{Pawlowski:2014zaa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Pawlowski}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Rennecke}},\ }\href {\doibase 10.1103/PhysRevD.90.076002} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+  {D90}},\ \bibinfo {pages} {076002} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1403.1179} {arXiv:1403.1179 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1403.1179;%%
 \end{thebibliography}%
