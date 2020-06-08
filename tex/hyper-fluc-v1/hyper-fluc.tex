@@ -320,7 +320,7 @@ The generalized susceptibilities are related to various cumulants of the baryon 
 \end{align}
 with $\braket{\cdots}$ denoting the ensemble average and $\delta N_B=N_B-\braket{N_B}$. Thus the mean value of the net baryon number of the system is given by $M=VT^3\chi_1^{B}$, the variance $\sigma^2=VT^3\chi_2^{B}$, skewness $S=\chi_3^{B}/(\chi_2^{B}\sigma)$, and the kurtosis $\kappa=\chi_4^{B}/(\chi_2^{B}\sigma^2)$, respectively.
 
-In this work emphasis is, however, put on the baryon number fluctuations of order higher than the fourth, i.e., $\chi_n^{B}$'s ($n>4$), which we name them hyper-order baryon number fluctuations. As same as the low-order ones, the hyper-order susceptibilities are also connected to their respective cumulants, and their relations, taking the fifth through eighth ones for instance, are given as follows
+In this work emphasis is, however, put on the baryon number fluctuations of order higher than the fourth, i.e., $\chi_n^{B}$'s ($n>4$), which are named hyper-order baryon number fluctuations. As same as the low-order ones, the hyper-order susceptibilities are also connected to their respective cumulants, and their relations, taking the fifth through eighth ones for instance, are given as follows
 \begin{align}
 \chi^B_5=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^5}-10\braket{(\delta N_B)^2}\braket{(\delta N_B)^3}\Big)\,,\\[2ex]
 \chi^B_6=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\[2ex]
@@ -336,21 +336,69 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 &+560\braket{(\delta N_B)^3}^2\braket{(\delta N_B)^2}-630\braket{(\delta N_B)^2}^4\Big)\,.
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Numerical results}
+\section{Numerical results and discussions}
 \label{sec:num}
 
+In this section we would like to present our calculated results and compare them with the relevant lattice calculations. Implications of our prediction for the hyper-order baryon number fluctuations in the heavy-ion collision experiments will also be discussed. But before we do that, the scales in the LEFT and OCD have to be matched.
+
+\subsection{Matching the scales in LEFT and OCD}
+\label{subsec:scale}
+
+Usually the scale in LEFT and that in QCD do not agree with each other exactly, and a direct consequence is that the pseudocritical temperature of the chiral phase crossover, i.e., the value of $T_c$ at $\mu_B=0$ is different in the LEFT and QCD. Although it is not a real phase transition, the benchmark value of $T_c$ is well determined through, e.g., the chiral condensate, chiral susceptibilities, etc. Recently, two lattice collaborations, the HotQCD collaboration and the Wuppertal-Budapest collaboration find $T_c=156.5\pm 1.5$ MeV \cite{Bazavov:2018mes} and $T_c=158.0\pm 0.6$ MeV, respectively. Furthermore, the scale is also affected by the number of quark flavors. As shown in the effective action in \Eq{eq:action}, only the $N_f=2$ flavor quarks, i.e., light quarks $u$ and $d$, are included in the LEFT in this work, while in lattice simulations besides the light quarks, dynamics of the strange quark is also taken into account. Thus there should be a mismatch of the scale resulting from the different systems of $N_f=2$ and $N_f=2+1$ flavor quarks.
+
+We denote the temperature and the baryon chemical potential in the LEFT as $T_{_{LEFT}}$ and $\mu_{B_{LEFT}}$, respectively, where the suffix is used to distinguish them from $T$ and $\mu_{B}$ in QCD or lattice simulations. In order to resolve the mismatch of the scale in LEFT and OCD, a simple linear relation between them both for the temperature and chemical potential is assumed, to wit,
+\begin{align}
+  T_{_{LEFT}}&=c_{_{T}}T\,, \quad \mu_{B_{LEFT}}=c_{\mu}\mu_{B}\,,\label{eq:rescale}
+\end{align}
+where the constant coefficients $c_{_{T}}$ and $c_{\mu}$ are to be determined.
+
+The coefficient $c_{_{T}}$ in \Eq{eq:rescale} is fixed through the pseudocritical temperature at $\mu_B=0$ in the LEFT and QCD, i.e., $c_{_{T}}=T_{c_{LEFT}}/T_c$, where we employ $T_c=156$ MeV for QCD from the lattice simulations. Hence, determination of $T_{c_{LEFT}}$ in the LEFT plays a key role in fixing the coefficient $c_{_{T}}$. Unfortunately, the chiral phase transition with the temperature at $\mu_B=0$ is not an exact phase transition, but rather a continuous crossover, due to the finite current quark mass. Accordingly, different observables might result in 
+
+
+The pseudocritical temperature in the LEFT is 
+
+
+
+
+
+
+
+
+$T_{c_{LEFT}}$
+
+
+
+
+
+
+
+
+
+
+
+
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
-\includegraphics[width=1\textwidth]{chi468-zeromuB}
+\includegraphics[width=1\textwidth]{R42R62R82-T-muB0}
 \caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within the fRG approach are compared with those of lattice QCD, where the green bands show the extrapolated continuum value obtained from the HotQCD Collaboration \cite{Bazavov:2017dus,Bazavov:2017tot} and the blue dots show the results from the Wuppertal-Budapest Collaboration \cite{Borsanyi:2018grb}.
 %This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.
-}\label{fig:chi468-zeromuB}
+}\label{fig:R42R62R82-T-muB0}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=1\textwidth]{R12R42R62-muBoT}
+\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within the fRG approach are compared with those of lattice QCD, where the green bands show the extrapolated continuum value obtained from the HotQCD Collaboration \cite{Bazavov:2017dus,Bazavov:2017tot} and the blue dots show the results from the Wuppertal-Budapest Collaboration \cite{Borsanyi:2018grb}.
+%This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.
+}\label{fig:R12R42R62-muBoT}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -358,8 +406,8 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 %
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
-\includegraphics[width=1\textwidth]{chi468-muBS}
-\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:finmu}
+\includegraphics[width=1\textwidth]{R42R62R82-T-muB0to120}
+\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:R42R62R82-T-muB0to120}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -367,8 +415,8 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 %
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
-\includegraphics[width=1\textwidth]{chi468-muBL}
-\caption{Evolution of the dependence of $\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) on the temperature, with the increasing $\mu_B$ from 0 to 400 MeV.}\label{fig:finmu}
+\includegraphics[width=1\textwidth]{R42R62R82-T-muB0to400}
+\caption{Evolution of the dependence of $\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) on the temperature, with the increasing $\mu_B$ from 0 to 400 MeV.}\label{fig:R42R62R82-T-muB0to400}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -376,8 +424,8 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 %
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
-\includegraphics[width=1\textwidth]{chi357-muBS}
-\caption{$\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:finmu}
+\includegraphics[width=1\textwidth]{R31R51R71-T-muB0to120}
+\caption{$\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) as functions of the temperature with some selective values of $\mu_B$ from 0 to 120 MeV.}\label{fig:R31R51R71-T-muB0to120}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -385,8 +433,8 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 %
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
-\includegraphics[width=1\textwidth]{chi357-muBL}
-\caption{Evolution of the dependence of $\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) on the temperature, with the increasing $\mu_B$ from 20 to 400 MeV.}\label{fig:finmu}
+\includegraphics[width=1\textwidth]{R31R51R71-T-muB0to400}
+\caption{Evolution of the dependence of $\chi^{B}_{3}/\chi^{B}_{1}$ (left panel), $\chi^{B}_{5}/\chi^{B}_{1}$ (middle panel), and $\chi^{B}_{7}/\chi^{B}_{1}$ (right panel) on the temperature, with the increasing $\mu_B$ from 20 to 400 MeV.}\label{fig:R31R51R71-T-muB0to400}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
