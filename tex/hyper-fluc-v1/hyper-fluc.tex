@@ -228,10 +228,12 @@ An generic Euclidian quantum field theory is completely described by its effecti
 interpolating it as a function of a renormalization group (RG) scale $k$, i.e.,  $\Gamma_k[\Phi]$, successively, starting from the respective classical action $S[\Phi]$ at a very high ultraviolet (UV) scale, say $\Lambda$, towards the infrared (IR) limit $k\rightarrow 0$ with $\Gamma[\Phi]=\Gamma_{k=0}[\Phi]$. For more details about the formalism of fRG, see, e.g., \cite{Wetterich:1992yh} as well as \cite{Ellwanger:1993mw,Morris:1993qb}. 
 
 To be specific, the flow equation for QCD, which describes the evolution of its effective action with the RG scale $k$, is shown in \Fig{fig:QCD_equation} diagrammatically. As one could see, the QCD flow receives contributions not only from the  gluon, ghost and the quark, i.e., the fundamental partonic degrees of freedom in QCD, but also from hadrons, such as mesons, which are composite or emergent degrees of freedom, and are generated dynamically through strong interactions when the RG scale is reduced down to the nonperturbative regime of the low energy QCD. Recent first-principle QCD calculations within fRG indicate that this transition, from the partonic to composite degrees of freedom, takes place in a narrow regime located at $k\sim$1 GeV \cite{Mitter:2014wpa,Braun:2014ata,Cyrol:2017ewj,Fu:2019hdw}. The flow of the QCD effective action corresponding to the diagrams in \Fig{fig:QCD_equation} can be written as follows,
+%
 \begin{align}
 \partial_t\Gamma_k[\Phi]=&\frac{1}{2}\mathrm{Tr}\Big(G_{AA,k}\partial_t R_{A,k}\Big)-\mathrm{Tr}\Big(G_{c\bar c,k}\partial_t R_{c,k}\Big)\nonumber\\[2ex]
   &-\mathrm{Tr}\Big(G_{q\bar q,k}\partial_t R_{q,k}\Big)+\frac{1}{2}\mathrm{Tr}\Big(G_{\phi\phi,k}\partial_t R_{\phi,k}\Big)\,,\label{eq:QCDflow}
 \end{align}
+%
 with $\Phi=(A, c, \bar c, q,\bar q,\phi)$, where $G$'s and $R$'s are the propagators and regulators of different fields, respectively. Note that the scale dependence of these quantities is explicitly indicated with a suffix $k$. The RG time in \Eq{eq:QCDflow} is defined by $t=\ln(k/\Lambda)$, with the initial UV scale $\Lambda$. We are not going to discuss details of the QCD flow in \Eq{eq:QCDflow} here, and interested readers are strongly suggested to refer to, e.g.,  \cite{Braun:2007bx,Braun:2008pi,Braun:2009gm,Mitter:2014wpa,Braun:2014ata,Cyrol:2016tym,Cyrol:2017ewj,Cyrol:2017qkl,Fu:2019hdw,Braun:2020ada} for recent progress in understanding of QCD or Yang-Mills theory in the vacuum and at finite temperature and density within the fRG approach, and also \cite{Berges:2000ew,Pawlowski:2005xe,Schaefer:2006sr,Gies:2006wv,Rosten:2010vm,Braun:2011pp,Pawlowski:2014aha} for QCD related review articles of fRG.
 
 As mentioned above, the transition of the degrees of freedom, from the partonic ones in the perturbative regime of high energy to the hadronic ones in the nonperturbative region of low energy, is realized through the dynamical hadronization in the fRG approach. With the help of the technique of dynamical hadronization, composite operators of resonated channels, e.g., the $\sigma$-$\pi$ channel, i.e., the scalar-pseudoscalar one in the low energy QCD, which are most relevant to the dynamics of the system, are bosonized or Hubbard-Stratonovich transformed successively with the evolution of RG scale. For more details, see, e.g., \cite{Gies:2001nw,Gies:2002hq,Pawlowski:2005xe,Floerchinger:2009uf,Fu:2019hdw}. 
@@ -239,59 +241,79 @@ As mentioned above, the transition of the degrees of freedom, from the partonic 
 In a recent first-principle fRG calculation to QCD, it has been shown clearly that a sequential decoupling of the gluon, quark, and mesonic degrees of freedom from the system with decreasing RG scale, results in a natural emergence of the low energy effective theory (LEFT) when the scale $k\lesssim 1$ GeV \cite{Fu:2019hdw}. The fRG formalism is ideally suited to the description of a phenomenon of emergence, which usually involves energy scale of different hierarchies, characteristic to different degrees of freedom. When the scale $k$ is high and the system is located in the perturbative region, the only relevant degrees of freedom in QCD are the gluon and quark, and the hadronic or mesonic ones are irrelevant due to their large masses. When $k$ decreases below $\sim 1$ GeV, the gluon develops a significant mass gap in the low momentum region, and thus decouples from the system. The dynamics is taken over by the emergent composite degrees of freedom, e.g. mesons, in particular the $\pi$ meson, which is in essence the Goldstone boson related to the spontaneously breaking chiral symmetry in the low energy QCD, and is the lightest hadron of mass $\sim 140$ MeV in the vacuum. 
 
 The direct consequence of the natural emergence of LEFT is that,  if the flow equation of QCD in \Eq{eq:QCDflow} is evolved at a starting scale, in which the glue sector has already significantly been suppressed by the gluon mass gap, say $\Lambda \sim 1$ GeV, it is safe and legitimate to disregard quantum fluctuations of the glue sector, i.e., the first two diagrams in \Fig{fig:QCD_equation}. Hence we are left with a scale dependent effective action, only composed of the matter sector fields, namely, the quark and meson, which reads
+%
 \begin{align}
 \Gamma_k[\Phi]=&\int_x \bigg\{Z_{q,k}\bar{q} \Big [\gamma_\mu \partial_\mu -\gamma_0(\hat\mu+igA_0) \Big ]q+\frac{1}{2}Z_{\phi,k}(\partial_\mu \phi)^2 \nonumber\\[2ex]
 &+h_k\bar{q}\big(T^0\sigma+i\gamma_5\vec{T}\cdot \vec{\pi}\big)q+V_k(\rho,A_0)-c\sigma \bigg\}\,,\label{eq:action}
 \end{align}
+%
 with a reduction of the involved species of fields $\Phi=(q,\bar q,\phi)$, and the shorthand notation for the space-time integral $\int_{x}=\int_0^{1/T}d x_0 \int d^3 x$. Note that in this work we only consider the case of $N_f=2$ flavor quark, i.e., the quark field $q=(u\,,d)^{T}$ in the action \Eq{eq:action}. The meson field $\phi=\left(\sigma,\vec{\pi}\right)$, being in the adjoint representation of group $\mathrm{U_V}(N_f)\times\mathrm{U_A}(N_f)$ in the flavor space, is coupled with the quark field through the Yukawa coupling. Here $T^0$ and $T^{i}$'s ($i=1\,,2\,,\cdots\,,N_f^2-1$) are the generators of $\mathrm{U}(N_f)$ group, denoted collectively as $T^a$'s, with the normalization $\Tr(T^{a}T^{b})=\frac{1}{2}\delta^{ab}$, which yields $T^{0}=\frac{1}{\sqrt{2N_{f}}}\mathbb{1}_{N_{f}\times N_{f}}$. $Z_{q,k}$ and $Z_{\phi,k}$ are the wave function renormalization for the quark and meson fields, respectively. Note that the wave function renormalizations, as well as the Yukawa coupling $h_k$ and the effective potential $V_k$ to be discussed in the following, are dependent on the RG scale $k$. 
 
 Quantum fluctuations of the glue sector are suppressed in the low energy region due to the large gluon mass gap as discussed above, and consequently it is reasonable to neglect their corresponding contributions in the flow equation of QCD in \Fig{fig:QCD_equation} or \Eq{eq:QCDflow}. The gluonic background field is, however, of significant importance for the QCD thermodynamics. In \Eq{eq:action} the temporal component of the gluonic background field $A_0$ is encoded, which is responsible for the quark confinement in the statistical sense of thermodynamics, see, e.g., \cite{Fukushima:2003fw,Ratti:2005jh,Schaefer:2007pw,Fu:2007xc} for more details. Therefore, the effective potential in \Eq{eq:action} reads
+%
 \begin{align}
 V_k(\rho,A_0)=&V_{\mathrm{glue},k}(A_0)+V_{\mathrm{mat},k}(\rho,A_0)\,,\label{eq:Vtotal}
 \end{align}
+%
 where the first term on the right-hand side is due to the temporal gluonic background field $A_0$, which can also be formulated in terms of the Polyakov loop $L(A_0)$. More details about $V_{\mathrm{glue},k}$ used in this work can be found in \app{app:gluepot}. The matter part of the effective potential $V_{\mathrm{mat},k}$ arises from the quark and meson diagrams in \Fig{fig:QCD_equation}, which is dependent on the meson field through $\rho=\phi^2/2$. Clearly,   $V_{\mathrm{mat},k}$ is $\mathrm{SU_A}(2)$ or $\mathrm{O}(4)$ invariant, which guarantees that the chiral symmetry is preserved on the level of interactions. The explicit breaking of the chiral symmetry is attributed to the linear term $-c\sigma$ in \Eq{eq:action}, which is also related to a nonvanishing value of the current quark mass. The quark chemical potential $\hat\mu=\mathrm{diag}(\mu_u,\mu_d)$ in the first line of \Eq{eq:action} is a diagonal matrix in the flavor space, and $\mu=\mu_u=\mu_d$ is assumed throughout this work. The quark chemical potential is related to the baryon chemical potential via $\mu=\mu_B/3$.
 
 In the scale regime of LEFT, as we have discussed above, the flow equation of the effective action in \Eq{eq:QCDflow} is reduced to 
+%
 \begin{align}
 \partial_t\Gamma_k[\Phi]=&-\mathrm{Tr}\Big(G_{q\bar q,k}\partial_t R_{q,k}\Big)+\frac{1}{2}\mathrm{Tr}\Big(G_{\phi\phi,k}\partial_t R_{\phi,k}\Big)\,,\label{eq:LEFTflow}
 \end{align}
+%
 where $R_{q,k}$ and $R_{\phi,k}$ are the regulators for the quark and meson fields, respectively, and their explicit expressions are given in \app{app:thresholdfun}. The full propagators read
+%
 \begin{align}
 G_{q\bar q/\phi\phi,k}=&\left(\frac{1}{\Gamma^{(2)}_k[\Phi]+R_k}\right)_{q\bar q/\phi\phi}\,,\label{}
 \end{align}
+%
 with $\Gamma^{(2)}_k[\Phi]=\delta^2\Gamma_k[\Phi]/(\delta \Phi_{i_1}\delta \Phi_{i_2})$, where different species of fields are distinguished with the help of the subscripts in $\Phi_{i_1/i_2}$. Inserting the effective action \eq{eq:action} into the flow equation \eq{eq:LEFTflow}, one is led to the flow equation for the effective potential of the matter sector, as follows
+%
 \begin{align}
   \partial_t V_{\mathrm{mat},k}(\rho)=&\frac{k^4}{4\pi^2} \bigg [\big(N^2_f-1\big) l^{(B,4)}_{0}(\tilde{m}^{2}_{\pi,k},\eta_{\phi,k};T)\nonumber\\[2ex]
 &+l^{(B,4)}_{0}(\tilde{m}^{2}_{\sigma,k},\eta_{\phi,k};T)\nonumber\\[2ex]
 &-4N_c N_f l^{(F,4)}_{0}(\tilde{m}^{2}_{q,k},\eta_{q,k};T,\mu)\bigg]\,, \label{eq:flowV}
 \end{align}
+%
 where the threshold functions $l^{(B/F,4)}_{0}$ are presented in \app{app:thresholdfun}, and the dimensionless renormalized quark and meson masses read
+%
 \begin{align}
   \tilde{m}^{2}_{q,k}=&\frac{h^{2}_{k}\rho}{2k^2Z^{2}_{q,k}}\,, \qquad \tilde{m}^{2}_{\pi,k}=\frac{V'_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,, \\[2ex]
   \tilde{m}^{2}_{\sigma,k}=&\frac{V'_{\mathrm{mat},k}(\rho)+2\rho V''_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,.\label{}
 \end{align}
+%
 
 The anomalous dimensions for the quark and meson fields in \Eq{eq:flowV} are defined as
+%
 \begin{align}
  \eta_{q,k}&=-\frac{\partial_t Z_{q,k}}{Z_{q,k}}\,,\qquad
   \eta_{\phi,k}=-\frac{\partial_t Z_{\phi,k}}{Z_{\phi,k}}\,,
 \end{align}
+%
 respectively. Accordingly, projecting the flow in \Eq{eq:LEFTflow} onto the one-particle irreducible (1PI) two-point function of the meson, one is readily to obtain 
+%
 \begin{align}
   \eta_{\phi,k}&=-\frac{1}{3Z_{\phi,k}}\delta_{ij}\frac{\partial}{\partial (|\bm{p}|^2)}\frac{\delta^2 \partial_t \Gamma_k}{\delta \pi_i(-p) \delta \pi_j(p)}\Bigg|_{\substack{p_0=0\\ \bm{p}=0}}\,,\label{eq:etaphi}
 \end{align}
+%
 where the spacial component is employed. Note that in the case of finite temperature and density, the $\mathrm{O}(4)$ rotation symmetry in the 4-$d$ Euclidean space is broken, and as a matter of fact, the mesonic anomalous dimension extracted above is different from that projected onto the temporal component. In another word, $\eta_{\phi,k}$ is split into $\eta_{\phi,k}^{\perp}$ and $\eta_{\phi,k}^{\parallel}$, which are transverse and longitudinal to the heat bath, respectively, at finite temperature and density. The influences of the splitting of $\eta_{\phi,k}$ on the thermodynamics and baryon number fluctuations have been investigated in detail \cite{Yin:2019ebz}, and it has been found that the impact is small. Therefore, it is reasonable to disregard the splitting of anomalous dimensions, and $\eta_{\phi,k}=\eta_{\phi,k}^{\perp}=\eta_{\phi,k}^{\parallel}$, as well as that for the quark anomalous dimension in the following, is assumed throughout this work. In the same way, the quark anomalous dimension is obtained by projecting the relevant flow onto the vector channel of the 1PI quark-antiquark correlation function, as follows
+%
 \begin{align}
   \eta_{q}&=\frac{1}{4 Z_{q,k}}\nonumber\\[2ex]
 &\times\mathrm{Re}\left[\frac{\partial}{\partial (|\bm{p}|^2)}\mathrm{tr}
             \left(i \bm{\gamma}\cdot\bm{p}\left(-\frac{\delta^2}{\delta\bar{q}(p)
             \delta q(p)}\partial_t \Gamma_k\right)\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,,  \label{eq:etapsi}
 \end{align}
+%
 where the external spacial momentum is chosen to be zero as same as the mesonic one, since the vanishing momentum is most relevant to the flow of effective potential in \Eq{eq:flowV}. Note that the lowest mode of the fermionic Matsubara frequency is nonvanishing and we designate it here as $p_{0,ex}$, to be described in \app{app:thresholdfun}. Moreover, the expression in the square bracket in \eq{eq:etapsi} is complex-valued, rather than real, when the chemical potential is nonzero. This artifact stems from the naive truncation of the external frequency, that is resolved through a resummation of the external frequency of quark  \cite{Fu:2016tey}. The flow equation of the Yukawa coupling is readily obtained via the projection of the 1PI quark-antiquark correlation function on the scalar channel, which reads
+%
 \begin{align}
   \partial_t h_k&=\frac{1}{2 \sigma}\mathrm{Re}\left[\mathrm{tr}\left(-\frac{\delta^2}{\delta\bar{q}(p)
             \delta q(p)}\partial_t \Gamma_k\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,.  \label{eq:dth}
 \end{align}
+%
 The explicit expressions for the meson and quark anomalous dimensions, and the flow of the Yukawa coupling can be found in \app{app:thresholdfun}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -301,26 +323,35 @@ The explicit expressions for the meson and quark anomalous dimensions, and the f
 \label{sec:hyper-fluc}
 
 The thermodynamical potential density in the LEFT at finite temperature and nonzero baryon chemical potential is readily obtained from the effective action in \Eq{eq:action}, which reads
+%
 \begin{align}
   \Omega[T,\mu_B]=&V_{\mathrm{glue}}(L, \bar L)+V_{\mathrm{mat},k=0}(\rho)-c\sigma\,,\label{eq:Omega}
 \end{align}
+%
 where the gluonic background field $A_0$ has been reformulated in terms of the Polyakov loop $L$ and its complex conjugate $\bar L$. The matter sector of the effective potential is integrated out towards the IR limit $k=0$, while the glue sector is independent of $k$, see \app{app:gluepot}. Note that the Polyakov loop and the meson field are on their respective equations of motion, and the effective potential in \Eq{eq:Omega} is normalized to zero in vacuum. The pressure of the system is directly related to the thermodynamical potential, as follows
+%
 \begin{align}
   p=&-\Omega[T,\mu_B]\,.\label{}
 \end{align}
+%
 The generalized susceptibility of the baryon number $\chi^B_n$ is defined through the $n$-order derivative of the pressure w.r.t. the baryon chemical potential, to wit,
+%
 \begin{align}
   \chi_n^{B}&=\frac{\partial^n}{\partial (\mu_B/T)^n}\frac{p}{T^4}\,.\label{eq:suscept}
 \end{align}
+%
 The generalized susceptibilities are related to various cumulants of the baryon number distribution, which can be measured in heavy-ion collision experiments through the cumulants of its proxy, i.e., the net proton distribution, see, e.g. \cite{Luo:2017faz} for details. For the lowest four orders, one is led to
+%
 \begin{align}
 \chi^B_1=&\frac{1}{VT^3}\braket{N_B}\,,\quad \chi^B_2=\frac{1}{VT^3}\braket{(\delta N_B)^2}\,,\label{eq:chiB1}\\[2ex]
 \chi^B_3=&\frac{1}{VT^3}\braket{(\delta N_B)^3}\,,\\[2ex]
 \chi^B_4=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\Big)\,,\label{eq:chiB4}
 \end{align}
+%
 with $\braket{\cdots}$ denoting the ensemble average and $\delta N_B=N_B-\braket{N_B}$. Thus the mean value of the net baryon number of the system is given by $M=VT^3\chi_1^{B}$, the variance $\sigma^2=VT^3\chi_2^{B}$, skewness $S=\chi_3^{B}/(\chi_2^{B}\sigma)$, and the kurtosis $\kappa=\chi_4^{B}/(\chi_2^{B}\sigma^2)$, respectively.
 
 In this work emphasis is, however, put on the baryon number fluctuations of order higher than the fourth, i.e., $\chi_n^{B}$'s ($n>4$), which are named hyper-order baryon number fluctuations. As same as the low-order ones, the hyper-order susceptibilities are also connected to their respective cumulants, and their relations, taking the fifth through eighth ones for instance, are given as follows
+%
 \begin{align}
 \chi^B_5=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^5}-10\braket{(\delta N_B)^2}\braket{(\delta N_B)^3}\Big)\,,\\[2ex]
 \chi^B_6=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\[2ex]
@@ -335,6 +366,7 @@ In this work emphasis is, however, put on the baryon number fluctuations of orde
 &+420\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}^2\nonumber\\[2ex]
 &+560\braket{(\delta N_B)^3}^2\braket{(\delta N_B)^2}-630\braket{(\delta N_B)^2}^4\Big)\,.
 \end{align}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -350,15 +382,42 @@ In this section we would like to present our calculated results and compare them
 Usually the scale in LEFT and that in QCD do not agree with each other exactly, and a direct consequence is that the pseudocritical temperature of the chiral phase crossover, i.e., the value of $T_c$ at $\mu_B=0$ is different in the LEFT and QCD. Although it is not a real phase transition, the benchmark value of $T_c$ is well determined through, e.g., the chiral condensate, chiral susceptibilities, etc. Recently, two lattice collaborations, the HotQCD collaboration and the Wuppertal-Budapest collaboration find $T_c=156.5\pm 1.5$ MeV \cite{Bazavov:2018mes} and $T_c=158.0\pm 0.6$ MeV, respectively. Furthermore, the scale is also affected by the number of quark flavors. As shown in the effective action in \Eq{eq:action}, only the $N_f=2$ flavor quarks, i.e., light quarks $u$ and $d$, are included in the LEFT in this work, while in lattice simulations besides the light quarks, dynamics of the strange quark is also taken into account. Thus there should be a mismatch of the scale resulting from the different systems of $N_f=2$ and $N_f=2+1$ flavor quarks.
 
 We denote the temperature and the baryon chemical potential in the LEFT as $T_{_{LEFT}}$ and $\mu_{B_{LEFT}}$, respectively, where the suffix is used to distinguish them from $T$ and $\mu_{B}$ in QCD or lattice simulations. In order to resolve the mismatch of the scale in LEFT and OCD, a simple linear relation between them both for the temperature and chemical potential is assumed, to wit,
+%
 \begin{align}
   T_{_{LEFT}}&=c_{_{T}}T\,, \quad \mu_{B_{LEFT}}=c_{\mu}\mu_{B}\,,\label{eq:rescale}
 \end{align}
+%
 where the constant coefficients $c_{_{T}}$ and $c_{\mu}$ are to be determined.
 
-The coefficient $c_{_{T}}$ in \Eq{eq:rescale} is fixed through the relative values of the pseudocritical temperature at $\mu_B=0$ in the LEFT and QCD, i.e., $c_{_{T}}=T_{c_{LEFT}}/T_c$, where $T_c=156$ MeV is employed for QCD from the lattice simulations. Hence, determination of $T_{c_{LEFT}}$ in the LEFT plays a key role in fixing the coefficient $c_{_{T}}$. Unfortunately, the chiral phase transition with the temperature at $\mu_B=0$ is not an exact phase transition, but rather a continuous crossover, due to a finite current quark mass. Accordingly, different observables might result in nonidentical $T_{c_{LEFT}}$. Since we are concerned with the baryon number fluctuations in this work, the kurtosis of the baryon number distribution, i.e., $\kappa \sigma^2=\chi_4^{B}/\chi_2^{B}$, is used to fix $T_{c_{LEFT}}$ as follows. In the left panel of \Fig{fig:R42R62R82-T-muB0}, $\chi_4^{B}/\chi_2^{B}$ is shown as a function of the temperature in unit of $T_c$ with vanishing baryon chemical potential, and result of the LEFT within fRG is compared with that of lattice QCD. It is found that the LEFT within fRG gives the best description of $\kappa \sigma^2$ in comparison to the lattice results with $T_{c_{LEFT}}=195$ MeV, which yields  
+The coefficient $c_{_{T}}$ in \Eq{eq:rescale} is fixed through fitting the LEFT curve of $R^{B}_{42}$ in the left panel of \Fig{fig:R42R62R82-T-muB0}, i.e., the kurtosis of the baryon number distribution $\kappa \sigma^2=R^{B}_{42}$, 
+as a function of the physical temperature $T$ with $\mu_B=0$ in comparison to the lattice results. It is found that the LEFT within fRG provides the best description of the lattice $\kappa \sigma^2$ with $c_{_{T}}=1.25$. Furthermore, the curvature of the phase boundary is employed to determine the constant $c_{\mu}$ in \Eq{eq:rescale}, where the curvature is defined as the quadratic expansion coefficient of the pseudocritical temperature as a function of the baryon chemical potential around $\mu_B=0$, i.e.,
+%
 \begin{align}
-  c_{_{T}}&=T_{c_{LEFT}}/T_c=1.25\,,\label{}
+  \frac{T_c(\mu_B)}{T_c}&=1-\kappa \left(\frac{\mu_B}{T_c}\right)^2+\lambda \left(\frac{\mu_B}{T_c}\right)^4+\cdots\,,\label{eq:curv}
 \end{align}
+%
+with the curvature $\kappa$, and 
+%
+\begin{align}
+  c_{\mu}&=c_{_{T}}\left(\frac{\kappa}{\kappa_{_{LEFT}}}\right)^{1/2}\,,\label{}
+\end{align}
+%
+$\kappa_{_{LEFT}}=0.0193$, $\kappa=0.0153$, $c_{\mu}=1.113$
+
+ 
+
+
+
+
+
+%The coefficient $c_{_{T}}$ in \Eq{eq:rescale} is fixed through the relative values of the pseudocritical temperature at $\mu_B=0$ in the LEFT and QCD, i.e., $c_{_{T}}=T_{c_{LEFT}}/T_c$, where $T_c=156$ MeV is employed for QCD from the lattice simulations. Hence, determination of $T_{c_{LEFT}}$ in the LEFT plays a key role in fixing the coefficient $c_{_{T}}$. Unfortunately, the chiral phase transition with the temperature at $\mu_B=0$ is not an exact phase transition, but rather a continuous crossover, due to a finite current quark mass. Accordingly, different observables might result in nonidentical $T_{c_{LEFT}}$. Since we are concerned with the baryon number fluctuations in this work, the kurtosis of the baryon number distribution, i.e., $\kappa \sigma^2=\chi_4^{B}/\chi_2^{B}$, is used to fix $T_{c_{LEFT}}$ as follows. In the left panel of \Fig{fig:R42R62R82-T-muB0}, $\chi_4^{B}/\chi_2^{B}$ is shown as a function of the temperature in unit of $T_c$ with vanishing baryon chemical potential, and result of the LEFT within fRG is compared with that of lattice QCD. It is found that the LEFT within fRG gives the best description of $\kappa \sigma^2$ in comparison to the lattice results with $T_{c_{LEFT}}=195$ MeV, which yields  
+%\begin{align}
+%  c_{_{T}}&=T_{c_{LEFT}}/T_c=1.25\,.\label{eq:cT}
+%\end{align}
+%From now on unless explicitly specified, values of temperature in the following, e.g., in legends of figures, are always referred to $T$, and the relevant $T_{_{LEFT}}$ in the LEFT could be inferred from Eqs. (\ref{eq:rescale}) and (\ref{eq:cT}).
+
+ 
+
 
 
 
