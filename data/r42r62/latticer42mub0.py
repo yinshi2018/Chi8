@@ -46,8 +46,10 @@ frgchi2=np.zeros((101,300))
 frgchi6=np.zeros((101,300))
 frgr62=np.zeros((101,300))
 ct=1.25
-ct1=1.24
-ct2=1.26
+#ct1=1.24
+ct1=1.235
+#ct2=1.26
+ct2=1.259
 mubfrg=np.loadtxt('./mub.dat')
 
 chi=np.loadtxt('./chiBre.dat')
