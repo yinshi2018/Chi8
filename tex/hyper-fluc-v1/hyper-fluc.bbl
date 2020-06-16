@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{38}%
+\begin{thebibliography}{39}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -401,6 +401,40 @@
   {http://arxiv.org/abs/1812.08235} {arXiv:1812.08235 [hep-lat]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1812.08235;%%
+\bibitem [{\citenamefont {Bellwied}\ \emph {et~al.}(2015)\citenamefont
+  {Bellwied}, \citenamefont {Borsanyi}, \citenamefont {Fodor}, \citenamefont
+  {Guenther}, \citenamefont {Katz}, \citenamefont {Ratti},\ and\ \citenamefont
+  {Szabo}}]{Bellwied:2015rza}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bellwied}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Borsanyi}},
+  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Fodor}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Guenther}}, \bibinfo {author}
+  {\bibfnamefont {S.~D.}\ \bibnamefont {Katz}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Ratti}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {K.~K.}\ \bibnamefont {Szabo}},\ }\href {\doibase
+  10.1016/j.physletb.2015.11.011} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Lett.}\ }\textbf {\bibinfo {volume} {B751}},\ \bibinfo {pages} {559}
+  (\bibinfo {year} {2015})},\ \Eprint {http://arxiv.org/abs/1507.07510}
+  {arXiv:1507.07510 [hep-lat]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1507.07510;%%
+\bibitem [{\citenamefont {Borsanyi}\ \emph {et~al.}(2020)\citenamefont
+  {Borsanyi}, \citenamefont {Fodor}, \citenamefont {Guenther}, \citenamefont
+  {Kara}, \citenamefont {Katz}, \citenamefont {Parotto}, \citenamefont
+  {Pasztor}, \citenamefont {Ratti},\ and\ \citenamefont
+  {Szabo}}]{Borsanyi:2020fev}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Borsanyi}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Fodor}},
+  \bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont {Guenther}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Kara}}, \bibinfo {author}
+  {\bibfnamefont {S.~D.}\ \bibnamefont {Katz}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Parotto}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Pasztor}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Ratti}}, \ and\ \bibinfo {author} {\bibfnamefont {K.~K.}\
+  \bibnamefont {Szabo}},\ }\href@noop {} {\  (\bibinfo {year} {2020})},\
+  \Eprint {http://arxiv.org/abs/2002.02821} {arXiv:2002.02821 [hep-lat]}
+  \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bazavov}\ \emph
   {et~al.}(2017{\natexlab{a}})\citenamefont {Bazavov} \emph
   {et~al.}}]{Bazavov:2017dus}%
@@ -442,17 +476,6 @@
   {http://arxiv.org/abs/1805.04445} {arXiv:1805.04445 [hep-lat]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1805.04445;%%
-\bibitem [{\citenamefont {Fu}\ and\ \citenamefont
-  {Pawlowski}(2016)}]{Fu:2015amv}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.-j.}\ \bibnamefont
-  {Fu}}\ and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Pawlowski}},\ }\href {\doibase 10.1103/PhysRevD.93.091501} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
-  {D93}},\ \bibinfo {pages} {091501} (\bibinfo {year} {2016})},\ \Eprint
-  {http://arxiv.org/abs/1512.08461} {arXiv:1512.08461 [hep-ph]} \BibitemShut
-  {NoStop}%
-%%CITATION = ARXIV:1512.08461;%%
 \bibitem [{\citenamefont {Lo}\ \emph {et~al.}(2013)\citenamefont {Lo},
   \citenamefont {Friman}, \citenamefont {Kaczmarek}, \citenamefont {Redlich},\
   and\ \citenamefont {Sasaki}}]{Lo:2013hla}%
