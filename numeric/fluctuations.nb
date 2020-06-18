@@ -1010,7 +1010,7 @@ Cell[BoxData[""], "Input",
 67b020baec19"]
 },
 WindowSize->{969, 744},
-WindowMargins->{{293, Automatic}, {Automatic, 61}},
+WindowMargins->{{353, Automatic}, {Automatic, 91}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (2017\:5e7410\
 \:67083\:65e5)",
 StyleDefinitions->"Default.nb"
