@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  18 JUN 2020 09:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  18 JUN 2020 21:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -490,7 +490,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 183.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./figures/QCD_equation.pdf, id=52, 344.99991pt x 62.099pt>
+<./figures/QCD_equation.pdf, id=56, 344.99991pt x 62.099pt>
 File: ./figures/QCD_equation.pdf Graphic file (type pdf)
 
 <use ./figures/QCD_equation.pdf>
@@ -511,63 +511,74 @@ Underfull \hbox (badness 1092) in paragraph at lines 270--274
 ]\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 ^^H[])$, where dif-fer-ent
  []
 
-[2] [3] [4] <./figures/R42R62R82-T-muB0.pdf, id=227, 975.645pt x 252.945pt>
+[2] [3] <./figures/R42R62R82-T-muB0.pdf, id=207, 975.645pt x 252.945pt>
 File: ./figures/R42R62R82-T-muB0.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0.pdf>
-Package pdftex.def Info: ./figures/R42R62R82-T-muB0.pdf used on input line 461.
+Package pdftex.def Info: ./figures/R42R62R82-T-muB0.pdf used on input line 380.
 
 (pdftex.def)             Requested size: 510.0pt x 132.22302pt.
+ [4]
+<./figures/R42-muBoT.pdf, id=238, 325.215pt x 252.945pt>
+File: ./figures/R42-muBoT.pdf Graphic file (type pdf)
 
-<./figures/R12R42R62-muBoT.pdf, id=234, 867.24pt x 252.945pt>
-File: ./figures/R12R42R62-muBoT.pdf Graphic file (type pdf)
+<use ./figures/R42-muBoT.pdf>
+Package pdftex.def Info: ./figures/R42-muBoT.pdf used on input line 426.
+(pdftex.def)             Requested size: 241.07895pt x 187.51215pt.
 
-<use ./figures/R12R42R62-muBoT.pdf>
-Package pdftex.def Info: ./figures/R12R42R62-muBoT.pdf used on input line 472.
-(pdftex.def)             Requested size: 510.0pt x 148.74994pt.
+<./figures/R62-muBoT.pdf, id=245, 325.215pt x 252.945pt>
+File: ./figures/R62-muBoT.pdf Graphic file (type pdf)
 
-<./figures/R42R62R82-T-muB0to120.pdf, id=241, 939.51pt x 252.945pt>
+<use ./figures/R62-muBoT.pdf>
+Package pdftex.def Info: ./figures/R62-muBoT.pdf used on input line 437.
+(pdftex.def)             Requested size: 241.07895pt x 187.51215pt.
+
+<./figures/R42R62R82-T-muB0to120.pdf, id=253, 939.51pt x 252.945pt>
 File: ./figures/R42R62R82-T-muB0to120.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0to120.pdf>
 Package pdftex.def Info: ./figures/R42R62R82-T-muB0to120.pdf used on input line
- 483.
+ 503.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
 
-<./figures/R42R62R82-T-muB0to400.pdf, id=242, 939.51pt x 252.945pt>
+<./figures/R42R62R82-T-muB0to400.pdf, id=254, 939.51pt x 252.945pt>
 File: ./figures/R42R62R82-T-muB0to400.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0to400.pdf>
 Package pdftex.def Info: ./figures/R42R62R82-T-muB0to400.pdf used on input line
- 492.
+ 512.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
 
-<./figures/R31R51R71-T-muB0to120.pdf, id=243, 939.51pt x 252.945pt>
+<./figures/R31R51R71-T-muB0to120.pdf, id=255, 939.51pt x 252.945pt>
 File: ./figures/R31R51R71-T-muB0to120.pdf Graphic file (type pdf)
 
 <use ./figures/R31R51R71-T-muB0to120.pdf>
 Package pdftex.def Info: ./figures/R31R51R71-T-muB0to120.pdf used on input line
- 501.
+ 521.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
 
-<./figures/R31R51R71-T-muB0to400.pdf, id=244, 939.51pt x 252.945pt>
+<./figures/R31R51R71-T-muB0to400.pdf, id=256, 939.51pt x 252.945pt>
 File: ./figures/R31R51R71-T-muB0to400.pdf Graphic file (type pdf)
 
 <use ./figures/R31R51R71-T-muB0to400.pdf>
 Package pdftex.def Info: ./figures/R31R51R71-T-muB0to400.pdf used on input line
- 510.
+ 530.
 (pdftex.def)             Requested size: 510.0pt x 137.30615pt.
 
-Underfull \hbox (badness 1308) in paragraph at lines 538--539
+Underfull \hbox (badness 1308) in paragraph at lines 558--559
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-[5] (./hyper-fluc.bbl [6 <./figures/R42R62R82-T-muB0.pdf> <./figures/R12R42R62-
-muBoT.pdf
+[5 <./figures/R42R62R82-T-muB0.pdf> <./figures/R42-muBoT.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R12R42R62-muBoT.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42-muBoT.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
 >]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 559.
+
+[6 <./figures/R62-muBoT.pdf>] (./hyper-fluc.bbl
 Underfull \hbox (badness 1668) in paragraph at lines 115--123
  []\OT1/cmr/m/n/9 A. K. Cy-rol, M. Mit-ter, J. M. Pawlowski,  and
  []
@@ -578,7 +589,12 @@ Underfull \hbox (badness 6842) in paragraph at lines 115--123
  054006 (2018)[],
  []
 
+[7 <./figures/R42R62R82-T-muB0to120.pdf> <./figures/R42R62R82-T-muB0to400.pdf
 
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42R62R82-T-muB0to
+400.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+>]
 Underfull \hbox (badness 3364) in paragraph at lines 160--169
  \OT1/cmr/m/n/9 Pawlowski, []Phys. Rev. Lett. \OT1/cmr/bx/n/9 106\OT1/cmr/m/n/9
  , 022002 (2011)[],
@@ -607,44 +623,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--261
 9 , 177 (2012)[],
  []
 
-[7 <./figures/R42R62R82-T-muB0to120.pdf> <./figures/R42R62R82-T-muB0to400.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42R62R82-T-muB0to
-400.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
-e
->]
-Underfull \hbox (badness 1137) in paragraph at lines 487--494
- []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
- []
-
-
-Underfull \hbox (badness 3635) in paragraph at lines 487--494
- \OT1/cmr/m/n/9 and C. Sasaki, []Phys. Rev. \OT1/cmr/bx/n/9 D88\OT1/cmr/m/n/9 ,
- 074502 (2013)[],
- []
-
-) [8 <./figures/R31R51R71-T-muB0to120.pdf> <./figures/R31R51R71-T-muB0to400.pdf
-
+[8 <./figures/R31R51R71-T-muB0to120.pdf> <./figures/R31R51R71-T-muB0to400.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R31R51R71-T-muB0to
 400.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
 >]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 628.
+Underfull \hbox (badness 1137) in paragraph at lines 496--503
+ []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 496--503
+ \OT1/cmr/m/n/9 and C. Sasaki, []Phys. Rev. \OT1/cmr/bx/n/9 D88\OT1/cmr/m/n/9 ,
+ 074502 (2013)[],
+ []
+
+) [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 648.
  (./hyper-fluc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 628.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 628.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 648.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 648.
 Package rerunfilecheck Info: File `hyper-fluc.out' has not changed.
-(rerunfilecheck)             Checksum: C2AC84ED89BCBF3D2E6DF28A5CCB2B96;903.
+(rerunfilecheck)             Checksum: BFF86EE8FDC693675A7B34D9ED3F9C5E;989.
  ) 
 Here is how much of TeX's memory you used:
- 9552 strings out of 493014
- 136156 string characters out of 6133352
- 290734 words of memory out of 5000000
- 12843 multiletter control sequences out of 15000+600000
+ 9569 strings out of 493014
+ 136439 string characters out of 6133352
+ 286734 words of memory out of 5000000
+ 12855 multiletter control sequences out of 15000+600000
  15221 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,35p,1419b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,35p,1419b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -666,10 +676,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (8 pages, 547194 bytes).
+Output written on hyper-fluc.pdf (9 pages, 584191 bytes).
 PDF statistics:
- 793 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 102 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 873 PDF objects out of 1000 (max. 8388607)
+ 557 compressed objects within 6 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
