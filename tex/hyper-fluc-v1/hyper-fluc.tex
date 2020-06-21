@@ -331,7 +331,7 @@ The thermodynamical potential density in the LEFT at finite temperature and nonz
 where the gluonic background field $A_0$ has been reformulated in terms of the Polyakov loop $L$ and its complex conjugate $\bar L$. The matter sector of the effective potential is integrated out towards the IR limit $k=0$, while the glue sector is independent of $k$, see \app{app:gluepot}. Note that the Polyakov loop and the meson field are on their respective equations of motion, and the effective potential in \Eq{eq:Omega} is normalized to zero in vacuum. The pressure of the system is directly related to the thermodynamical potential, as follows
 %
 \begin{align}
-  p=&-\Omega[T,\mu_B]\,.\label{}
+  p=&-\Omega[T,\mu_B]\,.\label{eq:pres}
 \end{align}
 %
 The generalized susceptibility of the baryon number $\chi^B_n$ is defined through the $n$-order derivative of the pressure w.r.t. the baryon chemical potential, to wit,
@@ -422,32 +422,35 @@ To sum up, in this section the scales between the LEFT and QCD have been matched
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\includegraphics[width=0.98\columnwidth]{R42-muBoT}
-\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within the fRG approach are compared with those of lattice QCD, where the green bands show the extrapolated continuum value obtained from the HotQCD Collaboration \cite{Bazavov:2017dus,Bazavov:2017tot} and the blue dots show the results from the Wuppertal-Budapest Collaboration \cite{Borsanyi:2018grb}.
-%This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.
-}\label{fig:R42-muBoT}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\includegraphics[width=0.98\columnwidth]{R62-muBoT}
-\caption{$\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within the fRG approach are compared with those of lattice QCD, where the green bands show the extrapolated continuum value obtained from the HotQCD Collaboration \cite{Bazavov:2017dus,Bazavov:2017tot} and the blue dots show the results from the Wuppertal-Budapest Collaboration \cite{Borsanyi:2018grb}.
-%This figure give the numerical results of vanishing baryon chemical potential and compare with the results of the lattice simulation. We rescale the lattice data by lattice critical temperature at $\mu_B=0$ which is $T_c=156MeV$. The set rescale parameter of the FRG results $T_c=194MeV$ by fit the FRG kurtosis with the lattice. The HotQCD Collaboration results are from \cite{Bazavov:2017dus,Bazavov:2017tot} the Wuppertal-Budapest Collaboration are from \cite{Borsanyi:2018grb}.
-}\label{fig:R62-muBoT}
-\end{figure}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=1.\columnwidth]{R42-muBoT} 
+\includegraphics[width=1.\columnwidth]{R62-muBoT} 
+\caption{$R^{B}_{42}$ (left panel) and $R^{B}_{62}$ (right panel) as functions of $\mu_B/T$ with $T=155$ MeV and $T=160$ MeV. Calculation of LEFT within the fRG approach is compared with lattice QCD computations by the HotQCD collaboration \cite{Bazavov:2020bjn} and the Wuppertal-Budapest collaboration \cite{Borsanyi:2018grb}.
+} \label{fig:R42R62-muBoT}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
 
+As we have discussed above, the LEFT has been calibrated by use of the curvature of phase boundary and the kurtosis of baryon number distribution as a function of $T$ with $\mu_B=0$, via a detailed comparison with recent lattice results. Consequently, one could use the LEFT to make predictions for the dependence of $R^{B}_{42}$ on the chemical potential, as well as the hyper-order baryon number fluctuations at finite temperature and density. In the middle and right panels of \Fig{fig:R42R62R82-T-muB0}, $R^{B}_{62}=\chi^{B}_{6}/\chi^{B}_{2}$ and $R^{B}_{82}=\chi^{B}_{8}/\chi^{B}_{2}$ are shown versus the temperature with vanishing $\mu_B$, respectively, and in the same way the LEFT and lattice QCD results are compared. Apparently, one observes that, with the increase of the order of fluctuations, errors of lattice calculation increase dramatically. Especially, the eighth-order fluctuations $R^{B}_{82}$ obtained by the two collaborations show a significant quantitative difference, although they are roughly consistent with each other qualitatively. It is found that the predicted hyper-order baryon number fluctuations from the LEFT within the fRG, are in qualitative agreement with both lattice results, and even consistent with the Wuppertal-Budapest result quantitatively within the errors.
 
-As we have discussed above, the LEFT has been calibrated by use of the curvature of phase boundary and the kurtosis of baryon number distribution as a function of $T$ with $\mu_B=0$, via a detailed comparison with recent lattice results. Consequently, one could use the LEFT to make predictions for the dependence of $R^{B}_{42}$ on the chemical potential, as well as the hyper-order baryon number fluctuations at finite temperature and density. In the middle and right panels of \Fig{fig:R42R62R82-T-muB0}, $R^{B}_{62}=\chi^{B}_{6}/\chi^{B}_{2}$ and $R^{B}_{82}=\chi^{B}_{8}/\chi^{B}_{2}$ are shown versus the temperature with vanishing $\mu_B$, respectively, and in the same way the LEFT and lattice QCD results are compared. Apparently, one observes that, with the increase of the order of fluctuations, errors of lattice calculation increase dramatically. Especially, the eighth-order fluctuations $R^{B}_{82}$ obtained by the two collaborations show a significant quantitative difference, although they are roughly consistent with each other qualitatively. It is found that the predicted hyper-order baryon number fluctuations from the LEFT within the fRG, are in qualitative agreement with both lattice results, and even consistent with the Wuppertal-Budapest result quantitatively within the error.
-
-
-
+To proceed, we consider the chemical potential dependence of baryon number fluctuations. Expanding the pressure in \Eq{eq:pres} in powers of $\hat{\mu}_{B}\equiv\mu_B/T$ around $\hat{\mu}_{B}=0$ , one is led to 
+%
+\begin{align}
+  \frac{p}{T^4}&=\frac{p}{T^4}\Big|_{\hat{\mu}_{B}=0}+\sum_{i=1}^{\infty}\frac{\chi^B_{2i}|_{\hat{\mu}_{B}=0}}{(2i)!}\hat{\mu}_{B}^{2i}\,.\label{eq:cmu}
+\end{align}
+%
+Truncating the Taylor expansion above up to order of $\hat{\mu}_{B}^{8}$ and employing \Eq{eq:suscept}, we obtain the expanded baryon number fluctuations in the first several orders, to wit,
+%
+\begin{align}
+\chi^B_2\simeq&\chi^B_2|_{\hat{\mu}_{B}=0}+\frac{\chi^B_4|_{\hat{\mu}_{B}=0}}{2!}\hat{\mu}_{B}^{2}+\frac{\chi^B_6|_{\hat{\mu}_{B}=0}}{4!}\hat{\mu}_{B}^{4}\nonumber\\[2ex]
+&+\frac{\chi^B_8|_{\hat{\mu}_{B}=0}}{6!}\hat{\mu}_{B}^{6}\,,\label{}\\[2ex]
+\chi^B_4\simeq&\chi^B_4|_{\hat{\mu}_{B}=0}+\frac{\chi^B_6|_{\hat{\mu}_{B}=0}}{2!}\hat{\mu}_{B}^{2}+\frac{\chi^B_8|_{\hat{\mu}_{B}=0}}{4!}\hat{\mu}_{B}^{4}\,,\\[2ex]
+\chi^B_6\simeq&\chi^B_6|_{\hat{\mu}_{B}=0}+\frac{\chi^B_8|_{\hat{\mu}_{B}=0}}{2!}\hat{\mu}_{B}^{2}\,.\label{}
+\end{align}
+%
+In \Fig{fig:R42R62-muBoT} we show the lattice results $\chi^B_4/\chi^B_2$ and $\chi^B_6/\chi^B_2$ based on the Taylor expansion above, and the fluctuations at vanishing chemical potential, viz. $\chi^B_{i}|_{\hat{\mu}_{B}=0}$ ($i=2$, 4, 6, 8) and relevant results in \Fig{fig:R42R62R82-T-muB0}, from the HotQCD collaboration \cite{Bazavov:2020bjn} and the Wuppertal-Budapest collaboration \cite{Borsanyi:2018grb}. Moreover, $\chi^B_n$'s in \Eq{eq:suscept} could also be computed directly in the LEFT within the fRG approach, without resorting to the Taylor expansion, and the relevant results are presented in \Fig{fig:R42R62-muBoT} for comparison. Here we choose two values of the temperature, and as expected, the LEFT result for the dependence of $R^{B}_{42}$ and $R^{B}_{62}$ on the chemical potential, agrees with both lattice results qualitatively, and is even quantitatively consistent with the Wuppertal-Budapest result.
 
 
 
