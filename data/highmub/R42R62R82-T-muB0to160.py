@@ -154,9 +154,9 @@ ax1.axis([80,230,0,1.2])
 #ax1.set_xscale('log')
 
 ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax1.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax1.set_ylabel(r'$R^B_{42}$', fontsize=14, color='black')
 
-ax1.legend([(band_mub0,line_mub0),(band_mub100,line_mub100),(band_mub160,line_mub160)],[r'$\mu_B=0$ MeV',r'$\mu_B=100$ MeV',r'$\mu_B=160$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend([(band_mub0,line_mub0),(band_mub100,line_mub100),(band_mub160,line_mub160)],[r'$\mu_B=0$',r'$\mu_B=100$ MeV',r'$\mu_B=160$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
@@ -209,7 +209,7 @@ line_mub160,=ax2.plot(Tcen,r62mub160cen,'k',linewidth=1,alpha=0.5)
 ax2.axis([80,230,-1.3,1.5])
 #ax2.set_xscale('log')
 ax2.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax2.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+ax2.set_ylabel(r'$R^B_{62}$', fontsize=14, color='black')
 
 ax2.legend(loc=0,fontsize=7,frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1)
 
@@ -265,7 +265,7 @@ ax3.axis([80,220,-15,10])
 #ax3.set_xscale('log')
 
 ax3.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax3.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax3.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
 
 ax3.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1)
 
@@ -285,6 +285,6 @@ for label in ax3.yaxis.get_ticklabels():
 fig.subplots_adjust(top=0.9, bottom=0.15, left=0.06, right=0.96, hspace=0.35, wspace=0.25)
 
 
-fig.savefig("finmublow.pdf")
+fig.savefig("R42R62R82-T-muB0to160.pdf")
 
 #plt.show()
