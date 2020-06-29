@@ -711,6 +711,6 @@ for label in ax3.yaxis.get_ticklabels():
 fig.subplots_adjust(top=0.9, bottom=0.15, left=0.06, right=0.96, hspace=0.35, wspace=0.25)
 
 
-fig.savefig("R42R62R82-T-muB0to160.pdf")
+fig.savefig("R42R62R82-T-muB.pdf")
 
 #plt.show()
