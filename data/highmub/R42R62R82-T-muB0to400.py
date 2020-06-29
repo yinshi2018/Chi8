@@ -94,30 +94,86 @@ r42160=np.zeros((300,20))
 r62160=np.zeros((300,20))
 r82160=np.zeros((300,20))
 #####################################################################################
-chi2mub240cen=np.loadtxt(r'./mub240/cmucen/final/buffer/chi2.dat')
-chi4mub240cen=np.loadtxt(r'./mub240/cmucen/final/buffer/chi4.dat')
-chi6mub240cen=np.loadtxt(r'./mub240/cmucen/final/buffer/chi6.dat')
-chi8mub240cen=np.loadtxt(r'./mub240/cmucen/final/buffer/chi8.dat')
-r42mub240cen=chi4mub240cen/chi2mub240cen
-r62mub240cen=chi6mub240cen/chi2mub240cen
-r82mub240cen=chi8mub240cen/chi2mub240cen
-chi2mub240up=np.loadtxt(r'./mub240/cmuup/final/buffer/chi2.dat')
-chi4mub240up=np.loadtxt(r'./mub240/cmuup/final/buffer/chi4.dat')
-chi6mub240up=np.loadtxt(r'./mub240/cmuup/final/buffer/chi6.dat')
-chi8mub240up=np.loadtxt(r'./mub240/cmuup/final/buffer/chi8.dat')
-r42mub240up=chi4mub240up/chi2mub240up
-r62mub240up=chi6mub240up/chi2mub240up
-r82mub240up=chi8mub240up/chi2mub240up
-chi2mub240down=np.loadtxt(r'./mub240/cmudown/final/buffer/chi2.dat')
-chi4mub240down=np.loadtxt(r'./mub240/cmudown/final/buffer/chi4.dat')
-chi6mub240down=np.loadtxt(r'./mub240/cmudown/final/buffer/chi6.dat')
-chi8mub240down=np.loadtxt(r'./mub240/cmudown/final/buffer/chi8.dat')
-r42mub240down=chi4mub240down/chi2mub240down
-r62mub240down=chi6mub240down/chi2mub240down
-r82mub240down=chi8mub240down/chi2mub240down
-r42240=np.zeros((300,20))
-r62240=np.zeros((300,20))
-r82240=np.zeros((300,20))
+chi2mub200cen=np.loadtxt(r'./mub200/cmucen/final/buffer/chi2.dat')
+chi4mub200cen=np.loadtxt(r'./mub200/cmucen/final/buffer/chi4.dat')
+chi6mub200cen=np.loadtxt(r'./mub200/cmucen/final/buffer/chi6.dat')
+chi8mub200cen=np.loadtxt(r'./mub200/cmucen/final/buffer/chi8.dat')
+r42mub200cen=chi4mub200cen/chi2mub200cen
+r62mub200cen=chi6mub200cen/chi2mub200cen
+r82mub200cen=chi8mub200cen/chi2mub200cen
+chi2mub200up=np.loadtxt(r'./mub200/cmuup/final/buffer/chi2.dat')
+chi4mub200up=np.loadtxt(r'./mub200/cmuup/final/buffer/chi4.dat')
+chi6mub200up=np.loadtxt(r'./mub200/cmuup/final/buffer/chi6.dat')
+chi8mub200up=np.loadtxt(r'./mub200/cmuup/final/buffer/chi8.dat')
+r42mub200up=chi4mub200up/chi2mub200up
+r62mub200up=chi6mub200up/chi2mub200up
+r82mub200up=chi8mub200up/chi2mub200up
+chi2mub200up1=np.loadtxt(r'./mub200/cmuup1/final/buffer/chi2.dat')
+chi4mub200up1=np.loadtxt(r'./mub200/cmuup1/final/buffer/chi4.dat')
+chi6mub200up1=np.loadtxt(r'./mub200/cmuup1/final/buffer/chi6.dat')
+chi8mub200up1=np.loadtxt(r'./mub200/cmuup1/final/buffer/chi8.dat')
+r42mub200up1=chi4mub200up1/chi2mub200up1
+r62mub200up1=chi6mub200up1/chi2mub200up1
+r82mub200up1=chi8mub200up1/chi2mub200up1
+chi2mub200up2=np.loadtxt(r'./mub200/cmuup2/final/buffer/chi2.dat')
+chi4mub200up2=np.loadtxt(r'./mub200/cmuup2/final/buffer/chi4.dat')
+chi6mub200up2=np.loadtxt(r'./mub200/cmuup2/final/buffer/chi6.dat')
+chi8mub200up2=np.loadtxt(r'./mub200/cmuup2/final/buffer/chi8.dat')
+r42mub200up2=chi4mub200up2/chi2mub200up2
+r62mub200up2=chi6mub200up2/chi2mub200up2
+r82mub200up2=chi8mub200up2/chi2mub200up2
+chi2mub200up3=np.loadtxt(r'./mub200/cmuup3/final/buffer/chi2.dat')
+chi4mub200up3=np.loadtxt(r'./mub200/cmuup3/final/buffer/chi4.dat')
+chi6mub200up3=np.loadtxt(r'./mub200/cmuup3/final/buffer/chi6.dat')
+chi8mub200up3=np.loadtxt(r'./mub200/cmuup3/final/buffer/chi8.dat')
+r42mub200up3=chi4mub200up3/chi2mub200up3
+r62mub200up3=chi6mub200up3/chi2mub200up3
+r82mub200up3=chi8mub200up3/chi2mub200up3
+chi2mub200up4=np.loadtxt(r'./mub200/cmuup4/final/buffer/chi2.dat')
+chi4mub200up4=np.loadtxt(r'./mub200/cmuup4/final/buffer/chi4.dat')
+chi6mub200up4=np.loadtxt(r'./mub200/cmuup4/final/buffer/chi6.dat')
+chi8mub200up4=np.loadtxt(r'./mub200/cmuup4/final/buffer/chi8.dat')
+r42mub200up4=chi4mub200up4/chi2mub200up4
+r62mub200up4=chi6mub200up4/chi2mub200up4
+r82mub200up4=chi8mub200up4/chi2mub200up4
+chi2mub200down=np.loadtxt(r'./mub200/cmudown/final/buffer/chi2.dat')
+chi4mub200down=np.loadtxt(r'./mub200/cmudown/final/buffer/chi4.dat')
+chi6mub200down=np.loadtxt(r'./mub200/cmudown/final/buffer/chi6.dat')
+chi8mub200down=np.loadtxt(r'./mub200/cmudown/final/buffer/chi8.dat')
+r42mub200down=chi4mub200down/chi2mub200down
+r62mub200down=chi6mub200down/chi2mub200down
+r82mub200down=chi8mub200down/chi2mub200down
+chi2mub200down1=np.loadtxt(r'./mub200/cmudown1/final/buffer/chi2.dat')
+chi4mub200down1=np.loadtxt(r'./mub200/cmudown1/final/buffer/chi4.dat')
+chi6mub200down1=np.loadtxt(r'./mub200/cmudown1/final/buffer/chi6.dat')
+chi8mub200down1=np.loadtxt(r'./mub200/cmudown1/final/buffer/chi8.dat')
+r42mub200down1=chi4mub200down1/chi2mub200down1
+r62mub200down1=chi6mub200down1/chi2mub200down1
+r82mub200down1=chi8mub200down1/chi2mub200down1
+chi2mub200down2=np.loadtxt(r'./mub200/cmudown2/final/buffer/chi2.dat')
+chi4mub200down2=np.loadtxt(r'./mub200/cmudown2/final/buffer/chi4.dat')
+chi6mub200down2=np.loadtxt(r'./mub200/cmudown2/final/buffer/chi6.dat')
+chi8mub200down2=np.loadtxt(r'./mub200/cmudown2/final/buffer/chi8.dat')
+r42mub200down2=chi4mub200down2/chi2mub200down2
+r62mub200down2=chi6mub200down2/chi2mub200down2
+r82mub200down2=chi8mub200down2/chi2mub200down2
+chi2mub200down3=np.loadtxt(r'./mub200/cmudown3/final/buffer/chi2.dat')
+chi4mub200down3=np.loadtxt(r'./mub200/cmudown3/final/buffer/chi4.dat')
+chi6mub200down3=np.loadtxt(r'./mub200/cmudown3/final/buffer/chi6.dat')
+chi8mub200down3=np.loadtxt(r'./mub200/cmudown3/final/buffer/chi8.dat')
+r42mub200down3=chi4mub200down3/chi2mub200down3
+r62mub200down3=chi6mub200down3/chi2mub200down3
+r82mub200down3=chi8mub200down3/chi2mub200down3
+chi2mub200down4=np.loadtxt(r'./mub200/cmudown4/final/buffer/chi2.dat')
+chi4mub200down4=np.loadtxt(r'./mub200/cmudown4/final/buffer/chi4.dat')
+chi6mub200down4=np.loadtxt(r'./mub200/cmudown4/final/buffer/chi6.dat')
+chi8mub200down4=np.loadtxt(r'./mub200/cmudown4/final/buffer/chi8.dat')
+r42mub200down4=chi4mub200down4/chi2mub200down4
+r62mub200down4=chi6mub200down4/chi2mub200down4
+r82mub200down4=chi8mub200down4/chi2mub200down4
+r42200=np.zeros((300,100))
+r62200=np.zeros((300,100))
+r82200=np.zeros((300,100))
 #####################################################################################
 chi2mub300cen=np.loadtxt(r'./mub300/cmucen/final/buffer/chi2.dat')
 chi4mub300cen=np.loadtxt(r'./mub300/cmucen/final/buffer/chi4.dat')
@@ -199,106 +255,6 @@ r82mub300down4=chi8mub300down4/chi2mub300down4
 r42300=np.zeros((300,100))
 r62300=np.zeros((300,100))
 r82300=np.zeros((300,100))
-#####################################################################################
-chi2mub320cen=np.loadtxt(r'./mub320/cmucen/final/buffer/chi2.dat')
-chi4mub320cen=np.loadtxt(r'./mub320/cmucen/final/buffer/chi4.dat')
-chi6mub320cen=np.loadtxt(r'./mub320/cmucen/final/buffer/chi6.dat')
-chi8mub320cen=np.loadtxt(r'./mub320/cmucen/final/buffer/chi8.dat')
-r42mub320cen=chi4mub320cen/chi2mub320cen
-r62mub320cen=chi6mub320cen/chi2mub320cen
-r82mub320cen=chi8mub320cen/chi2mub320cen
-chi2mub320up=np.loadtxt(r'./mub320/cmuup/final/buffer/chi2.dat')
-chi4mub320up=np.loadtxt(r'./mub320/cmuup/final/buffer/chi4.dat')
-chi6mub320up=np.loadtxt(r'./mub320/cmuup/final/buffer/chi6.dat')
-chi8mub320up=np.loadtxt(r'./mub320/cmuup/final/buffer/chi8.dat')
-r42mub320up=chi4mub320up/chi2mub320up
-r62mub320up=chi6mub320up/chi2mub320up
-r82mub320up=chi8mub320up/chi2mub320up
-chi2mub320down=np.loadtxt(r'./mub320/cmudown/final/buffer/chi2.dat')
-chi4mub320down=np.loadtxt(r'./mub320/cmudown/final/buffer/chi4.dat')
-chi6mub320down=np.loadtxt(r'./mub320/cmudown/final/buffer/chi6.dat')
-chi8mub320down=np.loadtxt(r'./mub320/cmudown/final/buffer/chi8.dat')
-r42mub320down=chi4mub320down/chi2mub320down
-r62mub320down=chi6mub320down/chi2mub320down
-r82mub320down=chi8mub320down/chi2mub320down
-r42320=np.zeros((300,20))
-r62320=np.zeros((300,20))
-r82320=np.zeros((300,20))
-#####################################################################################
-chi2mub340cen=np.loadtxt(r'./mub340/cmucen/final/buffer/chi2.dat')
-chi4mub340cen=np.loadtxt(r'./mub340/cmucen/final/buffer/chi4.dat')
-chi6mub340cen=np.loadtxt(r'./mub340/cmucen/final/buffer/chi6.dat')
-chi8mub340cen=np.loadtxt(r'./mub340/cmucen/final/buffer/chi8.dat')
-r42mub340cen=chi4mub340cen/chi2mub340cen
-r62mub340cen=chi6mub340cen/chi2mub340cen
-r82mub340cen=chi8mub340cen/chi2mub340cen
-chi2mub340up=np.loadtxt(r'./mub340/cmuup/final/buffer/chi2.dat')
-chi4mub340up=np.loadtxt(r'./mub340/cmuup/final/buffer/chi4.dat')
-chi6mub340up=np.loadtxt(r'./mub340/cmuup/final/buffer/chi6.dat')
-chi8mub340up=np.loadtxt(r'./mub340/cmuup/final/buffer/chi8.dat')
-r42mub340up=chi4mub340up/chi2mub340up
-r62mub340up=chi6mub340up/chi2mub340up
-r82mub340up=chi8mub340up/chi2mub340up
-chi2mub340down=np.loadtxt(r'./mub340/cmudown/final/buffer/chi2.dat')
-chi4mub340down=np.loadtxt(r'./mub340/cmudown/final/buffer/chi4.dat')
-chi6mub340down=np.loadtxt(r'./mub340/cmudown/final/buffer/chi6.dat')
-chi8mub340down=np.loadtxt(r'./mub340/cmudown/final/buffer/chi8.dat')
-r42mub340down=chi4mub340down/chi2mub340down
-r62mub340down=chi6mub340down/chi2mub340down
-r82mub340down=chi8mub340down/chi2mub340down
-r42340=np.zeros((300,20))
-r62340=np.zeros((300,20))
-r82340=np.zeros((300,20))
-#########################################################################################
-chi2mub360cen=np.loadtxt(r'./mub360/cmucen/final/buffer/chi2.dat')
-chi4mub360cen=np.loadtxt(r'./mub360/cmucen/final/buffer/chi4.dat')
-chi6mub360cen=np.loadtxt(r'./mub360/cmucen/final/buffer/chi6.dat')
-chi8mub360cen=np.loadtxt(r'./mub360/cmucen/final/buffer/chi8.dat')
-r42mub360cen=chi4mub360cen/chi2mub360cen
-r62mub360cen=chi6mub360cen/chi2mub360cen
-r82mub360cen=chi8mub360cen/chi2mub360cen
-chi2mub360up=np.loadtxt(r'./mub360/cmuup/final/buffer/chi2.dat')
-chi4mub360up=np.loadtxt(r'./mub360/cmuup/final/buffer/chi4.dat')
-chi6mub360up=np.loadtxt(r'./mub360/cmuup/final/buffer/chi6.dat')
-chi8mub360up=np.loadtxt(r'./mub360/cmuup/final/buffer/chi8.dat')
-r42mub360up=chi4mub360up/chi2mub360up
-r62mub360up=chi6mub360up/chi2mub360up
-r82mub360up=chi8mub360up/chi2mub360up
-chi2mub360down=np.loadtxt(r'./mub360/cmudown/final/buffer/chi2.dat')
-chi4mub360down=np.loadtxt(r'./mub360/cmudown/final/buffer/chi4.dat')
-chi6mub360down=np.loadtxt(r'./mub360/cmudown/final/buffer/chi6.dat')
-chi8mub360down=np.loadtxt(r'./mub360/cmudown/final/buffer/chi8.dat')
-r42mub360down=chi4mub360down/chi2mub360down
-r62mub360down=chi6mub360down/chi2mub360down
-r82mub360down=chi8mub360down/chi2mub360down
-r42360=np.zeros((300,20))
-r62360=np.zeros((300,20))
-r82360=np.zeros((300,20))
-#########################################################################################
-chi2mub380cen=np.loadtxt(r'./mub380/cmucen/final/buffer/chi2.dat')
-chi4mub380cen=np.loadtxt(r'./mub380/cmucen/final/buffer/chi4.dat')
-chi6mub380cen=np.loadtxt(r'./mub380/cmucen/final/buffer/chi6.dat')
-chi8mub380cen=np.loadtxt(r'./mub380/cmucen/final/buffer/chi8.dat')
-r42mub380cen=chi4mub380cen/chi2mub380cen
-r62mub380cen=chi6mub380cen/chi2mub380cen
-r82mub380cen=chi8mub380cen/chi2mub380cen
-chi2mub380up=np.loadtxt(r'./mub380/cmuup/final/buffer/chi2.dat')
-chi4mub380up=np.loadtxt(r'./mub380/cmuup/final/buffer/chi4.dat')
-chi6mub380up=np.loadtxt(r'./mub380/cmuup/final/buffer/chi6.dat')
-chi8mub380up=np.loadtxt(r'./mub380/cmuup/final/buffer/chi8.dat')
-r42mub380up=chi4mub380up/chi2mub380up
-r62mub380up=chi6mub380up/chi2mub380up
-r82mub380up=chi8mub380up/chi2mub380up
-chi2mub380down=np.loadtxt(r'./mub380/cmudown/final/buffer/chi2.dat')
-chi4mub380down=np.loadtxt(r'./mub380/cmudown/final/buffer/chi4.dat')
-chi6mub380down=np.loadtxt(r'./mub380/cmudown/final/buffer/chi6.dat')
-chi8mub380down=np.loadtxt(r'./mub380/cmudown/final/buffer/chi8.dat')
-r42mub380down=chi4mub380down/chi2mub380down
-r62mub380down=chi6mub380down/chi2mub380down
-r82mub380down=chi8mub380down/chi2mub380down
-r42380=np.zeros((300,20))
-r62380=np.zeros((300,20))
-r82380=np.zeros((300,20))
 #########################################################################################
 chi2mub400cen=np.loadtxt(r'./mub400/cmucen/final/buffer/chi2.dat')
 chi4mub400cen=np.loadtxt(r'./mub400/cmucen/final/buffer/chi4.dat')
@@ -380,7 +336,7 @@ r82mub400down4=chi8mub400down4/chi2mub400down4
 r42400=np.zeros((300,100))
 r62400=np.zeros((300,100))
 r82400=np.zeros((300,100))
-#########################################################################################
+#####################################################################################
 T=np.loadtxt(r'./TMeV.dat')
 Tcen=T/1.247
 Tup=T/1.259
@@ -395,52 +351,45 @@ fig=plt.figure(figsize=(13.5, 3.5))
 ax1=fig.add_subplot(131)
 band_mub0=ax1.fill_betweenx(r42mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
 line_mub0,=ax1.plot(Tcen,r42mub0,'r',linewidth=1,alpha=0.5)
+
 #########################################################################################
-for t in range(0,100):
+for t in range(0,20):
     if t<10:
-       r42300[:,t]=spline(T/ct[t],r42mub300up,xsame)
+       r42100[:,t]=spline(T/ct[t],r42mub100up,xsame)
     else:
-       if t>=10 and t<20:
-          r42300[:,t]=spline(T/ct[t-10],r42mub300up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r42300[:,t]=spline(T/ct[t-20],r42mub300up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r42300[:,t]=spline(T/ct[t-30],r42mub300up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r42300[:,t]=spline(T/ct[t-40],r42mub300up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r42300[:,t]=spline(T/ct[t-50],r42mub300down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r42300[:,t]=spline(T/ct[t-60],r42mub300down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r42300[:,t]=spline(T/ct[t-70],r42mub300down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r42300[:,t]=spline(T/ct[t-80],r42mub300down3,xsame)
-                            else:
-                                r42300[:,t]=spline(T/ct[t-90],r42mub300down4,xsame)
+       r42100[:,t]=spline(T/ct[t-10],r42mub100down,xsame)
 
 
-for num in range(1,100):
+for num in range(1,20):
     if num==1:
-       max300=np.maximum(r42300[:,num-1],r42300[:,num])
-       min300=np.minimum(r42300[:,num-1],r42300[:,num])
+       max100=np.maximum(r42100[:,num-1],r42100[:,num])
+       min100=np.minimum(r42100[:,num-1],r42100[:,num])
     else:
-       max300=np.maximum(max300,r42300[:,num])
-       min300=np.minimum(min300,r42300[:,num])
+       max100=np.maximum(max100,r42100[:,num])
+       min100=np.minimum(min100,r42100[:,num])
 
-band_mub300=ax1.fill_between(xsame,max300,min300,alpha=0.25,facecolor='b',edgecolor='')
-line_mub300,=ax1.plot(Tcen,r42mub300cen,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax1.plot(Tup,r42mub300up,'k',linewidth=1,alpha=0.5)
-#line_mub300,=ax1.plot(Tup,r42mub300down,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax1.plot(Tdown,r42mub300up,'r',linewidth=1,alpha=0.5)
-#line_mub300,=ax1.plot(Tdown,r42mub300down,'m',linewidth=1,alpha=0.5)
+band_mub100=ax1.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=ax1.plot(Tcen,r42mub100cen,'b',linewidth=1,alpha=0.5)
+
+
+#########################################################################################
+for t in range(0,20):
+    if t<10:
+       r42160[:,t]=spline(T/ct[t],r42mub160up,xsame)
+    else:
+       r42160[:,t]=spline(T/ct[t-10],r42mub160down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max160=np.maximum(r42160[:,num-1],r42160[:,num])
+       min160=np.minimum(r42160[:,num-1],r42160[:,num])
+    else:
+       max160=np.maximum(max160,r42160[:,num])
+       min160=np.minimum(min160,r42160[:,num])
+
+#band_mub160=ax1.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
+#line_mub160,=ax1.plot(Tcen,r42mub160cen,'k',linewidth=1,alpha=0.5)
 ############################################################################################
 for t in range(0,100):
     if t<10:
@@ -481,52 +430,155 @@ for num in range(1,99):
     else:
        max400=np.maximum(max400,r42400[:,num])
        min400=np.minimum(min400,r42400[:,num])
+#########################################################################################
+for t in range(0,100):
+    if t<10:
+       r42300[:,t]=spline(T/ct[t],r42mub300up,xsame)
+    else:
+       if t>=10 and t<20:
+          r42300[:,t]=spline(T/ct[t-10],r42mub300up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r42300[:,t]=spline(T/ct[t-20],r42mub300up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r42300[:,t]=spline(T/ct[t-30],r42mub300up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r42300[:,t]=spline(T/ct[t-40],r42mub300up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r42300[:,t]=spline(T/ct[t-50],r42mub300down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r42300[:,t]=spline(T/ct[t-60],r42mub300down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r42300[:,t]=spline(T/ct[t-70],r42mub300down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r42300[:,t]=spline(T/ct[t-80],r42mub300down3,xsame)
+                            else:
+                                r42300[:,t]=spline(T/ct[t-90],r42mub300down4,xsame)
 
-band_mub400=ax1.fill_between(xsame,max400,min400,alpha=0.25,facecolor='k',edgecolor='')
-line_mub400,=ax1.plot(Tcen,r42mub400cen,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400up,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400up1,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400up2,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400up3,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400up4,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400down,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400down1,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400down2,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400down3,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tup,r42mub400down4,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400up,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400up1,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400up2,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400up3,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400up4,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400down,'m',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400down1,'m',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400down2,'m',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400down3,'m',linewidth=1,alpha=0.5)
-#line_mub400,=ax1.plot(Tdown,r42mub400down4,'m',linewidth=1,alpha=0.5)
-################################################################################################
-ax1.axis([80,230,-1.5,2.])
+
+for num in range(1,100):
+    if num==1:
+       max300=np.maximum(r42300[:,num-1],r42300[:,num])
+       min300=np.minimum(r42300[:,num-1],r42300[:,num])
+    else:
+       max300=np.maximum(max300,r42300[:,num])
+       min300=np.minimum(min300,r42300[:,num])
+#########################################################################################
+for t in range(0,100):
+    if t<10:
+       r42200[:,t]=spline(T/ct[t],r42mub200up,xsame)
+    else:
+       if t>=10 and t<20:
+          r42200[:,t]=spline(T/ct[t-10],r42mub200up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r42200[:,t]=spline(T/ct[t-20],r42mub200up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r42200[:,t]=spline(T/ct[t-30],r42mub200up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r42200[:,t]=spline(T/ct[t-40],r42mub200up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r42200[:,t]=spline(T/ct[t-50],r42mub200down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r42200[:,t]=spline(T/ct[t-60],r42mub200down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r42200[:,t]=spline(T/ct[t-70],r42mub200down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r42200[:,t]=spline(T/ct[t-80],r42mub200down3,xsame)
+                            else:
+                                r42200[:,t]=spline(T/ct[t-90],r42mub200down4,xsame)
+
+
+for num in range(1,100):
+    if num==1:
+       max200=np.maximum(r42200[:,num-1],r42200[:,num])
+       min200=np.minimum(r42200[:,num-1],r42200[:,num])
+    else:
+       max200=np.maximum(max200,r42200[:,num])
+       min200=np.minimum(min200,r42200[:,num])
+
+band_mub200=ax1.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=ax1.plot(Tcen,r42mub200cen,'k',linewidth=1,alpha=0.5)
+
+plt.axes([0.085, 0.22, 0.095, 0.3]) #不用figure的形式则无须用set
+band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=plt.plot(Tcen,r42mub200cen,'k',linewidth=1,alpha=0.5)
+band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
+line_mub300,=plt.plot(Tcen,r42mub300cen,'c',linewidth=1,alpha=0.5)
+band_mub400=plt.fill_between(xsame,max400,min400,alpha=0.25,facecolor='m',edgecolor='')
+line_mub400,=plt.plot(Tcen,r42mub400cen,'m',linewidth=1,alpha=0.5)
+x=range(80,230,40)
+plt.xticks(x,fontsize=8)
+plt.yticks(fontsize=8)
+plt.axis([80,230,-1.5,2.])
+
+ax1.axis([80,230,0,1.2])
 #ax1.set_xscale('log')
 
 ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax1.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax1.set_ylabel(r'$R^B_{42}$', fontsize=14, color='black')
 
-ax1.legend([(band_mub0,line_mub0),(band_mub300,line_mub300),(band_mub400,line_mub400)],[r'$\mu_B=0$ MeV',r'$\mu_B=300$ MeV',r'$\mu_B=400$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend([(band_mub0,line_mub0),(band_mub100,line_mub100),(band_mub200,line_mub200),(band_mub300,line_mub300),(band_mub400,line_mub400)],[r'$\mu_B=0$',r'$\mu_B=100$ MeV',r'$\mu_B=200$ MeV',r'$\mu_B=300$ MeV',r'$\mu_B=400$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
-
 #######################################################################################################################
-#######################################################################################################################
-#######################################################################################################################
-#######################################################################################################################
-
 ax2=fig.add_subplot(132)
 
 band_mub0=ax2.fill_betweenx(r62mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
 line_mub0,=ax2.plot(Tcen,r62mub0,'r',linewidth=1,alpha=0.5)
+
+###############################################################################################################
+for t in range(0,20):
+    if t<10:
+       r62100[:,t]=spline(T/ct[t],r62mub100up,xsame)
+    else:
+       r62100[:,t]=spline(T/ct[t-10],r62mub100down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max100=np.maximum(r62100[:,num-1],r62100[:,num])
+       min100=np.minimum(r62100[:,num-1],r62100[:,num])
+    else:
+       max100=np.maximum(max100,r62100[:,num])
+       min100=np.minimum(min100,r62100[:,num])
+
+band_mub100=ax2.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=ax2.plot(Tcen,r62mub100cen,'b',linewidth=1,alpha=0.5)
+
+#####################################################################################################################
+for t in range(0,20):
+    if t<10:
+       r62160[:,t]=spline(T/ct[t],r62mub160up,xsame)
+    else:
+       r62160[:,t]=spline(T/ct[t-10],r62mub160down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max160=np.maximum(r62160[:,num-1],r62160[:,num])
+       min160=np.minimum(r62160[:,num-1],r62160[:,num])
+    else:
+       max160=np.maximum(max160,r62160[:,num])
+       min160=np.minimum(min160,r62160[:,num])
+
+#band_mub160=ax2.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
+#line_mub160,=ax2.plot(Tcen,r62mub160cen,'k',linewidth=1,alpha=0.5)
 #####################################################################################################################
 for t in range(0,100):
     if t<10:
@@ -566,13 +618,6 @@ for num in range(1,100):
     else:
        max400=np.maximum(max400,r62400[:,num])
        min400=np.minimum(min400,r62400[:,num])
-
-band_mub400=ax2.fill_between(xsame,max400,min400,alpha=0.25,facecolor='k',edgecolor='')
-line_mub400,=ax2.plot(Tcen,r62mub400cen,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax2.plot(Tup,r62mub400up,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax2.plot(Tup,r62mub400down,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax2.plot(Tdown,r62mub400up,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax2.plot(Tdown,r62mub400down,'m',linewidth=1,alpha=0.5)
 #####################################################################################################################
 for t in range(0,100):
     if t<10:
@@ -612,19 +657,65 @@ for num in range(1,100):
     else:
        max300=np.maximum(max300,r62300[:,num])
        min300=np.minimum(min300,r62300[:,num])
-
-band_mub300=ax2.fill_between(xsame,max300,min300,alpha=0.25,facecolor='b',edgecolor='')
-line_mub300,=ax2.plot(Tcen,r62mub300cen,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax2.plot(Tup,r62mub300up,'k',linewidth=1,alpha=0.5)
-#line_mub300,=ax2.plot(Tup,r62mub300down,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax2.plot(Tdown,r62mub300up,'r',linewidth=1,alpha=0.5)
-#line_mub300,=ax2.plot(Tdown,r62mub300down,'m',linewidth=1,alpha=0.5)
 #####################################################################################################################
+for t in range(0,100):
+    if t<10:
+       r62200[:,t]=spline(T/ct[t],r62mub200up,xsame)
+    else:
+       if t>=10 and t<20:
+          r62200[:,t]=spline(T/ct[t-10],r62mub200up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r62200[:,t]=spline(T/ct[t-20],r62mub200up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r62200[:,t]=spline(T/ct[t-30],r62mub200up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r62200[:,t]=spline(T/ct[t-40],r62mub200up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r62200[:,t]=spline(T/ct[t-50],r62mub200down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r62200[:,t]=spline(T/ct[t-60],r62mub200down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r62200[:,t]=spline(T/ct[t-70],r62mub200down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r62200[:,t]=spline(T/ct[t-80],r62mub200down3,xsame)
+                            else:
+                                r62200[:,t]=spline(T/ct[t-90],r62mub200down4,xsame)
 
-ax2.axis([80,230,-50,40])
+
+for num in range(1,100):
+    if num==1:
+       max200=np.maximum(r62200[:,num-1],r62200[:,num])
+       min200=np.minimum(r62200[:,num-1],r62200[:,num])
+    else:
+       max200=np.maximum(max200,r62200[:,num])
+       min200=np.minimum(min200,r62200[:,num])
+band_mub200=ax2.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=ax2.plot(Tcen,r62mub200cen,'k',linewidth=1,alpha=0.5)
+
+plt.axes([0.405, 0.22, 0.093, 0.3]) #不用figure的形式则无须用set
+band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=plt.plot(Tcen,r62mub200cen,'k',linewidth=1,alpha=0.5)
+band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
+line_mub300,=plt.plot(Tcen,r62mub300cen,'c',linewidth=1,alpha=0.5)
+band_mub400=plt.fill_between(xsame,max400,min400,alpha=0.25,facecolor='m',edgecolor='')
+line_mub400,=plt.plot(Tcen,r62mub400cen,'m',linewidth=1,alpha=0.5)
+x=range(80,230,40)
+y=range(-40,40,20)
+plt.xticks(x,fontsize=8)
+plt.yticks(y,fontsize=8)
+plt.axis([80,200,-50,40])
+
+ax2.axis([80,220,-2.3,1.7])
 #ax2.set_xscale('log')
 ax2.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax2.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+ax2.set_ylabel(r'$R^B_{62}$', fontsize=14, color='black')
 
 ax2.legend(loc=0,fontsize=7,frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1)
 
@@ -634,57 +725,46 @@ for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ############################################################################################################################
-############################################################################################################################
-############################################################################################################################
 ax3=fig.add_subplot(133)
 band_mub0=ax3.fill_betweenx(r82mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
 line_mub0,=ax3.plot(Tcen,r82mub0,'r',linewidth=1,alpha=0.5)
-######################################################################################################################
-for t in range(0,100):
+####################################################################################################################
+for t in range(0,20):
     if t<10:
-       r82300[:,t]=spline(T/ct[t],r82mub300up,xsame)
+       r82100[:,t]=spline(T/ct[t],r82mub100up,xsame)
     else:
-       if t>=10 and t<20:
-          r82300[:,t]=spline(T/ct[t-10],r82mub300up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r82300[:,t]=spline(T/ct[t-20],r82mub300up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r82300[:,t]=spline(T/ct[t-30],r82mub300up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r82300[:,t]=spline(T/ct[t-40],r82mub300up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r82300[:,t]=spline(T/ct[t-50],r82mub300down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r82300[:,t]=spline(T/ct[t-60],r82mub300down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r82300[:,t]=spline(T/ct[t-70],r82mub300down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r82300[:,t]=spline(T/ct[t-80],r82mub300down3,xsame)
-                            else:
-                                r82300[:,t]=spline(T/ct[t-90],r82mub300down4,xsame)
+       r82100[:,t]=spline(T/ct[t-10],r82mub100down,xsame)
 
 
-for num in range(1,100):
+for num in range(1,20):
     if num==1:
-       max300=np.maximum(r82300[:,num-1],r82300[:,num])
-       min300=np.minimum(r82300[:,num-1],r82300[:,num])
+       max100=np.maximum(r82100[:,num-1],r82100[:,num])
+       min100=np.minimum(r82100[:,num-1],r82100[:,num])
     else:
-       max300=np.maximum(max300,r82300[:,num])
-       min300=np.minimum(min300,r82300[:,num])
+       max100=np.maximum(max100,r82100[:,num])
+       min100=np.minimum(min100,r82100[:,num])
 
-band_mub300=ax3.fill_between(xsame,max300,min300,alpha=0.25,facecolor='b',edgecolor='')
-line_mub300,=ax3.plot(Tcen,r82mub300cen,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax3.plot(Tup,r82mub300up,'k',linewidth=1,alpha=0.5)
-#line_mub300,=ax3.plot(Tup,r82mub300down,'b',linewidth=1,alpha=0.5)
-#line_mub300,=ax3.plot(Tdown,r82mub300up,'r',linewidth=1,alpha=0.5)
-#line_mub300,=ax3.plot(Tdown,r82mub300down,'m',linewidth=1,alpha=0.5)
+band_mub100=ax3.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=ax3.plot(Tcen,r82mub100cen,'b',linewidth=1,alpha=0.5)
+
+#######################################################################################################################33
+for t in range(0,20):
+    if t<10:
+       r82160[:,t]=spline(T/ct[t],r82mub160up,xsame)
+    else:
+       r82160[:,t]=spline(T/ct[t-10],r82mub160down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max160=np.maximum(r82160[:,num-1],r82160[:,num])
+       min160=np.minimum(r82160[:,num-1],r82160[:,num])
+    else:
+       max160=np.maximum(max160,r82160[:,num])
+       min160=np.minimum(min160,r82160[:,num])
+
+#band_mub160=ax3.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
+#line_mub160,=ax3.plot(Tcen,r82mub160cen,'k',linewidth=1,alpha=0.5)
 ######################################################################################################################
 for t in range(0,100):
     if t<10:
@@ -724,19 +804,107 @@ for num in range(1,100):
     else:
        max400=np.maximum(max400,r82400[:,num])
        min400=np.minimum(min400,r82400[:,num])
+######################################################################################################################
+for t in range(0,100):
+    if t<10:
+       r82300[:,t]=spline(T/ct[t],r82mub300up,xsame)
+    else:
+       if t>=10 and t<20:
+          r82300[:,t]=spline(T/ct[t-10],r82mub300up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r82300[:,t]=spline(T/ct[t-20],r82mub300up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r82300[:,t]=spline(T/ct[t-30],r82mub300up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r82300[:,t]=spline(T/ct[t-40],r82mub300up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r82300[:,t]=spline(T/ct[t-50],r82mub300down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r82300[:,t]=spline(T/ct[t-60],r82mub300down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r82300[:,t]=spline(T/ct[t-70],r82mub300down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r82300[:,t]=spline(T/ct[t-80],r82mub300down3,xsame)
+                            else:
+                                r82300[:,t]=spline(T/ct[t-90],r82mub300down4,xsame)
 
-band_mub400=ax3.fill_between(xsame,max400,min400,alpha=0.25,facecolor='k',edgecolor='')
-line_mub400,=ax3.plot(Tcen,r82mub400cen,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax3.plot(Tup,r82mub400up,'k',linewidth=1,alpha=0.5)
-#line_mub400,=ax3.plot(Tup,r82mub400down,'b',linewidth=1,alpha=0.5)
-#line_mub400,=ax3.plot(Tdown,r82mub400up,'r',linewidth=1,alpha=0.5)
-#line_mub400,=ax3.plot(Tdown,r82mub400down,'m',linewidth=1,alpha=0.5)
 
-ax3.axis([90,210,-1400,2300])
+for num in range(1,100):
+    if num==1:
+       max300=np.maximum(r82300[:,num-1],r82300[:,num])
+       min300=np.minimum(r82300[:,num-1],r82300[:,num])
+    else:
+       max300=np.maximum(max300,r82300[:,num])
+       min300=np.minimum(min300,r82300[:,num])
+######################################################################################################################
+for t in range(0,100):
+    if t<10:
+       r82200[:,t]=spline(T/ct[t],r82mub200up,xsame)
+    else:
+       if t>=10 and t<20:
+          r82200[:,t]=spline(T/ct[t-10],r82mub200up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r82200[:,t]=spline(T/ct[t-20],r82mub200up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r82200[:,t]=spline(T/ct[t-30],r82mub200up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r82200[:,t]=spline(T/ct[t-40],r82mub200up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r82200[:,t]=spline(T/ct[t-50],r82mub200down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r82200[:,t]=spline(T/ct[t-60],r82mub200down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r82200[:,t]=spline(T/ct[t-70],r82mub200down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r82200[:,t]=spline(T/ct[t-80],r82mub200down3,xsame)
+                            else:
+                                r82200[:,t]=spline(T/ct[t-90],r82mub200down4,xsame)
+
+
+for num in range(1,100):
+    if num==1:
+       max200=np.maximum(r82200[:,num-1],r82200[:,num])
+       min200=np.minimum(r82200[:,num-1],r82200[:,num])
+    else:
+       max200=np.maximum(max200,r82200[:,num])
+       min200=np.minimum(min200,r82200[:,num])
+
+band_mub200=ax3.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=ax3.plot(Tcen,r82mub200cen,'k',linewidth=1,alpha=0.5)
+
+plt.axes([0.737, 0.22, 0.093, 0.3]) #不用figure的形式则无须用set
+band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
+line_mub200,=plt.plot(Tcen,r82mub200cen,'k',linewidth=1,alpha=0.5)
+band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
+line_mub300,=plt.plot(Tcen,r82mub300cen,'c',linewidth=1,alpha=0.5)
+band_mub400=plt.fill_between(xsame,max400,min400,alpha=0.25,facecolor='m',edgecolor='')
+line_mub400,=plt.plot(Tcen,r82mub400cen,'m',linewidth=1,alpha=0.5)
+x=range(80,230,40)
+y=range(-1500,2500,500)
+plt.xticks(x,fontsize=8)
+plt.yticks(y,fontsize=8)
+plt.axis([90,200,-1400,2300])
+
+
+ax3.axis([80,200,-30,23])
 #ax3.set_xscale('log')
 
 ax3.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax3.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax3.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
 
 ax3.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1)
 
