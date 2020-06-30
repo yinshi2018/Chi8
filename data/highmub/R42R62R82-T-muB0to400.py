@@ -5,6 +5,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import NullFormatter  # useful for `logit` scale
+from matplotlib.ticker import FuncFormatter  # scientific numbers
 import matplotlib.ticker as ticker
 import matplotlib as mpl
 from scipy.interpolate import spline
@@ -898,7 +899,7 @@ for num in range(1,100):
 band_mub200=ax3.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
 line_mub200,=ax3.plot(Tcen,r82mub200cen,'k',linewidth=1,alpha=0.5)
 
-plt.axes([0.737, 0.22, 0.093, 0.3]) #不用figure的形式则无须用set
+ax3_inset=plt.axes([0.732, 0.22, 0.095, 0.3]) #不用figure的形式则无须用set
 band_mub0=plt.fill_betweenx(r82mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
 line_mub0,=plt.plot(Tcen,r82mub0,'r',linewidth=1,alpha=0.5)
 band_mub100=plt.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
@@ -917,9 +918,17 @@ plt.xticks(x,fontsize=8)
 plt.yticks(y,fontsize=8)
 plt.axis([90,200,-1400,2300])
 
+def formatnum(x, pos):
+    return r'$%.1f$' % (x/10.**3)
+formatter = FuncFormatter(formatnum)
+ax3_inset.yaxis.set_major_formatter(formatter)
+
+
 
 ax3.axis([80,200,-30,23])
 #ax3.set_xscale('log')
+ax3.text(87, -3, r'$(\times 10^3)$',fontsize=8, color='k')
+
 
 ax3.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax3.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
