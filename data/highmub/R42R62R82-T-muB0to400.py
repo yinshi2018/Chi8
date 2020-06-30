@@ -388,8 +388,8 @@ for num in range(1,20):
        max160=np.maximum(max160,r42160[:,num])
        min160=np.minimum(min160,r42160[:,num])
 
-#band_mub160=ax1.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
-#line_mub160,=ax1.plot(Tcen,r42mub160cen,'k',linewidth=1,alpha=0.5)
+band_mub160=ax1.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=ax1.plot(Tcen,r42mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 ############################################################################################
 for t in range(0,100):
     if t<10:
@@ -513,6 +513,12 @@ band_mub200=ax1.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgeco
 line_mub200,=ax1.plot(Tcen,r42mub200cen,'k',linewidth=1,alpha=0.5)
 
 plt.axes([0.085, 0.22, 0.095, 0.3]) #不用figure的形式则无须用set
+band_mub0=plt.fill_betweenx(r42mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
+line_mub0,=plt.plot(Tcen,r42mub0,'r',linewidth=1,alpha=0.5)
+band_mub100=plt.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=plt.plot(Tcen,r42mub100cen,'b',linewidth=1,alpha=0.5)
+band_mub160=plt.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=plt.plot(Tcen,r42mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
 line_mub200,=plt.plot(Tcen,r42mub200cen,'k',linewidth=1,alpha=0.5)
 band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
@@ -530,7 +536,7 @@ ax1.axis([80,230,0,1.2])
 ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel(r'$R^B_{42}$', fontsize=14, color='black')
 
-ax1.legend([(band_mub0,line_mub0),(band_mub100,line_mub100),(band_mub200,line_mub200),(band_mub300,line_mub300),(band_mub400,line_mub400)],[r'$\mu_B=0$',r'$\mu_B=100$ MeV',r'$\mu_B=200$ MeV',r'$\mu_B=300$ MeV',r'$\mu_B=400$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend([(band_mub0,line_mub0),(band_mub100,line_mub100),(band_mub160,line_mub160),(band_mub200,line_mub200),(band_mub300,line_mub300),(band_mub400,line_mub400)],[r'$\mu_B=0$',r'$\mu_B=100$ MeV',r'$\mu_B=160$ MeV',r'$\mu_B=200$ MeV',r'$\mu_B=300$ MeV',r'$\mu_B=400$ MeV'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
@@ -577,8 +583,8 @@ for num in range(1,20):
        max160=np.maximum(max160,r62160[:,num])
        min160=np.minimum(min160,r62160[:,num])
 
-#band_mub160=ax2.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
-#line_mub160,=ax2.plot(Tcen,r62mub160cen,'k',linewidth=1,alpha=0.5)
+band_mub160=ax2.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=ax2.plot(Tcen,r62mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 #####################################################################################################################
 for t in range(0,100):
     if t<10:
@@ -700,6 +706,12 @@ band_mub200=ax2.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgeco
 line_mub200,=ax2.plot(Tcen,r62mub200cen,'k',linewidth=1,alpha=0.5)
 
 plt.axes([0.405, 0.22, 0.093, 0.3]) #不用figure的形式则无须用set
+band_mub0=plt.fill_betweenx(r62mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
+line_mub0,=plt.plot(Tcen,r62mub0,'r',linewidth=1,alpha=0.5)
+band_mub100=plt.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=plt.plot(Tcen,r62mub100cen,'b',linewidth=1,alpha=0.5)
+band_mub160=plt.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=plt.plot(Tcen,r62mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
 line_mub200,=plt.plot(Tcen,r62mub200cen,'k',linewidth=1,alpha=0.5)
 band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
@@ -763,8 +775,8 @@ for num in range(1,20):
        max160=np.maximum(max160,r82160[:,num])
        min160=np.minimum(min160,r82160[:,num])
 
-#band_mub160=ax3.fill_between(xsame,max160,min160,alpha=0.25,facecolor='k',edgecolor='')
-#line_mub160,=ax3.plot(Tcen,r82mub160cen,'k',linewidth=1,alpha=0.5)
+band_mub160=ax3.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=ax3.plot(Tcen,r82mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 ######################################################################################################################
 for t in range(0,100):
     if t<10:
@@ -887,6 +899,12 @@ band_mub200=ax3.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgeco
 line_mub200,=ax3.plot(Tcen,r82mub200cen,'k',linewidth=1,alpha=0.5)
 
 plt.axes([0.737, 0.22, 0.093, 0.3]) #不用figure的形式则无须用set
+band_mub0=plt.fill_betweenx(r82mub0,Tup,Tdown,alpha=0.25,facecolor='r',edgecolor='')
+line_mub0,=plt.plot(Tcen,r82mub0,'r',linewidth=1,alpha=0.5)
+band_mub100=plt.fill_between(xsame,max100,min100,alpha=0.25,facecolor='b',edgecolor='')
+line_mub100,=plt.plot(Tcen,r82mub100cen,'b',linewidth=1,alpha=0.5)
+band_mub160=plt.fill_between(xsame,max160,min160,alpha=0.25,facecolor='darkgreen',edgecolor='')
+line_mub160,=plt.plot(Tcen,r82mub160cen,'darkgreen',linewidth=1,alpha=0.5)
 band_mub200=plt.fill_between(xsame,max200,min200,alpha=0.25,facecolor='k',edgecolor='')
 line_mub200,=plt.plot(Tcen,r82mub200cen,'k',linewidth=1,alpha=0.5)
 band_mub300=plt.fill_between(xsame,max300,min300,alpha=0.25,facecolor='c',edgecolor='')
