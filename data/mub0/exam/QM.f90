@@ -53,7 +53,7 @@ program QM
   l_i=1.Q-10
   lb_i=1.Q-10
 
-  mu_up=190.Q+0/hc
+  mu_up=250.Q+0/hc
   mu_down=-mu_up
 
   mudelta=cos(pi*(j-0.5Q+00)/real(jmumax,kind=16))*(0.5Q+00*(mu_up-mu_down))+0.5Q+00*(mu_up+mu_down)

@@ -18,10 +18,10 @@ program QM
   real(16) T_MeV,muB_MeV
   real(16) mui,muBi,muB
   integer mmax
-  parameter(mmax=10)
+  parameter(mmax=11)
 !order of chebyshev polynomial
   real(16) dcd0mu(mmax),dcd1mu(mmax),dcd2mu(mmax),dcd3mu(mmax),dcd4mu(mmax),dcd5mu(mmax)
-  real(16) factorial,dcd6mu(mmax),dcd7mu(mmax),dcd8mu(mmax),chi(mmax,0:iTmax)
+  real(16) factorial,dcd6mu(mmax),dcd7mu(mmax),dcd8mu(mmax),dcd9mu(mmax),dcd10mu(mmax),chi(mmax,0:iTmax)
   real(16) fpi_res(0:jmumax,0:iTmax),mPion_res(0:jmumax,0:iTmax),mSigma_res(0:jmumax,0:iTmax)
   integer iT,iv
   real(16) l_i,lb_i,l_i_mu,lb_i_mu,mf_res(0:jmumax,0:iTmax)
@@ -77,8 +77,8 @@ program QM
 
   do i=0, iTmax
 
-    mu_down=190.Q+0/hc
-    mu_up=-190.Q+0/hc
+    mu_down=250.Q+0/hc
+    mu_up=-250.Q+0/hc
 
     T=T_res(i)
 
@@ -95,6 +95,8 @@ program QM
     call chder(mu_down,mu_up,dcd5mu,dcd6mu,mmax)
     call chder(mu_down,mu_up,dcd6mu,dcd7mu,mmax)
     call chder(mu_down,mu_up,dcd7mu,dcd8mu,mmax)
+    call chder(mu_down,mu_up,dcd8mu,dcd9mu,mmax)
+    call chder(mu_down,mu_up,dcd9mu,dcd10mu,mmax)
 
     chi(1,i)=chebev(mu_down,mu_up,dcd0mu,mmax,0.Q0)/T**4
     chi(2,i)=chebev(mu_down,mu_up,dcd1mu,mmax,0.Q0)/T**3
@@ -105,6 +107,8 @@ program QM
     chi(7,i)=chebev(mu_down,mu_up,dcd6mu,mmax,0.Q0)*T**2
     chi(8,i)=chebev(mu_down,mu_up,dcd7mu,mmax,0.Q0)*T**3
     chi(9,i)=chebev(mu_down,mu_up,dcd8mu,mmax,0.Q0)*T**4
+    chi(10,i)=chebev(mu_down,mu_up,dcd9mu,mmax,0.Q0)*T**5
+    chi(11,i)=chebev(mu_down,mu_up,dcd10mu,mmax,0.Q0)*T**6
 
   end do
 
@@ -159,6 +163,18 @@ program QM
   open(unit=51,file='./buffer/chi8.dat')
   do i=0, iTmax
     write(51, "(e21.14)")chi(9,i)
+  end do
+  close(51)
+
+  open(unit=51,file='./buffer/chi9.dat')
+  do i=0, iTmax
+    write(51, "(e21.14)")chi(10,i)
+  end do
+  close(51)
+
+  open(unit=51,file='./buffer/chi10.dat')
+  do i=0, iTmax
+    write(51, "(e21.14)")chi(11,i)
   end do
   close(51)
 

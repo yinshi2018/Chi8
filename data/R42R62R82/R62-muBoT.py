@@ -164,24 +164,23 @@ power3=spline(x3,R62193,xsame2)
 power4=spline(x4,R62196,xsame2)
 band_FRG_T155=ax1.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
 
-
-#ax1.plot(mubfrg*cmu/(200.0*ct),R62200,'-',color='b',linewidth=1,alpha=0.5)#,label=r'This work T=160 MeV')
-#ax1.plot(mubfrg*cmu/(194.0*ct),R62194,'-',color='k',linewidth=1,alpha=0.5)#,label=r'This work T=155 MeV')
-#ax1.fill_betweenx(R62200,mubfrg*cmu1/(200.0*ct1),mubfrg*cmu2/(200.0*ct2),alpha=0.5,facecolor='b',edgecolor='',label=r'This work T=160 MeV')
-#ax1.fill_betweenx(R62194,mubfrg*cmu1/(194.0*ct1),mubfrg*cmu2/(194.0*ct2),alpha=0.5,facecolor='k',edgecolor='',label=r'This work T=155 MeV')
-
-
-
-
-
-#ax1.plot(mub/155,R12[:,50],'k-',linewidth=2,markersize=5,label=r'$T$')
-#ax1.errorbar(mub/155.,R62[:,50],yerr=errR62[:,50],color='blue',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD  T=155')
-#ax1.errorbar(mub/158.,R62[:,56],yerr=errR62[:,56],color='red',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD  T=158')
-band_HotQCD_T160=ax1.fill_between(mub/160.,R62[:,60]-errR622[:,60],R62[:,60]+errR622[:,60],alpha=0.4,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
-band_HotQCD_T155=ax1.fill_between(mub/155.,R62[:,50]-errR622[:,50],R62[:,50]+errR622[:,50],alpha=0.4,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
 band_WB_T160=ax1.fill_between(mub/160.,WBR62[:,5]-WBerrR622[:,5],WBR62[:,5]+WBerrR622[:,5],alpha=0.4,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
 
 band_WB_T155=ax1.fill_between(mub/155.,WBR62[:,4]-WBerrR622[:,4],WBR62[:,4]+WBerrR622[:,4],alpha=0.4,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
+
+
+plt.axes([0.65, 0.22, 0.25, 0.27]) #不用figure的形式则无须用set
+line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R62200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
+band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
+line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R62195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)#,label=r'This work T=155 MeV')
+band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+band_HotQCD_T160=plt.fill_between(mub/160.,R62[:,60]-errR622[:,60],R62[:,60]+errR622[:,60],alpha=0.4,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
+band_HotQCD_T155=plt.fill_between(mub/155.,R62[:,50]-errR622[:,50],R62[:,50]+errR622[:,50],alpha=0.4,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
+
+x=range(120,230,20)
+plt.xticks(fontsize=8)
+plt.yticks(fontsize=8)
+plt.axis([0,0.8,-3,1.])
 
 ax1.axis([0,0.8,-3,1.])
 

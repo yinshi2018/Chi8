@@ -56,7 +56,7 @@ subroutine FRG(kappa_UV_i,kappa_UV,rho0,mPion,mSigma,mf,Vall,fpi,h,Zphi,Zpsi,c,k
   t_UV=0.Q+0
   t_IR=log(k_IR/k_UV)
 
-  eps_ode=1.Q-10
+  eps_ode=1.Q-12
   h1=t_IR/200.Q+0
   hmin=0.Q+0
   kmax=KMAXX
