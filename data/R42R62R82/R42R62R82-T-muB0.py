@@ -7,6 +7,7 @@ import numpy as np
 from matplotlib.ticker import NullFormatter  # useful for `logit` scale
 import matplotlib.ticker as ticker
 import matplotlib as mpl
+from scipy.interpolate import spline
 
 mpl.style.use('classic')
 
@@ -48,8 +49,19 @@ frgr62=np.zeros((101,300))
 ct=1.247
 ct1=1.235
 ct2=1.259
-mubfrg=np.loadtxt('./mub.dat')
+r82m=np.zeros((300,10))
+xsame=np.linspace(0.,300.,300)
+ct3=np.linspace(ct1,ct2,10)
+for t in range(0,10):
+    r82m[:,t]=spline(Tfrg/ct3[t],r82,xsame)
 
+for num in range(1,10):
+    if num==1:
+       max82=np.maximum(r82m[:,num-1],r82m[:,num])
+       min82=np.minimum(r82m[:,num-1],r82m[:,num])
+    else:
+       max82=np.maximum(max82,r82m[:,num])
+       min82=np.minimum(min82,r82m[:,num])
 chi=np.loadtxt('./chiBre.dat')
 T=chi[:,0]
 c2=chi[:,1]
@@ -203,8 +215,8 @@ for label in ax2.yaxis.get_ticklabels():
 
 ax3=fig.add_subplot(133)
 ax3.plot(Tfrg/ct,r82,'-',color='r',linewidth=1,alpha=0.5)#,label=r'$T=194\,\mathrm{MeV}$')
-ax3.fill_betweenx(r82,Tfrg/ct1,Tfrg/ct2,alpha=0.25,facecolor='r',edgecolor='r')#,label=r'$c_T=1.247(12)$')
-
+#ax3.fill_betweenx(r82,Tfrg/ct1,Tfrg/ct2,alpha=0.25,facecolor='r',edgecolor='r')#,label=r'$c_T=1.247(12)$')
+ax3.fill_between(xsame,max82,min82,alpha=0.25,facecolor='r',edgecolor='r')#,label=r'This work')
 #ax1.plot(mubfrg/199.0,R42199,'-',color='r',linewidth=1,label=r'$T=199\,\mathrm{MeV}$')
 #ax1.plot(mubfrg/189.0,R42189,'-',color='g',linewidth=1,label=r'$T=189\,\mathrm{MeV}$')
 #ax3.fill_between(hotQCDR62[:,0]/155,hotQCDR62[:,1],hotQCDR62[:,2],alpha=0.25,facecolor='b',edgecolor='',label=r'HotQCD old')

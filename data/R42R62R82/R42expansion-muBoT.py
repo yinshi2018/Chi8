@@ -25,6 +25,19 @@ R42195=np.loadtxt('./r42195.dat')
 R42200=np.loadtxt('./r42200.dat')
 R42201=np.loadtxt('./r42201.dat')
 R42207=np.loadtxt('./r42207.dat')
+Tfrg=np.loadtxt('./TMeV.dat')
+
+chi2frg=np.loadtxt('../mub0/final/buffer/chi2.dat')
+chi4frg=np.loadtxt('../mub0/final/buffer/chi4.dat')
+chi6frg=np.loadtxt('../mub0/final/buffer/chi6.dat')
+chi8frg=np.loadtxt('../mub0/final/buffer/chi8.dat')
+chi10frg=np.loadtxt('../mub0/final/buffer/chi10.dat')
+chi2f=np.zeros((300,101))
+chi4f=np.zeros((300,101))
+chi6f=np.zeros((300,101))
+chi8f=np.zeros((300,101))
+
+
 mubfrg=np.loadtxt('./mub.dat')
 cmu=1./1.110
 cmu1=1./(1.110+0.066)
@@ -139,6 +152,11 @@ for num1 in range(0,101):
                            +  ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])-(chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])*1./(1.*2.)*(4.*num1/WBT[num2])**2/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc4[num2])**2 \
                            +  (((1./(1.*2.)*(4.*num1/WBT[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc6[num2])**2)**0.5
 
+#print(chi2frg[1])
+for num1 in range(0,101):
+    for num2 in range(0,300):
+        chi2f[num2,num1]=chi2frg[num2]+1./(2.*1.) *chi4frg[num2]* (4.*num1/Tfrg[num2])**2. +1./(4.*3.*2.*1.) *chi6frg[num2]* (4.*num1/Tfrg[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *chi8frg[num2]* (4.*num1/Tfrg[num2])**6.#+1./(8.*7.*6.*5.*4.*3.*2.*1.) *chi10frg[num2]* (4.*num1/Tfrg[num2])**8.
+        chi4f[num2,num1]=chi4frg[num2] +1./(2.*1.) *chi6frg[num2]* (4.*num1/Tfrg[num2])**2.+1./(4.*3.*2.*1.) *chi8frg[num2]* (4.*num1/Tfrg[num2])**4.#+1./(6.*5.*4.*3.*2.*1.) *chi10frg[num2]* (4.*num1/Tfrg[num2])**6.       
 
 
 
@@ -148,56 +166,42 @@ fig=plt.figure(figsize=(4.5, 3.5))
 ax1=fig.add_subplot(111)
 x1=mubfrg*cmu2/(198.0*ct1)
 x2=mubfrg*cmu1/(201.0*ct2)
-
-
 line_FRG_T160,=ax1.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
-
 xsame=np.linspace(0.,1.2,100)
 power1=spline(x1,R42198,xsame)
 power2=spline(x2,R42201,xsame)
-
-band_FRG_T160=ax1.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
-
-
+#band_FRG_T160=ax1.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
 x3=mubfrg*cmu2/(193.0*ct1)
 x4=mubfrg*cmu1/(196.0*ct2)
 line_FRG_T155,=ax1.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)
-
 xsame2=np.linspace(0.,1.2,100)
 power3=spline(x3,R42193,xsame2)
 power4=spline(x4,R42196,xsame2)
-band_FRG_T155=ax1.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+#band_FRG_T155=ax1.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+xup160=mub*cmu2/(198.*ct1)
+xdown160=mub*cmu1/(201.*ct2)
+xsame=np.linspace(0.,1.2,100)
+powerup160=spline(xup160,chi4f[197,:]/chi2f[197,:],xsame)
+powerdown160=spline(xdown160,chi4f[200,:]/chi2f[200,:],xsame)
+#bandexp_FRG_T160=ax1.fill_between(xsame,powerup160,powerdown160,alpha=0.4,facecolor='b',edgecolor='',zorder=12,label=r'Expansion T=160 MeV')
+xup155=mub*cmu2/(193.*ct1)
+xdown155=mub*cmu1/(196.*ct2)
+xsame=np.linspace(0.,1.2,100)
+powerup155=spline(xup155,chi4f[193,:]/chi2f[193,:],xsame)
+powerdown155=spline(xdown155,chi4f[196,:]/chi2f[196,:],xsame)
+#bandexp_FRG_T155=ax1.fill_between(xsame,powerup155,powerdown155,alpha=0.4,facecolor='b',edgecolor='',zorder=12,label=r'Expansion T=155 MeV')
+exp_FRG_T155,=ax1.plot(mub*cmu/(195*ct),chi4f[194,:]/chi2f[194,:],'--',dashes=(5,2),color='b',linewidth=1.5,alpha=0.5)
+exp_FRG_T160,=ax1.plot(mub*cmu/(200*ct),chi4f[199,:]/chi2f[199,:],'--',dashes=(1,2),color='b',linewidth=1.5,alpha=0.5)
 
 
-
-r42150up=R42[:,40]+errR422[:,40]
-r42150down=R42[:,40]-errR422[:,40]
-r42160up=R42[:,60]+errR422[:,60]
-r42160down=R42[:,60]-errR422[:,60]
-
-band_WB_T160=ax1.fill_between(mub/160.,WBR42[:,5]-WBerrR422[:,5],WBR42[:,5]+WBerrR422[:,5],alpha=0.4,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
-band_WB_T155=ax1.fill_between(mub/155.,WBR42[:,4]-WBerrR422[:,4],WBR42[:,4]+WBerrR422[:,4],alpha=0.4,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
-
-plt.axes([0.245, 0.212, 0.29, 0.27]) #不用figure的形式则无须用set
-line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
-band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
-line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)
-band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
-band_HotQCD_T160=plt.fill_between(mub/160.,r42160up,r42160down,alpha=0.4,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
-band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+errR422[:,50],alpha=0.4,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
-
-x=range(120,230,20)
-plt.xticks(fontsize=8)
-plt.yticks(fontsize=8)
-plt.axis([0.,1.2,0.1,0.9])
-
-ax1.axis([0,1.2,0.1,0.9])
+ax1.axis([0,1.5,0.1,0.9])
 
 ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-#ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'This work $T=155$ MeV',r'This work $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+#ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160)),(r'This work $T=155$ MeV',r'This work $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
@@ -210,4 +214,4 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.15, right=0.95, hspace=0.35,
                     wspace=0.35)
 
 
-fig.savefig("R42-muBoT.pdf")
+fig.savefig("R42expansion-muBoT.pdf")
