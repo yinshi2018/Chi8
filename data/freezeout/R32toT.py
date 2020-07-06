@@ -1053,7 +1053,7 @@ ax2.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,0.4])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax2.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax2.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax2.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax2.yaxis.get_ticklabels():
@@ -1069,7 +1069,7 @@ ax3.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,0.8])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax3.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax3.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax3.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
@@ -1084,7 +1084,7 @@ ax4.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax4.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax4.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax4.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax4.yaxis.get_ticklabels():
@@ -1102,7 +1102,7 @@ ax5.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax5.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax5.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax5.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax5.yaxis.get_ticklabels():
@@ -1120,7 +1120,7 @@ ax6.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax6.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax6.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax6.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax6.yaxis.get_ticklabels():
@@ -1134,7 +1134,7 @@ ax7.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax7.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax7.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax7.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax7.yaxis.get_ticklabels():
@@ -1148,7 +1148,7 @@ ax8.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,bor
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax8.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax8.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax8.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax8.yaxis.get_ticklabels():

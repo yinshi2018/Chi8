@@ -1282,7 +1282,7 @@ plt.axis([5,230,0.5,1.5])
 ax16.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax16.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax16.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+ax16.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax16.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax16.yaxis.get_ticklabels():
