@@ -13,47 +13,6 @@ from scipy.interpolate import spline
 mpl.style.use('classic')
 
 # Data for plotting
-chi222=np.loadtxt('./mub22/cmucen/final/buffer/chi2.dat')
-chi322=np.loadtxt('./mub22/cmucen/final/buffer/chi3.dat')
-chi422=np.loadtxt('./mub22/cmucen/final/buffer/chi4.dat')
-chi622=np.loadtxt('./mub22/cmucen/final/buffer/chi6.dat')
-r4222=chi422/chi222
-r6222=chi622/chi222
-chi268=np.loadtxt('./mub68/cmucen/final/buffer/chi2.dat')
-chi468=np.loadtxt('./mub68/cmucen/final/buffer/chi4.dat')
-chi668=np.loadtxt('./mub68/cmucen/final/buffer/chi6.dat')
-r4268=chi468/chi268
-r6268=chi668/chi268
-chi2106=np.loadtxt('./mub106/cmucen/final/buffer/chi2.dat')
-chi4106=np.loadtxt('./mub106/cmucen/final/buffer/chi4.dat')
-chi6106=np.loadtxt('./mub106/cmucen/final/buffer/chi6.dat')
-r42106=chi4106/chi2106
-r62106=chi6106/chi2106
-chi2148=np.loadtxt('./mub148/cmucen/final/buffer/chi2.dat')
-chi4148=np.loadtxt('./mub148/cmucen/final/buffer/chi4.dat')
-chi6148=np.loadtxt('./mub148/cmucen/final/buffer/chi6.dat')
-r42148=chi4148/chi2148
-r62148=chi6148/chi2148
-chi2196=np.loadtxt('./mub196/cmucen/final/buffer/chi2.dat')
-chi4196=np.loadtxt('./mub196/cmucen/final/buffer/chi4.dat')
-chi6196=np.loadtxt('./mub196/cmucen/final/buffer/chi6.dat')
-r42196=chi4196/chi2196
-r62196=chi6196/chi2196
-chi2252=np.loadtxt('./mub252/cmucen/final/buffer/chi2.dat')
-chi4252=np.loadtxt('./mub252/cmucen/final/buffer/chi4.dat')
-chi6252=np.loadtxt('./mub252/cmucen/final/buffer/chi6.dat')
-r42252=chi4252/chi2252
-r62252=chi6252/chi2252
-chi2303=np.loadtxt('./mub303/cmucen/final/buffer/chi2.dat')
-chi4303=np.loadtxt('./mub303/cmucen/final/buffer/chi4.dat')
-chi6303=np.loadtxt('./mub303/cmucen/final/buffer/chi6.dat')
-r42303=chi4303/chi2303
-r62303=chi6303/chi2303
-chi2406=np.loadtxt('./mub406/cmucen/final/buffer/chi2.dat')
-chi4406=np.loadtxt('./mub406/cmucen/final/buffer/chi4.dat')
-chi6406=np.loadtxt('./mub406/cmucen/final/buffer/chi6.dat')
-r42406=chi4406/chi2406
-r62406=chi6406/chi2406
 T=np.loadtxt('./TMeV.dat')
 data200=np.zeros(300)
 data62=np.zeros(300)
@@ -69,6 +28,8 @@ T22up=np.zeros(100)
 T22down=np.zeros(100)
 T68up=np.zeros(100)
 T68down=np.zeros(100)
+T78up=np.zeros(100)
+T78down=np.zeros(100)
 T106up=np.zeros(100)
 T106down=np.zeros(100)
 T148up=np.zeros(100)
@@ -93,7 +54,7 @@ for num in range(0,300):
     data7[num]=0.798587
 
 
-energy=[200.,62.4,39.,27.,19.6,14.5,11.5,7.7]
+energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
 
 #############################################################################################################################################
 xsame=np.linspace(0.,299.,300)
@@ -335,6 +296,120 @@ r6268upl=np.max(r62l)
 r6268downl=np.min(r62l)
 print(r6268up)
 print(r6268down)
+####################################################################################################
+chi2mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi2.dat')
+chi3mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi3.dat')
+chi4mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi4.dat')
+chi6mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi6.dat')
+chi8mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi8.dat')
+r32mub78cen=chi3mub78cen/chi2mub78cen
+r42mub78cen=chi4mub78cen/chi2mub78cen
+r62mub78cen=chi6mub78cen/chi2mub78cen
+r82mub78cen=chi8mub78cen/chi2mub78cen
+chi2mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi2.dat')
+chi3mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi3.dat')
+chi4mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi4.dat')
+chi6mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi6.dat')
+chi8mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi8.dat')
+r32mub78up=chi3mub78up/chi2mub78up
+r42mub78up=chi4mub78up/chi2mub78up
+r62mub78up=chi6mub78up/chi2mub78up
+r82mub78up=chi8mub78up/chi2mub78up
+chi2mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi2.dat')
+chi3mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi3.dat')
+chi4mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi4.dat')
+chi6mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi6.dat')
+chi8mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi8.dat')
+r32mub78down=chi3mub78down/chi2mub78down
+r42mub78down=chi4mub78down/chi2mub78down
+r62mub78down=chi6mub78down/chi2mub78down
+r82mub78down=chi8mub78down/chi2mub78down
+r3278=np.zeros((300,20))
+r4278=np.zeros((300,20))
+r6278=np.zeros((300,20))
+for t in range(0,20):
+    if t<10:
+       r3278[:,t]=spline(T/ct[t],r32mub78up,xsame)
+    else:
+       r3278[:,t]=spline(T/ct[t-10],r32mub78down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max78=np.maximum(r3278[:,num-1],r3278[:,num])
+       min78=np.minimum(r3278[:,num-1],r3278[:,num])
+    else:
+       max78=np.maximum(max78,r3278[:,num])
+       min78=np.minimum(min78,r3278[:,num])
+
+for t in range(0,20):
+    if t<10:
+       r4278[:,t]=spline(T/ct[t],r42mub78up,xsame)
+    else:
+       r4278[:,t]=spline(T/ct[t-10],r42mub78down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max4278=np.maximum(r4278[:,num-1],r4278[:,num])
+       min4278=np.minimum(r4278[:,num-1],r4278[:,num])
+    else:
+       max4278=np.maximum(max4278,r4278[:,num])
+       min4278=np.minimum(min4278,r4278[:,num])
+
+for t in range(0,20):
+    if t<10:
+       r6278[:,t]=spline(T/ct[t],r62mub78up,xsame)
+    else:
+       r6278[:,t]=spline(T/ct[t-10],r62mub78down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max6278=np.maximum(r6278[:,num-1],r6278[:,num])
+       min6278=np.minimum(r6278[:,num-1],r6278[:,num])
+    else:
+       max6278=np.maximum(max6278,r6278[:,num])
+       min6278=np.minimum(min6278,r6278[:,num])
+
+r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)
+r42mub78cen=spline(T/ctcen,r42mub78cen,xsame)
+r62mub78cen=spline(T/ctcen,r62mub78cen,xsame)
+
+dif78cen=abs(r32mub78cen-0.346852)
+dif78up=abs(max78-0.346852)
+dif78down=abs(min78-0.346852)
+min78cen_index=np.argmin(dif78cen[80:300])+80
+min78up_index=np.argmin(dif78up[80:300])+80
+min78down_index=np.argmin(dif78down[80:300])+80
+print(min78up_index)
+print(min78down_index)
+r4278cen=r42mub78cen[min78cen_index]
+r6278cen=r62mub78cen[min78cen_index]
+r4278hcen=r42mub78cen[min78cen_index+10]
+r6278hcen=r62mub78cen[min78cen_index+10]
+r4278lcen=r42mub78cen[min78cen_index-5]
+r6278lcen=r62mub78cen[min78cen_index-5]
+r42=[max4278[min78up_index],max4278[min78down_index],min4278[min78up_index],min4278[min78down_index]]
+r42h=[max4278[min78up_index+10],max4278[min78down_index+10],min4278[min78up_index+10],min4278[min78down_index+10]]
+r42l=[max4278[min78up_index-5],max4278[min78down_index-5],min4278[min78up_index-5],min4278[min78down_index-5]]
+r4278up=np.max(r42)
+r4278down=np.min(r42)
+r4278uph=np.max(r42h)
+r4278downh=np.min(r42h)
+r4278upl=np.max(r42l)
+r4278downl=np.min(r42l)
+r62=[max6278[min78up_index],max6278[min78down_index],min6278[min78up_index],min6278[min78down_index]]
+r62h=[max6278[min78up_index+10],max6278[min78down_index+10],min6278[min78up_index+10],min6278[min78down_index+10]]
+r62l=[max6278[min78up_index-5],max6278[min78down_index-5],min6278[min78up_index-5],min6278[min78down_index-5]]
+r6278up=np.max(r62)
+r6278down=np.min(r62)
+r6278uph=np.max(r62h)
+r6278downh=np.min(r62h)
+r6278upl=np.max(r62l)
+r6278downl=np.min(r62l)
+print(r6278up)
+print(r6278down)
 ####################################################################################################
 chi2mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi2.dat')
 chi3mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi3.dat')
@@ -1588,38 +1663,38 @@ r62406downl=np.min(r62l)
 print(r62406up)
 print(r62406down)
 ####################################################################################################
-r62cen=[r6222cen,r6268cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
-r62up=[r6222up,r6268up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
-r62down=[r6222down,r6268down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
-r42up=[r4222up,r4268up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
-r42down=[r4222down,r4268down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
-r42cen=[r4222cen,r4268cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
-r42lcen=[r4222lcen,r4268lcen,r42106lcen,r42148lcen,r42196lcen,r42252lcen,r42303lcen,r42406lcen]
-r42hcen=[r4222hcen,r4268hcen,r42106hcen,r42148hcen,r42196hcen,r42252hcen,r42303hcen,r42406hcen]
-r62lcen=[r6222lcen,r6268lcen,r62106lcen,r62148lcen,r62196lcen,r62252lcen,r62303lcen,r62406lcen]
-r62hcen=[r6222hcen,r6268hcen,r62106hcen,r62148hcen,r62196hcen,r62252hcen,r62303hcen,r62406hcen]
-r42hup=[r4222uph,r4268uph,r42106uph,r42148uph,r42196uph,r42252uph,r42303uph,r42406uph]
-r42hdown=[r4222downh,r4268downh,r42106downh,r42148downh,r42196downh,r42252downh,r42303downh,r42406downh]
-r62lup=[r6222upl,r6268upl,r62106upl,r62148upl,r62196upl,r62252upl,r62303upl,r62406upl]
-r62ldown=[r6222downl,r6268downl,r62106downl,r62148downl,r62196downl,r62252downl,r62303downl,r62406downl]
-r62hup=[r6222uph,r6268uph,r62106uph,r62148uph,r62196uph,r62252uph,r62303uph,r62406uph]
-r62hdown=[r6222downh,r6268downh,r62106downh,r62148downh,r62196downh,r62252downh,r62303downh,r62406downh]
-r42lup=[r4222upl,r4268upl,r42106upl,r42148upl,r42196upl,r42252upl,r42303upl,r42406upl]
-r42ldown=[r4222downl,r4268downl,r42106downl,r42148downl,r42196downl,r42252downl,r42303downl,r42406downl]#r42和r62的上下限与中心值
-r62errup=np.zeros(8)
-r62errdown=np.zeros(8)
-r42errup=np.zeros(8)
-r42errdown=np.zeros(8)
-r62errhup=np.zeros(8)
-r62errhdown=np.zeros(8)
-r42errhup=np.zeros(8)
-r42errhdown=np.zeros(8)
-r62errlup=np.zeros(8)
-r62errldown=np.zeros(8)
-r42errlup=np.zeros(8)
-r42errldown=np.zeros(8)
+r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
+r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
+r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
+r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
+r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
+r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
+r42lcen=[r4222lcen,r4268lcen,r4278lcen,r42106lcen,r42148lcen,r42196lcen,r42252lcen,r42303lcen,r42406lcen]
+r42hcen=[r4222hcen,r4268hcen,r4278hcen,r42106hcen,r42148hcen,r42196hcen,r42252hcen,r42303hcen,r42406hcen]
+r62lcen=[r6222lcen,r6268lcen,r6278lcen,r62106lcen,r62148lcen,r62196lcen,r62252lcen,r62303lcen,r62406lcen]
+r62hcen=[r6222hcen,r6268hcen,r6278hcen,r62106hcen,r62148hcen,r62196hcen,r62252hcen,r62303hcen,r62406hcen]
+r42hup=[r4222uph,r4268uph,r4278uph,r42106uph,r42148uph,r42196uph,r42252uph,r42303uph,r42406uph]
+r42hdown=[r4222downh,r4268downh,r4278downh,r42106downh,r42148downh,r42196downh,r42252downh,r42303downh,r42406downh]
+r62lup=[r6222upl,r6268upl,r6278upl,r62106upl,r62148upl,r62196upl,r62252upl,r62303upl,r62406upl]
+r62ldown=[r6222downl,r6268downl,r6278downl,r62106downl,r62148downl,r62196downl,r62252downl,r62303downl,r62406downl]
+r62hup=[r6222uph,r6268uph,r6278uph,r62106uph,r62148uph,r62196uph,r62252uph,r62303uph,r62406uph]
+r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r62252downh,r62303downh,r62406downh]
+r42lup=[r4222upl,r4268upl,r4278upl,r42106upl,r42148upl,r42196upl,r42252upl,r42303upl,r42406upl]
+r42ldown=[r4222downl,r4268downl,r4278downl,r42106downl,r42148downl,r42196downl,r42252downl,r42303downl,r42406downl]#r42和r62的上下限与中心值
+r62errup=np.zeros(9)
+r62errdown=np.zeros(9)
+r42errup=np.zeros(9)
+r42errdown=np.zeros(9)
+r62errhup=np.zeros(9)
+r62errhdown=np.zeros(9)
+r42errhup=np.zeros(9)
+r42errhdown=np.zeros(9)
+r62errlup=np.zeros(9)
+r62errldown=np.zeros(9)
+r42errlup=np.zeros(9)
+r42errldown=np.zeros(9)
 
-for i in range(0,8):
+for i in range(0,9):
     r62errup[i]=r62up[i]-r62cen[i]
     r62errdown[i]=r62cen[i]-r62down[i]
     r42errup[i]=r42up[i]-r42cen[i]
@@ -1640,6 +1715,8 @@ for num in range(0,100):
     T22down[num]=min22down_index
     T68up[num]=min68up_index
     T68down[num]=min68down_index
+    T78up[num]=min78up_index
+    T78down[num]=min78down_index
     T106up[num]=min106up_index
     T106down[num]=min106down_index
     T148up[num]=min148up_index
@@ -1945,3 +2022,55 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
 
 
 fig.savefig("R32toR62.pdf")
+
+
+# Create figure
+fig=plt.figure(figsize=(4.5, 3.5))
+#fig=plt.figure()
+ax1=fig.add_subplot(111)
+ax1.errorbar(energy,r62cen,yerr=[r62errup,r62errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
+ax1.errorbar(energy,r62hcen,yerr=[r62errhup,r62errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
+ax1.errorbar(energy,r62lcen,yerr=[r62errlup,r62errldown],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62lcen,color='red',label=r'$T_f-5$')
+ax1.set_xscale('log')
+ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+plt.axis([5,230,-10.,10.])
+ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+for label in ax1.xaxis.get_ticklabels():
+    label.set_fontsize(10)
+for label in ax1.yaxis.get_ticklabels():
+    label.set_fontsize(10)
+fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
+                    wspace=0.35)
+
+
+fig.savefig("R62.pdf")
+
+# Create figure
+fig=plt.figure(figsize=(4.5, 3.5))
+#fig=plt.figure()
+ax1=fig.add_subplot(111)
+ax1.errorbar(energy,r42cen,yerr=[r42errup,r42errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r42cen,color='blue')
+ax1.errorbar(energy,r42hcen,yerr=[r42errhup,r42errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r42hcen,color='green')
+ax1.errorbar(energy,r42lcen,yerr=[r42errlup,r42errldown],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r42lcen,color='red')
+ax1.set_xscale('log')
+plt.axis([5,230,-2.,2.])
+ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax1.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+for label in ax1.xaxis.get_ticklabels():
+    label.set_fontsize(10)
+for label in ax1.yaxis.get_ticklabels():
+    label.set_fontsize(10)
+
+fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
+                    wspace=0.35)
+
+
+fig.savefig("R42.pdf")
+
