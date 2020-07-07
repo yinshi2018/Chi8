@@ -143,6 +143,27 @@ for num in range(1,20):
 
 for t in range(0,20):
     if t<10:
+       r4222[:,t]=spline(T/ct[t],r42mub22up,xsame)
+    else:
+       r4222[:,t]=spline(T/ct[t-10],r42mub22down,xsame)
+
+for t in range(0,20):
+    if t<10:
+       r4222[:,t]=spline(T/ct[t],r42mub22up,xsame)
+    else:
+       r4222[:,t]=spline(T/ct[t-10],r42mub22down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max4222=np.maximum(r4222[:,num-1],r4222[:,num])
+       min4222=np.minimum(r4222[:,num-1],r4222[:,num])
+    else:
+       max4222=np.maximum(max4222,r4222[:,num])
+       min4222=np.minimum(min4222,r4222[:,num])
+
+for t in range(0,20):
+    if t<10:
        r6222[:,t]=spline(T/ct[t],r62mub22up,xsame)
     else:
        r6222[:,t]=spline(T/ct[t-10],r62mub22down,xsame)
@@ -168,9 +189,24 @@ min22up_index=np.argmin(dif22up[80:300])+80
 min22down_index=np.argmin(dif22down[80:300])+80
 print(min22up_index)
 print(min22down_index)
+r42=[max4222[min22up_index],max4222[min22down_index],min4222[min22up_index],min4222[min22down_index]]
+r42h=[max4222[min22up_index+5],max4222[min22down_index+5],min4222[min22up_index+5],min4222[min22down_index+5]]
+r42l=[max4222[min22up_index-5],max4222[min22down_index-5],min4222[min22up_index-5],min4222[min22down_index-5]]
+r4222up=np.max(r42)
+r4222down=np.min(r42)
+r4222uph=np.max(r42h)
+r4222downh=np.min(r42h)
+r4222upl=np.max(r42l)
+r4222downl=np.min(r42l)
 r62=[max6222[min22up_index],max6222[min22down_index],min6222[min22up_index],min6222[min22down_index]]
+r62h=[max6222[min22up_index+5],max6222[min22down_index+5],min6222[min22up_index+5],min6222[min22down_index+5]]
+r62l=[max6222[min22up_index-5],max6222[min22down_index-5],min6222[min22up_index-5],min6222[min22down_index-5]]
 r6222up=np.max(r62)
 r6222down=np.min(r62)
+r6222uph=np.max(r62h)
+r6222downh=np.min(r62h)
+r6222upl=np.max(r62l)
+r6222downl=np.min(r62l)
 print(r6222up)
 print(r6222down)
 
@@ -222,6 +258,21 @@ for num in range(1,20):
 
 for t in range(0,20):
     if t<10:
+       r4268[:,t]=spline(T/ct[t],r42mub68up,xsame)
+    else:
+       r4268[:,t]=spline(T/ct[t-10],r42mub68down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max4268=np.maximum(r4268[:,num-1],r4268[:,num])
+       min4268=np.minimum(r4268[:,num-1],r4268[:,num])
+    else:
+       max4268=np.maximum(max4268,r4268[:,num])
+       min4268=np.minimum(min4268,r4268[:,num])
+
+for t in range(0,20):
+    if t<10:
        r6268[:,t]=spline(T/ct[t],r62mub68up,xsame)
     else:
        r6268[:,t]=spline(T/ct[t-10],r62mub68down,xsame)
@@ -247,9 +298,24 @@ min68up_index=np.argmin(dif68up[80:300])+80
 min68down_index=np.argmin(dif68down[80:300])+80
 print(min68up_index)
 print(min68down_index)
-r62=[max6268[min68up_index],max6268[min68down_index],min6268[min68up_index],min6268[min68down_index]]
+r42=[max4268[min22up_index],max4268[min22down_index],min4268[min22up_index],min4268[min22down_index]]
+r42h=[max4268[min22up_index+5],max4268[min22down_index+5],min4268[min22up_index+5],min4268[min22down_index+5]]
+r42l=[max4268[min22up_index-5],max4268[min22down_index-5],min4268[min22up_index-5],min4268[min22down_index-5]]
+r4268up=np.max(r42)
+r4268down=np.min(r42)
+r4268uph=np.max(r42h)
+r4268downh=np.min(r42h)
+r4268upl=np.max(r42l)
+r4268downl=np.min(r42l)
+r62=[max4268[min22up_index],max4268[min22down_index],min4268[min22up_index],min4268[min22down_index]]
+r62h=[max4268[min22up_index+5],max4268[min22down_index+5],min4268[min22up_index+5],min4268[min22down_index+5]]
+r62l=[max4268[min22up_index-5],max4268[min22down_index-5],min4268[min22up_index-5],min4268[min22down_index-5]]
 r6268up=np.max(r62)
 r6268down=np.min(r62)
+r6268uph=np.max(r62h)
+r6268downh=np.min(r62h)
+r6268upl=np.max(r62l)
+r6268downl=np.min(r62l)
 print(r6268up)
 print(r6268down)
 ####################################################################################################
@@ -300,6 +366,21 @@ for num in range(1,20):
 
 for t in range(0,20):
     if t<10:
+       r42106[:,t]=spline(T/ct[t],r42mub106up,xsame)
+    else:
+       r42106[:,t]=spline(T/ct[t-10],r42mub106down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max42106=np.maximum(r42106[:,num-1],r42106[:,num])
+       min42106=np.minimum(r42106[:,num-1],r42106[:,num])
+    else:
+       max42106=np.maximum(max42106,r42106[:,num])
+       min42106=np.minimum(min42106,r42106[:,num])
+
+for t in range(0,20):
+    if t<10:
        r62106[:,t]=spline(T/ct[t],r62mub106up,xsame)
     else:
        r62106[:,t]=spline(T/ct[t-10],r62mub106down,xsame)
@@ -325,9 +406,24 @@ min106up_index=np.argmin(dif106up[80:300])+80
 min106down_index=np.argmin(dif106down[80:300])+80
 print(min106up_index)
 print(min106down_index)
-r62=[max62106[min106up_index],max62106[min106down_index],min62106[min106up_index],min62106[min106down_index]]
+r42=[max42106[min22up_index],max42106[min22down_index],min42106[min22up_index],min42106[min22down_index]]
+r42h=[max42106[min22up_index+5],max42106[min22down_index+5],min42106[min22up_index+5],min42106[min22down_index+5]]
+r42l=[max42106[min22up_index-5],max42106[min22down_index-5],min42106[min22up_index-5],min42106[min22down_index-5]]
+r42106up=np.max(r42)
+r42106down=np.min(r42)
+r42106uph=np.max(r42h)
+r42106downh=np.min(r42h)
+r42106upl=np.max(r42l)
+r42106downl=np.min(r42l)
+r62=[max42106[min22up_index],max42106[min22down_index],min42106[min22up_index],min42106[min22down_index]]
+r62h=[max42106[min22up_index+5],max42106[min22down_index+5],min42106[min22up_index+5],min42106[min22down_index+5]]
+r62l=[max42106[min22up_index-5],max42106[min22down_index-5],min42106[min22up_index-5],min42106[min22down_index-5]]
 r62106up=np.max(r62)
 r62106down=np.min(r62)
+r62106uph=np.max(r62h)
+r62106downh=np.min(r62h)
+r62106upl=np.max(r62l)
+r62106downl=np.min(r62l)
 print(r62106up)
 print(r62106down)
 ####################################################################################################
@@ -378,6 +474,21 @@ for num in range(1,20):
 
 for t in range(0,20):
     if t<10:
+       r42148[:,t]=spline(T/ct[t],r42mub148up,xsame)
+    else:
+       r42148[:,t]=spline(T/ct[t-10],r42mub148down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max42148=np.maximum(r42148[:,num-1],r42148[:,num])
+       min42148=np.minimum(r42148[:,num-1],r42148[:,num])
+    else:
+       max42148=np.maximum(max42148,r42148[:,num])
+       min42148=np.minimum(min42148,r42148[:,num])
+
+for t in range(0,20):
+    if t<10:
        r62148[:,t]=spline(T/ct[t],r62mub148up,xsame)
     else:
        r62148[:,t]=spline(T/ct[t-10],r62mub148down,xsame)
@@ -395,17 +506,32 @@ r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)
 r42mub148cen=spline(T/ctcen,r42mub148cen,xsame)
 r62mub148cen=spline(T/ctcen,r62mub148cen,xsame)
 
-dif148cen=abs(r32mub148cen-0.302545)
-dif148up=abs(max148-0.302545)
-dif148down=abs(min148-0.302545)
+dif148cen=abs(r32mub148cen-0.541676)
+dif148up=abs(max148-0.541676)
+dif148down=abs(min148-0.541676)
 min148cen_index=np.argmin(dif148cen[80:300])+80
 min148up_index=np.argmin(dif148up[80:300])+80
 min148down_index=np.argmin(dif148down[80:300])+80
 print(min148up_index)
 print(min148down_index)
-r62=[max62148[min148up_index],max62148[min148down_index],min62148[min148up_index],min62148[min148down_index]]
+r42=[max42148[min22up_index],max42148[min22down_index],min42148[min22up_index],min42148[min22down_index]]
+r42h=[max42148[min22up_index+5],max42148[min22down_index+5],min42148[min22up_index+5],min42148[min22down_index+5]]
+r42l=[max42148[min22up_index-5],max42148[min22down_index-5],min42148[min22up_index-5],min42148[min22down_index-5]]
+r42148up=np.max(r42)
+r42148down=np.min(r42)
+r42148uph=np.max(r42h)
+r42148downh=np.min(r42h)
+r42148upl=np.max(r42l)
+r42148downl=np.min(r42l)
+r62=[max42148[min22up_index],max42148[min22down_index],min42148[min22up_index],min42148[min22down_index]]
+r62h=[max42148[min22up_index+5],max42148[min22down_index+5],min42148[min22up_index+5],min42148[min22down_index+5]]
+r62l=[max42148[min22up_index-5],max42148[min22down_index-5],min42148[min22up_index-5],min42148[min22down_index-5]]
 r62148up=np.max(r62)
 r62148down=np.min(r62)
+r62148uph=np.max(r62h)
+r62148downh=np.min(r62h)
+r62148upl=np.max(r62l)
+r62148downl=np.min(r62l)
 print(r62148up)
 print(r62148down)
 ####################################################################################################
@@ -543,6 +669,36 @@ for t in range(0,100):
 
 for t in range(0,100):
     if t<10:
+       r42196[:,t]=spline(T/ct[t],r42mub196up,xsame)
+    else:
+       if t>=10 and t<20:
+          r42196[:,t]=spline(T/ct[t-10],r42mub196up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r42196[:,t]=spline(T/ct[t-20],r42mub196up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r42196[:,t]=spline(T/ct[t-30],r42mub196up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r42196[:,t]=spline(T/ct[t-40],r42mub196up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r42196[:,t]=spline(T/ct[t-50],r42mub196down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r42196[:,t]=spline(T/ct[t-60],r42mub196down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r42196[:,t]=spline(T/ct[t-70],r42mub196down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r42196[:,t]=spline(T/ct[t-80],r42mub196down3,xsame)
+                            else:
+                                r42196[:,t]=spline(T/ct[t-90],r42mub196down4,xsame)
+
+for t in range(0,100):
+    if t<10:
        r62196[:,t]=spline(T/ct[t],r62mub196up,xsame)
     else:
        if t>=10 and t<20:
@@ -582,6 +738,14 @@ for num in range(1,100):
 
 for num in range(1,100):
     if num==1:
+       max42196=np.maximum(r42196[:,num-1],r42196[:,num])
+       min42196=np.minimum(r42196[:,num-1],r42196[:,num])
+    else:
+       max42196=np.maximum(max42196,r42196[:,num])
+       min42196=np.minimum(min42196,r42196[:,num])
+
+for num in range(1,100):
+    if num==1:
        max62196=np.maximum(r62196[:,num-1],r62196[:,num])
        min62196=np.minimum(r62196[:,num-1],r62196[:,num])
     else:
@@ -600,9 +764,24 @@ min196up_index=np.argmin(dif196up[80:300])+80
 min196down_index=np.argmin(dif196down[80:300])+80
 print(min196up_index)
 print(min196down_index)
-r62=[max62196[min196up_index],max62196[min196down_index],min62196[min196up_index],min62196[min196down_index]]
+r42=[max42196[min22up_index],max42196[min22down_index],min42196[min22up_index],min42196[min22down_index]]
+r42h=[max42196[min22up_index+5],max42196[min22down_index+5],min42196[min22up_index+5],min42196[min22down_index+5]]
+r42l=[max42196[min22up_index-5],max42196[min22down_index-5],min42196[min22up_index-5],min42196[min22down_index-5]]
+r42196up=np.max(r42)
+r42196down=np.min(r42)
+r42196uph=np.max(r42h)
+r42196downh=np.min(r42h)
+r42196upl=np.max(r42l)
+r42196downl=np.min(r42l)
+r62=[max42196[min22up_index],max42196[min22down_index],min42196[min22up_index],min42196[min22down_index]]
+r62h=[max42196[min22up_index+5],max42196[min22down_index+5],min42196[min22up_index+5],min42196[min22down_index+5]]
+r62l=[max42196[min22up_index-5],max42196[min22down_index-5],min42196[min22up_index-5],min42196[min22down_index-5]]
 r62196up=np.max(r62)
 r62196down=np.min(r62)
+r62196uph=np.max(r62h)
+r62196downh=np.min(r62h)
+r62196upl=np.max(r62l)
+r62196downl=np.min(r62l)
 print(r62196up)
 print(r62196down)
 #####################################################################################################
@@ -740,6 +919,36 @@ for t in range(0,100):
 
 for t in range(0,100):
     if t<10:
+       r42303[:,t]=spline(T/ct[t],r42mub303up,xsame)
+    else:
+       if t>=10 and t<20:
+          r42303[:,t]=spline(T/ct[t-10],r42mub303up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r42303[:,t]=spline(T/ct[t-20],r42mub303up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r42303[:,t]=spline(T/ct[t-30],r42mub303up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r42303[:,t]=spline(T/ct[t-40],r42mub303up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r42303[:,t]=spline(T/ct[t-50],r42mub303down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r42303[:,t]=spline(T/ct[t-60],r42mub303down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r42303[:,t]=spline(T/ct[t-70],r42mub303down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r42303[:,t]=spline(T/ct[t-80],r42mub303down3,xsame)
+                            else:
+                                r42303[:,t]=spline(T/ct[t-90],r42mub303down4,xsame)
+
+for t in range(0,100):
+    if t<10:
        r62303[:,t]=spline(T/ct[t],r62mub303up,xsame)
     else:
        if t>=10 and t<20:
@@ -779,6 +988,14 @@ for num in range(1,100):
 
 for num in range(1,100):
     if num==1:
+       max42303=np.maximum(r42303[:,num-1],r42303[:,num])
+       min42303=np.minimum(r42303[:,num-1],r42303[:,num])
+    else:
+       max42303=np.maximum(max42303,r42303[:,num])
+       min42303=np.minimum(min42303,r42303[:,num])
+
+for num in range(1,100):
+    if num==1:
        max62303=np.maximum(r62303[:,num-1],r62303[:,num])
        min62303=np.minimum(r62303[:,num-1],r62303[:,num])
     else:
@@ -797,9 +1014,24 @@ min303up_index=np.argmin(dif303up[80:300])+80
 min303down_index=np.argmin(dif303down[80:300])+80
 print(min303up_index)
 print(min303down_index)
-r62=[max62303[min303up_index],max62303[min303down_index],min62303[min303up_index],min62303[min303down_index]]
+r42=[max42303[min22up_index],max42303[min22down_index],min42303[min22up_index],min42303[min22down_index]]
+r42h=[max42303[min22up_index+5],max42303[min22down_index+5],min42303[min22up_index+5],min42303[min22down_index+5]]
+r42l=[max42303[min22up_index-5],max42303[min22down_index-5],min42303[min22up_index-5],min42303[min22down_index-5]]
+r42303up=np.max(r42)
+r42303down=np.min(r42)
+r42303uph=np.max(r42h)
+r42303downh=np.min(r42h)
+r42303upl=np.max(r42l)
+r42303downl=np.min(r42l)
+r62=[max42303[min22up_index],max42303[min22down_index],min42303[min22up_index],min42303[min22down_index]]
+r62h=[max42303[min22up_index+5],max42303[min22down_index+5],min42303[min22up_index+5],min42303[min22down_index+5]]
+r62l=[max42303[min22up_index-5],max42303[min22down_index-5],min42303[min22up_index-5],min42303[min22down_index-5]]
 r62303up=np.max(r62)
 r62303down=np.min(r62)
+r62303uph=np.max(r62h)
+r62303downh=np.min(r62h)
+r62303upl=np.max(r62l)
+r62303downl=np.min(r62l)
 print(r62303up)
 print(r62303down)
 ####################################################################################################
@@ -937,6 +1169,36 @@ for t in range(0,100):
 
 for t in range(0,100):
     if t<10:
+       r42406[:,t]=spline(T/ct[t],r42mub406up,xsame)
+    else:
+       if t>=10 and t<20:
+          r42406[:,t]=spline(T/ct[t-10],r42mub406up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r42406[:,t]=spline(T/ct[t-20],r42mub406up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r42406[:,t]=spline(T/ct[t-30],r42mub406up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r42406[:,t]=spline(T/ct[t-40],r42mub406up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r42406[:,t]=spline(T/ct[t-50],r42mub406down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r42406[:,t]=spline(T/ct[t-60],r42mub406down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r42406[:,t]=spline(T/ct[t-70],r42mub406down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r42406[:,t]=spline(T/ct[t-80],r42mub406down3,xsame)
+                            else:
+                                r42406[:,t]=spline(T/ct[t-90],r42mub406down4,xsame)
+
+for t in range(0,100):
+    if t<10:
        r62406[:,t]=spline(T/ct[t],r62mub406up,xsame)
     else:
        if t>=10 and t<20:
@@ -976,6 +1238,14 @@ for num in range(1,100):
 
 for num in range(1,100):
     if num==1:
+       max42406=np.maximum(r42406[:,num-1],r42406[:,num])
+       min42406=np.minimum(r42406[:,num-1],r42406[:,num])
+    else:
+       max42406=np.maximum(max42406,r42406[:,num])
+       min42406=np.minimum(min42406,r42406[:,num])
+
+for num in range(1,100):
+    if num==1:
        max62406=np.maximum(r62406[:,num-1],r62406[:,num])
        min62406=np.minimum(r62406[:,num-1],r62406[:,num])
     else:
@@ -994,19 +1264,64 @@ min406up_index=np.argmin(dif406up[80:300])+80
 min406down_index=np.argmin(dif406down[80:300])+80
 print(min406up_index)
 print(min406down_index)
-r62=[max62406[min406up_index],max62406[min406down_index],max62406[(min406down_index+min406up_index)/2],min62406[min406up_index],min62406[min406down_index]]
+r42=[max42406[min22up_index],max42406[min22down_index],min42406[min22up_index],min42406[min22down_index]]
+r42h=[max42406[min22up_index+5],max42406[min22down_index+5],min42406[min22up_index+5],min42406[min22down_index+5]]
+r42l=[max42406[min22up_index-5],max42406[min22down_index-5],min42406[min22up_index-5],min42406[min22down_index-5]]
+r42406up=np.max(r42)
+r42406down=np.min(r42)
+r42406uph=np.max(r42h)
+r42406downh=np.min(r42h)
+r42406upl=np.max(r42l)
+r42406downl=np.min(r42l)
+r62=[max42406[min22up_index],max42406[min22down_index],min42406[min22up_index],min42406[min22down_index]]
+r62h=[max42406[min22up_index+5],max42406[min22down_index+5],min42406[min22up_index+5],min42406[min22down_index+5]]
+r62l=[max42406[min22up_index-5],max42406[min22down_index-5],min42406[min22up_index-5],min42406[min22down_index-5]]
 r62406up=np.max(r62)
 r62406down=np.min(r62)
+r62406uph=np.max(r62h)
+r62406downh=np.min(r62h)
+r62406upl=np.max(r62l)
+r62406downl=np.min(r62l)
 print(r62406up)
 print(r62406down)
 ####################################################################################################
 r62up=[r6222up,r6268up,r62106up,r62148up,r62196up,r62303up,r62406up]
 r62down=[r6222down,r6268down,r62106down,r62148down,r62196down,r62303down,r62406down]
+r42up=[r4222up,r4268up,r42106up,r42148up,r42196up,r42303up,r42406up]
+r42down=[r4222down,r4268down,r42106down,r42148down,r42196down,r42303down,r42406down]
+r62uph=[r6222uph,r6268uph,r62106uph,r62148uph,r62196uph,r62303uph,r62406uph]
+r62downh=[r6222downh,r6268downh,r62106downh,r62148downh,r62196downh,r62303downh,r62406downh]
+r42uph=[r4222uph,r4268uph,r42106uph,r42148uph,r42196uph,r42303uph,r42406uph]
+r42downh=[r4222downh,r4268downh,r42106downh,r42148downh,r42196downh,r42303downh,r42406downh]
+r62upl=[r6222upl,r6268upl,r62106upl,r62148upl,r62196upl,r62303upl,r62406upl]
+r62downl=[r6222downl,r6268downl,r62106downl,r62148downl,r62196downl,r62303downl,r62406downl]
+r42upl=[r4222upl,r4268upl,r42106upl,r42148upl,r42196upl,r42303upl,r42406upl]
+r42downl=[r4222downl,r4268downl,r42106downl,r42148downl,r42196downl,r42303downl,r42406downl]
 r62cen=np.zeros(7)
 r62err=np.zeros(7)
+r42cen=np.zeros(7)
+r42err=np.zeros(7)
+r62cenh=np.zeros(7)
+r62errh=np.zeros(7)
+r42cenh=np.zeros(7)
+r42errh=np.zeros(7)
+r62cenl=np.zeros(7)
+r62errl=np.zeros(7)
+r42cenl=np.zeros(7)
+r42errl=np.zeros(7)
 for i in range(0,7):
     r62cen[i]=(r62up[i]+r62down[i])/2.
     r62err[i]=(r62up[i]-r62down[i])/2.
+    r42cen[i]=(r42up[i]+r42down[i])/2.
+    r42err[i]=(r42up[i]-r42down[i])/2.
+    r62cenh[i]=(r62uph[i]+r62downh[i])/2.
+    r62errh[i]=(r62uph[i]-r62downh[i])/2.
+    r42cenh[i]=(r42uph[i]+r42downh[i])/2.
+    r42errh[i]=(r42uph[i]-r42downh[i])/2.
+    r62cenl[i]=(r62upl[i]+r62downl[i])/2.
+    r62errl[i]=(r62upl[i]-r62downl[i])/2.
+    r42cenl[i]=(r42upl[i]+r42downl[i])/2.
+    r42errl[i]=(r42upl[i]-r42downl[i])/2.
 
 for num in range(0,100):
     T22up[num]=min22up_index
@@ -1027,16 +1342,16 @@ for num in range(0,100):
 # Create figure
 fig=plt.figure(figsize=(12, 18.5))
 #fig=plt.figure()
-ax1=fig.add_subplot(531)
-#band_mub100=ax1.fill_between(xsame,max22,min22,alpha=0.25,facecolor='b',edgecolor='')
-#line_mub100,=ax1.plot(xsame,r42mub22cen,'b',linewidth=1,alpha=0.5)
-#ax1.plot(energy,r62up)
-#ax1.plot(energy,r62down)
-ax1.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
-#ax1.plot(xsame,data)
-#ax1.legend(( ),(r'This work $T=155$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1=fig.add_subplot(631)
+ax1.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
+ax1.errorbar(energy,r62cenh,yerr=r62errh,color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62cenh,color='green',label=r'$T_f+5$')
+ax1.errorbar(energy,r62cenl,yerr=r62errl,color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62cenl,color='red',label=r'$T_f-5$')
 ax1.set_xscale('log')
-plt.axis([5,230,-10.,2.])
+ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+plt.axis([5,230,-2.,2.])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax1.xaxis.get_ticklabels():
@@ -1045,7 +1360,7 @@ for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 
-ax2=fig.add_subplot(532)
+ax2=fig.add_subplot(632)
 band_mub=ax2.fill_between(xsame,max22,min22,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
 line_mub,=ax2.plot(xsame,r32mub22cen,'b',linewidth=1,alpha=0.5)
 ax2.plot(xsame,data200)
@@ -1060,7 +1375,7 @@ for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 
-ax3=fig.add_subplot(533)
+ax3=fig.add_subplot(633)
 band_mub=ax3.fill_between(xsame,max68,min68,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
 line_mub,=ax3.plot(xsame,r32mub68cen,'b',linewidth=1,alpha=0.5)
 ax3.plot(xsame,data62)
@@ -1076,7 +1391,7 @@ for label in ax3.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 
-ax4=fig.add_subplot(534)
+ax4=fig.add_subplot(634)
 band_mub=ax4.fill_between(xsame,max106,min106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
 line_mub,=ax4.plot(xsame,r32mub106cen,'b',linewidth=1,alpha=0.5)
 ax4.plot(xsame,data39)
@@ -1090,7 +1405,7 @@ for label in ax4.xaxis.get_ticklabels():
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax5=fig.add_subplot(535)
+ax5=fig.add_subplot(635)
 band_mub=ax5.fill_between(xsame,max148,min148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
 line_mub,=ax5.plot(xsame,r32mub148cen,'b',linewidth=1,alpha=0.5)
 ax5.plot(xsame,data27)
@@ -1108,7 +1423,7 @@ for label in ax5.xaxis.get_ticklabels():
 for label in ax5.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax6=fig.add_subplot(536)
+ax6=fig.add_subplot(636)
 band_mub=ax6.fill_between(xsame,max196,min196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
 line_mub,=ax6.plot(xsame,r32mub196cen,'b',linewidth=1,alpha=0.5)
 ax6.plot(xsame,data19)
@@ -1126,7 +1441,7 @@ for label in ax6.xaxis.get_ticklabels():
 for label in ax6.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax7=fig.add_subplot(537)
+ax7=fig.add_subplot(637)
 band_mub=ax7.fill_between(xsame,max303,min303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
 line_mub,=ax7.plot(xsame,r32mub303cen,'b',linewidth=1,alpha=0.5)
 ax7.plot(xsame,data11)
@@ -1140,7 +1455,7 @@ for label in ax7.xaxis.get_ticklabels():
 for label in ax7.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax8=fig.add_subplot(538)
+ax8=fig.add_subplot(638)
 band_mub=ax8.fill_between(xsame,max406,min406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
 line_mub,=ax8.plot(xsame,r32mub406cen,'b',linewidth=1,alpha=0.5)
 ax8.plot(xsame,data7)
@@ -1154,7 +1469,7 @@ for label in ax8.xaxis.get_ticklabels():
 for label in ax8.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax9=fig.add_subplot(539)
+ax9=fig.add_subplot(639)
 band_mub=ax9.fill_between(xsame,max6222,min6222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
 line_mub,=ax9.plot(xsame,r62mub22cen,'b',linewidth=1,alpha=0.5)
 ax9.plot(T22up,y62)
@@ -1173,7 +1488,7 @@ for label in ax9.xaxis.get_ticklabels():
 for label in ax9.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax10=fig.add_subplot(5,3,10)
+ax10=fig.add_subplot(6,3,10)
 band_mub=ax10.fill_between(xsame,max6268,min6268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
 line_mub,=ax10.plot(xsame,r62mub68cen,'b',linewidth=1,alpha=0.5)
 ax10.plot(T68up,y62)
@@ -1189,7 +1504,7 @@ for label in ax10.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 
-ax11=fig.add_subplot(5,3,11)
+ax11=fig.add_subplot(6,3,11)
 band_mub=ax11.fill_between(xsame,max62106,min62106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
 line_mub,=ax11.plot(xsame,r62mub106cen,'b',linewidth=1,alpha=0.5)
 ax11.plot(T106up,y62)
@@ -1204,7 +1519,7 @@ for label in ax11.xaxis.get_ticklabels():
 for label in ax11.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax12=fig.add_subplot(5,3,12)
+ax12=fig.add_subplot(6,3,12)
 band_mub=ax12.fill_between(xsame,max62148,min62148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
 line_mub,=ax12.plot(xsame,r62mub148cen,'b',linewidth=1,alpha=0.5)
 ax12.plot(T148up,y62)
@@ -1219,7 +1534,7 @@ for label in ax12.xaxis.get_ticklabels():
 for label in ax12.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax13=fig.add_subplot(5,3,13)
+ax13=fig.add_subplot(6,3,13)
 band_mub=ax13.fill_between(xsame,max62196,min62196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
 line_mub,=ax13.plot(xsame,r62mub196cen,'b',linewidth=1,alpha=0.5)
 ax13.plot(T196up,y62)
@@ -1235,7 +1550,7 @@ for label in ax13.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 
-ax14=fig.add_subplot(5,3,14)
+ax14=fig.add_subplot(6,3,14)
 band_mub=ax14.fill_between(xsame,max62303,min62303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
 line_mub,=ax14.plot(xsame,r62mub303cen,'b',linewidth=1,alpha=0.5)
 ax14.plot(T303up,y62)
@@ -1250,7 +1565,7 @@ for label in ax14.xaxis.get_ticklabels():
 for label in ax14.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-ax15=fig.add_subplot(5,3,15)
+ax15=fig.add_subplot(6,3,15)
 band_mub=ax15.fill_between(xsame,max62406,min62406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
 line_mub,=ax15.plot(xsame,r62mub406cen,'b',linewidth=1,alpha=0.5)
 ax15.plot(T406up,y62)
@@ -1265,6 +1580,21 @@ for label in ax15.xaxis.get_ticklabels():
 for label in ax15.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+ax16=fig.add_subplot(6,3,16)
+ax16.errorbar(energy,r42cen,yerr=r42err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax16.errorbar(energy,r42cen,color='blue')
+ax16.errorbar(energy,r42cenh,yerr=r42errh,color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax16.errorbar(energy,r42cenh,color='green')
+ax16.errorbar(energy,r42cenl,yerr=r42errl,color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax16.errorbar(energy,r42cenl,color='red')
+ax16.set_xscale('log')
+plt.axis([5,230,-2.,2.])
+ax16.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax16.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+for label in ax16.xaxis.get_ticklabels():
+    label.set_fontsize(10)
+for label in ax16.yaxis.get_ticklabels():
+    label.set_fontsize(10)
 
 
 fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
