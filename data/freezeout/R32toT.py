@@ -58,7 +58,7 @@ energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
 
 #############################################################################################################################################
 xsame=np.linspace(0.,299.,300)
-deltat=0.04
+deltat=0.05
 ctcen=1.247
 ctup=1.259
 ctdown=1.235
@@ -1662,8 +1662,9 @@ r62406uph=np.max(r62h)
 r62406downh=np.min(r62h)
 r62406upl=np.max(r62l)
 r62406downl=np.min(r62l)
-print(r62406up)
-print(r62406down)
+print(r62406hcen)
+#print(r62406up)
+#print(r62406down)
 print(r62406uph)
 print(r62406downh)
 ####################################################################################################
@@ -1712,6 +1713,9 @@ for i in range(0,9):
     r42errlup[i]=r42lup[i]-r42lcen[i]
     r42errldown[i]=r42lcen[i]-r42ldown[i]
 
+print(r62errhup)
+print(r62errhdown)
+print(r62hcen)
 
 
 for num in range(0,100):
@@ -1738,13 +1742,13 @@ for num in range(0,100):
 fig=plt.figure(figsize=(12, 18.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(631)
-ax1.errorbar(energy,r62cen,yerr=[r62errup,r62errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-ax1.errorbar(energy,r62hcen,yerr=[r62errhup,r62errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
 ax1.set_xscale('log')
 #ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-plt.axis([5,230,-10.,10.])
+plt.axis([5,230,-10.,2.])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax1.xaxis.get_ticklabels():
@@ -2003,12 +2007,11 @@ for label in ax17.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax18=fig.add_subplot(6,3,18)
-ax18.errorbar(energy,r42cen,yerr=[r42errup,r42errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax18.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax18.errorbar(energy,r42cen,color='blue')
-ax18.errorbar(energy,r42hcen,yerr=[r42errhup,r42errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax18.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax18.errorbar(energy,r42hcen,color='green')
-ax18.errorbar(energy,r42lcen,yerr=[r42errlup,r42errldown],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax18.errorbar(energy,r42lcen,color='red')
+
 ax18.set_xscale('log')
 plt.axis([5,230,-2.,2.])
 ax18.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
@@ -2030,12 +2033,11 @@ fig.savefig("R32toR62.pdf")
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(111)
-ax1.errorbar(energy,r62cen,yerr=[r62errup,r62errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-ax1.errorbar(energy,r62hcen,yerr=[r62errhup,r62errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
-ax1.errorbar(energy,r62lcen,yerr=[r62errlup,r62errldown],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.plot(energy,r62lcen,color='red',label=r'$T_f-5$')
+ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,r62hcen,color='green',label=r'$T_f$*105%')
+
 ax1.set_xscale('log')
 ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 plt.axis([5,230,-10.,10.])
@@ -2055,12 +2057,11 @@ fig.savefig("R62.pdf")
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(111)
-ax1.errorbar(energy,r42cen,yerr=[r42errup,r42errdown],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.errorbar(energy,r42cen,color='blue')
-ax1.errorbar(energy,r42hcen,yerr=[r42errhup,r42errhdown],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.errorbar(energy,r42hcen,color='green')
-ax1.errorbar(energy,r42lcen,yerr=[r42errlup,r42errldown],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.errorbar(energy,r42lcen,color='red')
+
 ax1.set_xscale('log')
 plt.axis([5,230,-2.,2.])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
