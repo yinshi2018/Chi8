@@ -9,7 +9,6 @@ import matplotlib.ticker as ticker
 import matplotlib as mpl
 from scipy.interpolate import spline
 
-
 mpl.style.use('classic')
 
 # Data for plotting
@@ -43,17 +42,17 @@ for num in range(1,10):
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(111)
-band_FRG=ax1.fill_between(xsame,max102,min102,alpha=0.25,facecolor='r',edgecolor='r')#,label=r'This work')
-line_FRG,=ax1.plot(Tfrg/ctcen,r102,'-',color='r',linewidth=1,alpha=0.5)#,label=r'ct between 1.24 and 1.26')
+band_FRG=ax1.fill_between(xsame,max102,min102,alpha=0.25,facecolor='r',edgecolor='r',label=r'This work')
+line_FRG,=ax1.plot(Tfrg/ctcen,r102,'-',color='r',linewidth=1,alpha=0.5)
 
 ax1.axis([80,220,-23,20])
 
-ax1.set_xlabel('$T$', fontsize=14, color='black')
+ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{10,2}$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
-#ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'This work $T=155$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG,line_FRG),),(r'This work',),loc=2,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
