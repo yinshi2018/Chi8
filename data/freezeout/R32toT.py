@@ -2041,6 +2041,7 @@ ax1.plot(energy,r62hcen,color='green',label=r'$T_f$*105%')
 ax1.set_xscale('log')
 ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 plt.axis([5,230,-10.,10.])
+#plt.axis([5,230,-50.,40.])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax1.xaxis.get_ticklabels():

@@ -189,23 +189,23 @@ x1=mubfrg*cmu2/(198.0*ct1)
 x2=mubfrg*cmu1/(201.0*ct2)
 
 
-line_FRG_T160,=ax1.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
+line_FRG_T160,=ax1.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
 
 xsame=np.linspace(0.,1.2,100)
 power1=spline(x1,R42198,xsame)
 power2=spline(x2,R42201,xsame)
 
-band_FRG_T160=ax1.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
+band_FRG_T160=ax1.fill_between(xsame,power1,power2,alpha=0.3,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
 
 
 x3=mubfrg*cmu2/(193.0*ct1)
 x4=mubfrg*cmu1/(196.0*ct2)
-line_FRG_T155,=ax1.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)
+line_FRG_T155,=ax1.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
 
 xsame2=np.linspace(0.,1.2,100)
 power3=spline(x3,R42193,xsame2)
 power4=spline(x4,R42196,xsame2)
-band_FRG_T155=ax1.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+band_FRG_T155=ax1.fill_between(xsame2,power3,power4,alpha=0.3,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
 
 
 
@@ -214,16 +214,16 @@ r42150down=R42[:,40]-errR422[:,40]
 r42160up=R42[:,60]+errR422[:,60]
 r42160down=R42[:,60]-errR422[:,60]
 
-band_WB_T160=ax1.fill_between(mub/160.,WBR42[:,5]-WBerrR422[:,5],WBR42[:,5]+WBerrR422[:,5],alpha=0.4,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
-band_WB_T155=ax1.fill_between(mub/155.,WBR42[:,4]-WBerrR422[:,4],WBR42[:,4]+WBerrR422[:,4],alpha=0.4,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
+band_WB_T160=ax1.fill_between(mub/160.,WBR42[:,5]-WBerrR422[:,5],WBR42[:,5]+WBerrR422[:,5],alpha=0.3,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
+band_WB_T155=ax1.fill_between(mub/155.,WBR42[:,4]-WBerrR422[:,4],WBR42[:,4]+WBerrR422[:,4],alpha=0.3,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
 
 plt.axes([0.13, 0.212, 0.15, 0.27]) #不用figure的形式则无须用set
-line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
-band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
-line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)
-band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
-band_HotQCD_T160=plt.fill_between(mub/160.,r42160up,r42160down,alpha=0.4,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
-band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+errR422[:,50],alpha=0.4,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
+line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
+band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.3,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
+line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
+band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.3,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+band_HotQCD_T160=plt.fill_between(mub/160.,r42160up,r42160down,alpha=0.3,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
+band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+errR422[:,50],alpha=0.3,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
 
 
 plt.xticks(fontsize=8)
@@ -247,22 +247,22 @@ for label in ax1.yaxis.get_ticklabels():
 ax2=fig.add_subplot(122)
 x1=mubfrg*cmu2/(198.0*ct1)
 x2=mubfrg*cmu1/(201.0*ct2)
-line_FRG_T160,=ax2.plot(mubfrg*cmu/(200.0*ct),R62200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5)
+line_FRG_T160,=ax2.plot(mubfrg*cmu/(200.0*ct),R62200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
 xsame=np.linspace(0.,1.2,100)
 power1=spline(x1,R62198,xsame)
 power2=spline(x2,R62201,xsame)
-band_FRG_T160=ax2.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
+band_FRG_T160=ax2.fill_between(xsame,power1,power2,alpha=0.3,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
 x3=mubfrg*cmu2/(193.0*ct1)
 x4=mubfrg*cmu1/(196.0*ct2)
-line_FRG_T155,=ax2.plot(mubfrg*cmu/(195.0*ct),R62195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)#,label=r'This work T=155 MeV')
+line_FRG_T155,=ax2.plot(mubfrg*cmu/(195.0*ct),R62195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)#,label=r'This work T=155 MeV')
 xsame2=np.linspace(0.,1.2,100)
 power3=spline(x3,R62193,xsame2)
 power4=spline(x4,R62196,xsame2)
-band_FRG_T155=ax2.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+band_FRG_T155=ax2.fill_between(xsame2,power3,power4,alpha=0.3,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
 
-band_WB_T160=ax2.fill_between(mub/160.,WBR62[:,5]-WBerrR622[:,5],WBR62[:,5]+WBerrR622[:,5],alpha=0.4,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
+band_WB_T160=ax2.fill_between(mub/160.,WBR62[:,5]-WBerrR622[:,5],WBR62[:,5]+WBerrR622[:,5],alpha=0.3,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
 
-band_WB_T155=ax2.fill_between(mub/155.,WBR62[:,4]-WBerrR622[:,4],WBR62[:,4]+WBerrR622[:,4],alpha=0.4,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
+band_WB_T155=ax2.fill_between(mub/155.,WBR62[:,4]-WBerrR622[:,4],WBR62[:,4]+WBerrR622[:,4],alpha=0.3,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
 
 
 #plt.axes([0.613, 0.212, 0.15, 0.27]) #不用figure的形式则无须用set
@@ -270,8 +270,8 @@ band_WB_T155=ax2.fill_between(mub/155.,WBR62[:,4]-WBerrR622[:,4],WBR62[:,4]+WBer
 #band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.4,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
 #line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R62195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5)#,label=r'This work T=155 MeV')
 #band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.4,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
-band_HotQCD_T160=ax2.fill_between(mub/160.,R62[:,60]-errR622[:,60],R62[:,60]+errR622[:,60],alpha=0.4,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
-band_HotQCD_T155=ax2.fill_between(mub/155.,R62[:,50]-errR622[:,50],R62[:,50]+errR622[:,50],alpha=0.4,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
+band_HotQCD_T160=ax2.fill_between(mub/160.,R62[:,60]-errR622[:,60],R62[:,60]+errR622[:,60],alpha=0.3,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
+band_HotQCD_T155=ax2.fill_between(mub/155.,R62[:,50]-errR622[:,50],R62[:,50]+errR622[:,50],alpha=0.3,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
 
 #x=range(0,1,0.2)
 #plt.xticks(fontsize=8)
@@ -283,7 +283,7 @@ ax2.axis([0,0.8,-3,1.])
 ax2.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax2.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
 
-ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'This work $T=155$ MeV',r'This work $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='7',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'fRG $T=155$ MeV',r'fRG $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='7',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax2.xaxis.get_ticklabels():
     label.set_fontsize(10)

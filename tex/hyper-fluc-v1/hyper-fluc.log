@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  7 JUL 2020 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  9 JUL 2020 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -533,7 +533,7 @@ Package pdftex.def Info: ./figures/R102-T-muB0.pdf used on input line 389.
 File: ./figures/R42R62-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62-muBoT.pdf>
-Package pdftex.def Info: ./figures/R42R62-muBoT.pdf used on input line 448.
+Package pdftex.def Info: ./figures/R42R62-muBoT.pdf used on input line 449.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
 <./figures/R42R62expansion-muBoT.pdf, id=244, 650.43pt x 252.945pt>
@@ -541,10 +541,10 @@ File: ./figures/R42R62expansion-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62expansion-muBoT.pdf>
 Package pdftex.def Info: ./figures/R42R62expansion-muBoT.pdf used on input line
- 458.
+ 459.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
-<./figures/R42R62R82-T-muB0to400.pdf, id=249, 975.645pt x 252.945pt>
+<./figures/R42R62R82-T-muB0to400.pdf, id=253, 975.645pt x 252.945pt>
 File: ./figures/R42R62R82-T-muB0to400.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0to400.pdf>
@@ -593,7 +593,7 @@ Underfull \hbox (badness 6842) in paragraph at lines 188--197
  054015 (2018)[],
  []
 
-
+[8]
 Underfull \hbox (badness 1675) in paragraph at lines 222--229
  []\OT1/cmr/m/n/9 J. M. Pawlowski, []An-nals Phys. \OT1/cmr/bx/n/9 322\OT1/cmr/
 m/n/9 , 2831 (2007)[],
@@ -605,7 +605,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--261
 9 , 177 (2012)[],
  []
 
-[8]
+
 Underfull \hbox (badness 1137) in paragraph at lines 496--503
  []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
@@ -629,13 +629,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9560 strings out of 493014
- 136093 string characters out of 6133352
- 285734 words of memory out of 5000000
- 12846 multiletter control sequences out of 15000+600000
+ 9564 strings out of 493014
+ 136142 string characters out of 6133352
+ 303734 words of memory out of 5000000
+ 12850 multiletter control sequences out of 15000+600000
  15221 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,35p,1419b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,35p,1927b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -657,10 +657,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (9 pages, 619903 bytes).
+Output written on hyper-fluc.pdf (9 pages, 616821 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
- 544 compressed objects within 6 object streams
+ 800 PDF objects out of 1000 (max. 8388607)
+ 554 compressed objects within 6 object streams
  108 named destinations out of 1000 (max. 500000)
  135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
