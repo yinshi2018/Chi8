@@ -10,10 +10,12 @@ import matplotlib as mpl
 from scipy.interpolate import spline
 
 
+
 mpl.style.use('classic')
 
 # Data for plotting
 T=np.loadtxt('./TMeV.dat')
+kurtosis=np.loadtxt('./RHICdatakurtosis.dat')
 data200=np.zeros(300)
 data62=np.zeros(300)
 data54=np.zeros(300)
@@ -1662,11 +1664,11 @@ r62406uph=np.max(r62h)
 r62406downh=np.min(r62h)
 r62406upl=np.max(r62l)
 r62406downl=np.min(r62l)
-print(r62406hcen)
-#print(r62406up)
-#print(r62406down)
-print(r62406uph)
-print(r62406downh)
+print(r62406cen)
+print(r62406up)
+print(r62406down)
+#print(r62406uph)
+#print(r62406downh)
 ####################################################################################################
 r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
 r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
@@ -1742,17 +1744,23 @@ for num in range(0,100):
 fig=plt.figure(figsize=(12, 18.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(631)
-ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=1)
 ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
 ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
+y=range(-60,60,10)
 ax1.set_xscale('log')
+ax1.set_yscale('symlog')
 #ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-plt.axis([5,230,-10.,2.])
+plt.axis([5,230,-60.,60.])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+plt.yticks(y)
+#ax1.set_xticks([200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7])
+ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'])
 for label in ax1.xaxis.get_ticklabels():
-    label.set_fontsize(10)
+    label.set_fontsize(7)
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
@@ -2028,30 +2036,36 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
 
 fig.savefig("R32toR62.pdf")
 
-
+energyrhic=[200.,54.4]
+value62=[-2.54509,1.20229]
+erro62=[1.01682,0.480246]
 # Create figure
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(111)
-ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=1)
 ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.plot(energy,r62hcen,color='green',label=r'$T_f$*105%')
-
-ax1.set_xscale('log')
-ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-plt.axis([5,230,-10.,10.])
+ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
+ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
+ax1.errorbar(energyrhic,value62,yerr=erro62,color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
+#ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+plt.axis([5.,230.,-60.,60.])
+ax1.set_xscale('symlog')
+ax1.set_yscale('symlog')
+#plt.xticks([])
+ax1.xaxis.set_major_formatter(plt.NullFormatter())
+ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
-for label in ax1.xaxis.get_ticklabels():
-    label.set_fontsize(10)
+#for label in ax1.xaxis.get_ticklabels():
+#    label.set_fontsize(7)
 for label in ax1.yaxis.get_ticklabels():
-    label.set_fontsize(10)
-fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
-                    wspace=0.35)
-
-
+    label.set_fontsize(7)
+fig.subplots_adjust(top=0.95, bottom=0.2, left=0.16, right=0.95, hspace=0.35,wspace=0.35)
 fig.savefig("R62.pdf")
+
 
 # Create figure
 fig=plt.figure(figsize=(4.5, 3.5))
@@ -2061,17 +2075,20 @@ ax1.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',li
 ax1.errorbar(energy,r42cen,color='blue')
 ax1.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 ax1.errorbar(energy,r42hcen,color='green')
-
-ax1.set_xscale('log')
+ax1.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+#ax1.errorbar(energy,kurtosis[:,0],color='red')
+ax1.set_xscale('symlog')
 plt.axis([5,230,-2.,2.])
+ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
-for label in ax1.xaxis.get_ticklabels():
-    label.set_fontsize(10)
+#for label in ax1.xaxis.get_ticklabels():
+#    label.set_fontsize(10)
 for label in ax1.yaxis.get_ticklabels():
-    label.set_fontsize(10)
+    label.set_fontsize(7)
 
-fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
+fig.subplots_adjust(top=0.95, bottom=0.2, left=0.16, right=0.95, hspace=0.35,
                     wspace=0.35)
 
 
