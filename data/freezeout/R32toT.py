@@ -2045,7 +2045,6 @@ fig=plt.figure(figsize=(4.5, 3.5))
 ax1=fig.add_subplot(111)
 ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=1)
 ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-<<<<<<< HEAD
 ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
 ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
 ax1.errorbar(energyrhic,value62,yerr=erro62,color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
@@ -2054,19 +2053,9 @@ plt.axis([5.,230.,-60.,60.])
 ax1.set_xscale('symlog')
 ax1.set_yscale('symlog')
 #plt.xticks([])
-ax1.xaxis.set_major_formatter(plt.NullFormatter())
 ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
-=======
-ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.plot(energy,r62hcen,color='green',label=r'$T_f$*105%')
-
-ax1.set_xscale('log')
-ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-plt.axis([5,230,-10.,10.])
-#plt.axis([5,230,-50.,40.])
->>>>>>> 1aae5b893c4d70616b3cb364ba3a18fac5042d34
 ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
