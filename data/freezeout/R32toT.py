@@ -57,13 +57,20 @@ for num in range(0,300):
 
 
 energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
-
 #############################################################################################################################################
 xsame=np.linspace(0.,299.,300)
 deltat=0.05
 ctcen=1.247
 ctup=1.259
 ctdown=1.235
+Tc=[208,208,208,207,206,204,201,197,187]
+Tcup=[int(208/ctdown),int(208/ctdown),int(208/ctdown),int(207/ctdown),int(206/ctdown),int(204/ctdown),int(201/ctdown),int(197/ctdown),int(187/ctdown)]
+Tcdown=[int(208/ctup),int(208/ctup),int(208/ctup),int(207/ctup),int(206/ctup),int(204/ctup),int(201/ctup),int(197/ctup),int(187/ctup)]
+Tcen=[int(208/ctcen),int(208/ctcen),int(208/ctcen),int(207/ctcen),int(206/ctcen),int(204/ctcen),int(201/ctcen),int(197/ctcen),int(187/ctcen)]
+print(xsame)
+print(Tcup)
+print(T)
+
 ct=np.linspace(ctdown,ctup,10)
 chi2mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi2.dat')
 chi3mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi3.dat')
@@ -95,6 +102,7 @@ r82mub22down=chi8mub22down/chi2mub22down
 r3222=np.zeros((300,20))
 r4222=np.zeros((300,20))
 r6222=np.zeros((300,20))
+r8222=np.zeros((300,20))
 for t in range(0,20):
     if t<10:
        r3222[:,t]=spline(T/ct[t],r32mub22up,xsame)
@@ -146,9 +154,18 @@ for num in range(1,20):
        max6222=np.maximum(max6222,r6222[:,num])
        min6222=np.minimum(min6222,r6222[:,num])
 
+for num in range(1,20):
+    if num==1:
+       max8222=np.maximum(r8222[:,num-1],r8222[:,num])
+       min8222=np.minimum(r8222[:,num-1],r8222[:,num])
+    else:
+       max8222=np.maximum(max8222,r8222[:,num])
+       min8222=np.minimum(min8222,r8222[:,num])
+
 r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)
 r42mub22cen=spline(T/ctcen,r42mub22cen,xsame)
 r62mub22cen=spline(T/ctcen,r62mub22cen,xsame)
+r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
 
 dif22cen=abs(r32mub22cen-0.122302)
 dif22up=abs(max22-0.122302)
@@ -158,30 +175,54 @@ min22up_index=np.argmin(dif22up[80:300])+80
 min22down_index=np.argmin(dif22down[80:300])+80
 print(min22up_index)
 print(min22down_index)
+r3222cen=r32mub22cen[min22cen_index]
 r4222cen=r42mub22cen[min22cen_index]
 r6222cen=r62mub22cen[min22cen_index]
-r4222hcen=r42mub22cen[min22cen_index+int(min22cen_index*deltat)]
-r6222hcen=r62mub22cen[min22cen_index+int(min22cen_index*deltat)]
-r4222lcen=r42mub22cen[min22cen_index-5]
-r6222lcen=r62mub22cen[min22cen_index-5]
+r8222cen=r82mub22cen[min22cen_index]
+#r3222hcen=r32mub22cen[min22cen_index+int(min22cen_index*deltat)]
+#r4222hcen=r42mub22cen[min22cen_index+int(min22cen_index*deltat)]
+#r6222hcen=r62mub22cen[min22cen_index+int(min22cen_index*deltat)]
+#r8222hcen=r82mub22cen[min22cen_index+int(min22cen_index*deltat)]
+r3222hcen=r32mub22cen[Tcen[0]]
+r4222hcen=r42mub22cen[Tcen[0]]
+r6222hcen=r62mub22cen[Tcen[0]]
+r8222hcen=r82mub22cen[Tcen[0]]
+
+
+r32=[max22[min22up_index],max22[min22down_index],min22[min22up_index],min22[min22down_index]]
+#r32h=[max22[min22up_index+int(min22up_index*deltat)],max22[min22down_index+int(min22down_index*deltat)],min22[min22up_index+int(min22up_index*deltat)],min22[min22down_index+int(min22down_index*deltat)]]
+r32h=[max22[Tcup[0]],max22[Tcdown[0]],min22[Tcup[0]],min22[Tcdown[0]]]
+r3222up=np.max(r32)
+r3222down=np.min(r32)
+r3222uph=np.max(r32h)
+r3222downh=np.min(r32h)
+
 r42=[max4222[min22up_index],max4222[min22down_index],min4222[min22up_index],min4222[min22down_index]]
-r42h=[max4222[min22up_index+int(min22up_index*deltat)],max4222[min22down_index+int(min22down_index*deltat)],min4222[min22up_index+int(min22up_index*deltat)],min4222[min22down_index+int(min22down_index*deltat)]]
-r42l=[max4222[min22up_index-5],max4222[min22down_index-5],min4222[min22up_index-5],min4222[min22down_index-5]]
+#r42h=[max4222[min22up_index+int(min22up_index*deltat)],max4222[min22down_index+int(min22down_index*deltat)],min4222[min22up_index+int(min22up_index*deltat)],min4222[min22down_index+int(min22down_index*deltat)]]
+r42h=[max4222[Tcup[0]],max4222[Tcdown[0]],min4222[Tcup[0]],min4222[Tcdown[0]]]
 r4222up=np.max(r42)
 r4222down=np.min(r42)
 r4222uph=np.max(r42h)
 r4222downh=np.min(r42h)
-r4222upl=np.max(r42l)
-r4222downl=np.min(r42l)
+
+
 r62=[max6222[min22up_index],max6222[min22down_index],min6222[min22up_index],min6222[min22down_index]]
-r62h=[max6222[min22up_index+int(min22up_index*deltat)],max6222[min22down_index+int(min22down_index*deltat)],min6222[min22up_index+int(min22up_index*deltat)],min6222[min22down_index+int(min22down_index*deltat)]]
-r62l=[max6222[min22up_index-5],max6222[min22down_index-5],min6222[min22up_index-5],min6222[min22down_index-5]]
+#r62h=[max6222[min22up_index+int(min22up_index*deltat)],max6222[min22down_index+int(min22down_index*deltat)],min6222[min22up_index+int(min22up_index*deltat)],min6222[min22down_index+int(min22down_index*deltat)]]
+r62h=[max6222[Tcup[0]],max6222[Tcdown[0]],min6222[Tcup[0]],min6222[Tcdown[0]]]
 r6222up=np.max(r62)
 r6222down=np.min(r62)
 r6222uph=np.max(r62h)
 r6222downh=np.min(r62h)
-r6222upl=np.max(r62l)
-r6222downl=np.min(r62l)
+
+
+r82=[max8222[min22up_index],max8222[min22down_index],min8222[min22up_index],min8222[min22down_index]]
+#r82h=[max8222[min22up_index+int(min22up_index*deltat)],max8222[min22down_index+int(min22down_index*deltat)],min8222[min22up_index+int(min22up_index*deltat)],min8222[min22down_index+int(min22down_index*deltat)]]
+r82h=[max8222[Tcup[0]],max8222[Tcdown[0]],min8222[Tcup[0]],min8222[Tcdown[0]]]
+r8222up=np.max(r82)
+r8222down=np.min(r82)
+r8222uph=np.max(r82h)
+r8222downh=np.min(r82h)
+
 print(r6222up)
 print(r6222down)
 print(r6222uph)
@@ -217,6 +258,7 @@ r82mub68down=chi8mub68down/chi2mub68down
 r3268=np.zeros((300,20))
 r4268=np.zeros((300,20))
 r6268=np.zeros((300,20))
+r8268=np.zeros((300,20))
 for t in range(0,20):
     if t<10:
        r3268[:,t]=spline(T/ct[t],r32mub68up,xsame)
@@ -262,9 +304,25 @@ for num in range(1,20):
        max6268=np.maximum(max6268,r6268[:,num])
        min6268=np.minimum(min6268,r6268[:,num])
 
+for t in range(0,20):
+    if t<10:
+       r8268[:,t]=spline(T/ct[t],r82mub68up,xsame)
+    else:
+       r8268[:,t]=spline(T/ct[t-10],r82mub68down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max8268=np.maximum(r8268[:,num-1],r8268[:,num])
+       min8268=np.minimum(r8268[:,num-1],r8268[:,num])
+    else:
+       max8268=np.maximum(max8268,r8268[:,num])
+       min8268=np.minimum(min8268,r8268[:,num])
+
 r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)
 r42mub68cen=spline(T/ctcen,r42mub68cen,xsame)
 r62mub68cen=spline(T/ctcen,r62mub68cen,xsame)
+r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 
 dif68cen=abs(r32mub68cen-0.325439)
 dif68up=abs(max68-0.325439)
@@ -274,30 +332,49 @@ min68up_index=np.argmin(dif68up[80:300])+80
 min68down_index=np.argmin(dif68down[80:300])+80
 print(min68up_index)
 print(min68down_index)
+r3268cen=r32mub68cen[min68cen_index]
+#r3268hcen=r32mub68cen[min68cen_index+int(min68cen_index*deltat)]
+r3268hcen=r32mub68cen[Tcen[1]]
+r32=[max68[min68up_index],max68[min68down_index],min68[min68up_index],min68[min68down_index]]
+#r32h=[max68[min68up_index+int(min68up_index*deltat)],max68[min68down_index+int(min68down_index*deltat)],min68[min68up_index+int(min68up_index*deltat)],min68[min68down_index+int(min68down_index*deltat)]]
+r32h=[max68[Tcup[1]],max68[Tcdown[1]],min68[Tcup[1]],min68[Tcdown[1]]]
+r3268up=np.max(r32)
+r3268down=np.min(r32)
+r3268uph=np.max(r32h)
+r3268downh=np.min(r32h)
+
 r4268cen=r42mub68cen[min68cen_index]
 r6268cen=r62mub68cen[min68cen_index]
-r4268hcen=r42mub68cen[min68cen_index+int(min68cen_index*deltat)]
-r6268hcen=r62mub68cen[min68cen_index+int(min68cen_index*deltat)]
-r4268lcen=r42mub68cen[min68cen_index-5]
-r6268lcen=r62mub68cen[min68cen_index-5]
+#r4268hcen=r42mub68cen[min68cen_index+int(min68cen_index*deltat)]
+#r6268hcen=r62mub68cen[min68cen_index+int(min68cen_index*deltat)]
+r4268hcen=r42mub68cen[Tcen[1]]
+r6268hcen=r62mub68cen[Tcen[1]]
 r42=[max4268[min68up_index],max4268[min68down_index],min4268[min68up_index],min4268[min68down_index]]
-r42h=[max4268[min68up_index+int(min68up_index*deltat)],max4268[min68down_index+int(min68down_index*deltat)],min4268[min68up_index+int(min68up_index*deltat)],min4268[min68down_index+int(min68down_index*deltat)]]
-r42l=[max4268[min68up_index-5],max4268[min68down_index-5],min4268[min68up_index-5],min4268[min68down_index-5]]
+#r42h=[max4268[min68up_index+int(min68up_index*deltat)],max4268[min68down_index+int(min68down_index*deltat)],min4268[min68up_index+int(min68up_index*deltat)],min4268[min68down_index+int(min68down_index*deltat)]]
+r42h=[max4268[Tcup[1]],max4268[Tcdown[1]],min4268[Tcup[1]],min4268[Tcdown[1]]]
 r4268up=np.max(r42)
 r4268down=np.min(r42)
 r4268uph=np.max(r42h)
 r4268downh=np.min(r42h)
-r4268upl=np.max(r42l)
-r4268downl=np.min(r42l)
+
 r62=[max6268[min68up_index],max6268[min68down_index],min6268[min68up_index],min6268[min68down_index]]
-r62h=[max6268[min68up_index+int(min68up_index*deltat)],max6268[min68down_index+int(min68down_index*deltat)],min6268[min68up_index+int(min68up_index*deltat)],min6268[min68down_index+int(min68down_index*deltat)]]
-r62l=[max6268[min68up_index-5],max6268[min68down_index-5],min6268[min68up_index-5],min6268[min68down_index-5]]
+#r62h=[max6268[min68up_index+int(min68up_index*deltat)],max6268[min68down_index+int(min68down_index*deltat)],min6268[min68up_index+int(min68up_index*deltat)],min6268[min68down_index+int(min68down_index*deltat)]]
+r62h=[max6268[Tcup[1]],max6268[Tcdown[1]],min6268[Tcup[1]],min6268[Tcdown[1]]]
 r6268up=np.max(r62)
 r6268down=np.min(r62)
 r6268uph=np.max(r62h)
 r6268downh=np.min(r62h)
-r6268upl=np.max(r62l)
-r6268downl=np.min(r62l)
+
+r8268cen=r82mub68cen[min68cen_index]
+#r8268hcen=r82mub68cen[min68cen_index+int(min68cen_index*deltat)]
+r8268hcen=r82mub68cen[Tcen[1]]
+r82=[max8268[min68up_index],max8268[min68down_index],min8268[min68up_index],min8268[min68down_index]]
+#r82h=[max8268[min68up_index+int(min68up_index*deltat)],max8268[min68down_index+int(min68down_index*deltat)],min8268[min68up_index+int(min68up_index*deltat)],min8268[min68down_index+int(min68down_index*deltat)]]
+r82h=[max8268[Tcup[1]],max8268[Tcdown[1]],min8268[Tcup[1]],min8268[Tcdown[1]]]
+r8268up=np.max(r82)
+r8268down=np.min(r82)
+r8268uph=np.max(r82h)
+r8268downh=np.min(r82h)
 print(r6268up)
 print(r6268down)
 ####################################################################################################
@@ -331,6 +408,7 @@ r82mub78down=chi8mub78down/chi2mub78down
 r3278=np.zeros((300,20))
 r4278=np.zeros((300,20))
 r6278=np.zeros((300,20))
+r8278=np.zeros((300,20))
 for t in range(0,20):
     if t<10:
        r3278[:,t]=spline(T/ct[t],r32mub78up,xsame)
@@ -376,9 +454,25 @@ for num in range(1,20):
        max6278=np.maximum(max6278,r6278[:,num])
        min6278=np.minimum(min6278,r6278[:,num])
 
+for t in range(0,20):
+    if t<10:
+       r8278[:,t]=spline(T/ct[t],r82mub78up,xsame)
+    else:
+       r8278[:,t]=spline(T/ct[t-10],r82mub78down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max8278=np.maximum(r8278[:,num-1],r8278[:,num])
+       min8278=np.minimum(r8278[:,num-1],r8278[:,num])
+    else:
+       max8278=np.maximum(max8278,r8278[:,num])
+       min8278=np.minimum(min8278,r8278[:,num])
+
 r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)
 r42mub78cen=spline(T/ctcen,r42mub78cen,xsame)
 r62mub78cen=spline(T/ctcen,r62mub78cen,xsame)
+r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 
 dif78cen=abs(r32mub78cen-0.346852)
 dif78up=abs(max78-0.346852)
@@ -388,30 +482,53 @@ min78up_index=np.argmin(dif78up[80:300])+80
 min78down_index=np.argmin(dif78down[80:300])+80
 print(min78up_index)
 print(min78down_index)
+r3278cen=r32mub78cen[min78cen_index]
+#r3278hcen=r32mub78cen[min78cen_index+int(min78cen_index*deltat)]
+r3278hcen=r32mub78cen[Tcen[2]]
+r32=[max78[min78up_index],max78[min78down_index],min78[min78up_index],min78[min78down_index]]
+#r32h=[max78[min78up_index+int(min78up_index*deltat)],max78[min78down_index+int(min78down_index*deltat)],min78[min78up_index+int(min78up_index*deltat)],min78[min78down_index+int(min78down_index*deltat)]]
+r32h=[max78[Tcup[2]],max78[Tcdown[2]],min78[Tcup[2]],min78[Tcdown[2]]]
+r3278up=np.max(r32)
+r3278down=np.min(r32)
+r3278uph=np.max(r32h)
+r3278downh=np.min(r32h)
+
 r4278cen=r42mub78cen[min78cen_index]
 r6278cen=r62mub78cen[min78cen_index]
-r4278hcen=r42mub78cen[min78cen_index+int(min78cen_index*deltat)]
-r6278hcen=r62mub78cen[min78cen_index+int(min78cen_index*deltat)]
-r4278lcen=r42mub78cen[min78cen_index-5]
-r6278lcen=r62mub78cen[min78cen_index-5]
+#r4278hcen=r42mub78cen[min78cen_index+int(min78cen_index*deltat)]
+#r6278hcen=r62mub78cen[min78cen_index+int(min78cen_index*deltat)]
+r4278hcen=r42mub78cen[Tcen[2]]
+r6278hcen=r62mub78cen[Tcen[2]]
 r42=[max4278[min78up_index],max4278[min78down_index],min4278[min78up_index],min4278[min78down_index]]
-r42h=[max4278[min78up_index+int(min78up_index*deltat)],max4278[min78down_index+int(min78down_index*deltat)],min4278[min78up_index+int(min78up_index*deltat)],min4278[min78down_index+int(min78down_index*deltat)]]
-r42l=[max4278[min78up_index-5],max4278[min78down_index-5],min4278[min78up_index-5],min4278[min78down_index-5]]
+#r42h=[max4278[min78up_index+int(min78up_index*deltat)],max4278[min78down_index+int(min78down_index*deltat)],min4278[min78up_index+int(min78up_index*deltat)],min4278[min78down_index+int(min78down_index*deltat)]]
+r42h=[max4278[Tcup[2]],max4278[Tcdown[2]],min4278[Tcup[2]],min4278[Tcdown[2]]]
 r4278up=np.max(r42)
 r4278down=np.min(r42)
 r4278uph=np.max(r42h)
 r4278downh=np.min(r42h)
-r4278upl=np.max(r42l)
-r4278downl=np.min(r42l)
+
+
+r6278cen=r62mub78cen[min78cen_index]
+#r6278hcen=r62mub78cen[min78cen_index+int(min78cen_index*deltat)]
+r6278hcen=r62mub78cen[Tcen[2]]
 r62=[max6278[min78up_index],max6278[min78down_index],min6278[min78up_index],min6278[min78down_index]]
-r62h=[max6278[min78up_index+int(min78up_index*deltat)],max6278[min78down_index+int(min78down_index*deltat)],min6278[min78up_index+int(min78up_index*deltat)],min6278[min78down_index+int(min78down_index*deltat)]]
-r62l=[max6278[min78up_index-5],max6278[min78down_index-5],min6278[min78up_index-5],min6278[min78down_index-5]]
+#r62h=[max6278[min78up_index+int(min78up_index*deltat)],max6278[min78down_index+int(min78down_index*deltat)],min6278[min78up_index+int(min78up_index*deltat)],min6278[min78down_index+int(min78down_index*deltat)]]
+r62h=[max6278[Tcup[2]],max6278[Tcdown[2]],min6278[Tcup[2]],min6278[Tcdown[2]]]
 r6278up=np.max(r62)
 r6278down=np.min(r62)
 r6278uph=np.max(r62h)
 r6278downh=np.min(r62h)
-r6278upl=np.max(r62l)
-r6278downl=np.min(r62l)
+
+r8278cen=r82mub78cen[min78cen_index]
+#r8278hcen=r82mub78cen[min78cen_index+int(min78cen_index*deltat)]
+r8278hcen=r82mub78cen[Tcen[2]]
+r82=[max8278[min78up_index],max8278[min78down_index],min8278[min78up_index],min8278[min78down_index]]
+#r82h=[max8278[min78up_index+int(min78up_index*deltat)],max8278[min78down_index+int(min78down_index*deltat)],min8278[min78up_index+int(min78up_index*deltat)],min8278[min78down_index+int(min78down_index*deltat)]]
+r82h=[max8278[Tcup[2]],max8278[Tcdown[2]],min8278[Tcup[2]],min8278[Tcdown[2]]]
+r8278up=np.max(r82)
+r8278down=np.min(r82)
+r8278uph=np.max(r82h)
+r8278downh=np.min(r82h)
 print(r6278up)
 print(r6278down)
 ####################################################################################################
@@ -445,6 +562,7 @@ r82mub106down=chi8mub106down/chi2mub106down
 r32106=np.zeros((300,20))
 r42106=np.zeros((300,20))
 r62106=np.zeros((300,20))
+r82106=np.zeros((300,20))
 for t in range(0,20):
     if t<10:
        r32106[:,t]=spline(T/ct[t],r32mub106up,xsame)
@@ -490,9 +608,25 @@ for num in range(1,20):
        max62106=np.maximum(max62106,r62106[:,num])
        min62106=np.minimum(min62106,r62106[:,num])
 
+for t in range(0,20):
+    if t<10:
+       r82106[:,t]=spline(T/ct[t],r82mub106up,xsame)
+    else:
+       r82106[:,t]=spline(T/ct[t-10],r82mub106down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max82106=np.maximum(r82106[:,num-1],r82106[:,num])
+       min82106=np.minimum(r82106[:,num-1],r82106[:,num])
+    else:
+       max82106=np.maximum(max82106,r82106[:,num])
+       min82106=np.minimum(min82106,r82106[:,num])
+
 r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)
 r42mub106cen=spline(T/ctcen,r42mub106cen,xsame)
 r62mub106cen=spline(T/ctcen,r62mub106cen,xsame)
+r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
 
 dif106cen=abs(r32mub106cen-0.441900)
 dif106up=abs(max106-0.441900)
@@ -502,30 +636,50 @@ min106up_index=np.argmin(dif106up[80:300])+80
 min106down_index=np.argmin(dif106down[80:300])+80
 print(min106up_index)
 print(min106down_index)
+r32106cen=r32mub106cen[min106cen_index]
+#r32106hcen=r32mub106cen[min106cen_index+int(min106cen_index*deltat)]
+r32106hcen=r32mub106cen[Tcen[3]]
+r32=[max106[min106up_index],max106[min106down_index],min106[min106up_index],min106[min106down_index]]
+#r32h=[max106[min106up_index+int(min106up_index*deltat)],max106[min106down_index+int(min106down_index*deltat)],min106[min106up_index+int(min106up_index*deltat)],min106[min106down_index+int(min106down_index*deltat)]]
+r32h=[max106[Tcup[3]],max106[Tcdown[3]],min106[Tcup[3]],min106[Tcdown[3]]]
+r32106up=np.max(r32)
+r32106down=np.min(r32)
+r32106uph=np.max(r32h)
+r32106downh=np.min(r32h)
+
 r42106cen=r42mub106cen[min106cen_index]
 r62106cen=r62mub106cen[min106cen_index]
-r42106hcen=r42mub106cen[min106cen_index+int(min106cen_index*deltat)]
-r62106hcen=r62mub106cen[min106cen_index+int(min106cen_index*deltat)]
-r42106lcen=r42mub106cen[min106cen_index-5]
-r62106lcen=r62mub106cen[min106cen_index-5]
+#r42106hcen=r42mub106cen[min106cen_index+int(min106cen_index*deltat)]
+#r62106hcen=r62mub106cen[min106cen_index+int(min106cen_index*deltat)]
+r42106hcen=r42mub106cen[Tcen[3]]
+r62106hcen=r62mub106cen[Tcen[3]]
 r42=[max42106[min106up_index],max42106[min106down_index],min42106[min106up_index],min42106[min106down_index]]
-r42h=[max42106[min106up_index+int(min106up_index*deltat)],max42106[min106down_index+int(min106down_index*deltat)],min42106[min106up_index+int(min106up_index*deltat)],min42106[min106down_index+int(min106down_index*deltat)]]
-r42l=[max42106[min106up_index-5],max42106[min106down_index-5],min42106[min106up_index-5],min42106[min106down_index-5]]
+#r42h=[max42106[min106up_index+int(min106up_index*deltat)],max42106[min106down_index+int(min106down_index*deltat)],min42106[min106up_index+int(min106up_index*deltat)],min42106[min106down_index+int(min106down_index*deltat)]]
+r42h=[max42106[Tcup[3]],max42106[Tcdown[3]],min42106[Tcup[3]],min42106[Tcdown[3]]]
 r42106up=np.max(r42)
 r42106down=np.min(r42)
 r42106uph=np.max(r42h)
 r42106downh=np.min(r42h)
-r42106upl=np.max(r42l)
-r42106downl=np.min(r42l)
+
 r62=[max62106[min106up_index],max62106[min106down_index],min62106[min106up_index],min62106[min106down_index]]
-r62h=[max62106[min106up_index+int(min106up_index*deltat)],max62106[min106down_index+int(min106down_index*deltat)],min62106[min106up_index+int(min106up_index*deltat)],min62106[min106down_index+int(min106down_index*deltat)]]
-r62l=[max62106[min106up_index-5],max62106[min106down_index-5],min62106[min106up_index-5],min62106[min106down_index-5]]
+#r62h=[max62106[min106up_index+int(min106up_index*deltat)],max62106[min106down_index+int(min106down_index*deltat)],min62106[min106up_index+int(min106up_index*deltat)],min62106[min106down_index+int(min106down_index*deltat)]]
+r62h=[max62106[Tcup[3]],max62106[Tcdown[3]],min62106[Tcup[3]],min62106[Tcdown[3]]]
 r62106up=np.max(r62)
 r62106down=np.min(r62)
 r62106uph=np.max(r62h)
 r62106downh=np.min(r62h)
-r62106upl=np.max(r62l)
-r62106downl=np.min(r62l)
+
+r82106cen=r82mub106cen[min106cen_index]
+#r82106hcen=r82mub106cen[min106cen_index+int(min106cen_index*deltat)]
+r82106hcen=r82mub106cen[Tcen[3]]
+r82=[max82106[min106up_index],max82106[min106down_index],min82106[min106up_index],min82106[min106down_index]]
+#r82h=[max82106[min106up_index+int(min106up_index*deltat)],max82106[min106down_index+int(min106down_index*deltat)],min82106[min106up_index+int(min106up_index*deltat)],min82106[min106down_index+int(min106down_index*deltat)]]
+r82h=[max82106[Tcup[3]],max82106[Tcdown[3]],min82106[Tcup[3]],min82106[Tcdown[3]]]
+r82106up=np.max(r82)
+r82106down=np.min(r82)
+r82106uph=np.max(r82h)
+r82106downh=np.min(r82h)
+
 print(r62106up)
 print(r62106down)
 ####################################################################################################
@@ -559,6 +713,7 @@ r82mub148down=chi8mub148down/chi2mub148down
 r32148=np.zeros((300,20))
 r42148=np.zeros((300,20))
 r62148=np.zeros((300,20))
+r82148=np.zeros((300,20))
 for t in range(0,20):
     if t<10:
        r32148[:,t]=spline(T/ct[t],r32mub148up,xsame)
@@ -604,9 +759,25 @@ for num in range(1,20):
        max62148=np.maximum(max62148,r62148[:,num])
        min62148=np.minimum(min62148,r62148[:,num])
 
+for t in range(0,20):
+    if t<10:
+       r82148[:,t]=spline(T/ct[t],r82mub148up,xsame)
+    else:
+       r82148[:,t]=spline(T/ct[t-10],r82mub148down,xsame)
+
+
+for num in range(1,20):
+    if num==1:
+       max82148=np.maximum(r82148[:,num-1],r82148[:,num])
+       min82148=np.minimum(r82148[:,num-1],r82148[:,num])
+    else:
+       max82148=np.maximum(max82148,r82148[:,num])
+       min82148=np.minimum(min82148,r82148[:,num])
+
 r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)
 r42mub148cen=spline(T/ctcen,r42mub148cen,xsame)
 r62mub148cen=spline(T/ctcen,r62mub148cen,xsame)
+r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
 
 dif148cen=abs(r32mub148cen-0.553053)
 dif148up=abs(max148-0.553053)
@@ -616,30 +787,50 @@ min148up_index=np.argmin(dif148up[80:300])+80
 min148down_index=np.argmin(dif148down[80:300])+80
 print(min148up_index)
 print(min148down_index)
+r32148cen=r32mub148cen[min148cen_index]
+#r32148hcen=r32mub148cen[min148cen_index+int(min148cen_index*deltat)]
+r32148hcen=r32mub148cen[Tcen[4]]
+r32=[max148[min148up_index],max148[min148down_index],min148[min148up_index],min148[min148down_index]]
+#r32h=[max148[min148up_index+int(min148up_index*deltat)],max148[min148down_index+int(min148down_index*deltat)],min148[min148up_index+int(min148up_index*deltat)],min148[min148down_index+int(min148down_index*deltat)]]
+r32h=[max148[Tcup[4]],max148[Tcdown[4]],min148[Tcup[4]],min148[Tcdown[4]]]
+r32148up=np.max(r32)
+r32148down=np.min(r32)
+r32148uph=np.max(r32h)
+r32148downh=np.min(r32h)
+
 r42148cen=r42mub148cen[min148cen_index]
 r62148cen=r62mub148cen[min148cen_index]
-r42148hcen=r42mub148cen[min148cen_index+int(min148cen_index*deltat)]
-r62148hcen=r62mub148cen[min148cen_index+int(min148cen_index*deltat)]
-r42148lcen=r42mub148cen[min148cen_index-5]
-r62148lcen=r62mub148cen[min148cen_index-5]
+#r42148hcen=r42mub148cen[min148cen_index+int(min148cen_index*deltat)]
+#r62148hcen=r62mub148cen[min148cen_index+int(min148cen_index*deltat)]
+r42148hcen=r42mub148cen[Tcen[4]]
+r62148hcen=r62mub148cen[Tcen[4]]
 r42=[max42148[min148up_index],max42148[min148down_index],min42148[min148up_index],min42148[min148down_index]]
-r42h=[max42148[min148up_index+int(min148up_index*deltat)],max42148[min148down_index+int(min148down_index*deltat)],min42148[min148up_index+int(min148up_index*deltat)],min42148[min148down_index+int(min148down_index*deltat)]]
-r42l=[max42148[min148up_index-5],max42148[min148down_index-5],min42148[min148up_index-5],min42148[min148down_index-5]]
+#r42h=[max42148[min148up_index+int(min148up_index*deltat)],max42148[min148down_index+int(min148down_index*deltat)],min42148[min148up_index+int(min148up_index*deltat)],min42148[min148down_index+int(min148down_index*deltat)]]
+r42h=[max42148[Tcup[4]],max42148[Tcdown[4]],min42148[Tcup[4]],min42148[Tcdown[4]]]
 r42148up=np.max(r42)
 r42148down=np.min(r42)
 r42148uph=np.max(r42h)
 r42148downh=np.min(r42h)
-r42148upl=np.max(r42l)
-r42148downl=np.min(r42l)
+
 r62=[max62148[min148up_index],max62148[min148down_index],min62148[min148up_index],min62148[min148down_index]]
-r62h=[max62148[min148up_index+int(min148up_index*deltat)],max62148[min148down_index+int(min148down_index*deltat)],min62148[min148up_index+int(min148up_index*deltat)],min62148[min148down_index+int(min148down_index*deltat)]]
-r62l=[max62148[min148up_index-5],max62148[min148down_index-5],min62148[min148up_index-5],min62148[min148down_index-5]]
+#r62h=[max62148[min148up_index+int(min148up_index*deltat)],max62148[min148down_index+int(min148down_index*deltat)],min62148[min148up_index+int(min148up_index*deltat)],min62148[min148down_index+int(min148down_index*deltat)]]
+r62h=[max62148[Tcup[4]],max62148[Tcdown[4]],min62148[Tcup[4]],min62148[Tcdown[4]]]
 r62148up=np.max(r62)
 r62148down=np.min(r62)
 r62148uph=np.max(r62h)
 r62148downh=np.min(r62h)
-r62148upl=np.max(r62l)
-r62148downl=np.min(r62l)
+
+r82148cen=r82mub148cen[min148cen_index]
+#r82148hcen=r82mub148cen[min148cen_index+int(min148cen_index*deltat)]
+r82148hcen=r82mub148cen[Tcen[4]]
+r82=[max82148[min148up_index],max82148[min148down_index],min82148[min148up_index],min82148[min148down_index]]
+#r82h=[max82148[min148up_index+int(min148up_index*deltat)],max82148[min148down_index+int(min148down_index*deltat)],min82148[min148up_index+int(min148up_index*deltat)],min82148[min148down_index+int(min148down_index*deltat)]]
+r82h=[max82148[Tcup[4]],max82148[Tcdown[4]],min82148[Tcup[4]],min82148[Tcdown[4]]]
+r82148up=np.max(r82)
+r82148down=np.min(r82)
+r82148uph=np.max(r82h)
+r82148downh=np.min(r82h)
+
 print(r62148up)
 print(r62148down)
 ####################################################################################################
@@ -745,6 +936,7 @@ r82mub196down4=chi8mub196down4/chi2mub196down4
 r32196=np.zeros((300,100))
 r42196=np.zeros((300,100))
 r62196=np.zeros((300,100))
+r82196=np.zeros((300,100))
 for t in range(0,100):
     if t<10:
        r32196[:,t]=spline(T/ct[t],r32mub196up,xsame)
@@ -835,6 +1027,36 @@ for t in range(0,100):
                             else:
                                 r62196[:,t]=spline(T/ct[t-90],r62mub196down4,xsame)
 
+for t in range(0,100):
+    if t<10:
+       r82196[:,t]=spline(T/ct[t],r82mub196up,xsame)
+    else:
+       if t>=10 and t<20:
+          r82196[:,t]=spline(T/ct[t-10],r82mub196up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r82196[:,t]=spline(T/ct[t-20],r82mub196up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r82196[:,t]=spline(T/ct[t-30],r82mub196up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r82196[:,t]=spline(T/ct[t-40],r82mub196up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r82196[:,t]=spline(T/ct[t-50],r82mub196down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r82196[:,t]=spline(T/ct[t-60],r82mub196down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r82196[:,t]=spline(T/ct[t-70],r82mub196down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r82196[:,t]=spline(T/ct[t-80],r82mub196down3,xsame)
+                            else:
+                                r82196[:,t]=spline(T/ct[t-90],r82mub196down4,xsame)
+
 
 for num in range(1,100):
     if num==1:
@@ -860,9 +1082,18 @@ for num in range(1,100):
        max62196=np.maximum(max62196,r62196[:,num])
        min62196=np.minimum(min62196,r62196[:,num])
 
+for num in range(1,100):
+    if num==1:
+       max82196=np.maximum(r82196[:,num-1],r82196[:,num])
+       min82196=np.minimum(r82196[:,num-1],r82196[:,num])
+    else:
+       max82196=np.maximum(max82196,r82196[:,num])
+       min82196=np.minimum(min82196,r82196[:,num])
+
 r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)
 r42mub196cen=spline(T/ctcen,r42mub196cen,xsame)
 r62mub196cen=spline(T/ctcen,r62mub196cen,xsame)
+r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 
 dif196cen=abs(r32mub196cen-0.642055)
 dif196up=abs(max196-0.642055)
@@ -872,30 +1103,50 @@ min196up_index=np.argmin(dif196up[80:300])+80
 min196down_index=np.argmin(dif196down[80:300])+80
 print(min196up_index)
 print(min196down_index)
+r32196cen=r32mub196cen[min196cen_index]
+#r32196hcen=r32mub196cen[min196cen_index+int(min196cen_index*deltat)]
+r32196hcen=r32mub196cen[Tcen[5]]
+r32=[max196[min196up_index],max196[min196down_index],min196[min196up_index],min196[min196down_index]]
+#r32h=[max196[min196up_index+int(min196up_index*deltat)],max196[min196down_index+int(min196down_index*deltat)],min196[min196up_index+int(min196up_index*deltat)],min196[min196down_index+int(min196down_index*deltat)]]
+r32h=[max196[Tcup[5]],max196[Tcdown[5]],min196[Tcup[5]],min196[Tcdown[5]]]
+r32196up=np.max(r32)
+r32196down=np.min(r32)
+r32196uph=np.max(r32h)
+r32196downh=np.min(r32h)
+
 r42196cen=r42mub196cen[min196cen_index]
 r62196cen=r62mub196cen[min196cen_index]
-r42196hcen=r42mub196cen[min196cen_index+int(min196cen_index*deltat)]
-r62196hcen=r62mub196cen[min196cen_index+int(min196cen_index*deltat)]
-r42196lcen=r42mub196cen[min196cen_index-5]
-r62196lcen=r62mub196cen[min196cen_index-5]
+#r42196hcen=r42mub196cen[min196cen_index+int(min196cen_index*deltat)]
+#r62196hcen=r62mub196cen[min196cen_index+int(min196cen_index*deltat)]
+r42196hcen=r42mub196cen[Tcen[5]]
+r62196hcen=r62mub196cen[Tcen[5]]
 r42=[max42196[min196up_index],max42196[min196down_index],min42196[min196up_index],min42196[min196down_index]]
-r42h=[max42196[min196up_index+int(min196up_index*deltat)],max42196[min196down_index+int(min196down_index*deltat)],min42196[min196up_index+int(min196up_index*deltat)],min42196[min196down_index+int(min196down_index*deltat)]]
-r42l=[max42196[min196up_index-5],max42196[min196down_index-5],min42196[min196up_index-5],min42196[min196down_index-5]]
+#r42h=[max42196[min196up_index+int(min196up_index*deltat)],max42196[min196down_index+int(min196down_index*deltat)],min42196[min196up_index+int(min196up_index*deltat)],min42196[min196down_index+int(min196down_index*deltat)]]
+r42h=[max42196[Tcup[5]],max42196[Tcdown[5]],min42196[Tcup[5]],min42196[Tcdown[5]]]
 r42196up=np.max(r42)
 r42196down=np.min(r42)
 r42196uph=np.max(r42h)
 r42196downh=np.min(r42h)
-r42196upl=np.max(r42l)
-r42196downl=np.min(r42l)
+
 r62=[max62196[min196up_index],max62196[min196down_index],min62196[min196up_index],min62196[min196down_index]]
-r62h=[max62196[min196up_index+int(min196up_index*deltat)],max62196[min196down_index+int(min196down_index*deltat)],min62196[min196up_index+int(min196up_index*deltat)],min62196[min196down_index+int(min196down_index*deltat)]]
-r62l=[max62196[min196up_index-5],max62196[min196down_index-5],min62196[min196up_index-5],min62196[min196down_index-5]]
+#r62h=[max62196[min196up_index+int(min196up_index*deltat)],max62196[min196down_index+int(min196down_index*deltat)],min62196[min196up_index+int(min196up_index*deltat)],min62196[min196down_index+int(min196down_index*deltat)]]
+r62h=[max62196[Tcup[5]],max62196[Tcdown[5]],min62196[Tcup[5]],min62196[Tcdown[5]]]
 r62196up=np.max(r62)
 r62196down=np.min(r62)
 r62196uph=np.max(r62h)
 r62196downh=np.min(r62h)
-r62196upl=np.max(r62l)
-r62196downl=np.min(r62l)
+
+r82196cen=r82mub196cen[min196cen_index]
+#r82196hcen=r82mub196cen[min196cen_index+int(min196cen_index*deltat)]
+r82196hcen=r82mub196cen[Tcen[5]]
+r82=[max82196[min196up_index],max82196[min196down_index],min82196[min196up_index],min82196[min196down_index]]
+#r82h=[max82196[min196up_index+int(min196up_index*deltat)],max82196[min196down_index+int(min196down_index*deltat)],min82196[min196up_index+int(min196up_index*deltat)],min82196[min196down_index+int(min196down_index*deltat)]]
+r82h=[max82196[Tcup[5]],max82196[Tcdown[5]],min82196[Tcup[5]],min82196[Tcdown[5]]]
+r82196up=np.max(r82)
+r82196down=np.min(r82)
+r82196uph=np.max(r82h)
+r82196downh=np.min(r82h)
+
 print(r62196up)
 print(r62196down)
 ####################################################################################################
@@ -1001,6 +1252,7 @@ r82mub252down4=chi8mub252down4/chi2mub252down4
 r32252=np.zeros((300,100))
 r42252=np.zeros((300,100))
 r62252=np.zeros((300,100))
+r82252=np.zeros((300,100))
 for t in range(0,100):
     if t<10:
        r32252[:,t]=spline(T/ct[t],r32mub252up,xsame)
@@ -1092,6 +1344,37 @@ for t in range(0,100):
                                 r62252[:,t]=spline(T/ct[t-90],r62mub252down4,xsame)
 
 
+for t in range(0,100):
+    if t<10:
+       r82252[:,t]=spline(T/ct[t],r82mub252up,xsame)
+    else:
+       if t>=10 and t<20:
+          r82252[:,t]=spline(T/ct[t-10],r82mub252up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r82252[:,t]=spline(T/ct[t-20],r82mub252up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r82252[:,t]=spline(T/ct[t-30],r82mub252up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r82252[:,t]=spline(T/ct[t-40],r82mub252up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r82252[:,t]=spline(T/ct[t-50],r82mub252down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r82252[:,t]=spline(T/ct[t-60],r82mub252down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r82252[:,t]=spline(T/ct[t-70],r82mub252down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r82252[:,t]=spline(T/ct[t-80],r82mub252down3,xsame)
+                            else:
+                                r82252[:,t]=spline(T/ct[t-90],r82mub252down4,xsame)
+
+
 for num in range(1,100):
     if num==1:
        max252=np.maximum(r32252[:,num-1],r32252[:,num])
@@ -1116,9 +1399,18 @@ for num in range(1,100):
        max62252=np.maximum(max62252,r62252[:,num])
        min62252=np.minimum(min62252,r62252[:,num])
 
+for num in range(1,100):
+    if num==1:
+       max82252=np.maximum(r82252[:,num-1],r82252[:,num])
+       min82252=np.minimum(r82252[:,num-1],r82252[:,num])
+    else:
+       max82252=np.maximum(max82252,r82252[:,num])
+       min82252=np.minimum(min82252,r82252[:,num])
+
 r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)
 r42mub252cen=spline(T/ctcen,r42mub252cen,xsame)
 r62mub252cen=spline(T/ctcen,r62mub252cen,xsame)
+r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 
 dif252cen=abs(r32mub252cen-0.782208)
 dif252up=abs(max252-0.782208)
@@ -1128,30 +1420,50 @@ min252up_index=np.argmin(dif252up[80:300])+80
 min252down_index=np.argmin(dif252down[80:300])+80
 print(min252up_index)
 print(min252down_index)
+r32252cen=r32mub252cen[min252cen_index]
+#r32252hcen=r32mub252cen[min252cen_index+int(min252cen_index*deltat)]
+r32252hcen=r32mub252cen[Tcen[6]]
+r32=[max252[min252up_index],max252[min252down_index],min252[min252up_index],min252[min252down_index]]
+#r32h=[max252[min252up_index+int(min252up_index*deltat)],max252[min252down_index+int(min252down_index*deltat)],min252[min252up_index+int(min252up_index*deltat)],min252[min252down_index+int(min252down_index*deltat)]]
+r32h=[max252[Tcup[6]],max252[Tcdown[6]],min252[Tcup[6]],min252[Tcdown[6]]]
+r32252up=np.max(r32)
+r32252down=np.min(r32)
+r32252uph=np.max(r32h)
+r32252downh=np.min(r32h)
+
 r42252cen=r42mub252cen[min252cen_index]
 r62252cen=r62mub252cen[min252cen_index]
-r42252hcen=r42mub252cen[min252cen_index+int(min252cen_index*deltat)]
-r62252hcen=r62mub252cen[min252cen_index+int(min252cen_index*deltat)]
-r42252lcen=r42mub252cen[min252cen_index-5]
-r62252lcen=r62mub252cen[min252cen_index-5]
+#r42252hcen=r42mub252cen[min252cen_index+int(min252cen_index*deltat)]
+#r62252hcen=r62mub252cen[min252cen_index+int(min252cen_index*deltat)]
+r42252hcen=r42mub252cen[Tcen[6]]
+r62252hcen=r62mub252cen[Tcen[6]]
 r42=[max42252[min252up_index],max42252[min252down_index],min42252[min252up_index],min42252[min252down_index]]
-r42h=[max42252[min252up_index+int(min252up_index*deltat)],max42252[min252down_index+int(min252down_index*deltat)],min42252[min252up_index+int(min252up_index*deltat)],min42252[min252down_index+int(min252down_index*deltat)]]
-r42l=[max42252[min252up_index-5],max42252[min252down_index-5],min42252[min252up_index-5],min42252[min252down_index-5]]
+#r42h=[max42252[min252up_index+int(min252up_index*deltat)],max42252[min252down_index+int(min252down_index*deltat)],min42252[min252up_index+int(min252up_index*deltat)],min42252[min252down_index+int(min252down_index*deltat)]]
+r42h=[max42252[Tcup[6]],max42252[Tcdown[6]],min42252[Tcup[6]],min42252[Tcdown[6]]]
 r42252up=np.max(r42)
 r42252down=np.min(r42)
 r42252uph=np.max(r42h)
 r42252downh=np.min(r42h)
-r42252upl=np.max(r42l)
-r42252downl=np.min(r42l)
+
 r62=[max62252[min252up_index],max62252[min252down_index],min62252[min252up_index],min62252[min252down_index]]
-r62h=[max62252[min252up_index+int(min252up_index*deltat)],max62252[min252down_index+int(min252down_index*deltat)],min62252[min252up_index+int(min252up_index*deltat)],min62252[min252down_index+int(min252down_index*deltat)]]
-r62l=[max62252[min252up_index-5],max62252[min252down_index-5],min62252[min252up_index-5],min62252[min252down_index-5]]
+#r62h=[max62252[min252up_index+int(min252up_index*deltat)],max62252[min252down_index+int(min252down_index*deltat)],min62252[min252up_index+int(min252up_index*deltat)],min62252[min252down_index+int(min252down_index*deltat)]]
+r62h=[max62252[Tcup[6]],max62252[Tcdown[6]],min62252[Tcup[6]],min62252[Tcdown[6]]]
 r62252up=np.max(r62)
 r62252down=np.min(r62)
 r62252uph=np.max(r62h)
 r62252downh=np.min(r62h)
-r62252upl=np.max(r62l)
-r62252downl=np.min(r62l)
+
+r82252cen=r82mub252cen[min252cen_index]
+#r82252hcen=r82mub252cen[min252cen_index+int(min252cen_index*deltat)]
+r82252hcen=r82mub252cen[Tcen[6]]
+r82=[max82252[min252up_index],max82252[min252down_index],min82252[min252up_index],min82252[min252down_index]]
+#r82h=[max82252[min252up_index+int(min252up_index*deltat)],max82252[min252down_index+int(min252down_index*deltat)],min82252[min252up_index+int(min252up_index*deltat)],min82252[min252down_index+int(min252down_index*deltat)]]
+r82h=[max82252[Tcup[6]],max82252[Tcdown[6]],min82252[Tcup[6]],min82252[Tcdown[6]]]
+r82252up=np.max(r82)
+r82252down=np.min(r82)
+r82252uph=np.max(r82h)
+r82252downh=np.min(r82h)
+
 print(r62252up)
 print(r62252down)
 #####################################################################################################
@@ -1257,6 +1569,7 @@ r82mub303down4=chi8mub303down4/chi2mub303down4
 r32303=np.zeros((300,100))
 r42303=np.zeros((300,100))
 r62303=np.zeros((300,100))
+r82303=np.zeros((300,100))
 for t in range(0,100):
     if t<10:
        r32303[:,t]=spline(T/ct[t],r32mub303up,xsame)
@@ -1347,6 +1660,36 @@ for t in range(0,100):
                             else:
                                 r62303[:,t]=spline(T/ct[t-90],r62mub303down4,xsame)
 
+for t in range(0,100):
+    if t<10:
+       r82303[:,t]=spline(T/ct[t],r82mub303up,xsame)
+    else:
+       if t>=10 and t<20:
+          r82303[:,t]=spline(T/ct[t-10],r82mub303up1,xsame)
+       else:
+          if t>=20 and t<30:
+             r82303[:,t]=spline(T/ct[t-20],r82mub303up2,xsame)
+          else: 
+             if t>=30 and t<40:
+                r82303[:,t]=spline(T/ct[t-30],r82mub303up3,xsame)
+             else: 
+                if t>=40 and t<50:
+                   r82303[:,t]=spline(T/ct[t-40],r82mub303up4,xsame)
+                else:
+                   if t>=50 and t<60:
+                      r82303[:,t]=spline(T/ct[t-50],r82mub303down,xsame)
+                   else: 
+                      if t>=60 and t<70:
+                         r82303[:,t]=spline(T/ct[t-60],r82mub303down1,xsame)
+                      else:
+                         if t>=70 and t<80:
+                            r82303[:,t]=spline(T/ct[t-70],r82mub303down2,xsame)
+                         else: 
+                            if t>=80 and t<90:
+                               r82303[:,t]=spline(T/ct[t-80],r82mub303down3,xsame)
+                            else:
+                                r82303[:,t]=spline(T/ct[t-90],r82mub303down4,xsame)
+
 
 for num in range(1,100):
     if num==1:
@@ -1372,9 +1715,18 @@ for num in range(1,100):
        max62303=np.maximum(max62303,r62303[:,num])
        min62303=np.minimum(min62303,r62303[:,num])
 
+for num in range(1,100):
+    if num==1:
+       max82303=np.maximum(r82303[:,num-1],r82303[:,num])
+       min82303=np.minimum(r82303[:,num-1],r82303[:,num])
+    else:
+       max82303=np.maximum(max82303,r82303[:,num])
+       min82303=np.minimum(min82303,r82303[:,num])
+
 r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)
 r42mub303cen=spline(T/ctcen,r42mub303cen,xsame)
 r62mub303cen=spline(T/ctcen,r62mub303cen,xsame)
+r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 
 dif303cen=abs(r32mub303cen-0.783562)
 dif303up=abs(max303-0.783562)
@@ -1384,30 +1736,50 @@ min303up_index=np.argmin(dif303up[80:300])+80
 min303down_index=np.argmin(dif303down[80:300])+80
 print(min303up_index)
 print(min303down_index)
+r32303cen=r32mub303cen[min303cen_index]
+#r32303hcen=r32mub303cen[min303cen_index+int(min303cen_index*deltat)]
+r32303hcen=r32mub303cen[Tcen[7]]
+r32=[max303[min303up_index],max303[min303down_index],min303[min303up_index],min303[min303down_index]]
+#r32h=[max303[min303up_index+int(min303up_index*deltat)],max303[min303down_index+int(min303down_index*deltat)],min303[min303up_index+int(min303up_index*deltat)],min303[min303down_index+int(min303down_index*deltat)]]
+r32h=[max303[Tcup[7]],max303[Tcdown[7]],min303[Tcup[7]],min303[Tcdown[7]]]
+r32303up=np.max(r32)
+r32303down=np.min(r32)
+r32303uph=np.max(r32h)
+r32303downh=np.min(r32h)
+
 r42303cen=r42mub303cen[min303cen_index]
 r62303cen=r62mub303cen[min303cen_index]
-r42303hcen=r42mub303cen[min303cen_index+int(min303cen_index*deltat)]
-r62303hcen=r62mub303cen[min303cen_index+int(min303cen_index*deltat)]
-r42303lcen=r42mub303cen[min303cen_index-5]
-r62303lcen=r62mub303cen[min303cen_index-5]
+#r42303hcen=r42mub303cen[min303cen_index+int(min303cen_index*deltat)]
+#r62303hcen=r62mub303cen[min303cen_index+int(min303cen_index*deltat)]
+r42303hcen=r42mub303cen[Tcen[7]]
+r62303hcen=r62mub303cen[Tcen[7]]
 r42=[max42303[min303up_index],max42303[min303down_index],min42303[min303up_index],min42303[min303down_index]]
-r42h=[max42303[min303up_index+int(min303up_index*deltat)],max42303[min303down_index+int(min303down_index*deltat)],min42303[min303up_index+int(min303up_index*deltat)],min42303[min303down_index+int(min303down_index*deltat)]]
-r42l=[max42303[min303up_index-5],max42303[min303down_index-5],min42303[min303up_index-5],min42303[min303down_index-5]]
+#r42h=[max42303[min303up_index+int(min303up_index*deltat)],max42303[min303down_index+int(min303down_index*deltat)],min42303[min303up_index+int(min303up_index*deltat)],min42303[min303down_index+int(min303down_index*deltat)]]
+r42h=[max42303[Tcup[7]],max42303[Tcdown[7]],min42303[Tcup[7]],min42303[Tcdown[7]]]
 r42303up=np.max(r42)
 r42303down=np.min(r42)
 r42303uph=np.max(r42h)
 r42303downh=np.min(r42h)
-r42303upl=np.max(r42l)
-r42303downl=np.min(r42l)
+
 r62=[max62303[min303up_index],max62303[min303down_index],min62303[min303up_index],min62303[min303down_index]]
-r62h=[max62303[min303up_index+int(min303up_index*deltat)],max62303[min303down_index+int(min303down_index*deltat)],min62303[min303up_index+int(min303up_index*deltat)],min62303[min303down_index+int(min303down_index*deltat)]]
-r62l=[max62303[min303up_index-5],max62303[min303down_index-5],min62303[min303up_index-5],min62303[min303down_index-5]]
+#r62h=[max62303[min303up_index+int(min303up_index*deltat)],max62303[min303down_index+int(min303down_index*deltat)],min62303[min303up_index+int(min303up_index*deltat)],min62303[min303down_index+int(min303down_index*deltat)]]
+r62h=[max62303[Tcup[7]],max62303[Tcdown[7]],min62303[Tcup[7]],min62303[Tcdown[7]]]
 r62303up=np.max(r62)
 r62303down=np.min(r62)
 r62303uph=np.max(r62h)
 r62303downh=np.min(r62h)
-r62303upl=np.max(r62l)
-r62303downl=np.min(r62l)
+
+r82303cen=r82mub303cen[min303cen_index]
+#r82303hcen=r82mub303cen[min303cen_index+int(min303cen_index*deltat)]
+r82303hcen=r82mub303cen[Tcen[7]]
+r82=[max82303[min303up_index],max82303[min303down_index],min82303[min303up_index],min82303[min303down_index]]
+#r82h=[max82303[min303up_index+int(min303up_index*deltat)],max82303[min303down_index+int(min303down_index*deltat)],min82303[min303up_index+int(min303up_index*deltat)],min82303[min303down_index+int(min303down_index*deltat)]]
+r82h=[max82303[Tcup[7]],max82303[Tcdown[7]],min82303[Tcup[7]],min82303[Tcdown[7]]]
+r82303up=np.max(r82)
+r82303down=np.min(r82)
+r82303uph=np.max(r82h)
+r82303downh=np.min(r82h)
+
 print(r62303up)
 print(r62303down)
 ####################################################################################################
@@ -1513,6 +1885,7 @@ r82mub406down4=chi8mub406down4/chi2mub406down4
 r32406=np.zeros((300,100))
 r42406=np.zeros((300,100))
 r62406=np.zeros((300,100))
+r82406=np.zeros((300,100))
 for t in range(0,100):
     if t<10:
        r32406[:,t]=spline(T/ct[t],r32mub406up,xsame)
@@ -1628,9 +2001,18 @@ for num in range(1,100):
        max62406=np.maximum(max62406,r62406[:,num])
        min62406=np.minimum(min62406,r62406[:,num])
 
+for num in range(1,100):
+    if num==1:
+       max82406=np.maximum(r82406[:,num-1],r82406[:,num])
+       min82406=np.minimum(r82406[:,num-1],r82406[:,num])
+    else:
+       max82406=np.maximum(max82406,r82406[:,num])
+       min82406=np.minimum(min82406,r82406[:,num])
+
 r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)
 r42mub406cen=spline(T/ctcen,r42mub406cen,xsame)
 r62mub406cen=spline(T/ctcen,r62mub406cen,xsame)
+r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 
 dif406cen=abs(r32mub406cen-0.798587)
 dif406up=abs(max406-0.798587)
@@ -1638,32 +2020,53 @@ dif406down=abs(min406-0.798587)
 min406cen_index=np.argmin(dif406cen[80:300])+80
 min406up_index=np.argmin(dif406up[80:300])+80
 min406down_index=np.argmin(dif406down[80:300])+80
+print('T406')
 print(min406up_index)
 print(min406down_index)
+r32406cen=r32mub406cen[min406cen_index]
+#r32406hcen=r32mub406cen[min406cen_index+int(min406cen_index*deltat)]
+r32406hcen=r32mub406cen[Tcen[8]]
+r32=[max406[min406up_index],max406[min406down_index],min406[min406up_index],min406[min406down_index]]
+#r32h=[max406[min406up_index+int(min406up_index*deltat)],max406[min406down_index+int(min406down_index*deltat)],min406[min406up_index+int(min406up_index*deltat)],min406[min406down_index+int(min406down_index*deltat)]]
+r32h=[max406[Tcup[8]],max406[Tcdown[8]],min406[Tcup[8]],min406[Tcdown[8]]]
+r32406up=np.max(r32)
+r32406down=np.min(r32)
+r32406uph=np.max(r32h)
+r32406downh=np.min(r32h)
+
 r42406cen=r42mub406cen[min406cen_index]
 r62406cen=r62mub406cen[min406cen_index]
-r42406hcen=r42mub406cen[min406cen_index+int(min406cen_index*deltat)]
-r62406hcen=r62mub406cen[min406cen_index+int(min406cen_index*deltat)]
-r42406lcen=r42mub406cen[min406cen_index-5]
-r62406lcen=r62mub406cen[min406cen_index-5]
+#r42406hcen=r42mub406cen[min406cen_index+int(min406cen_index*deltat)]
+#r62406hcen=r62mub406cen[min406cen_index+int(min406cen_index*deltat)]
+r42406hcen=r42mub406cen[Tcen[8]]
+r62406hcen=r62mub406cen[Tcen[8]]
 r42=[max42406[min406up_index],max42406[min406down_index],min42406[min406up_index],min42406[min406down_index]]
-r42h=[max42406[min406up_index+int(min406up_index*deltat)],max42406[min406down_index+int(min406down_index*deltat)],min42406[min406up_index+int(min406up_index*deltat)],min42406[min406down_index+int(min406down_index*deltat)]]
-r42l=[max42406[min406up_index-5],max42406[min406down_index-5],min42406[min406up_index-5],min42406[min406down_index-5]]
+#r42h=[max42406[min406up_index+int(min406up_index*deltat)],max42406[min406down_index+int(min406down_index*deltat)],min42406[min406up_index+int(min406up_index*deltat)],min42406[min406down_index+int(min406down_index*deltat)]]
+r42h=[max42406[Tcup[8]],max42406[Tcdown[8]],min42406[Tcup[8]],min42406[Tcdown[8]]]
 r42406up=np.max(r42)
 r42406down=np.min(r42)
 r42406uph=np.max(r42h)
 r42406downh=np.min(r42h)
-r42406upl=np.max(r42l)
-r42406downl=np.min(r42l)
+
 r62=[max62406[min406up_index],max62406[min406down_index],min62406[min406up_index],min62406[min406down_index]]
-r62h=[max62406[min406up_index+int(min406up_index*deltat)],max62406[min406down_index+int(min406down_index*deltat)],min62406[min406up_index+int(min406up_index*deltat)],min62406[min406down_index+int(min406down_index*deltat)]]
-r62l=[max62406[min406up_index-5],max62406[min406down_index-5],min62406[min406up_index-5],min62406[min406down_index-5]]
+#r62h=[max62406[min406up_index+int(min406up_index*deltat)],max62406[min406down_index+int(min406down_index*deltat)],min62406[min406up_index+int(min406up_index*deltat)],min62406[min406down_index+int(min406down_index*deltat)]]
+r62h=[max62406[Tcup[8]],max62406[Tcdown[8]],min62406[Tcup[8]],min62406[Tcdown[8]]]
 r62406up=np.max(r62)
 r62406down=np.min(r62)
 r62406uph=np.max(r62h)
 r62406downh=np.min(r62h)
-r62406upl=np.max(r62l)
-r62406downl=np.min(r62l)
+
+r82406cen=r82mub406cen[min406cen_index]
+#r82406hcen=r82mub406cen[min406cen_index+int(min406cen_index*deltat)]
+r82406hcen=r82mub406cen[Tcen[8]]
+r82=[max82406[min406up_index],max82406[min406down_index],min82406[min406up_index],min82406[min406down_index]]
+#r82h=[max82406[min406up_index+int(min406up_index*deltat)],max82406[min406down_index+int(min406down_index*deltat)],min82406[min406up_index+int(min406up_index*deltat)],min82406[min406down_index+int(min406down_index*deltat)]]
+r82h=[max82406[Tcup[8]],max82406[Tcdown[8]],min82406[Tcup[8]],min82406[Tcdown[8]]]
+r82406up=np.max(r82)
+r82406down=np.min(r82)
+r82406uph=np.max(r82h)
+r82406downh=np.min(r82h)
+
 print(r62406cen)
 print(r62406up)
 print(r62406down)
@@ -1676,18 +2079,25 @@ r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252do
 r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
 r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
 r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
-r42lcen=[r4222lcen,r4268lcen,r4278lcen,r42106lcen,r42148lcen,r42196lcen,r42252lcen,r42303lcen,r42406lcen]
 r42hcen=[r4222hcen,r4268hcen,r4278hcen,r42106hcen,r42148hcen,r42196hcen,r42252hcen,r42303hcen,r42406hcen]
-r62lcen=[r6222lcen,r6268lcen,r6278lcen,r62106lcen,r62148lcen,r62196lcen,r62252lcen,r62303lcen,r62406lcen]
 r62hcen=[r6222hcen,r6268hcen,r6278hcen,r62106hcen,r62148hcen,r62196hcen,r62252hcen,r62303hcen,r62406hcen]
 r42hup=[r4222uph,r4268uph,r4278uph,r42106uph,r42148uph,r42196uph,r42252uph,r42303uph,r42406uph]
 r42hdown=[r4222downh,r4268downh,r4278downh,r42106downh,r42148downh,r42196downh,r42252downh,r42303downh,r42406downh]
-r62lup=[r6222upl,r6268upl,r6278upl,r62106upl,r62148upl,r62196upl,r62252upl,r62303upl,r62406upl]
-r62ldown=[r6222downl,r6268downl,r6278downl,r62106downl,r62148downl,r62196downl,r62252downl,r62303downl,r62406downl]
 r62hup=[r6222uph,r6268uph,r6278uph,r62106uph,r62148uph,r62196uph,r62252uph,r62303uph,r62406uph]
 r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r62252downh,r62303downh,r62406downh]
-r42lup=[r4222upl,r4268upl,r4278upl,r42106upl,r42148upl,r42196upl,r42252upl,r42303upl,r42406upl]
-r42ldown=[r4222downl,r4268downl,r4278downl,r42106downl,r42148downl,r42196downl,r42252downl,r42303downl,r42406downl]#r42和r62的上下限与中心值
+r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
+r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
+r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
+r82hcen=[r8222hcen,r8268hcen,r8278hcen,r82106hcen,r82148hcen,r82196hcen,r82252hcen,r82303hcen,r82406hcen]
+r82hup=[r8222uph,r8268uph,r8278uph,r82106uph,r82148uph,r82196uph,r82252uph,r82303uph,r82406uph]
+r82hdown=[r8222downh,r8268downh,r8278downh,r82106downh,r82148downh,r82196downh,r82252downh,r82303downh,r82406downh]
+r32cen=[r3222cen,r3268cen,r3278cen,r32106cen,r32148cen,r32196cen,r32252cen,r32303cen,r32406cen]
+r32up=[r3222up,r3268up,r3278up,r32106up,r32148up,r32196up,r32252up,r32303up,r32406up]
+r32down=[r3222down,r3268down,r3278down,r32106down,r32148down,r32196down,r32252down,r32303down,r32406down]
+r32hcen=[r3222hcen,r3268hcen,r3278hcen,r32106hcen,r32148hcen,r32196hcen,r32252hcen,r32303hcen,r32406hcen]
+r32hup=[r3222uph,r3268uph,r3278uph,r32106uph,r32148uph,r32196uph,r32252uph,r32303uph,r32406uph]
+r32hdown=[r3222downh,r3268downh,r3278downh,r32106downh,r32148downh,r32196downh,r32252downh,r32303downh,r32406downh]
+#r42和r62的上下限与中心值
 r62errup=np.zeros(9)
 r62errdown=np.zeros(9)
 r42errup=np.zeros(9)
@@ -1700,6 +2110,18 @@ r62errlup=np.zeros(9)
 r62errldown=np.zeros(9)
 r42errlup=np.zeros(9)
 r42errldown=np.zeros(9)
+r82errup=np.zeros(9)
+r82errdown=np.zeros(9)
+r32errup=np.zeros(9)
+r32errdown=np.zeros(9)
+r82errhup=np.zeros(9)
+r82errhdown=np.zeros(9)
+r32errhup=np.zeros(9)
+r32errhdown=np.zeros(9)
+r82errlup=np.zeros(9)
+r82errldown=np.zeros(9)
+r32errlup=np.zeros(9)
+r32errldown=np.zeros(9)
 
 for i in range(0,9):
     r62errup[i]=r62up[i]-r62cen[i]
@@ -1710,14 +2132,19 @@ for i in range(0,9):
     r62errhdown[i]=r62hcen[i]-r62hdown[i]
     r42errhup[i]=r42hup[i]-r42hcen[i]
     r42errhdown[i]=r42hcen[i]-r42hdown[i]
-    r62errlup[i]=r62lup[i]-r62lcen[i]
-    r62errldown[i]=r62lcen[i]-r62ldown[i]
-    r42errlup[i]=r42lup[i]-r42lcen[i]
-    r42errldown[i]=r42lcen[i]-r42ldown[i]
+    r82errup[i]=r82up[i]-r82cen[i]
+    r82errdown[i]=r82cen[i]-r82down[i]
+    r32errup[i]=r32up[i]-r32cen[i]
+    r32errdown[i]=r32cen[i]-r32down[i]
+    r82errhup[i]=r82hup[i]-r82hcen[i]
+    r82errhdown[i]=r82hcen[i]-r82hdown[i]
+    r32errhup[i]=r32hup[i]-r32hcen[i]
+    r32errhdown[i]=r32hcen[i]-r32hdown[i]
 
-print(r62errhup)
-print(r62errhdown)
-print(r62hcen)
+
+print(r82errup)
+print(r82errdown)
+print(r82cen)
 
 
 for num in range(0,100):
@@ -2040,54 +2467,77 @@ energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
-fig=plt.figure(figsize=(9., 3.5))
+fig=plt.figure(figsize=(9., 7.))
 #fig=plt.figure()
-ax2=fig.add_subplot(122)
+ax2=fig.add_subplot(222)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=1)
 line62cen,=ax2.plot(energy,r62cen,color='blue',label=r'$T_f$')
 point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
 line62h,=ax2.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
-ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $1.05T_f$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $T_c$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 plt.axis([5.,230.,-60.,60.])
 ax2.set_xscale('symlog')
 ax2.set_yscale('symlog')
 #plt.xticks([])
 ax2.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax2.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+ax2.xaxis.tick_top()
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
-ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
+ax2.xaxis.set_label_position('top') 
 ax2.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(7)
 for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(7)
-#fig.subplots_adjust(top=0.95, bottom=0.2, left=0.16, right=0.95, hspace=0.35,wspace=0.35)
-#fig.savefig("R62.pdf")
 
 
-# Create figure
-#fig=plt.figure(figsize=(4.5, 3.5))
-#fig=plt.figure()
-ax1=fig.add_subplot(121)
-ax1.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.errorbar(energy,r42cen,color='blue')
-ax1.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax1.errorbar(energy,r42hcen,color='green')
-ax1.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax3=fig.add_subplot(223)
+ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax3.errorbar(energy,r42cen,color='blue')
+ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax3.errorbar(energy,r42hcen,color='green')
+ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 #ax1.errorbar(energy,kurtosis[:,0],color='red')
-ax1.set_xscale('symlog')
+ax3.set_xscale('symlog')
 plt.axis([5,230,-2.,2.])
-ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
-ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax1.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax3.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
+for label in ax3.yaxis.get_ticklabels():
+    label.set_fontsize(7)
+
+ax1=fig.add_subplot(221)
+ax1.errorbar(energy,kurtosis[:,2],yerr=[r32errdown,r32errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.set_xscale('symlog')
+plt.axis([5,230,0.,1.2])
+ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax1.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+ax1.xaxis.tick_top()
+ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
+ax1.xaxis.set_label_position('top') 
+ax1.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
-fig.subplots_adjust(top=0.95, bottom=0.2, left=0.1, right=0.95, hspace=0.35,
+ax4=fig.add_subplot(224)
+ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax4.set_xscale('symlog')
+plt.axis([5,230,-50.,60.])
+ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
+ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax4.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+for label in ax4.yaxis.get_ticklabels():
+    label.set_fontsize(7)
+
+
+fig.subplots_adjust(top=0.9, bottom=0.15, left=0.1, right=0.95, hspace=0.,
                     wspace=0.35)
 
 
