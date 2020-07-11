@@ -44,6 +44,24 @@ T303up=np.zeros(100)
 T303down=np.zeros(100)
 T406up=np.zeros(100)
 T406down=np.zeros(100)
+T22hup=np.zeros(100)
+T22hdown=np.zeros(100)
+T68hup=np.zeros(100)
+T68hdown=np.zeros(100)
+T78hup=np.zeros(100)
+T78hdown=np.zeros(100)
+T106hup=np.zeros(100)
+T106hdown=np.zeros(100)
+T148hup=np.zeros(100)
+T148hdown=np.zeros(100)
+T196hup=np.zeros(100)
+T196hdown=np.zeros(100)
+T252hup=np.zeros(100)
+T252hdown=np.zeros(100)
+T303hup=np.zeros(100)
+T303hdown=np.zeros(100)
+T406hup=np.zeros(100)
+T406hdown=np.zeros(100)
 for num in range(0,300):
     data200[num]=0.122302
     data62[num]=0.325439
@@ -2166,6 +2184,24 @@ for num in range(0,100):
     T303down[num]=min303down_index
     T406up[num]=min406up_index
     T406down[num]=min406down_index
+    T22hup[num]=Tcup[0]
+    T22hdown[num]=Tcdown[0]
+    T68hup[num]=Tcup[1]
+    T68hdown[num]=Tcdown[1]
+    T78hup[num]=Tcup[2]
+    T78hdown[num]=Tcdown[2]
+    T106hup[num]=Tcup[3]
+    T106hdown[num]=Tcdown[3]
+    T148hup[num]=Tcup[4]
+    T148hdown[num]=Tcdown[4]
+    T196hup[num]=Tcup[5]
+    T196hdown[num]=Tcdown[5]
+    T252hup[num]=Tcup[6]
+    T252hdown[num]=Tcdown[6]
+    T303hup[num]=Tcup[7]
+    T303hdown[num]=Tcdown[7]
+    T406hup[num]=Tcup[8]
+    T406hdown[num]=Tcdown[8]
 ####################################################################################################
 # Create figure
 fig=plt.figure(figsize=(12, 18.5))
@@ -2320,6 +2356,8 @@ band_mub=ax10.fill_between(xsame,max6222,min6222,alpha=0.25,facecolor='b',edgeco
 line_mub,=ax10.plot(xsame,r62mub22cen,'b',linewidth=1,alpha=0.5)
 ax10.plot(T22up,y62)
 ax10.plot(T22down,y62)
+ax10.plot(T22hup,y62,color='r')
+ax10.plot(T22hdown,y62,color='r')
 #ax2.plot(energy,r62up)
 #ax2.plot(energy,r62down)
 #ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
@@ -2339,6 +2377,8 @@ band_mub=ax11.fill_between(xsame,max6268,min6268,alpha=0.25,facecolor='b',edgeco
 line_mub,=ax11.plot(xsame,r62mub68cen,'b',linewidth=1,alpha=0.5)
 ax11.plot(T68up,y62)
 ax11.plot(T68down,y62)
+ax11.plot(T68hup,y62,color='r')
+ax11.plot(T68hdown,y62,color='r')
 ax11.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-0.5,1.2])
@@ -2355,6 +2395,8 @@ band_mub=ax12.fill_between(xsame,max62106,min62106,alpha=0.25,facecolor='b',edge
 line_mub,=ax12.plot(xsame,r62mub106cen,'b',linewidth=1,alpha=0.5)
 ax12.plot(T106up,y62)
 ax12.plot(T106down,y62)
+ax12.plot(T106hup,y62,color='r')
+ax12.plot(T106hdown,y62,color='r')
 ax12.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-1,1.4])
@@ -2370,6 +2412,8 @@ band_mub=ax13.fill_between(xsame,max62148,min62148,alpha=0.25,facecolor='b',edge
 line_mub,=ax13.plot(xsame,r62mub148cen,'b',linewidth=1,alpha=0.5)
 ax13.plot(T148up,y62)
 ax13.plot(T148down,y62)
+ax13.plot(T148hup,y62,color='r')
+ax13.plot(T148hdown,y62,color='r')
 ax13.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-1,1.5])
@@ -2385,6 +2429,8 @@ band_mub=ax14.fill_between(xsame,max62196,min62196,alpha=0.25,facecolor='b',edge
 line_mub,=ax14.plot(xsame,r62mub196cen,'b',linewidth=1,alpha=0.5)
 ax14.plot(T196up,y62)
 ax14.plot(T196down,y62)
+ax14.plot(T196hup,y62,color='r')
+ax14.plot(T196hdown,y62,color='r')
 ax14.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-2.2,1.7])
@@ -2401,6 +2447,8 @@ band_mub=ax15.fill_between(xsame,max62252,min62252,alpha=0.25,facecolor='b',edge
 line_mub,=ax15.plot(xsame,r62mub252cen,'b',linewidth=1,alpha=0.5)
 ax15.plot(T252up,y62)
 ax15.plot(T252down,y62)
+ax15.plot(T252hup,y62,color='r')
+ax15.plot(T252hdown,y62,color='r')
 ax15.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-10,5])
@@ -2416,6 +2464,8 @@ band_mub=ax16.fill_between(xsame,max62303,min62303,alpha=0.25,facecolor='b',edge
 line_mub,=ax16.plot(xsame,r62mub303cen,'b',linewidth=1,alpha=0.5)
 ax16.plot(T303up,y62)
 ax16.plot(T303down,y62)
+ax16.plot(T303hup,y62,color='r')
+ax16.plot(T303hdown,y62,color='r')
 ax16.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-10,5])
@@ -2431,6 +2481,8 @@ band_mub=ax17.fill_between(xsame,max62406,min62406,alpha=0.25,facecolor='b',edge
 line_mub,=ax17.plot(xsame,r62mub406cen,'b',linewidth=1,alpha=0.5)
 ax17.plot(T406up,y62)
 ax17.plot(T406down,y62)
+ax17.plot(T406hup,y62,color='r')
+ax17.plot(T406hdown,y62,color='r')
 ax17.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,-60,50])
@@ -2495,9 +2547,9 @@ for label in ax2.yaxis.get_ticklabels():
 
 ax3=fig.add_subplot(223)
 ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax3.errorbar(energy,r42cen,color='blue')
+ax3.plot(energy,r42cen,color='blue')
 ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
-ax3.errorbar(energy,r42hcen,color='green')
+ax3.plot(energy,r42hcen,color='green')
 ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
 #ax1.errorbar(energy,kurtosis[:,0],color='red')
 ax3.set_xscale('symlog')
@@ -2513,7 +2565,10 @@ for label in ax3.yaxis.get_ticklabels():
 
 ax1=fig.add_subplot(221)
 ax1.errorbar(energy,kurtosis[:,2],yerr=[r32errdown,r32errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.plot(energy,kurtosis[:,2],color='blue')
 ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='red',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r32hcen,yerr=[r32errhdown,r32errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax1.errorbar(energy,r32hcen,color='green')
 ax1.set_xscale('symlog')
 plt.axis([5,230,0.,1.2])
 ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
@@ -2527,6 +2582,9 @@ for label in ax1.yaxis.get_ticklabels():
 
 ax4=fig.add_subplot(224)
 ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax4.plot(energy,r82cen,color='b')
+ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)
+ax4.plot(energy,r82hcen,color='green')
 ax4.set_xscale('symlog')
 plt.axis([5,230,-50.,60.])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
