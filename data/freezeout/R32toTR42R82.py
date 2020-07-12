@@ -2200,9 +2200,16 @@ for i in range(0,9):
     r32errhdown[i]=r32hcen[i]-r32hdown[i]
 
 
-print(r82errup)
-print(r82errdown)
-print(r82cen)
+print(min22cen_index)
+print(min68cen_index)
+print(min78cen_index)
+print(min106cen_index)
+print(min148cen_index)
+print(min196cen_index)
+print(min252cen_index)
+print(min303cen_index)
+print(min406cen_index)
+
 
 
 for num in range(0,1000):
