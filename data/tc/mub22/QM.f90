@@ -101,6 +101,10 @@ program QM
     write(51,*)fpi*hc
     close(51)
 
+    open(unit=51,file='./buffer/sigma.dat',position='append')
+    write(51,*)(fpi/sqrt(Zphi))*hc
+    close(51)
+
     open(unit=51,file='./buffer/Delta_lR.dat',position='append')
     write(51, "(e21.14)")-0.5*(c*fpi*hc-fpi0*hc*sqrt(Zphi)*c/(sqrt(Zphi0)))
     close(51)
