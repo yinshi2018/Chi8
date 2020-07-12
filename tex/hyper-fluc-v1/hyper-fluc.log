@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  9 JUL 2020 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  12 JUL 2020 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,14 +529,14 @@ File: ./figures/R102-T-muB0.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figures/R102-T-muB0.pdf used on input line 389.
 (pdftex.def)             Requested size: 229.49844pt x 178.50378pt.
  [4]
-<./figures/R42R62-muBoT.pdf, id=239, 650.43pt x 252.945pt>
+<./figures/R42R62-muBoT.pdf, id=240, 650.43pt x 252.945pt>
 File: ./figures/R42R62-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62-muBoT.pdf>
 Package pdftex.def Info: ./figures/R42R62-muBoT.pdf used on input line 449.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
-<./figures/R42R62expansion-muBoT.pdf, id=244, 650.43pt x 252.945pt>
+<./figures/R42R62expansion-muBoT.pdf, id=245, 650.43pt x 252.945pt>
 File: ./figures/R42R62expansion-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62expansion-muBoT.pdf>
@@ -544,7 +544,7 @@ Package pdftex.def Info: ./figures/R42R62expansion-muBoT.pdf used on input line
  459.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
-<./figures/R42R62R82-T-muB0to400.pdf, id=253, 975.645pt x 252.945pt>
+<./figures/R42R62R82-T-muB0to400.pdf, id=254, 975.645pt x 252.945pt>
 File: ./figures/R42R62R82-T-muB0to400.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0to400.pdf>
@@ -561,11 +561,24 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42R62expansion-mu
 BoT.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
 >]
-Underfull \hbox (badness 1308) in paragraph at lines 592--593
+
+LaTeX Warning: Reference `eq:rho1' on page 7 undefined on input line 511.
+
+
+LaTeX Warning: Reference `eq:rho1' on page 7 undefined on input line 511.
+
+<./figures/Rm2-sqrtS.pdf, id=501, 650.43pt x 505.89pt>
+File: ./figures/Rm2-sqrtS.pdf Graphic file (type pdf)
+
+<use ./figures/Rm2-sqrtS.pdf>
+Package pdftex.def Info: ./figures/Rm2-sqrtS.pdf used on input line 519.
+(pdftex.def)             Requested size: 458.99689pt x 357.00757pt.
+ [7 <./figures/R42R62R82-T-muB0to400.pdf>]
+Underfull \hbox (badness 1308) in paragraph at lines 626--627
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-[7 <./figures/R42R62R82-T-muB0to400.pdf>] (./hyper-fluc.bbl
+[8 <./figures/Rm2-sqrtS.pdf>] (./hyper-fluc.bbl [9]
 Underfull \hbox (badness 1668) in paragraph at lines 115--123
  []\OT1/cmr/m/n/9 A. K. Cy-rol, M. Mit-ter, J. M. Pawlowski,  and
  []
@@ -593,7 +606,7 @@ Underfull \hbox (badness 6842) in paragraph at lines 188--197
  054015 (2018)[],
  []
 
-[8]
+
 Underfull \hbox (badness 1675) in paragraph at lines 222--229
  []\OT1/cmr/m/n/9 J. M. Pawlowski, []An-nals Phys. \OT1/cmr/bx/n/9 322\OT1/cmr/
 m/n/9 , 2831 (2007)[],
@@ -605,37 +618,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--261
 9 , 177 (2012)[],
  []
 
-
-Underfull \hbox (badness 1137) in paragraph at lines 496--503
+[10]
+Underfull \hbox (badness 1137) in paragraph at lines 642--649
  []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 496--503
+Underfull \hbox (badness 3635) in paragraph at lines 642--649
  \OT1/cmr/m/n/9 and C. Sasaki, []Phys. Rev. \OT1/cmr/bx/n/9 D88\OT1/cmr/m/n/9 ,
  074502 (2013)[],
  []
 
-) [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 682.
+) [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 716.
  (./hyper-fluc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 682.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 682.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 716.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 716.
 Package rerunfilecheck Info: File `hyper-fluc.out' has not changed.
 (rerunfilecheck)             Checksum: BFF86EE8FDC693675A7B34D9ED3F9C5E;989.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9564 strings out of 493014
- 136142 string characters out of 6133352
- 303734 words of memory out of 5000000
- 12850 multiletter control sequences out of 15000+600000
+ 9648 strings out of 493014
+ 137901 string characters out of 6133352
+ 323821 words of memory out of 5000000
+ 12914 multiletter control sequences out of 15000+600000
  15221 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,35p,1927b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,35p,1927b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -655,12 +671,13 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (9 pages, 616821 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on hyper-fluc.pdf (11 pages, 669293 bytes).
 PDF statistics:
- 800 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 108 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 981 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

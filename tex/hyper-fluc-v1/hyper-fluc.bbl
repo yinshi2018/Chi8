@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{40}%
+\begin{thebibliography}{54}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -485,6 +485,152 @@
   \bibnamefont {Szabo}},\ }\href@noop {} {\  (\bibinfo {year} {2020})},\
   \Eprint {http://arxiv.org/abs/2002.02821} {arXiv:2002.02821 [hep-lat]}
   \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Adamczyk}\ \emph {et~al.}(2014)\citenamefont
+  {Adamczyk} \emph {et~al.}}]{Adamczyk:2013dal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Adamczyk}} \emph {et~al.} (\bibinfo {collaboration} {STAR}),\ }\href
+  {\doibase 10.1103/PhysRevLett.112.032302} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo
+  {pages} {032302} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1309.5681} {arXiv:1309.5681 [nucl-ex]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1309.5681;%%
+\bibitem [{\citenamefont {Luo}(2015)}]{Luo:2015ewa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Luo}} (\bibinfo {collaboration} {STAR}),\ }\bibfield  {booktitle} {\emph
+  {\bibinfo {booktitle} {{Proceedings, 9th International Workshop on Critical
+  Point and Onset of Deconfinement (CPOD 2014): Bielefeld, Germany, November
+  17-21, 2014}}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {PoS}\ }\textbf {\bibinfo {volume} {CPOD2014}},\ \bibinfo {pages} {019}
+  (\bibinfo {year} {2015})},\ \Eprint {http://arxiv.org/abs/1503.02558}
+  {arXiv:1503.02558 [nucl-ex]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1503.02558;%%
+\bibitem [{\citenamefont {Adam}\ \emph {et~al.}(2020)\citenamefont {Adam} \emph
+  {et~al.}}]{Adam:2020unf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Adam}} \emph {et~al.} (\bibinfo {collaboration} {STAR}),\ }\href@noop {} {\
+  (\bibinfo {year} {2020})},\ \Eprint {http://arxiv.org/abs/2001.02852}
+  {arXiv:2001.02852 [nucl-ex]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nonaka}(2020)}]{Nonaka:2020crv}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Nonaka}} (\bibinfo {collaboration} {STAR}),\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {{28th International Conference on Ultrarelativistic
+  Nucleus-Nucleus Collisions}}}}\ (\bibinfo {year} {2020})\ \Eprint
+  {http://arxiv.org/abs/2002.12505} {arXiv:2002.12505 [nucl-ex]} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Pandav}(2020)}]{Pandav:2020uzx}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Pandav}} (\bibinfo {collaboration} {STAR}),\ }\href@noop {} {\  (\bibinfo
+  {year} {2020})},\ \Eprint {http://arxiv.org/abs/2003.12503} {arXiv:2003.12503
+  [nucl-ex]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Adamczyk}\ \emph {et~al.}(2017)\citenamefont
+  {Adamczyk} \emph {et~al.}}]{Adamczyk:2017iwn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Adamczyk}} \emph {et~al.} (\bibinfo {collaboration} {STAR}),\ }\href
+  {\doibase 10.1103/PhysRevC.96.044904} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {C96}},\ \bibinfo {pages}
+  {044904} (\bibinfo {year} {2017})},\ \Eprint
+  {http://arxiv.org/abs/1701.07065} {arXiv:1701.07065 [nucl-ex]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1701.07065;%%
+\bibitem [{\citenamefont {Luo}\ \emph {et~al.}(2013)\citenamefont {Luo},
+  \citenamefont {Xu}, \citenamefont {Mohanty},\ and\ \citenamefont
+  {Xu}}]{Luo:2013bmi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Luo}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Xu}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Mohanty}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Xu}},\ }\href {\doibase
+  10.1088/0954-3899/40/10/105104} {\bibfield  {journal} {\bibinfo  {journal}
+  {J. Phys. G}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo {pages} {105104}
+  (\bibinfo {year} {2013})},\ \Eprint {http://arxiv.org/abs/1302.2332}
+  {arXiv:1302.2332 [nucl-ex]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Braun-Munzinger}\ \emph {et~al.}(2017)\citenamefont
+  {Braun-Munzinger}, \citenamefont {Rustamov},\ and\ \citenamefont
+  {Stachel}}]{Braun-Munzinger:2016yjz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Braun-Munzinger}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rustamov}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Stachel}},\ }\href {\doibase 10.1016/j.nuclphysa.2017.01.011} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Phys. A}\ }\textbf {\bibinfo {volume}
+  {960}},\ \bibinfo {pages} {114} (\bibinfo {year} {2017})},\ \Eprint
+  {http://arxiv.org/abs/1612.00702} {arXiv:1612.00702 [nucl-th]} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Vovchenko}\ \emph {et~al.}(2020)\citenamefont
+  {Vovchenko}, \citenamefont {Savchuk}, \citenamefont {Poberezhnyuk},
+  \citenamefont {Gorenstein},\ and\ \citenamefont {Koch}}]{Vovchenko:2020tsr}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Vovchenko}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Savchuk}},
+  \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Poberezhnyuk}},
+  \bibinfo {author} {\bibfnamefont {M.~I.}\ \bibnamefont {Gorenstein}}, \ and\
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Koch}},\ }\href@noop {}
+  {\  (\bibinfo {year} {2020})},\ \Eprint {http://arxiv.org/abs/2003.13905}
+  {arXiv:2003.13905 [hep-ph]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nahrgang}\ \emph {et~al.}(2015)\citenamefont
+  {Nahrgang}, \citenamefont {Bluhm}, \citenamefont {Alba}, \citenamefont
+  {Bellwied},\ and\ \citenamefont {Ratti}}]{Nahrgang:2014fza}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Nahrgang}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bluhm}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Alba}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Bellwied}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Ratti}},\ }\href {\doibase
+  10.1140/epjc/s10052-015-3775-0} {\bibfield  {journal} {\bibinfo  {journal}
+  {Eur. Phys. J. C}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo {pages} {573}
+  (\bibinfo {year} {2015})},\ \Eprint {http://arxiv.org/abs/1402.1238}
+  {arXiv:1402.1238 [hep-ph]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bluhm}\ \emph {et~al.}(2020)\citenamefont {Bluhm}
+  \emph {et~al.}}]{Bluhm:2020mpc}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Bluhm}} \emph {et~al.},\ }\href@noop {} {\  (\bibinfo {year} {2020})},\
+  \Eprint {http://arxiv.org/abs/2001.08831} {arXiv:2001.08831 [nucl-th]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fu}\ and\ \citenamefont
+  {Pawlowski}(2016)}]{Fu:2015amv}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.-j.}\ \bibnamefont
+  {Fu}}\ and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Pawlowski}},\ }\href {\doibase 10.1103/PhysRevD.93.091501} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+  {D93}},\ \bibinfo {pages} {091501} (\bibinfo {year} {2016})},\ \Eprint
+  {http://arxiv.org/abs/1512.08461} {arXiv:1512.08461 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1512.08461;%%
+\bibitem [{\citenamefont {Isserstedt}\ \emph {et~al.}(2019)\citenamefont
+  {Isserstedt}, \citenamefont {Buballa}, \citenamefont {Fischer},\ and\
+  \citenamefont {Gunkel}}]{Isserstedt:2019pgx}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Isserstedt}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Buballa}},
+  \bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont {Fischer}}, \ and\
+  \bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont {Gunkel}},\
+  }\href@noop {} {\  (\bibinfo {year} {2019})},\ \Eprint
+  {http://arxiv.org/abs/1906.11644} {arXiv:1906.11644 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1906.11644;%%
+\bibitem [{\citenamefont {Andronic}\ \emph {et~al.}(2018)\citenamefont
+  {Andronic}, \citenamefont {Braun-Munzinger}, \citenamefont {Redlich},\ and\
+  \citenamefont {Stachel}}]{Andronic:2017pug}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Andronic}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Braun-Munzinger}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Redlich}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Stachel}},\ }\href {\doibase 10.1038/s41586-018-0491-6} {\bibfield
+  {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume} {561}},\
+  \bibinfo {pages} {321} (\bibinfo {year} {2018})},\ \Eprint
+  {http://arxiv.org/abs/1710.09425} {arXiv:1710.09425 [nucl-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1710.09425;%%
 \bibitem [{\citenamefont {Lo}\ \emph {et~al.}(2013)\citenamefont {Lo},
   \citenamefont {Friman}, \citenamefont {Kaczmarek}, \citenamefont {Redlich},\
   and\ \citenamefont {Sasaki}}]{Lo:2013hla}%
