@@ -116,9 +116,9 @@ for num1 in range(0,101):
     	b7=1./(7.*6.*5.*4.*3.*2.*1.) *(4.*num1/T[num2])**7.
     	b8=1./(8.*7.*6.*5.*4.*3.*2.*1.) *(4.*num1/T[num2])**8.
         chi1[num1,num2]=c2[num2]*4.*num1/T[num2]+1./(3.*2.*1.) *c4[num2]* (4.*num1/T[num2])**3. +1./(5.*4.*3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**5.+1./(7.*6.*5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**7.
-        chi2[num1,num2]=c2[num2]+1./(2.*1.) *c4[num2]* (4.*num1/T[num2])**2. #+1./(4.*3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**6.
+        chi2[num1,num2]=c2[num2]+1./(2.*1.) *c4[num2]* (4.*num1/T[num2])**2. +1./(4.*3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**6.
         chi3[num1,num2]=c4[num2]* (4.*num1/T[num2]) +1./(3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**3.+1./(5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**5.
-        chi4[num1,num2]=c4[num2] +1./(2.*1.) *c6[num2]* (4.*num1/T[num2])**2.#+1./(4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**4.
+        chi4[num1,num2]=c4[num2] +1./(2.*1.) *c6[num2]* (4.*num1/T[num2])**2.+1./(4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**4.
         chi5[num1,num2]=c6[num2]* (4.*num1/T[num2])+1./(3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**3.
         chi6[num1,num2]=c6[num2]+1./(2.*1.) *c8[num2]* (4.*num1/T[num2])**2.
         chi7[num1,num2]=c8[num2]* (4.*num1/T[num2])
@@ -153,8 +153,8 @@ for num1 in range(0,101):
 
 for num1 in range(0,101):
     for num2 in range(0,18):
-        chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2. #+1./(4.*3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**6.
-        chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.#+1./(4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**4.        chi7[num1,num2]=c8[num2]* (4.*num1/T[num2])
+        chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2. +1./(4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**6.
+        chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.+1./(4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**4.   #     chi7[num1,num2]=c8[num2]* (4.*num1/T[num2])
         WBR42[num1,num2]=chi4[num1,num2]/chi2[num1,num2]
         WBerrR42[num1,num2]=abs(chi4[num1,num2]/(chi2[num1,num2]**2))*WBerrc2[num2]+abs(1./chi2[num1,num2]-chi4[num1,num2]/(chi2[num1,num2])**2*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc4[num2]+abs(1./chi2[num1,num2]*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc6[num2]
         WBerrR422[num1,num2]=((((chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc2[num2])**2 \
@@ -165,7 +165,7 @@ for num1 in range(0,101):
 for num1 in range(0,101):
     for num2 in range(0,18):
         chi1[num1,num2]=WBc2[num2]*4.*num1/WBT[num2]+1./(3.*2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**3. +1./(5.*4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**5.+1./(7.*6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**7.
-        chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2.# +1./(4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**6.
+        chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2. +1./(4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**6.
         chi3[num1,num2]=WBc4[num2]* (4.*num1/WBT[num2]) +1./(3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**3.+1./(5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**5.
         chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.+1./(4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**4.
         chi5[num1,num2]=WBc6[num2]* (4.*num1/WBT[num2])+1./(3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**3.
@@ -294,4 +294,4 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.09, right=0.95, hspace=0.35,
                     wspace=0.25)
 
 
-fig.savefig("R42R62-muBoT.pdf")
+fig.savefig("R42R62-muBoThighorder.pdf")
