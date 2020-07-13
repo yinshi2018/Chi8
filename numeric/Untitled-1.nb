@@ -1,0 +1,507 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16812,        499]
+NotebookOptionsPosition[     16099,        472]
+NotebookOutlinePosition[     16434,        487]
+CellTagsIndexPosition[     16391,        484]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ InitializationCell->True,
+ CellChangeTimes->{{3.692964187311714*^9, 3.692964195335157*^9}, 
+   3.69299931114537*^9},
+ ExpressionUUID -> "bd966d80-b42a-4d2e-a4a0-f93bca8869f7"],
+
+Cell[BoxData["\<\"/home/yinsh/Chi8/numeric\"\>"], "Output",
+ CellChangeTimes->{{3.803618628418539*^9, 3.8036186287746553`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"errR423", "=", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"chi4", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], 
+           SuperscriptBox[
+            RowBox[{"chi2", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], "2"]]}], ")"}], "2"], 
+       SuperscriptBox[
+        RowBox[{"errc2", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["1", 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"chi4", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]], "*", 
+           FractionBox["1", "2"], "*", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", "*", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}]}], ")"}], "2"], 
+       
+       SuperscriptBox[
+        RowBox[{"errc4", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            FractionBox["1", "2"], "*", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{"4", "*", "num1"}], 
+               RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}], 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"chi4", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]], "*", 
+           FractionBox["1", 
+            RowBox[{"4", "*", "3", "*", "2"}]], "*", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", "*", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"]}]}], ")"}], "2"], 
+       
+       SuperscriptBox[
+        RowBox[{"errc6", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            FractionBox["1", 
+             RowBox[{"4", "*", "3", "*", "2"}]], "*", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{"4", "*", "num1"}], 
+               RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"]}], 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"chi4", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]], "*", 
+           FractionBox["1", 
+            RowBox[{"6", "*", "5", "*", "4", "*", "3", "*", "2"}]], "*", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", "*", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "6"]}]}], ")"}], "2"], 
+       
+       SuperscriptBox[
+        RowBox[{"errc8", "[", "num2", "]"}], "2"]}]}], ")"}], 
+    FractionBox["1", "2"]], "//", "HoldForm"}]}]], "Input",
+ CellChangeTimes->{{3.8036175744045362`*^9, 3.803617588605536*^9}, {
+  3.80361763663127*^9, 3.803617818877885*^9}, {3.803617879020627*^9, 
+  3.8036181523136044`*^9}, {3.803618365685607*^9, 3.803618368432728*^9}, {
+  3.803618504991851*^9, 3.803618512910033*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"\[Sqrt]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"chi4", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}], 
+          SuperscriptBox[
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], "2"]]}], ")"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"errc2", "[", "num2", "]"}], "2"]}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"chi2", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"chi4", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", " ", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"chi2", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", "2"}]]}], ")"}],
+        "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"errc4", "[", "num2", "]"}], "2"]}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", " ", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"], 
+          RowBox[{"2", " ", 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"chi4", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", " ", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"chi2", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"4", " ", "3", " ", "2"}], ")"}]}]]}], ")"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"errc6", "[", "num2", "]"}], "2"]}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", " ", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"], 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"4", " ", "3", " ", "2"}], ")"}], " ", 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"chi4", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", " ", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "6"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"chi2", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"6", " ", "5", " ", "4", " ", "3", " ", "2"}], ")"}]}]]}],
+         ")"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"errc8", "[", "num2", "]"}], "2"]}]}], ")"}]}],
+  HoldForm]], "Output",
+ CellChangeTimes->{3.803618403561222*^9, 3.80361851369954*^9, 
+  3.803618551706871*^9, 3.803618628891506*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"errR623", "=", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"chi6", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], 
+           SuperscriptBox[
+            RowBox[{"chi2", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], "2"]]}], ")"}], "2"], 
+       SuperscriptBox[
+        RowBox[{"errc2", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"chi6", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]]}], "*", 
+          FractionBox["1", "2"], "*", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", "*", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}], ")"}], "2"], 
+       SuperscriptBox[
+        RowBox[{"errc4", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["1", 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"chi6", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]], "*", 
+           FractionBox["1", 
+            RowBox[{"4", "*", "3", "*", "2"}]], "*", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", "*", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"]}]}], ")"}], "2"], 
+       
+       SuperscriptBox[
+        RowBox[{"errc6", "[", "num2", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            FractionBox["1", "2"], "*", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{"4", "*", "num1"}], 
+               RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}], 
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"chi6", "[", 
+             RowBox[{"num1", ",", "num2"}], "]"}], 
+            SuperscriptBox[
+             RowBox[{"chi2", "[", 
+              RowBox[{"num1", ",", "num2"}], "]"}], "2"]], "*", 
+           FractionBox["1", 
+            RowBox[{"6", "*", "5", "*", "4", "*", "3", "*", "2"}]], "*", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox[
+              RowBox[{"4", "*", "num1"}], 
+              RowBox[{"T", "[", "num2", "]"}]], ")"}], "6"]}]}], ")"}], "2"], 
+       
+       SuperscriptBox[
+        RowBox[{"errc8", "[", "num2", "]"}], "2"]}]}], ")"}], 
+    FractionBox["1", "2"]], "//", "HoldForm"}]}]], "Input",
+ CellChangeTimes->{{3.80361816893635*^9, 3.8036182260605383`*^9}, {
+   3.803618261130328*^9, 3.80361828035079*^9}, 3.803618372752809*^9, 
+   3.803618548569066*^9}],
+
+Cell[BoxData[
+ TagBox[
+  SqrtBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"chi6", "[", 
+          RowBox[{"num1", ",", "num2"}], "]"}], 
+         SuperscriptBox[
+          RowBox[{"chi2", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}], "2"]]}], ")"}], "2"], " ", 
+     SuperscriptBox[
+      RowBox[{"errc2", "[", "num2", "]"}], "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"chi6", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", " ", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", "2"}]]}], ")"}], 
+      "2"], " ", 
+     SuperscriptBox[
+      RowBox[{"errc4", "[", "num2", "]"}], "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["1", 
+         RowBox[{"chi2", "[", 
+          RowBox[{"num1", ",", "num2"}], "]"}]], "-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"chi6", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", " ", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "4"]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"4", " ", "3", " ", "2"}], ")"}]}]]}], ")"}], "2"], " ", 
+     SuperscriptBox[
+      RowBox[{"errc6", "[", "num2", "]"}], "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox[
+            RowBox[{"4", " ", "num1"}], 
+            RowBox[{"T", "[", "num2", "]"}]], ")"}], "2"], 
+         RowBox[{"2", " ", 
+          RowBox[{"chi2", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"chi6", "[", 
+           RowBox[{"num1", ",", "num2"}], "]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"4", " ", "num1"}], 
+             RowBox[{"T", "[", "num2", "]"}]], ")"}], "6"]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"chi2", "[", 
+            RowBox[{"num1", ",", "num2"}], "]"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"6", " ", "5", " ", "4", " ", "3", " ", "2"}], ")"}]}]]}], 
+       ")"}], "2"], " ", 
+     SuperscriptBox[
+      RowBox[{"errc8", "[", "num2", "]"}], "2"]}]}]],
+  HoldForm]], "Output",
+ CellChangeTimes->{3.803618403591374*^9, 3.803618551780134*^9, 
+  3.803618629005547*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FortranForm", "[", "errR423", "]"}], ">>", 
+  "\"\<./errR42.f90\>\""}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.641201711114938*^9, 3.641201719433392*^9}, {
+   3.641201800258625*^9, 3.641201840632657*^9}, {3.6454223438439417`*^9, 
+   3.6454223461058397`*^9}, {3.6454224377415237`*^9, 3.645422445903282*^9}, {
+   3.6454224811584787`*^9, 3.6454225236425*^9}, {3.645422566157453*^9, 
+   3.645422599137287*^9}, {3.6454238007109756`*^9, 3.6454238158172617`*^9}, {
+   3.6454334603922243`*^9, 3.645433477961706*^9}, 3.645433707573777*^9, 
+   3.6454337569313107`*^9, 3.64543379281234*^9, {3.6454338325146427`*^9, 
+   3.645433861622384*^9}, {3.645435338921762*^9, 3.645435342425865*^9}, 
+   3.645442342860054*^9, {3.771206587195064*^9, 3.77120659800268*^9}, {
+   3.7712117519191236`*^9, 3.771211754728774*^9}, {3.77121506429711*^9, 
+   3.771215066808017*^9}, {3.7712337793797207`*^9, 3.7712337820363417`*^9}, {
+   3.771885308614296*^9, 3.771885308710141*^9}, {3.803618376018818*^9, 
+   3.8036183875964537`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FortranForm", "[", "errR623", "]"}], ">>", 
+  "\"\<./errR62.f90\>\""}]], "Input",
+ CellChangeTimes->{{3.803618393829185*^9, 3.8036183956607513`*^9}}]
+},
+WindowSize->{1920, 1016},
+WindowMargins->{{1, Automatic}, {Automatic, 11}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 334, 7, 51, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ InitializationCell->True],
+Cell[895, 29, 127, 1, 32, "Output"],
+Cell[CellGroupData[{
+Cell[1047, 34, 3830, 108, 236, "Input"],
+Cell[4880, 144, 3557, 105, 173, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8474, 254, 3314, 95, 232, "Input"],
+Cell[11791, 351, 3020, 93, 94, "Output"]
+}, Open  ]],
+Cell[14826, 447, 1082, 17, 32, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[15911, 466, 184, 4, 65, "Input"]
+}
+]
+*)
+

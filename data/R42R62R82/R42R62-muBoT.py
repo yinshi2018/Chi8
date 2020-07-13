@@ -100,8 +100,10 @@ A8=np.zeros((101,101))
 errR12=np.zeros((101,101))
 errR42=np.zeros((101,101))
 errR422=np.zeros((101,101))
+errR423=np.zeros((101,101))
 errR62=np.zeros((101,101))
 errR622=np.zeros((101,101))
+errR623=np.zeros((101,101))
 errR82=np.zeros((101,101))
 for num1 in range(0,101):
     for num2 in range(0,101):
@@ -150,16 +152,45 @@ for num1 in range(0,101):
                            + (((chi6[num1,num2]+1./(1.*2.)*(4.*num1/T[num2])**2*chi8[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/T[num2])**2*chi4[num1,num2])**2)*(1./(1.*2.)*(4.*num1/T[num2])**2)*errc4[num2])**2 \
                            + ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/T[num2])**2*chi4[num1,num2]))*errc6[num2])**2 \
                            + (((1./(1.*2.)*(4.*num1/T[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/T[num2])**2*chi4[num1,num2]))*errc8[num2])**2)**0.5
+        errR423[num1,num2]= ((-(chi4[num1,num2]/chi2[num1,num2]**2))**2*errc2[num2]**2 +   \
+                            (1/chi2[num1,num2] - chi4[num1,num2]/chi2[num1,num2]**2*0.5*   \
+                            ((4*num1)/T[num2])**2)**2*errc4[num2]**2 +                     \
+                            ((0.5*((4*num1)/T[num2])**2)/chi2[num1,num2] -                 \
+                            chi4[num1,num2]/chi2[num1,num2]**2*1/(4.*3.*2.)*               \
+                            ((4*num1)/T[num2])**4)**2*errc6[num2]**2 +                     \
+                            ((1/(4.*3.*2.)*((4*num1)/T[num2])**4)/chi2[num1,num2] -        \
+                            chi4[num1,num2]/chi2[num1,num2]**2*1/(6.*5.*4.*3.*2.)*         \
+                            ((4*num1)/T[num2])**6)**2*errc8[num2]**2)**0.5
+        errR623[num1,num2]=((-(chi6[num1,num2]/chi2[num1,num2]**2))**2*errc2[num2]**2 +          \
+                           (-(chi6[num1,num2]/chi2[num1,num2]**2)*0.5*((4*num1)/T[num2])**2)**2* \
+                           errc4[num2]**2 + (1/chi2[num1,num2] -                                 \
+                           chi6[num1,num2]/chi2[num1,num2]**2*1/(4.*3.*2.)*                      \
+                           ((4*num1)/T[num2])**4)**2*errc6[num2]**2 +                            \
+                           ((0.5*((4*num1)/T[num2])**2)/chi2[num1,num2] -                        \
+                           chi6[num1,num2]/chi2[num1,num2]**2*1/(6.*5.*4.*3.*2.)*                \
+                           ((4*num1)/T[num2])**6)**2*errc8[num2]**2)**0.5
+
+
 
 for num1 in range(0,101):
     for num2 in range(0,18):
         chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2. +1./(4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**6.
-        chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.+1./(4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**4.   #     chi7[num1,num2]=c8[num2]* (4.*num1/T[num2])
+        chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.+1./(4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**4.   
         WBR42[num1,num2]=chi4[num1,num2]/chi2[num1,num2]
         WBerrR42[num1,num2]=abs(chi4[num1,num2]/(chi2[num1,num2]**2))*WBerrc2[num2]+abs(1./chi2[num1,num2]-chi4[num1,num2]/(chi2[num1,num2])**2*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc4[num2]+abs(1./chi2[num1,num2]*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc6[num2]
-        WBerrR422[num1,num2]=((((chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc2[num2])**2 \
-                           +  ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])-(chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])*1./(1.*2.)*(4.*num1/WBT[num2])**2/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc4[num2])**2 \
-                           +  (((1./(1.*2.)*(4.*num1/WBT[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc6[num2])**2)**0.5
+#        WBerrR422[num1,num2]=((((chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc2[num2])**2 \
+#                           +  ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])-(chi4[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi6[num1,num2])*1./(1.*2.)*(4.*num1/WBT[num2])**2/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc4[num2])**2 \
+#                           +  (((1./(1.*2.)*(4.*num1/WBT[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc6[num2])**2)**0.5
+        WBerrR422[num1,num2]= ((-(chi4[num1,num2]/chi2[num1,num2]**2))**2*WBerrc2[num2]**2 +   \
+                            (1/chi2[num1,num2] - chi4[num1,num2]/chi2[num1,num2]**2*0.5*   \
+                            ((4*num1)/WBT[num2])**2)**2*WBerrc4[num2]**2 +                     \
+                            ((0.5*((4*num1)/WBT[num2])**2)/chi2[num1,num2] -                 \
+                            chi4[num1,num2]/chi2[num1,num2]**2*1/(4.*3.*2.)*               \
+                            ((4*num1)/WBT[num2])**4)**2*WBerrc6[num2]**2 +                     \
+                            ((1/(4.*3.*2.)*((4*num1)/WBT[num2])**4)/chi2[num1,num2] -        \
+                            chi4[num1,num2]/chi2[num1,num2]**2*1/(6.*5.*4.*3.*2.)*         \
+                            ((4*num1)/WBT[num2])**6)**2*WBerrc8[num2]**2)**0.5
+
 
 
 for num1 in range(0,101):
@@ -174,10 +205,19 @@ for num1 in range(0,101):
         chi8[num1,num2]=WBc8[num2]
         WBR62[num1,num2]=chi6[num1,num2]/chi2[num1,num2]
         WBerrR62[num1,num2]=abs(chi6[num1,num2]/(chi2[num1,num2]**2))*WBerrc2[num2]+abs(chi6[num1,num2]/(chi2[num1,num2]**2)*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc4[num2]+abs(1./chi2[num1,num2])*WBerrc6[num2]+abs(1./chi2[num1,num2]*1./(2.*1.)*(4.*num1/WBT[num2])**2)*WBerrc8[num2]
-        WBerrR622[num1,num2]=((((chi6[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi8[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc2[num2])**2 \
-                           + (((chi6[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi8[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*(1./(1.*2.)*(4.*num1/WBT[num2])**2)*WBerrc4[num2])**2 \
-                           + ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc6[num2])**2 \
-                           + (((1./(1.*2.)*(4.*num1/WBT[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc8[num2])**2)**0.5
+#        WBerrR622[num1,num2]=((((chi6[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi8[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*WBerrc2[num2])**2 \
+#                           + (((chi6[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi8[num1,num2])/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2])**2)*(1./(1.*2.)*(4.*num1/WBT[num2])**2)*WBerrc4[num2])**2 \
+#                           + ((1./(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc6[num2])**2 \
+#                           + (((1./(1.*2.)*(4.*num1/WBT[num2])**2)/(chi2[num1,num2]+1./(1.*2.)*(4.*num1/WBT[num2])**2*chi4[num1,num2]))*WBerrc8[num2])**2)**0.5
+        WBerrR622[num1,num2]=((-(chi6[num1,num2]/chi2[num1,num2]**2))**2*WBerrc2[num2]**2 +          \
+                           (-(chi6[num1,num2]/chi2[num1,num2]**2)*0.5*((4*num1)/WBT[num2])**2)**2* \
+                           WBerrc4[num2]**2 + (1/chi2[num1,num2] -                                 \
+                           chi6[num1,num2]/chi2[num1,num2]**2*1/(4.*3.*2.)*                      \
+                           ((4*num1)/WBT[num2])**4)**2*WBerrc6[num2]**2 +                            \
+                           ((0.5*((4*num1)/WBT[num2])**2)/chi2[num1,num2] -                        \
+                           chi6[num1,num2]/chi2[num1,num2]**2*1/(6.*5.*4.*3.*2.)*                \
+                           ((4*num1)/WBT[num2])**6)**2*WBerrc8[num2]**2)**0.5
+
 
 
 
@@ -228,9 +268,9 @@ band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+err
 
 plt.xticks(fontsize=8)
 plt.yticks(fontsize=8)
-plt.axis([0.,1.2,0.1,0.9])
+plt.axis([0.,0.8,0.2,0.9])
 
-ax1.axis([0,1.2,0.1,0.9])
+ax1.axis([0,0.8,0.2,0.9])
 
 ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
