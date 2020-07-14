@@ -267,27 +267,27 @@ r42160down=R42[:,60]-errR422[:,60]
 band_WB_T160=ax1.fill_between(mub/160.,WBR42[:,5]-WBerrR422[:,5],WBR42[:,5]+WBerrR422[:,5],alpha=0.3,facecolor=(0.8,0.5,0),edgecolor='',label=r'WB T=160 MeV')
 band_WB_T155=ax1.fill_between(mub/155.,WBR42[:,4]-WBerrR422[:,4],WBR42[:,4]+WBerrR422[:,4],alpha=0.3,facecolor='b',edgecolor='',label=r'WB T=155 MeV')
 
-#plt.axes([0.13, 0.212, 0.15, 0.27]) #不用figure的形式则无须用set
-#line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
-#band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.3,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
+plt.axes([-1., -1., 0.000000001, 0.00000000001]) #不用figure的形式则无须用set
+line_FRG_T160,=plt.plot(mubfrg*cmu/(200.0*ct),R42200,'--',dashes=(1,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
+band_FRG_T160=plt.fill_between(xsame,power1,power2,alpha=0.3,facecolor='m',edgecolor='',zorder=12,label=r'This work T=160 MeV')
 #line_FRG_T155,=plt.plot(mubfrg*cmu/(195.0*ct),R42195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
-#line_FRG_T155,=plt.plot(mubfrg*cmu/(193.0*ct),R42193,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
-#band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.3,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
-#band_HotQCD_T160=plt.fill_between(mub/160.,r42160up,r42160down,alpha=0.3,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
-#band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+errR422[:,50],alpha=0.3,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
+line_FRG_T155,=plt.plot(mubfrg*cmu/(193.0*ct),R42193,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=20)
+band_FRG_T155=plt.fill_between(xsame2,power3,power4,alpha=0.3,facecolor='r',edgecolor='',zorder=11,label=r'This work T=155 MeV')
+band_HotQCD_T160=plt.fill_between(mub/160.,r42160up,r42160down,alpha=0.3,facecolor='c',edgecolor='',label=r'HotQCD T=160 MeV')
+band_HotQCD_T155=plt.fill_between(mub/155.,R42[:,50]-errR422[:,50],R42[:,50]+errR422[:,50],alpha=0.3,facecolor='green',edgecolor='',label=r'HotQCD T=155 MeV')
 
 
-#plt.xticks(fontsize=8)
-#plt.yticks(fontsize=8)
-#plt.axis([0.,0.8,0.2,0.9])
+plt.xticks(fontsize=0)
+plt.yticks(fontsize=0)
+plt.axis([0.,0.8,0.2,0.9])
 
-ax1.axis([0,0.8,0.4,0.9])
+ax1.axis([0,0.8,0.3,0.9])
 
 ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-#ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'This work $T=155$ MeV',r'This work $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'This work $T=155$ MeV',r'This work $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='7',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
@@ -339,7 +339,7 @@ ax2.axis([0,0.8,-3,1.])
 ax2.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax2.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
 
-ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'fRG $T=155$ MeV',r'fRG $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='7',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+#ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),band_HotQCD_T155,band_HotQCD_T160,band_WB_T155,band_WB_T160),(r'fRG $T=155$ MeV',r'fRG $T=160$ MeV',r'HotQCD $T=155$ MeV',r'HotQCD $T=160$ MeV',r'WB $T=155$ MeV',r'WB $T=160$ MeV'),loc=0,fontsize='7',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax2.xaxis.get_ticklabels():
     label.set_fontsize(10)
