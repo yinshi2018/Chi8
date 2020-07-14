@@ -2572,7 +2572,7 @@ energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
-fig=plt.figure(figsize=(9., 7.))
+fig=plt.figure(figsize=(9., 6.))
 #fig=plt.figure()
 ax2=fig.add_subplot(222)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
@@ -2593,7 +2593,7 @@ ax2.xaxis.tick_top()
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax2.xaxis.set_label_position('top') 
-ax2.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+ax2.set_ylabel(r'$R^B_{62}(R^p_{62})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(7)
 for label in ax2.yaxis.get_ticklabels():
@@ -2614,7 +2614,7 @@ plt.axis([5,230,-2.,2.2])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax3.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax3.set_ylabel(r'$R^B_{42}(R^p_{42})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
@@ -2628,7 +2628,7 @@ linetf,=ax1.plot(energy,kurtosis[:,2],color='r',alpha=0.3,zorder=2)
 exp=ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 bandtc=ax1.fill_between(energy,r32hdown,r32hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=2)
 linetc,=ax1.plot(energy,r32hcen,color='b',alpha=0.3,zorder=2)
-ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'This work at $T_{CF}$',r'This work at $T_c$',r'RHIC data 0-5%'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'fRG with $T_{_{CF}}$',r'fRG with $T_c$',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax1.set_xscale('symlog')
 plt.axis([5,230,0.,1.2])
 ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
@@ -2636,7 +2636,7 @@ ax1.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotatio
 ax1.xaxis.tick_top()
 ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.xaxis.set_label_position('top') 
-ax1.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
+ax1.set_ylabel(r'$R^B_{32}(R^p_{32})$', fontsize=14, color='black')
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
@@ -2654,14 +2654,14 @@ plt.axis([5,230,-10000.,10000.])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax4.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax4.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
 fig.subplots_adjust(top=0.9, bottom=0.15, left=0.1, right=0.95, hspace=0.,
-                    wspace=0.35)
+                    wspace=0.25)
 
 
-fig.savefig("R4262.pdf")
+fig.savefig("Rm2-sqrtS.pdf")
 
