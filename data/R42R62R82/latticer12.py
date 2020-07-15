@@ -14,11 +14,17 @@ mpl.style.use('classic')
 R12194=np.loadtxt('./r12194.dat')
 R12199=np.loadtxt('./r12199.dat')
 R12189=np.loadtxt('./r12189.dat')
-
-
+WBc2=np.loadtxt('./r42r62mubtlat/data1/WB_chi2.dat')
+WBc4=np.loadtxt('./r42r62mubtlat/data1/WB_chi4.dat')
+WBc6=np.loadtxt('./r42r62mubtlat/data1/WB_chi6.dat')
+WBc8=np.loadtxt('./r42r62mubtlat/data1/WB_chi8.dat')
+WBT=[135.,140.,145.,150.,155.,160.,165.,170.,175.,180.,185.,190.,195.,200.,205.,210.,215.,220.]
+WBR12=np.zeros((101,18))
 mubfrg=np.loadtxt('./mub.dat')
-ct=1./1.25
-cmu=1./1.113
+#ct=1./1.247
+#cmu=1./1.110
+ct=1.
+cmu=1.
 chi=np.loadtxt('./chiBre.dat')
 T=chi[:,0]
 c2=chi[:,1]
@@ -95,6 +101,20 @@ for num1 in range(0,100):
         A1b7[num1,num2]=(1./(7.*6.*5.*4.*3.*2.*1.)*(4.*num1/T[num2])**6)/(c2[num2]+1./(3.*2.*1.) *c4[num2]* (4.*num1/T[num2])**2. +1./(5.*4.*3.*2.*1.) *c6[num2]* (4.*num1/T[num2])**4.+1./(7.*6.*5.*4.*3.*2.*1.) *c8[num2]* (4.*num1/T[num2])**6.)
         errR12[num1,num2]=(abs(A1b1[num1,num2]-A2[num1,num2]*b0)*errc2[num2]+abs(A1b3[num1,num2]-A2[num1,num2]*b2)*errc4[num2]+abs(A1b5[num1,num2]-A2[num1,num2]*b4)*errc6[num2]+abs(A1b7[num1,num2]-A2[num1,num2]*b6)*errc8[num2])*R12[num1,num2]
     
+
+
+for num1 in range(0,101):
+    for num2 in range(0,18):
+        chi1[num1,num2]=WBc2[num2]*4.*num1/WBT[num2]+1./(3.*2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**3. +1./(5.*4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**5.+1./(7.*6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**7.
+        chi2[num1,num2]=WBc2[num2]+1./(2.*1.) *WBc4[num2]* (4.*num1/WBT[num2])**2. +1./(4.*3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**6.
+        chi3[num1,num2]=WBc4[num2]* (4.*num1/WBT[num2]) +1./(3.*2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**3.+1./(5.*4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**5.
+        chi4[num1,num2]=WBc4[num2] +1./(2.*1.) *WBc6[num2]* (4.*num1/WBT[num2])**2.+1./(4.*3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**4.
+        chi5[num1,num2]=WBc6[num2]* (4.*num1/WBT[num2])+1./(3.*2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**3.
+        chi6[num1,num2]=WBc6[num2]+1./(2.*1.) *WBc8[num2]* (4.*num1/WBT[num2])**2.
+        chi7[num1,num2]=WBc8[num2]* (4.*num1/WBT[num2])
+        chi8[num1,num2]=WBc8[num2]
+        WBR12[num1,num2]=chi1[num1,num2]/chi2[num1,num2]
+
 # Create figure
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
@@ -102,9 +122,9 @@ ax1=fig.add_subplot(111)
 ax1.plot(mubfrg*cmu/(194.0*ct),R12194,'-',color='k',linewidth=1,label=r'$T=194\,\mathrm{MeV}$')
 ax1.plot(mubfrg*cmu/(199.0*ct),R12199,'-',color='r',linewidth=1,label=r'$T=199\,\mathrm{MeV}$')
 ax1.plot(mubfrg*cmu/(189.0*ct),R12189,'-',color='g',linewidth=1,label=r'$T=189\,\mathrm{MeV}$')
-
+ax1.errorbar(mub/155.,WBR12[:,4],yerr=errR12[:,53],color='blue',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD')
 #ax1.plot(mub/155,R12[:,50],'k-',linewidth=2,markersize=5,label=r'$T$')
-ax1.errorbar(mub/156.,R12[:,53],yerr=errR12[:,53],color='blue',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD')
+#ax1.errorbar(mub/156.,R12[:,53],yerr=errR12[:,53],color='blue',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD')
 
 ax1.axis([0,1.3,0,1.2])
 

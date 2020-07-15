@@ -63,26 +63,24 @@ T303hdown=np.zeros(1000)
 T406hup=np.zeros(1000)
 T406hdown=np.zeros(1000)
 for num in range(0,300):
-    data200[num]=0.151238
-    data62[num]=0.425195
-    data54[num]=0.467920
-    data39[num]=0.597403
-    data27[num]=0.770048
-    data19[num]=0.901129
-    data14[num]=0.979091
-    data11[num]=1.035206
-    data7[num]=1.066514
+    data200[num]=0.122302
+    data62[num]=0.325439
+    data54[num]=0.346852
+    data39[num]=0.441900
+    data27[num]=0.553053
+    data19[num]=0.642055
+    data14[num]=0.782208
+    data11[num]=0.783562
+    data7[num]=0.798587
 
 
 energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
 #############################################################################################################################################
 xsame=np.linspace(0.,299.,300)
 deltat=0.05
-cmu=1.110
 ctcen=1.247
 ctup=1.259
 ctdown=1.235
-c=ctcen/cmu
 
 Tcup=[int(205/ctdown)-1,int(205/ctdown)-1,int(205/ctdown)-1,int(204/ctdown)-1,int(203/ctdown)-1,int(201/ctdown)-1,int(198/ctdown)-1,int(194/ctdown)-1,int(182/ctdown)-1]
 Tcdown=[int(205/ctup)-1,int(205/ctup)-1,int(205/ctup)-1,int(204/ctup)-1,int(203/ctup)-1,int(201/ctup)-1,int(198/ctup)-1,int(194/ctup)-1,int(182/ctup)-1]
@@ -96,60 +94,37 @@ print(Tcup)
 print(T)
 
 ct=np.linspace(ctdown,ctup,10)
-chi1mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi1.dat')
 chi2mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi2.dat')
 chi3mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi3.dat')
 chi4mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi4.dat')
 chi6mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi6.dat')
 chi8mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi8.dat')
-r12mub22cen=chi1mub22cen/chi2mub22cen
 r32mub22cen=chi3mub22cen/chi2mub22cen
 r42mub22cen=chi4mub22cen/chi2mub22cen
 r62mub22cen=chi6mub22cen/chi2mub22cen
 r82mub22cen=chi8mub22cen/chi2mub22cen
-chi1mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi1.dat')
 chi2mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi2.dat')
 chi3mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi3.dat')
 chi4mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi4.dat')
 chi6mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi6.dat')
 chi8mub22up=np.loadtxt(r'./mub22/cmuup/final/buffer/chi8.dat')
-r12mub22up=chi1mub22up/chi2mub22up
 r32mub22up=chi3mub22up/chi2mub22up
 r42mub22up=chi4mub22up/chi2mub22up
 r62mub22up=chi6mub22up/chi2mub22up
 r82mub22up=chi8mub22up/chi2mub22up
-chi1mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi1.dat')
 chi2mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi2.dat')
 chi3mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi3.dat')
 chi4mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi4.dat')
 chi6mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi6.dat')
 chi8mub22down=np.loadtxt(r'./mub22/cmudown/final/buffer/chi8.dat')
-r12mub22down=chi1mub22down/chi2mub22down
 r32mub22down=chi3mub22down/chi2mub22down
 r42mub22down=chi4mub22down/chi2mub22down
 r62mub22down=chi6mub22down/chi2mub22down
 r82mub22down=chi8mub22down/chi2mub22down
-r1222=np.zeros((300,20))
 r3222=np.zeros((300,20))
 r4222=np.zeros((300,20))
 r6222=np.zeros((300,20))
 r8222=np.zeros((300,20))
-for t in range(0,20):
-    if t<10:
-       r1222[:,t]=spline(T/ct[t],r12mub22up,xsame)
-    else:
-       r1222[:,t]=spline(T/ct[t-10],r12mub22down,xsame)
-
-
-for num in range(1,20):
-    if num==1:
-       max1222=np.maximum(r1222[:,num-1],r1222[:,num])
-       min1222=np.minimum(r1222[:,num-1],r1222[:,num])
-    else:
-       max1222=np.maximum(max1222,r1222[:,num])
-       min1222=np.minimum(min1222,r1222[:,num])
-
-
 for t in range(0,20):
     if t<10:
        r3222[:,t]=spline(T/ct[t],r32mub22up,xsame)
@@ -164,7 +139,6 @@ for num in range(1,20):
     else:
        max22=np.maximum(max22,r3222[:,num])
        min22=np.minimum(min22,r3222[:,num])
-
 
 for t in range(0,20):
     if t<10:
@@ -216,13 +190,7 @@ for num in range(1,20):
        max8222=np.maximum(max8222,r8222[:,num])
        min8222=np.minimum(min8222,r8222[:,num])
 
-r12mub22cen=spline(T/ctcen,r12mub22cen,xsame)*c
-r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)*c
-max1222=max1222*c
-min1222=min1222*c
-max22=max22*c
-min22=min22*c
-
+r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)
 r42mub22cen=spline(T/ctcen,r42mub22cen,xsame)
 r62mub22cen=spline(T/ctcen,r62mub22cen,xsame)
 r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
@@ -230,17 +198,11 @@ r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
 dif22cen=abs(r32mub22cen-0.122302)
 dif22up=abs(max22-0.122302)
 dif22down=abs(min22-0.122302)
-dif1222cen=abs(r12mub22cen-0.151238)
-dif1222up=abs(max1222-0.151238)
-dif1222down=abs(min1222-0.151238)
-#min22cen_index=np.argmin(dif22cen[80:300])+80
-#min22up_index=np.argmin(dif22up[80:300])+80
-#min22down_index=np.argmin(dif22down[80:300])+80
-min22cen_index=np.argmin(dif1222cen[80:300])+80
-min22up_index=np.argmin(dif1222up[80:300])+80
-min22down_index=np.argmin(dif1222down[80:300])+80
-
-r1222cen=r12mub22cen[min22cen_index]
+min22cen_index=np.argmin(dif22cen[80:300])+80
+min22up_index=np.argmin(dif22up[80:300])+80
+min22down_index=np.argmin(dif22down[80:300])+80
+print(min22up_index)
+print(min22down_index)
 r3222cen=r32mub22cen[min22cen_index]
 r4222cen=r42mub22cen[min22cen_index]
 r6222cen=r62mub22cen[min22cen_index]
@@ -249,19 +211,11 @@ r8222cen=r82mub22cen[min22cen_index]
 #r4222hcen=r42mub22cen[min22cen_index+int(min22cen_index*deltat)]
 #r6222hcen=r62mub22cen[min22cen_index+int(min22cen_index*deltat)]
 #r8222hcen=r82mub22cen[min22cen_index+int(min22cen_index*deltat)]
-r1222hcen=r12mub22cen[Tcen[0]]
 r3222hcen=r32mub22cen[Tcen[0]]
 r4222hcen=r42mub22cen[Tcen[0]]
 r6222hcen=r62mub22cen[Tcen[0]]
 r8222hcen=r82mub22cen[Tcen[0]]
 
-r12=[max1222[min22up_index],max1222[min22down_index],min1222[min22up_index],min1222[min22down_index]]
-#r32h=[max22[min22up_index+int(min22up_index*deltat)],max22[min22down_index+int(min22down_index*deltat)],min22[min22up_index+int(min22up_index*deltat)],min22[min22down_index+int(min22down_index*deltat)]]
-r12h=[max1222[Tcup[0]],max1222[Tcdown[0]],min1222[Tcup[0]],min1222[Tcdown[0]]]
-r1222up=np.max(r12)
-r1222down=np.min(r12)
-r1222uph=np.max(r12h)
-r1222downh=np.min(r12h)
 
 r32=[max22[min22up_index],max22[min22down_index],min22[min22up_index],min22[min22down_index]]
 #r32h=[max22[min22up_index+int(min22up_index*deltat)],max22[min22down_index+int(min22down_index*deltat)],min22[min22up_index+int(min22up_index*deltat)],min22[min22down_index+int(min22down_index*deltat)]]
@@ -297,62 +251,42 @@ r8222down=np.min(r82)
 r8222uph=np.max(r82h)
 r8222downh=np.min(r82h)
 
-print('200')
+print(r6222up)
+print(r6222down)
+print(r6222uph)
+print(r6222downh)
 ####################################################################################################
-chi1mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi1.dat')
 chi2mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi2.dat')
 chi3mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi3.dat')
 chi4mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi4.dat')
 chi6mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi6.dat')
 chi8mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi8.dat')
-r12mub68cen=chi1mub68cen/chi2mub68cen
 r32mub68cen=chi3mub68cen/chi2mub68cen
 r42mub68cen=chi4mub68cen/chi2mub68cen
 r62mub68cen=chi6mub68cen/chi2mub68cen
 r82mub68cen=chi8mub68cen/chi2mub68cen
-chi1mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi1.dat')
 chi2mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi2.dat')
 chi3mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi3.dat')
 chi4mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi4.dat')
 chi6mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi6.dat')
 chi8mub68up=np.loadtxt(r'./mub68/cmuup/final/buffer/chi8.dat')
-r12mub68up=chi1mub68up/chi2mub68up
 r32mub68up=chi3mub68up/chi2mub68up
 r42mub68up=chi4mub68up/chi2mub68up
 r62mub68up=chi6mub68up/chi2mub68up
 r82mub68up=chi8mub68up/chi2mub68up
-chi1mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi1.dat')
 chi2mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi2.dat')
 chi3mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi3.dat')
 chi4mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi4.dat')
 chi6mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi6.dat')
 chi8mub68down=np.loadtxt(r'./mub68/cmudown/final/buffer/chi8.dat')
-r12mub68down=chi1mub68down/chi2mub68down
 r32mub68down=chi3mub68down/chi2mub68down
 r42mub68down=chi4mub68down/chi2mub68down
 r62mub68down=chi6mub68down/chi2mub68down
 r82mub68down=chi8mub68down/chi2mub68down
-r1268=np.zeros((300,20))
 r3268=np.zeros((300,20))
 r4268=np.zeros((300,20))
 r6268=np.zeros((300,20))
 r8268=np.zeros((300,20))
-for t in range(0,20):
-    if t<10:
-       r1268[:,t]=spline(T/ct[t],r12mub68up,xsame)
-    else:
-       r1268[:,t]=spline(T/ct[t-10],r12mub68down,xsame)
-
-
-for num in range(1,20):
-    if num==1:
-       max1268=np.maximum(r1268[:,num-1],r1268[:,num])
-       min1268=np.minimum(r1268[:,num-1],r1268[:,num])
-    else:
-       max1268=np.maximum(max1268,r1268[:,num])
-       min1268=np.minimum(min1268,r1268[:,num])
-
-
 for t in range(0,20):
     if t<10:
        r3268[:,t]=spline(T/ct[t],r32mub68up,xsame)
@@ -413,12 +347,7 @@ for num in range(1,20):
        max8268=np.maximum(max8268,r8268[:,num])
        min8268=np.minimum(min8268,r8268[:,num])
 
-r12mub68cen=spline(T/ctcen,r12mub68cen,xsame)*c
-r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)*c
-max1268=max1268*c
-min1268=min1268*c
-max68=max68*c
-min68=min68*c
+r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)
 r42mub68cen=spline(T/ctcen,r42mub68cen,xsame)
 r62mub68cen=spline(T/ctcen,r62mub68cen,xsame)
 r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
@@ -426,28 +355,11 @@ r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 dif68cen=abs(r32mub68cen-0.325439)
 dif68up=abs(max68-0.325439)
 dif68down=abs(min68-0.325439)
-dif1268cen=abs(r12mub68cen-0.425195)
-dif1268up=abs(max1268-0.425195)
-dif1268down=abs(min1268-0.425195)
-#min68cen_index=np.argmin(dif68cen[80:300])+80
-#min68up_index=np.argmin(dif68up[80:300])+80
-#min68down_index=np.argmin(dif68down[80:300])+80
-min68cen_index=np.argmin(dif1268cen[80:300])+80
-min68up_index=np.argmin(dif1268up[80:300])+80
-min68down_index=np.argmin(dif1268down[80:300])+80
-
-r1268cen=r12mub68cen[min68cen_index]
-#r3268hcen=r32mub68cen[min68cen_index+int(min68cen_index*deltat)]
-r1268hcen=r12mub68cen[Tcen[1]]
-r12=[max1268[min68up_index],max1268[min68down_index],min1268[min68up_index],min1268[min68down_index]]
-#r32h=[max68[min68up_index+int(min68up_index*deltat)],max68[min68down_index+int(min68down_index*deltat)],min68[min68up_index+int(min68up_index*deltat)],min68[min68down_index+int(min68down_index*deltat)]]
-r12h=[max1268[Tcup[1]],max1268[Tcdown[1]],min1268[Tcup[1]],min1268[Tcdown[1]]]
-r1268up=np.max(r12)
-r1268down=np.min(r12)
-r1268uph=np.max(r12h)
-r1268downh=np.min(r12h)
-
-
+min68cen_index=np.argmin(dif68cen[80:300])+80
+min68up_index=np.argmin(dif68up[80:300])+80
+min68down_index=np.argmin(dif68down[80:300])+80
+print(min68up_index)
+print(min68down_index)
 r3268cen=r32mub68cen[min68cen_index]
 #r3268hcen=r32mub68cen[min68cen_index+int(min68cen_index*deltat)]
 r3268hcen=r32mub68cen[Tcen[1]]
@@ -491,61 +403,40 @@ r8268up=np.max(r82)
 r8268down=np.min(r82)
 r8268uph=np.max(r82h)
 r8268downh=np.min(r82h)
-print('62.4')
+print(r6268up)
+print(r6268down)
 ####################################################################################################
-chi1mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi1.dat')
 chi2mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi2.dat')
 chi3mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi3.dat')
 chi4mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi4.dat')
 chi6mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi6.dat')
 chi8mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi8.dat')
-r12mub78cen=chi1mub78cen/chi2mub78cen
 r32mub78cen=chi3mub78cen/chi2mub78cen
 r42mub78cen=chi4mub78cen/chi2mub78cen
 r62mub78cen=chi6mub78cen/chi2mub78cen
 r82mub78cen=chi8mub78cen/chi2mub78cen
-chi1mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi1.dat')
 chi2mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi2.dat')
 chi3mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi3.dat')
 chi4mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi4.dat')
 chi6mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi6.dat')
 chi8mub78up=np.loadtxt(r'./mub78/cmuup/final/buffer/chi8.dat')
-r12mub78up=chi1mub78up/chi2mub78up
 r32mub78up=chi3mub78up/chi2mub78up
 r42mub78up=chi4mub78up/chi2mub78up
 r62mub78up=chi6mub78up/chi2mub78up
 r82mub78up=chi8mub78up/chi2mub78up
-chi1mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi1.dat')
 chi2mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi2.dat')
 chi3mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi3.dat')
 chi4mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi4.dat')
 chi6mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi6.dat')
 chi8mub78down=np.loadtxt(r'./mub78/cmudown/final/buffer/chi8.dat')
-r12mub78down=chi1mub78down/chi2mub78down
 r32mub78down=chi3mub78down/chi2mub78down
 r42mub78down=chi4mub78down/chi2mub78down
 r62mub78down=chi6mub78down/chi2mub78down
 r82mub78down=chi8mub78down/chi2mub78down
-r1278=np.zeros((300,20))
 r3278=np.zeros((300,20))
 r4278=np.zeros((300,20))
 r6278=np.zeros((300,20))
 r8278=np.zeros((300,20))
-for t in range(0,20):
-    if t<10:
-       r1278[:,t]=spline(T/ct[t],r12mub78up,xsame)
-    else:
-       r1278[:,t]=spline(T/ct[t-10],r12mub78down,xsame)
-
-
-for num in range(1,20):
-    if num==1:
-       max1278=np.maximum(r1278[:,num-1],r1278[:,num])
-       min1278=np.minimum(r1278[:,num-1],r1278[:,num])
-    else:
-       max1278=np.maximum(max1278,r1278[:,num])
-       min1278=np.minimum(min1278,r1278[:,num])
-
 for t in range(0,20):
     if t<10:
        r3278[:,t]=spline(T/ct[t],r32mub78up,xsame)
@@ -606,12 +497,7 @@ for num in range(1,20):
        max8278=np.maximum(max8278,r8278[:,num])
        min8278=np.minimum(min8278,r8278[:,num])
 
-r12mub78cen=spline(T/ctcen,r12mub78cen,xsame)*c
-r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)*c
-max1278=max1278*c
-min1278=min1278*c
-max78=max78*c
-min78=min78*c
+r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)
 r42mub78cen=spline(T/ctcen,r42mub78cen,xsame)
 r62mub78cen=spline(T/ctcen,r62mub78cen,xsame)
 r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
@@ -619,27 +505,11 @@ r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 dif78cen=abs(r32mub78cen-0.346852)
 dif78up=abs(max78-0.346852)
 dif78down=abs(min78-0.346852)
-dif1278cen=abs(r12mub78cen-0.467920)
-dif1278up=abs(max1278-0.467920)
-dif1278down=abs(min1278-0.467920)
-#min78cen_index=np.argmin(dif78cen[80:300])+80
-#min78up_index=np.argmin(dif78up[80:300])+80
-#min78down_index=np.argmin(dif78down[80:300])+80
-min78cen_index=np.argmin(dif1278cen[80:300])+80
-min78up_index=np.argmin(dif1278up[80:300])+80
-min78down_index=np.argmin(dif1278down[80:300])+80
-
-r1278cen=r12mub78cen[min78cen_index]
-#r3278hcen=r32mub78cen[min78cen_index+int(min78cen_index*deltat)]
-r1278hcen=r12mub78cen[Tcen[2]]
-r12=[max1278[min78up_index],max1278[min78down_index],min1278[min78up_index],min1278[min78down_index]]
-#r32h=[max78[min78up_index+int(min78up_index*deltat)],max78[min78down_index+int(min78down_index*deltat)],min78[min78up_index+int(min78up_index*deltat)],min78[min78down_index+int(min78down_index*deltat)]]
-r12h=[max1278[Tcup[2]],max1278[Tcdown[2]],min1278[Tcup[2]],min1278[Tcdown[2]]]
-r1278up=np.max(r12)
-r1278down=np.min(r12)
-r1278uph=np.max(r12h)
-r1278downh=np.min(r12h)
-
+min78cen_index=np.argmin(dif78cen[80:300])+80
+min78up_index=np.argmin(dif78up[80:300])+80
+min78down_index=np.argmin(dif78down[80:300])+80
+print(min78up_index)
+print(min78down_index)
 r3278cen=r32mub78cen[min78cen_index]
 #r3278hcen=r32mub78cen[min78cen_index+int(min78cen_index*deltat)]
 r3278hcen=r32mub78cen[Tcen[2]]
@@ -687,64 +557,40 @@ r8278up=np.max(r82)
 r8278down=np.min(r82)
 r8278uph=np.max(r82h)
 r8278downh=np.min(r82h)
-print('54.4')
+print(r6278up)
+print(r6278down)
 ####################################################################################################
-chi1mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi1.dat')
 chi2mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi2.dat')
 chi3mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi3.dat')
 chi4mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi4.dat')
 chi6mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi6.dat')
 chi8mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi8.dat')
-r12mub106cen=chi1mub106cen/chi2mub106cen
 r32mub106cen=chi3mub106cen/chi2mub106cen
 r42mub106cen=chi4mub106cen/chi2mub106cen
 r62mub106cen=chi6mub106cen/chi2mub106cen
 r82mub106cen=chi8mub106cen/chi2mub106cen
-chi1mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi1.dat')
 chi2mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi2.dat')
 chi3mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi3.dat')
 chi4mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi4.dat')
 chi6mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi6.dat')
 chi8mub106up=np.loadtxt(r'./mub106/cmuup/final/buffer/chi8.dat')
-r12mub106up=chi1mub106up/chi2mub106up
 r32mub106up=chi3mub106up/chi2mub106up
 r42mub106up=chi4mub106up/chi2mub106up
 r62mub106up=chi6mub106up/chi2mub106up
 r82mub106up=chi8mub106up/chi2mub106up
-chi1mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi1.dat')
 chi2mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi2.dat')
 chi3mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi3.dat')
 chi4mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi4.dat')
 chi6mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi6.dat')
 chi8mub106down=np.loadtxt(r'./mub106/cmudown/final/buffer/chi8.dat')
-r12mub106down=chi1mub106down/chi2mub106down
 r32mub106down=chi3mub106down/chi2mub106down
 r42mub106down=chi4mub106down/chi2mub106down
 r62mub106down=chi6mub106down/chi2mub106down
 r82mub106down=chi8mub106down/chi2mub106down
-r12106=np.zeros((300,20))
 r32106=np.zeros((300,20))
 r42106=np.zeros((300,20))
 r62106=np.zeros((300,20))
 r82106=np.zeros((300,20))
-
-for t in range(0,20):
-    if t<10:
-       r12106[:,t]=spline(T/ct[t],r12mub106up,xsame)
-    else:
-       r12106[:,t]=spline(T/ct[t-10],r12mub106down,xsame)
-
-
-for num in range(1,20):
-    if num==1:
-       max12106=np.maximum(r12106[:,num-1],r12106[:,num])
-       min12106=np.minimum(r12106[:,num-1],r12106[:,num])
-    else:
-       max12106=np.maximum(max12106,r12106[:,num])
-       min12106=np.minimum(min12106,r12106[:,num])
-
-
-
 for t in range(0,20):
     if t<10:
        r32106[:,t]=spline(T/ct[t],r32mub106up,xsame)
@@ -805,12 +651,7 @@ for num in range(1,20):
        max82106=np.maximum(max82106,r82106[:,num])
        min82106=np.minimum(min82106,r82106[:,num])
 
-r12mub106cen=spline(T/ctcen,r12mub106cen,xsame)*c
-r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)*c
-max12106=max12106*c
-min12106=min12106*c
-max106=max106*c
-min106=min106*c
+r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)
 r42mub106cen=spline(T/ctcen,r42mub106cen,xsame)
 r62mub106cen=spline(T/ctcen,r62mub106cen,xsame)
 r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
@@ -818,28 +659,11 @@ r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
 dif106cen=abs(r32mub106cen-0.441900)
 dif106up=abs(max106-0.441900)
 dif106down=abs(min106-0.441900)
-dif12106cen=abs(r12mub106cen-0.597403)
-dif12106up=abs(max12106-0.597403)
-dif12106down=abs(min12106-0.597403)
-#min106cen_index=np.argmin(dif106cen[80:300])+80
-#min106up_index=np.argmin(dif106up[80:300])+80
-#min106down_index=np.argmin(dif106down[80:300])+80
-min106cen_index=np.argmin(dif12106cen[80:300])+80
-min106up_index=np.argmin(dif12106up[80:300])+80
-min106down_index=np.argmin(dif12106down[80:300])+80
-
-r12106cen=r12mub106cen[min106cen_index]
-#r32106hcen=r32mub106cen[min106cen_index+int(min106cen_index*deltat)]
-r12106hcen=r12mub106cen[Tcen[3]]
-r12=[max12106[min106up_index],max12106[min106down_index],min12106[min106up_index],min12106[min106down_index]]
-#r32h=[max106[min106up_index+int(min106up_index*deltat)],max106[min106down_index+int(min106down_index*deltat)],min106[min106up_index+int(min106up_index*deltat)],min106[min106down_index+int(min106down_index*deltat)]]
-r12h=[max12106[Tcup[3]],max12106[Tcdown[3]],min12106[Tcup[3]],min12106[Tcdown[3]]]
-r12106up=np.max(r12)
-r12106down=np.min(r12)
-r12106uph=np.max(r12h)
-r12106downh=np.min(r12h)
-
-
+min106cen_index=np.argmin(dif106cen[80:300])+80
+min106up_index=np.argmin(dif106up[80:300])+80
+min106down_index=np.argmin(dif106down[80:300])+80
+print(min106up_index)
+print(min106down_index)
 r32106cen=r32mub106cen[min106cen_index]
 #r32106hcen=r32mub106cen[min106cen_index+int(min106cen_index*deltat)]
 r32106hcen=r32mub106cen[Tcen[3]]
@@ -884,63 +708,40 @@ r82106down=np.min(r82)
 r82106uph=np.max(r82h)
 r82106downh=np.min(r82h)
 
-print('39')
+print(r62106up)
+print(r62106down)
 ####################################################################################################
-chi1mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi1.dat')
 chi2mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi2.dat')
 chi3mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi3.dat')
 chi4mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi4.dat')
 chi6mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi6.dat')
 chi8mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi8.dat')
-r12mub148cen=chi1mub148cen/chi2mub148cen
 r32mub148cen=chi3mub148cen/chi2mub148cen
 r42mub148cen=chi4mub148cen/chi2mub148cen
 r62mub148cen=chi6mub148cen/chi2mub148cen
 r82mub148cen=chi8mub148cen/chi2mub148cen
-chi1mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi1.dat')
 chi2mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi2.dat')
 chi3mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi3.dat')
 chi4mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi4.dat')
 chi6mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi6.dat')
 chi8mub148up=np.loadtxt(r'./mub148/cmuup/final/buffer/chi8.dat')
-r12mub148up=chi1mub148up/chi2mub148up
 r32mub148up=chi3mub148up/chi2mub148up
 r42mub148up=chi4mub148up/chi2mub148up
 r62mub148up=chi6mub148up/chi2mub148up
 r82mub148up=chi8mub148up/chi2mub148up
-chi1mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi1.dat')
 chi2mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi2.dat')
 chi3mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi3.dat')
 chi4mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi4.dat')
 chi6mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi6.dat')
 chi8mub148down=np.loadtxt(r'./mub148/cmudown/final/buffer/chi8.dat')
-r12mub148down=chi1mub148down/chi2mub148down
 r32mub148down=chi3mub148down/chi2mub148down
 r42mub148down=chi4mub148down/chi2mub148down
 r62mub148down=chi6mub148down/chi2mub148down
 r82mub148down=chi8mub148down/chi2mub148down
-r12148=np.zeros((300,20))
 r32148=np.zeros((300,20))
 r42148=np.zeros((300,20))
 r62148=np.zeros((300,20))
 r82148=np.zeros((300,20))
-
-for t in range(0,20):
-    if t<10:
-       r12148[:,t]=spline(T/ct[t],r12mub148up,xsame)
-    else:
-       r12148[:,t]=spline(T/ct[t-10],r12mub148down,xsame)
-
-
-for num in range(1,20):
-    if num==1:
-       max12148=np.maximum(r12148[:,num-1],r12148[:,num])
-       min12148=np.minimum(r12148[:,num-1],r12148[:,num])
-    else:
-       max12148=np.maximum(max12148,r12148[:,num])
-       min12148=np.minimum(min12148,r12148[:,num])
-
-
 for t in range(0,20):
     if t<10:
        r32148[:,t]=spline(T/ct[t],r32mub148up,xsame)
@@ -1001,13 +802,7 @@ for num in range(1,20):
        max82148=np.maximum(max82148,r82148[:,num])
        min82148=np.minimum(min82148,r82148[:,num])
 
-
-r12mub148cen=spline(T/ctcen,r12mub148cen,xsame)*c
-r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)*c
-max12148=max12148*c
-min12148=min12148*c
-max148=max148*c
-min148=min148*c
+r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)
 r42mub148cen=spline(T/ctcen,r42mub148cen,xsame)
 r62mub148cen=spline(T/ctcen,r62mub148cen,xsame)
 r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
@@ -1015,28 +810,11 @@ r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
 dif148cen=abs(r32mub148cen-0.553053)
 dif148up=abs(max148-0.553053)
 dif148down=abs(min148-0.553053)
-dif12148cen=abs(r12mub148cen-0.770048)
-dif12148up=abs(max12148-0.770048)
-dif12148down=abs(min12148-0.770048)
-#min148cen_index=np.argmin(dif148cen[80:300])+80
-#min148up_index=np.argmin(dif148up[80:300])+80
-#min148down_index=np.argmin(dif148down[80:300])+80
-min148cen_index=np.argmin(dif12148cen[80:300])+80
-min148up_index=np.argmin(dif12148up[80:300])+80
-min148down_index=np.argmin(dif12148down[80:300])+80
-
-r12148cen=r12mub148cen[min148cen_index]
-#r32148hcen=r32mub148cen[min148cen_index+int(min148cen_index*deltat)]
-r12148hcen=r12mub148cen[Tcen[4]]
-r12=[max12148[min148up_index],max12148[min148down_index],min12148[min148up_index],min12148[min148down_index]]
-#r32h=[max148[min148up_index+int(min148up_index*deltat)],max148[min148down_index+int(min148down_index*deltat)],min148[min148up_index+int(min148up_index*deltat)],min148[min148down_index+int(min148down_index*deltat)]]
-r12h=[max12148[Tcup[4]],max12148[Tcdown[4]],min12148[Tcup[4]],min12148[Tcdown[4]]]
-r12148up=np.max(r12)
-r12148down=np.min(r12)
-r12148uph=np.max(r12h)
-r12148downh=np.min(r12h)
-
-
+min148cen_index=np.argmin(dif148cen[80:300])+80
+min148up_index=np.argmin(dif148up[80:300])+80
+min148down_index=np.argmin(dif148down[80:300])+80
+print(min148up_index)
+print(min148down_index)
 r32148cen=r32mub148cen[min148cen_index]
 #r32148hcen=r32mub148cen[min148cen_index+int(min148cen_index*deltat)]
 r32148hcen=r32mub148cen[Tcen[4]]
@@ -1081,165 +859,112 @@ r82148down=np.min(r82)
 r82148uph=np.max(r82h)
 r82148downh=np.min(r82h)
 
-print('27')
+print(r62148up)
+print(r62148down)
 ####################################################################################################
-chi1mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi1.dat')
 chi2mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi2.dat')
 chi3mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi3.dat')
 chi4mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi4.dat')
 chi6mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi6.dat')
 chi8mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi8.dat')
-r12mub196cen=chi1mub196cen/chi2mub196cen
 r32mub196cen=chi3mub196cen/chi2mub196cen
 r42mub196cen=chi4mub196cen/chi2mub196cen
 r62mub196cen=chi6mub196cen/chi2mub196cen
 r82mub196cen=chi8mub196cen/chi2mub196cen
-chi1mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi1.dat')
 chi2mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi2.dat')
 chi3mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi3.dat')
 chi4mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi4.dat')
 chi6mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi6.dat')
 chi8mub196up=np.loadtxt(r'./mub196/cmuup/final/buffer/chi8.dat')
-r12mub196up=chi1mub196up/chi2mub196up
 r32mub196up=chi3mub196up/chi2mub196up
 r42mub196up=chi4mub196up/chi2mub196up
 r62mub196up=chi6mub196up/chi2mub196up
 r82mub196up=chi8mub196up/chi2mub196up
-chi1mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi1.dat')
 chi2mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi2.dat')
 chi3mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi3.dat')
 chi4mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi4.dat')
 chi6mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi6.dat')
 chi8mub196up1=np.loadtxt(r'./mub196/cmuup1/final/buffer/chi8.dat')
-r12mub196up1=chi1mub196up1/chi2mub196up1
 r32mub196up1=chi3mub196up1/chi2mub196up1
 r42mub196up1=chi4mub196up1/chi2mub196up1
 r62mub196up1=chi6mub196up1/chi2mub196up1
 r82mub196up1=chi8mub196up1/chi2mub196up1
-chi1mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi1.dat')
 chi2mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi2.dat')
 chi3mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi3.dat')
 chi4mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi4.dat')
 chi6mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi6.dat')
 chi8mub196up2=np.loadtxt(r'./mub196/cmuup2/final/buffer/chi8.dat')
-r12mub196up2=chi1mub196up2/chi2mub196up2
 r32mub196up2=chi3mub196up2/chi2mub196up2
 r42mub196up2=chi4mub196up2/chi2mub196up2
 r62mub196up2=chi6mub196up2/chi2mub196up2
 r82mub196up2=chi8mub196up2/chi2mub196up2
-chi1mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi1.dat')
 chi2mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi2.dat')
 chi3mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi3.dat')
 chi4mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi4.dat')
 chi6mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi6.dat')
 chi8mub196up3=np.loadtxt(r'./mub196/cmuup3/final/buffer/chi8.dat')
-r12mub196up3=chi1mub196up3/chi2mub196up3
 r32mub196up3=chi3mub196up3/chi2mub196up3
 r42mub196up3=chi4mub196up3/chi2mub196up3
 r62mub196up3=chi6mub196up3/chi2mub196up3
 r82mub196up3=chi8mub196up3/chi2mub196up3
-chi1mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi1.dat')
 chi2mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi2.dat')
 chi3mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi3.dat')
 chi4mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi4.dat')
 chi6mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi6.dat')
 chi8mub196up4=np.loadtxt(r'./mub196/cmuup4/final/buffer/chi8.dat')
-r12mub196up4=chi1mub196up4/chi2mub196up4
 r32mub196up4=chi3mub196up4/chi2mub196up4
 r42mub196up4=chi4mub196up4/chi2mub196up4
 r62mub196up4=chi6mub196up4/chi2mub196up4
 r82mub196up4=chi8mub196up4/chi2mub196up4
-chi1mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi1.dat')
 chi2mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi2.dat')
 chi3mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi3.dat')
 chi4mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi4.dat')
 chi6mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi6.dat')
 chi8mub196down=np.loadtxt(r'./mub196/cmudown/final/buffer/chi8.dat')
-r12mub196down=chi1mub196down/chi2mub196down
 r32mub196down=chi3mub196down/chi2mub196down
 r42mub196down=chi4mub196down/chi2mub196down
 r62mub196down=chi6mub196down/chi2mub196down
 r82mub196down=chi8mub196down/chi2mub196down
-chi1mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi1.dat')
 chi2mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi2.dat')
 chi3mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi3.dat')
 chi4mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi4.dat')
 chi6mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi6.dat')
 chi8mub196down1=np.loadtxt(r'./mub196/cmudown1/final/buffer/chi8.dat')
-r12mub196down1=chi1mub196down1/chi2mub196down1
 r32mub196down1=chi3mub196down1/chi2mub196down1
 r42mub196down1=chi4mub196down1/chi2mub196down1
 r62mub196down1=chi6mub196down1/chi2mub196down1
 r82mub196down1=chi8mub196down1/chi2mub196down1
-chi1mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi1.dat')
 chi2mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi2.dat')
 chi3mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi3.dat')
 chi4mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi4.dat')
 chi6mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi6.dat')
 chi8mub196down2=np.loadtxt(r'./mub196/cmudown2/final/buffer/chi8.dat')
-r12mub196down2=chi1mub196down2/chi2mub196down2
 r32mub196down2=chi3mub196down2/chi2mub196down2
 r42mub196down2=chi4mub196down2/chi2mub196down2
 r62mub196down2=chi6mub196down2/chi2mub196down2
 r82mub196down2=chi8mub196down2/chi2mub196down2
-chi1mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi1.dat')
 chi2mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi2.dat')
 chi3mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi3.dat')
 chi4mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi4.dat')
 chi6mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi6.dat')
 chi8mub196down3=np.loadtxt(r'./mub196/cmudown3/final/buffer/chi8.dat')
-r12mub196down3=chi1mub196down3/chi2mub196down3
 r32mub196down3=chi3mub196down3/chi2mub196down3
 r42mub196down3=chi4mub196down3/chi2mub196down3
 r62mub196down3=chi6mub196down3/chi2mub196down3
 r82mub196down3=chi8mub196down3/chi2mub196down3
-chi1mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi1.dat')
 chi2mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi2.dat')
 chi3mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi3.dat')
 chi4mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi4.dat')
 chi6mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi6.dat')
 chi8mub196down4=np.loadtxt(r'./mub196/cmudown4/final/buffer/chi8.dat')
-r12mub196down4=chi1mub196down4/chi2mub196down4
 r32mub196down4=chi3mub196down4/chi2mub196down4
 r42mub196down4=chi4mub196down4/chi2mub196down4
 r62mub196down4=chi6mub196down4/chi2mub196down4
 r82mub196down4=chi8mub196down4/chi2mub196down4
-r12196=np.zeros((300,100))
 r32196=np.zeros((300,100))
 r42196=np.zeros((300,100))
 r62196=np.zeros((300,100))
 r82196=np.zeros((300,100))
-for t in range(0,100):
-    if t<10:
-       r12196[:,t]=spline(T/ct[t],r12mub196up,xsame)
-    else:
-       if t>=10 and t<20:
-          r12196[:,t]=spline(T/ct[t-10],r12mub196up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r12196[:,t]=spline(T/ct[t-20],r12mub196up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r12196[:,t]=spline(T/ct[t-30],r12mub196up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r12196[:,t]=spline(T/ct[t-40],r12mub196up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r12196[:,t]=spline(T/ct[t-50],r12mub196down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r12196[:,t]=spline(T/ct[t-60],r12mub196down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r12196[:,t]=spline(T/ct[t-70],r12mub196down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r12196[:,t]=spline(T/ct[t-80],r12mub196down3,xsame)
-                            else:
-                                r12196[:,t]=spline(T/ct[t-90],r12mub196down4,xsame)
-
-
 for t in range(0,100):
     if t<10:
        r32196[:,t]=spline(T/ct[t],r32mub196up,xsame)
@@ -1360,14 +1085,6 @@ for t in range(0,100):
                             else:
                                 r82196[:,t]=spline(T/ct[t-90],r82mub196down4,xsame)
 
-for num in range(1,100):
-    if num==1:
-       max12196=np.maximum(r12196[:,num-1],r12196[:,num])
-       min12196=np.minimum(r12196[:,num-1],r12196[:,num])
-    else:
-       max12196=np.maximum(max12196,r12196[:,num])
-       min12196=np.minimum(min12196,r12196[:,num])
-
 
 for num in range(1,100):
     if num==1:
@@ -1401,12 +1118,7 @@ for num in range(1,100):
        max82196=np.maximum(max82196,r82196[:,num])
        min82196=np.minimum(min82196,r82196[:,num])
 
-r12mub196cen=spline(T/ctcen,r12mub196cen,xsame)*c
-r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)*c
-max12196=max12196*c
-min12196=min12196*c
-max196=max196*c
-min196=min196*c
+r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)
 r42mub196cen=spline(T/ctcen,r42mub196cen,xsame)
 r62mub196cen=spline(T/ctcen,r62mub196cen,xsame)
 r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
@@ -1414,27 +1126,11 @@ r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 dif196cen=abs(r32mub196cen-0.642055)
 dif196up=abs(max196-0.642055)
 dif196down=abs(min196-0.642055)
-dif12196cen=abs(r12mub196cen-0.901129)
-dif12196up=abs(max12196-0.901129)
-dif12196down=abs(min12196-0.901129)
-#min196cen_index=np.argmin(dif196cen[80:300])+80
-#min196up_index=np.argmin(dif196up[80:300])+80
-#min196down_index=np.argmin(dif196down[80:300])+80
-min196cen_index=np.argmin(dif12196cen[80:300])+80
-min196up_index=np.argmin(dif12196up[80:300])+80
-min196down_index=np.argmin(dif12196down[80:300])+80
-
-r12196cen=r12mub196cen[min196cen_index]
-#r32196hcen=r32mub196cen[min196cen_index+int(min196cen_index*deltat)]
-r12196hcen=r12mub196cen[Tcen[5]]
-r12=[max12196[min196up_index],max12196[min196down_index],min12196[min196up_index],min12196[min196down_index]]
-#r32h=[max196[min196up_index+int(min196up_index*deltat)],max196[min196down_index+int(min196down_index*deltat)],min196[min196up_index+int(min196up_index*deltat)],min196[min196down_index+int(min196down_index*deltat)]]
-r12h=[max12196[Tcup[5]],max12196[Tcdown[5]],min12196[Tcup[5]],min12196[Tcdown[5]]]
-r12196up=np.max(r12)
-r12196down=np.min(r12)
-r12196uph=np.max(r12h)
-r12196downh=np.min(r12h)
-
+min196cen_index=np.argmin(dif196cen[80:300])+80
+min196up_index=np.argmin(dif196up[80:300])+80
+min196down_index=np.argmin(dif196down[80:300])+80
+print(min196up_index)
+print(min196down_index)
 r32196cen=r32mub196cen[min196cen_index]
 #r32196hcen=r32mub196cen[min196cen_index+int(min196cen_index*deltat)]
 r32196hcen=r32mub196cen[Tcen[5]]
@@ -1479,164 +1175,112 @@ r82196down=np.min(r82)
 r82196uph=np.max(r82h)
 r82196downh=np.min(r82h)
 
-print('19.6')
+print(r62196up)
+print(r62196down)
 ####################################################################################################
-chi1mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi1.dat')
 chi2mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi2.dat')
 chi3mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi3.dat')
 chi4mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi4.dat')
 chi6mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi6.dat')
 chi8mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi8.dat')
-r12mub252cen=chi1mub252cen/chi2mub252cen
 r32mub252cen=chi3mub252cen/chi2mub252cen
 r42mub252cen=chi4mub252cen/chi2mub252cen
 r62mub252cen=chi6mub252cen/chi2mub252cen
 r82mub252cen=chi8mub252cen/chi2mub252cen
-chi1mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi1.dat')
 chi2mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi2.dat')
 chi3mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi3.dat')
 chi4mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi4.dat')
 chi6mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi6.dat')
 chi8mub252up=np.loadtxt(r'./mub252/cmuup/final/buffer/chi8.dat')
-r12mub252up=chi1mub252up/chi2mub252up
 r32mub252up=chi3mub252up/chi2mub252up
 r42mub252up=chi4mub252up/chi2mub252up
 r62mub252up=chi6mub252up/chi2mub252up
 r82mub252up=chi8mub252up/chi2mub252up
-chi1mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi1.dat')
 chi2mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi2.dat')
 chi3mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi3.dat')
 chi4mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi4.dat')
 chi6mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi6.dat')
 chi8mub252up1=np.loadtxt(r'./mub252/cmuup1/final/buffer/chi8.dat')
-r12mub252up1=chi1mub252up1/chi2mub252up1
 r32mub252up1=chi3mub252up1/chi2mub252up1
 r42mub252up1=chi4mub252up1/chi2mub252up1
 r62mub252up1=chi6mub252up1/chi2mub252up1
 r82mub252up1=chi8mub252up1/chi2mub252up1
-chi1mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi1.dat')
 chi2mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi2.dat')
 chi3mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi3.dat')
 chi4mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi4.dat')
 chi6mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi6.dat')
 chi8mub252up2=np.loadtxt(r'./mub252/cmuup2/final/buffer/chi8.dat')
-r12mub252up2=chi1mub252up2/chi2mub252up2
 r32mub252up2=chi3mub252up2/chi2mub252up2
 r42mub252up2=chi4mub252up2/chi2mub252up2
 r62mub252up2=chi6mub252up2/chi2mub252up2
 r82mub252up2=chi8mub252up2/chi2mub252up2
-chi1mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi1.dat')
 chi2mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi2.dat')
 chi3mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi3.dat')
 chi4mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi4.dat')
 chi6mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi6.dat')
 chi8mub252up3=np.loadtxt(r'./mub252/cmuup3/final/buffer/chi8.dat')
-r12mub252up3=chi1mub252up3/chi2mub252up3
 r32mub252up3=chi3mub252up3/chi2mub252up3
 r42mub252up3=chi4mub252up3/chi2mub252up3
 r62mub252up3=chi6mub252up3/chi2mub252up3
 r82mub252up3=chi8mub252up3/chi2mub252up3
-chi1mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi1.dat')
 chi2mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi2.dat')
 chi3mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi3.dat')
 chi4mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi4.dat')
 chi6mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi6.dat')
 chi8mub252up4=np.loadtxt(r'./mub252/cmuup4/final/buffer/chi8.dat')
-r12mub252up4=chi1mub252up4/chi2mub252up4
 r32mub252up4=chi3mub252up4/chi2mub252up4
 r42mub252up4=chi4mub252up4/chi2mub252up4
 r62mub252up4=chi6mub252up4/chi2mub252up4
 r82mub252up4=chi8mub252up4/chi2mub252up4
-chi1mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi1.dat')
 chi2mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi2.dat')
 chi3mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi3.dat')
 chi4mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi4.dat')
 chi6mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi6.dat')
 chi8mub252down=np.loadtxt(r'./mub252/cmudown/final/buffer/chi8.dat')
-r12mub252down=chi1mub252down/chi2mub252down
 r32mub252down=chi3mub252down/chi2mub252down
 r42mub252down=chi4mub252down/chi2mub252down
 r62mub252down=chi6mub252down/chi2mub252down
 r82mub252down=chi8mub252down/chi2mub252down
-chi1mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi1.dat')
 chi2mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi2.dat')
 chi3mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi3.dat')
 chi4mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi4.dat')
 chi6mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi6.dat')
 chi8mub252down1=np.loadtxt(r'./mub252/cmudown1/final/buffer/chi8.dat')
-r12mub252down1=chi1mub252down1/chi2mub252down1
 r32mub252down1=chi3mub252down1/chi2mub252down1
 r42mub252down1=chi4mub252down1/chi2mub252down1
 r62mub252down1=chi6mub252down1/chi2mub252down1
 r82mub252down1=chi8mub252down1/chi2mub252down1
-chi1mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi1.dat')
 chi2mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi2.dat')
 chi3mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi3.dat')
 chi4mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi4.dat')
 chi6mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi6.dat')
 chi8mub252down2=np.loadtxt(r'./mub252/cmudown2/final/buffer/chi8.dat')
-r12mub252down2=chi1mub252down2/chi2mub252down2
 r32mub252down2=chi3mub252down2/chi2mub252down2
 r42mub252down2=chi4mub252down2/chi2mub252down2
 r62mub252down2=chi6mub252down2/chi2mub252down2
 r82mub252down2=chi8mub252down2/chi2mub252down2
-chi1mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi1.dat')
 chi2mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi2.dat')
 chi3mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi3.dat')
 chi4mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi4.dat')
 chi6mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi6.dat')
 chi8mub252down3=np.loadtxt(r'./mub252/cmudown3/final/buffer/chi8.dat')
-r12mub252down3=chi1mub252down3/chi2mub252down3
 r32mub252down3=chi3mub252down3/chi2mub252down3
 r42mub252down3=chi4mub252down3/chi2mub252down3
 r62mub252down3=chi6mub252down3/chi2mub252down3
 r82mub252down3=chi8mub252down3/chi2mub252down3
-chi1mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi1.dat')
 chi2mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi2.dat')
 chi3mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi3.dat')
 chi4mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi4.dat')
 chi6mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi6.dat')
 chi8mub252down4=np.loadtxt(r'./mub252/cmudown4/final/buffer/chi8.dat')
-r12mub252down4=chi1mub252down4/chi2mub252down4
 r32mub252down4=chi3mub252down4/chi2mub252down4
 r42mub252down4=chi4mub252down4/chi2mub252down4
 r62mub252down4=chi6mub252down4/chi2mub252down4
 r82mub252down4=chi8mub252down4/chi2mub252down4
-r12252=np.zeros((300,100))
 r32252=np.zeros((300,100))
 r42252=np.zeros((300,100))
 r62252=np.zeros((300,100))
 r82252=np.zeros((300,100))
-for t in range(0,100):
-    if t<10:
-       r12252[:,t]=spline(T/ct[t],r12mub252up,xsame)
-    else:
-       if t>=10 and t<20:
-          r12252[:,t]=spline(T/ct[t-10],r12mub252up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r12252[:,t]=spline(T/ct[t-20],r12mub252up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r12252[:,t]=spline(T/ct[t-30],r12mub252up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r12252[:,t]=spline(T/ct[t-40],r12mub252up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r12252[:,t]=spline(T/ct[t-50],r12mub252down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r12252[:,t]=spline(T/ct[t-60],r12mub252down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r12252[:,t]=spline(T/ct[t-70],r12mub252down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r12252[:,t]=spline(T/ct[t-80],r12mub252down3,xsame)
-                            else:
-                                r12252[:,t]=spline(T/ct[t-90],r12mub252down4,xsame)
-
 for t in range(0,100):
     if t<10:
        r32252[:,t]=spline(T/ct[t],r32mub252up,xsame)
@@ -1758,14 +1402,6 @@ for t in range(0,100):
                             else:
                                 r82252[:,t]=spline(T/ct[t-90],r82mub252down4,xsame)
 
-for num in range(1,100):
-    if num==1:
-       max12252=np.maximum(r12252[:,num-1],r12252[:,num])
-       min12252=np.minimum(r12252[:,num-1],r12252[:,num])
-    else:
-       max12252=np.maximum(max12252,r12252[:,num])
-       min12252=np.minimum(min12252,r12252[:,num])
-
 
 for num in range(1,100):
     if num==1:
@@ -1799,12 +1435,7 @@ for num in range(1,100):
        max82252=np.maximum(max82252,r82252[:,num])
        min82252=np.minimum(min82252,r82252[:,num])
 
-r12mub252cen=spline(T/ctcen,r12mub252cen,xsame)*c
-r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)*c
-max12252=max12252*c
-min12252=min12252*c
-max252=max252*c
-min252=min252*c
+r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)
 r42mub252cen=spline(T/ctcen,r42mub252cen,xsame)
 r62mub252cen=spline(T/ctcen,r62mub252cen,xsame)
 r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
@@ -1812,28 +1443,11 @@ r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 dif252cen=abs(r32mub252cen-0.782208)
 dif252up=abs(max252-0.782208)
 dif252down=abs(min252-0.782208)
-dif12252cen=abs(r12mub252cen-0.979091)
-dif12252up=abs(max12252-0.979091)
-dif12252down=abs(min12252-0.979091)
-#min252cen_index=np.argmin(dif252cen[80:300])+80
-#min252up_index=np.argmin(dif252up[80:300])+80
-#min252down_index=np.argmin(dif252down[80:300])+80
-min252cen_index=np.argmin(dif12252cen[80:300])+80
-min252up_index=np.argmin(dif12252up[80:300])+80
-min252down_index=np.argmin(dif12252down[80:300])+80
-
-r12252cen=r12mub252cen[min252cen_index]
-#r32252hcen=r32mub252cen[min252cen_index+int(min252cen_index*deltat)]
-r12252hcen=r12mub252cen[Tcen[6]]
-r12=[max12252[min252up_index],max12252[min252down_index],min12252[min252up_index],min12252[min252down_index]]
-#r32h=[max252[min252up_index+int(min252up_index*deltat)],max252[min252down_index+int(min252down_index*deltat)],min252[min252up_index+int(min252up_index*deltat)],min252[min252down_index+int(min252down_index*deltat)]]
-r12h=[max12252[Tcup[6]],max12252[Tcdown[6]],min12252[Tcup[6]],min12252[Tcdown[6]]]
-r12252up=np.max(r12)
-r12252down=np.min(r12)
-r12252uph=np.max(r12h)
-r12252downh=np.min(r12h)
-
-
+min252cen_index=np.argmin(dif252cen[80:300])+80
+min252up_index=np.argmin(dif252up[80:300])+80
+min252down_index=np.argmin(dif252down[80:300])+80
+print(min252up_index)
+print(min252down_index)
 r32252cen=r32mub252cen[min252cen_index]
 #r32252hcen=r32mub252cen[min252cen_index+int(min252cen_index*deltat)]
 r32252hcen=r32mub252cen[Tcen[6]]
@@ -1878,164 +1492,112 @@ r82252down=np.min(r82)
 r82252uph=np.max(r82h)
 r82252downh=np.min(r82h)
 
-print('14.5')
+print(r62252up)
+print(r62252down)
 #####################################################################################################
-chi1mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi1.dat')
 chi2mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi2.dat')
 chi3mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi3.dat')
 chi4mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi4.dat')
 chi6mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi6.dat')
 chi8mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi8.dat')
-r12mub303cen=chi1mub303cen/chi2mub303cen
 r32mub303cen=chi3mub303cen/chi2mub303cen
 r42mub303cen=chi4mub303cen/chi2mub303cen
 r62mub303cen=chi6mub303cen/chi2mub303cen
 r82mub303cen=chi8mub303cen/chi2mub303cen
-chi1mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi1.dat')
 chi2mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi2.dat')
 chi3mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi3.dat')
 chi4mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi4.dat')
 chi6mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi6.dat')
 chi8mub303up=np.loadtxt(r'./mub303/cmuup/final/buffer/chi8.dat')
-r12mub303up=chi1mub303up/chi2mub303up
 r32mub303up=chi3mub303up/chi2mub303up
 r42mub303up=chi4mub303up/chi2mub303up
 r62mub303up=chi6mub303up/chi2mub303up
 r82mub303up=chi8mub303up/chi2mub303up
-chi1mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi1.dat')
 chi2mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi2.dat')
 chi3mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi3.dat')
 chi4mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi4.dat')
 chi6mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi6.dat')
 chi8mub303up1=np.loadtxt(r'./mub303/cmuup1/final/buffer/chi8.dat')
-r12mub303up1=chi1mub303up1/chi2mub303up1
 r32mub303up1=chi3mub303up1/chi2mub303up1
 r42mub303up1=chi4mub303up1/chi2mub303up1
 r62mub303up1=chi6mub303up1/chi2mub303up1
 r82mub303up1=chi8mub303up1/chi2mub303up1
-chi1mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi1.dat')
 chi2mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi2.dat')
 chi3mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi3.dat')
 chi4mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi4.dat')
 chi6mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi6.dat')
 chi8mub303up2=np.loadtxt(r'./mub303/cmuup2/final/buffer/chi8.dat')
-r12mub303up2=chi1mub303up2/chi2mub303up2
 r32mub303up2=chi3mub303up2/chi2mub303up2
 r42mub303up2=chi4mub303up2/chi2mub303up2
 r62mub303up2=chi6mub303up2/chi2mub303up2
 r82mub303up2=chi8mub303up2/chi2mub303up2
-chi1mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi1.dat')
 chi2mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi2.dat')
 chi3mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi3.dat')
 chi4mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi4.dat')
 chi6mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi6.dat')
 chi8mub303up3=np.loadtxt(r'./mub303/cmuup3/final/buffer/chi8.dat')
-r12mub303up3=chi1mub303up3/chi2mub303up3
 r32mub303up3=chi3mub303up3/chi2mub303up3
 r42mub303up3=chi4mub303up3/chi2mub303up3
 r62mub303up3=chi6mub303up3/chi2mub303up3
 r82mub303up3=chi8mub303up3/chi2mub303up3
-chi1mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi1.dat')
 chi2mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi2.dat')
 chi3mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi3.dat')
 chi4mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi4.dat')
 chi6mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi6.dat')
 chi8mub303up4=np.loadtxt(r'./mub303/cmuup4/final/buffer/chi8.dat')
-r12mub303up4=chi1mub303up4/chi2mub303up4
 r32mub303up4=chi3mub303up4/chi2mub303up4
 r42mub303up4=chi4mub303up4/chi2mub303up4
 r62mub303up4=chi6mub303up4/chi2mub303up4
 r82mub303up4=chi8mub303up4/chi2mub303up4
-chi1mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi1.dat')
 chi2mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi2.dat')
 chi3mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi3.dat')
 chi4mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi4.dat')
 chi6mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi6.dat')
 chi8mub303down=np.loadtxt(r'./mub303/cmudown/final/buffer/chi8.dat')
-r12mub303down=chi1mub303down/chi2mub303down
 r32mub303down=chi3mub303down/chi2mub303down
 r42mub303down=chi4mub303down/chi2mub303down
 r62mub303down=chi6mub303down/chi2mub303down
 r82mub303down=chi8mub303down/chi2mub303down
-chi1mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi1.dat')
 chi2mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi2.dat')
 chi3mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi3.dat')
 chi4mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi4.dat')
 chi6mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi6.dat')
 chi8mub303down1=np.loadtxt(r'./mub303/cmudown1/final/buffer/chi8.dat')
-r12mub303down1=chi1mub303down1/chi2mub303down1
 r32mub303down1=chi3mub303down1/chi2mub303down1
 r42mub303down1=chi4mub303down1/chi2mub303down1
 r62mub303down1=chi6mub303down1/chi2mub303down1
 r82mub303down1=chi8mub303down1/chi2mub303down1
-chi1mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi1.dat')
 chi2mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi2.dat')
 chi3mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi3.dat')
 chi4mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi4.dat')
 chi6mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi6.dat')
 chi8mub303down2=np.loadtxt(r'./mub303/cmudown2/final/buffer/chi8.dat')
-r12mub303down2=chi1mub303down2/chi2mub303down2
 r32mub303down2=chi3mub303down2/chi2mub303down2
 r42mub303down2=chi4mub303down2/chi2mub303down2
 r62mub303down2=chi6mub303down2/chi2mub303down2
 r82mub303down2=chi8mub303down2/chi2mub303down2
-chi1mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi1.dat')
 chi2mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi2.dat')
 chi3mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi3.dat')
 chi4mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi4.dat')
 chi6mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi6.dat')
 chi8mub303down3=np.loadtxt(r'./mub303/cmudown3/final/buffer/chi8.dat')
-r12mub303down3=chi1mub303down3/chi2mub303down3
 r32mub303down3=chi3mub303down3/chi2mub303down3
 r42mub303down3=chi4mub303down3/chi2mub303down3
 r62mub303down3=chi6mub303down3/chi2mub303down3
 r82mub303down3=chi8mub303down3/chi2mub303down3
-chi1mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi1.dat')
 chi2mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi2.dat')
 chi3mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi3.dat')
 chi4mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi4.dat')
 chi6mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi6.dat')
 chi8mub303down4=np.loadtxt(r'./mub303/cmudown4/final/buffer/chi8.dat')
-r12mub303down4=chi1mub303down4/chi2mub303down4
 r32mub303down4=chi3mub303down4/chi2mub303down4
 r42mub303down4=chi4mub303down4/chi2mub303down4
 r62mub303down4=chi6mub303down4/chi2mub303down4
 r82mub303down4=chi8mub303down4/chi2mub303down4
-r12303=np.zeros((300,100))
 r32303=np.zeros((300,100))
 r42303=np.zeros((300,100))
 r62303=np.zeros((300,100))
 r82303=np.zeros((300,100))
-for t in range(0,100):
-    if t<10:
-       r12303[:,t]=spline(T/ct[t],r12mub303up,xsame)
-    else:
-       if t>=10 and t<20:
-          r12303[:,t]=spline(T/ct[t-10],r12mub303up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r12303[:,t]=spline(T/ct[t-20],r12mub303up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r12303[:,t]=spline(T/ct[t-30],r12mub303up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r12303[:,t]=spline(T/ct[t-40],r12mub303up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r12303[:,t]=spline(T/ct[t-50],r12mub303down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r12303[:,t]=spline(T/ct[t-60],r12mub303down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r12303[:,t]=spline(T/ct[t-70],r12mub303down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r12303[:,t]=spline(T/ct[t-80],r12mub303down3,xsame)
-                            else:
-                                r12303[:,t]=spline(T/ct[t-90],r12mub303down4,xsame)
-
 for t in range(0,100):
     if t<10:
        r32303[:,t]=spline(T/ct[t],r32mub303up,xsame)
@@ -2156,14 +1718,6 @@ for t in range(0,100):
                             else:
                                 r82303[:,t]=spline(T/ct[t-90],r82mub303down4,xsame)
 
-for num in range(1,100):
-    if num==1:
-       max12303=np.maximum(r12303[:,num-1],r12303[:,num])
-       min12303=np.minimum(r12303[:,num-1],r12303[:,num])
-    else:
-       max12303=np.maximum(max12303,r12303[:,num])
-       min12303=np.minimum(min12303,r12303[:,num])
-
 
 for num in range(1,100):
     if num==1:
@@ -2197,12 +1751,7 @@ for num in range(1,100):
        max82303=np.maximum(max82303,r82303[:,num])
        min82303=np.minimum(min82303,r82303[:,num])
 
-r12mub303cen=spline(T/ctcen,r12mub303cen,xsame)*c
-r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)*c
-max12303=max12303*c
-min12303=min12303*c
-max303=max303*c
-min303=min303*c
+r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)
 r42mub303cen=spline(T/ctcen,r42mub303cen,xsame)
 r62mub303cen=spline(T/ctcen,r62mub303cen,xsame)
 r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
@@ -2210,28 +1759,11 @@ r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 dif303cen=abs(r32mub303cen-0.783562)
 dif303up=abs(max303-0.783562)
 dif303down=abs(min303-0.783562)
-dif12303cen=abs(r12mub303cen-1.035206)
-dif12303up=abs(max12303-1.035206)
-dif12303down=abs(min12303-1.035206)
-#min303cen_index=np.argmin(dif303cen[80:300])+80
-#min303up_index=np.argmin(dif303up[80:300])+80
-#min303down_index=np.argmin(dif303down[80:300])+80
-min303cen_index=np.argmin(dif12303cen[80:300])+80
-min303up_index=np.argmin(dif12303up[80:300])+80
-min303down_index=np.argmin(dif12303down[80:300])+80
-
-r12303cen=r12mub303cen[min303cen_index]
-#r32303hcen=r32mub303cen[min303cen_index+int(min303cen_index*deltat)]
-r12303hcen=r12mub303cen[Tcen[7]]
-r12=[max12303[min303up_index],max12303[min303down_index],min12303[min303up_index],min12303[min303down_index]]
-#r32h=[max303[min303up_index+int(min303up_index*deltat)],max303[min303down_index+int(min303down_index*deltat)],min303[min303up_index+int(min303up_index*deltat)],min303[min303down_index+int(min303down_index*deltat)]]
-r12h=[max12303[Tcup[7]],max12303[Tcdown[7]],min12303[Tcup[7]],min12303[Tcdown[7]]]
-r12303up=np.max(r12)
-r12303down=np.min(r12)
-r12303uph=np.max(r12h)
-r12303downh=np.min(r12h)
-
-
+min303cen_index=np.argmin(dif303cen[80:300])+80
+min303up_index=np.argmin(dif303up[80:300])+80
+min303down_index=np.argmin(dif303down[80:300])+80
+print(min303up_index)
+print(min303down_index)
 r32303cen=r32mub303cen[min303cen_index]
 #r32303hcen=r32mub303cen[min303cen_index+int(min303cen_index*deltat)]
 r32303hcen=r32mub303cen[Tcen[7]]
@@ -2276,164 +1808,112 @@ r82303down=np.min(r82)
 r82303uph=np.max(r82h)
 r82303downh=np.min(r82h)
 
-print('11.5')
+print(r62303up)
+print(r62303down)
 ####################################################################################################
-chi1mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi1.dat')
 chi2mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi2.dat')
 chi3mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi3.dat')
 chi4mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi4.dat')
 chi6mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi6.dat')
 chi8mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi8.dat')
-r12mub406cen=chi1mub406cen/chi2mub406cen
 r32mub406cen=chi3mub406cen/chi2mub406cen
 r42mub406cen=chi4mub406cen/chi2mub406cen
 r62mub406cen=chi6mub406cen/chi2mub406cen
 r82mub406cen=chi8mub406cen/chi2mub406cen
-chi1mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi1.dat')
 chi2mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi2.dat')
 chi3mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi3.dat')
 chi4mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi4.dat')
 chi6mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi6.dat')
 chi8mub406up=np.loadtxt(r'./mub406/cmuup/final/buffer/chi8.dat')
-r12mub406up=chi1mub406up/chi2mub406up
 r32mub406up=chi3mub406up/chi2mub406up
 r42mub406up=chi4mub406up/chi2mub406up
 r62mub406up=chi6mub406up/chi2mub406up
 r82mub406up=chi8mub406up/chi2mub406up
-chi1mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi1.dat')
 chi2mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi2.dat')
 chi3mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi3.dat')
 chi4mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi4.dat')
 chi6mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi6.dat')
 chi8mub406up1=np.loadtxt(r'./mub406/cmuup1/final/buffer/chi8.dat')
-r12mub406up1=chi1mub406up1/chi2mub406up1
 r32mub406up1=chi3mub406up1/chi2mub406up1
 r42mub406up1=chi4mub406up1/chi2mub406up1
 r62mub406up1=chi6mub406up1/chi2mub406up1
 r82mub406up1=chi8mub406up1/chi2mub406up1
-chi1mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi1.dat')
 chi2mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi2.dat')
 chi3mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi3.dat')
 chi4mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi4.dat')
 chi6mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi6.dat')
 chi8mub406up2=np.loadtxt(r'./mub406/cmuup2/final/buffer/chi8.dat')
-r12mub406up2=chi1mub406up2/chi2mub406up2
 r32mub406up2=chi3mub406up2/chi2mub406up2
 r42mub406up2=chi4mub406up2/chi2mub406up2
 r62mub406up2=chi6mub406up2/chi2mub406up2
 r82mub406up2=chi8mub406up2/chi2mub406up2
-chi1mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi1.dat')
 chi2mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi2.dat')
 chi3mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi3.dat')
 chi4mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi4.dat')
 chi6mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi6.dat')
 chi8mub406up3=np.loadtxt(r'./mub406/cmuup3/final/buffer/chi8.dat')
-r12mub406up3=chi1mub406up3/chi2mub406up3
 r32mub406up3=chi3mub406up3/chi2mub406up3
 r42mub406up3=chi4mub406up3/chi2mub406up3
 r62mub406up3=chi6mub406up3/chi2mub406up3
 r82mub406up3=chi8mub406up3/chi2mub406up3
-chi1mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi1.dat')
 chi2mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi2.dat')
 chi3mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi3.dat')
 chi4mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi4.dat')
 chi6mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi6.dat')
 chi8mub406up4=np.loadtxt(r'./mub406/cmuup4/final/buffer/chi8.dat')
-r12mub406up4=chi1mub406up4/chi2mub406up4
 r32mub406up4=chi3mub406up4/chi2mub406up4
 r42mub406up4=chi4mub406up4/chi2mub406up4
 r62mub406up4=chi6mub406up4/chi2mub406up4
 r82mub406up4=chi8mub406up4/chi2mub406up4
-chi1mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi1.dat')
 chi2mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi2.dat')
 chi3mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi3.dat')
 chi4mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi4.dat')
 chi6mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi6.dat')
 chi8mub406down=np.loadtxt(r'./mub406/cmudown/final/buffer/chi8.dat')
-r12mub406down=chi1mub406down/chi2mub406down
 r32mub406down=chi3mub406down/chi2mub406down
 r42mub406down=chi4mub406down/chi2mub406down
 r62mub406down=chi6mub406down/chi2mub406down
 r82mub406down=chi8mub406down/chi2mub406down
-chi1mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi1.dat')
 chi2mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi2.dat')
 chi3mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi3.dat')
 chi4mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi4.dat')
 chi6mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi6.dat')
 chi8mub406down1=np.loadtxt(r'./mub406/cmudown1/final/buffer/chi8.dat')
-r12mub406down1=chi1mub406down1/chi2mub406down1
 r32mub406down1=chi3mub406down1/chi2mub406down1
 r42mub406down1=chi4mub406down1/chi2mub406down1
 r62mub406down1=chi6mub406down1/chi2mub406down1
 r82mub406down1=chi8mub406down1/chi2mub406down1
-chi1mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi1.dat')
 chi2mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi2.dat')
 chi3mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi3.dat')
 chi4mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi4.dat')
 chi6mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi6.dat')
 chi8mub406down2=np.loadtxt(r'./mub406/cmudown2/final/buffer/chi8.dat')
-r12mub406down2=chi1mub406down2/chi2mub406down2
 r32mub406down2=chi3mub406down2/chi2mub406down2
 r42mub406down2=chi4mub406down2/chi2mub406down2
 r62mub406down2=chi6mub406down2/chi2mub406down2
 r82mub406down2=chi8mub406down2/chi2mub406down2
-chi1mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi1.dat')
 chi2mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi2.dat')
 chi3mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi3.dat')
 chi4mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi4.dat')
 chi6mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi6.dat')
 chi8mub406down3=np.loadtxt(r'./mub406/cmudown3/final/buffer/chi8.dat')
-r12mub406down3=chi1mub406down3/chi2mub406down3
 r32mub406down3=chi3mub406down3/chi2mub406down3
 r42mub406down3=chi4mub406down3/chi2mub406down3
 r62mub406down3=chi6mub406down3/chi2mub406down3
 r82mub406down3=chi8mub406down3/chi2mub406down3
-chi1mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi1.dat')
 chi2mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi2.dat')
 chi3mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi3.dat')
 chi4mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi4.dat')
 chi6mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi6.dat')
 chi8mub406down4=np.loadtxt(r'./mub406/cmudown4/final/buffer/chi8.dat')
-r12mub406down4=chi1mub406down4/chi2mub406down4
 r32mub406down4=chi3mub406down4/chi2mub406down4
 r42mub406down4=chi4mub406down4/chi2mub406down4
 r62mub406down4=chi6mub406down4/chi2mub406down4
 r82mub406down4=chi8mub406down4/chi2mub406down4
-r12406=np.zeros((300,100))
 r32406=np.zeros((300,100))
 r42406=np.zeros((300,100))
 r62406=np.zeros((300,100))
 r82406=np.zeros((300,100))
-for t in range(0,100):
-    if t<10:
-       r12406[:,t]=spline(T/ct[t],r12mub406up,xsame)
-    else:
-       if t>=10 and t<20:
-          r12406[:,t]=spline(T/ct[t-10],r12mub406up1,xsame)
-       else:
-          if t>=20 and t<30:
-             r12406[:,t]=spline(T/ct[t-20],r12mub406up2,xsame)
-          else: 
-             if t>=30 and t<40:
-                r12406[:,t]=spline(T/ct[t-30],r12mub406up3,xsame)
-             else: 
-                if t>=40 and t<50:
-                   r12406[:,t]=spline(T/ct[t-40],r12mub406up4,xsame)
-                else:
-                   if t>=50 and t<60:
-                      r12406[:,t]=spline(T/ct[t-50],r12mub406down,xsame)
-                   else: 
-                      if t>=60 and t<70:
-                         r12406[:,t]=spline(T/ct[t-60],r12mub406down1,xsame)
-                      else:
-                         if t>=70 and t<80:
-                            r12406[:,t]=spline(T/ct[t-70],r12mub406down2,xsame)
-                         else: 
-                            if t>=80 and t<90:
-                               r12406[:,t]=spline(T/ct[t-80],r12mub406down3,xsame)
-                            else:
-                                r12406[:,t]=spline(T/ct[t-90],r12mub406down4,xsame)
-
 for t in range(0,100):
     if t<10:
        r32406[:,t]=spline(T/ct[t],r32mub406up,xsame)
@@ -2557,14 +2037,6 @@ for t in range(0,100):
 
 for num in range(1,100):
     if num==1:
-       max12406=np.maximum(r12406[:,num-1],r12406[:,num])
-       min12406=np.minimum(r12406[:,num-1],r12406[:,num])
-    else:
-       max12406=np.maximum(max12406,r12406[:,num])
-       min12406=np.minimum(min12406,r12406[:,num])
-
-for num in range(1,100):
-    if num==1:
        max406=np.maximum(r32406[:,num-1],r32406[:,num])
        min406=np.minimum(r32406[:,num-1],r32406[:,num])
     else:
@@ -2595,12 +2067,7 @@ for num in range(1,100):
        max82406=np.maximum(max82406,r82406[:,num])
        min82406=np.minimum(min82406,r82406[:,num])
 
-r12mub406cen=spline(T/ctcen,r12mub406cen,xsame)*c
-r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)*c
-max12406=max12406*c
-min12406=min12406*c
-max406=max406*c
-min406=min406*c
+r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)
 r42mub406cen=spline(T/ctcen,r42mub406cen,xsame)
 r62mub406cen=spline(T/ctcen,r62mub406cen,xsame)
 r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
@@ -2608,27 +2075,12 @@ r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 dif406cen=abs(r32mub406cen-0.798587)
 dif406up=abs(max406-0.798587)
 dif406down=abs(min406-0.798587)
-dif12406cen=abs(r12mub406cen-1.066514)
-dif12406up=abs(max12406-1.066514)
-dif12406down=abs(min12406-1.066514)
-#min406cen_index=np.argmin(dif406cen[80:300])+80
-#min406up_index=np.argmin(dif406up[80:300])+80
-#min406down_index=np.argmin(dif406down[80:300])+80
-min406cen_index=np.argmin(dif12406cen[80:300])+80
-min406up_index=np.argmin(dif12406up[80:300])+80
-min406down_index=np.argmin(dif12406down[80:300])+80
-
-r12406cen=r12mub406cen[min406cen_index]
-#r32406hcen=r32mub406cen[min406cen_index+int(min406cen_index*deltat)]
-r12406hcen=r12mub406cen[Tcen[8]]
-r12=[max12406[min406up_index],max12406[min406down_index],min12406[min406up_index],min12406[min406down_index]]
-#r32h=[max406[min406up_index+int(min406up_index*deltat)],max406[min406down_index+int(min406down_index*deltat)],min406[min406up_index+int(min406up_index*deltat)],min406[min406down_index+int(min406down_index*deltat)]]
-r12h=[max12406[Tcup[8]],max12406[Tcdown[8]],min12406[Tcup[8]],min12406[Tcdown[8]]]
-r12406up=np.max(r12)
-r12406down=np.min(r12)
-r12406uph=np.max(r12h)
-r12406downh=np.min(r12h)
-
+min406cen_index=np.argmin(dif406cen[80:300])+80
+min406up_index=np.argmin(dif406up[80:300])+80
+min406down_index=np.argmin(dif406down[80:300])+80
+print('T406')
+print(min406up_index)
+print(min406down_index)
 r32406cen=r32mub406cen[min406cen_index]
 #r32406hcen=r32mub406cen[min406cen_index+int(min406cen_index*deltat)]
 r32406hcen=r32mub406cen[Tcen[8]]
@@ -2673,7 +2125,11 @@ r82406down=np.min(r82)
 r82406uph=np.max(r82h)
 r82406downh=np.min(r82h)
 
-print('7.7')
+print(r62406cen)
+print(r62406up)
+print(r62406down)
+#print(r62406uph)
+#print(r62406downh)
 ####################################################################################################
 r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
 r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
@@ -2699,12 +2155,6 @@ r32down=[r3222down,r3268down,r3278down,r32106down,r32148down,r32196down,r32252do
 r32hcen=[r3222hcen,r3268hcen,r3278hcen,r32106hcen,r32148hcen,r32196hcen,r32252hcen,r32303hcen,r32406hcen]
 r32hup=[r3222uph,r3268uph,r3278uph,r32106uph,r32148uph,r32196uph,r32252uph,r32303uph,r32406uph]
 r32hdown=[r3222downh,r3268downh,r3278downh,r32106downh,r32148downh,r32196downh,r32252downh,r32303downh,r32406downh]
-r12cen=[r1222cen,r1268cen,r1278cen,r12106cen,r12148cen,r12196cen,r12252cen,r12303cen,r12406cen]
-r12up=[r1222up,r1268up,r1278up,r12106up,r12148up,r12196up,r12252up,r12303up,r12406up]
-r12down=[r1222down,r1268down,r1278down,r12106down,r12148down,r12196down,r12252down,r12303down,r12406down]
-r12hcen=[r1222hcen,r1268hcen,r1278hcen,r12106hcen,r12148hcen,r12196hcen,r12252hcen,r12303hcen,r12406hcen]
-r12hup=[r1222uph,r1268uph,r1278uph,r12106uph,r12148uph,r12196uph,r12252uph,r12303uph,r12406uph]
-r12hdown=[r1222downh,r1268downh,r1278downh,r12106downh,r12148downh,r12196downh,r12252downh,r12303downh,r12406downh]
 #r42和r62的上下限与中心值
 r62errup=np.zeros(9)
 r62errdown=np.zeros(9)
@@ -2730,10 +2180,6 @@ r82errlup=np.zeros(9)
 r82errldown=np.zeros(9)
 r32errlup=np.zeros(9)
 r32errldown=np.zeros(9)
-r12errup=np.zeros(9)
-r12errdown=np.zeros(9)
-r12errhup=np.zeros(9)
-r12errhdown=np.zeros(9)
 
 for i in range(0,9):
     r62errup[i]=r62up[i]-r62cen[i]
@@ -2752,12 +2198,20 @@ for i in range(0,9):
     r82errhdown[i]=r82hcen[i]-r82hdown[i]
     r32errhup[i]=r32hup[i]-r32hcen[i]
     r32errhdown[i]=r32hcen[i]-r32hdown[i]
-    r12errup[i]=r12up[i]-r12cen[i]
-    r12errdown[i]=r12cen[i]-r12down[i]
-    r12errhup[i]=r12hup[i]-r12hcen[i]
-    r12errhdown[i]=r12hcen[i]-r12hdown[i]
 
 
+#print(min22cen_index)
+#print(min68cen_index)
+#print(min78cen_index)
+#print(min106cen_index)
+#print(min148cen_index)
+#print(min196cen_index)
+#print(min252cen_index)
+#print(min303cen_index)
+#print(min406cen_index)
+print(r62hdown)
+print(r62hup)
+print(r62hcen)
 
 
 for num in range(0,1000):
@@ -2824,12 +2278,13 @@ for label in ax1.yaxis.get_ticklabels():
 
 
 ax2=fig.add_subplot(632)
-band_mub=ax2.fill_between(xsame,max1222,min1222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
-line_mub,=ax2.plot(xsame,r12mub22cen,'b',linewidth=1,alpha=0.5)
-ax2.plot(xsame,data200,color='k')
+band_mub=ax2.fill_between(xsame,max4222,min4222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
+line_mub,=ax2.plot(xsame,r42mub22cen,'b',linewidth=1,alpha=0.5)
+ax2.plot(T22hup,y62,color='g')
+ax2.plot(T22hdown,y62,color='g')
 ax2.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0,0.4])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax2.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax2.xaxis.get_ticklabels():
@@ -2839,12 +2294,14 @@ for label in ax2.yaxis.get_ticklabels():
 
 
 ax3=fig.add_subplot(633)
-band_mub=ax3.fill_between(xsame,max1268,min1268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
-line_mub,=ax3.plot(xsame,r12mub68cen,'b',linewidth=1,alpha=0.5)
-ax3.plot(xsame,data62,color='k')
+band_mub=ax3.fill_between(xsame,max4268,min4268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
+line_mub,=ax3.plot(xsame,r42mub68cen,'b',linewidth=1,alpha=0.5)
+ax3.plot(T68hup,y62,color='g')
+ax3.plot(T68hdown,y62,color='g')
+
 ax3.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.2,0.8])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax3.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax3.xaxis.get_ticklabels():
@@ -2854,12 +2311,13 @@ for label in ax3.yaxis.get_ticklabels():
 
 
 ax4=fig.add_subplot(634)
-band_mub=ax4.fill_between(xsame,max12106,min12106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
-line_mub,=ax4.plot(xsame,r12mub106cen,'b',linewidth=1,alpha=0.5)
-ax4.plot(xsame,data39,color='k')
+band_mub=ax4.fill_between(xsame,max42106,min42106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
+line_mub,=ax4.plot(xsame,r42mub106cen,'b',linewidth=1,alpha=0.5)
+ax4.plot(T106hup,y62,color='g')
+ax4.plot(T106hdown,y62,color='g')
 ax4.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.2,1.])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax4.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax4.xaxis.get_ticklabels():
@@ -2868,12 +2326,15 @@ for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax5=fig.add_subplot(635)
-band_mub=ax5.fill_between(xsame,max12148,min12148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
-line_mub,=ax5.plot(xsame,r12mub148cen,'b',linewidth=1,alpha=0.5)
-ax5.plot(xsame,data27,color='k')
+band_mub=ax5.fill_between(xsame,max42148,min42148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
+line_mub,=ax5.plot(xsame,r42mub148cen,'b',linewidth=1,alpha=0.5)
+ax5.plot(T148hup,y62,color='g')
+ax5.plot(T148hdown,y62,color='g')
+#ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
+#ax2.plot(xsame,data)
 ax5.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.4,1.])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax5.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax5.xaxis.get_ticklabels():
@@ -2882,12 +2343,15 @@ for label in ax5.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax6=fig.add_subplot(636)
-band_mub=ax6.fill_between(xsame,max12196,min12196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
-line_mub,=ax6.plot(xsame,r12mub196cen,'b',linewidth=1,alpha=0.5)
-ax6.plot(xsame,data19,color='k')
+band_mub=ax6.fill_between(xsame,max42196,min42196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
+line_mub,=ax6.plot(xsame,r42mub196cen,'b',linewidth=1,alpha=0.5)
+ax6.plot(T196hup,y62,color='g')
+ax6.plot(T196hdown,y62,color='g')
+#ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
+#ax2.plot(xsame,data)
 ax6.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.6,1.2])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax6.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax6.xaxis.get_ticklabels():
@@ -2896,12 +2360,13 @@ for label in ax6.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax7=fig.add_subplot(637)
-band_mub=ax7.fill_between(xsame,max12252,min12252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
-line_mub,=ax7.plot(xsame,r12mub252cen,'b',linewidth=1,alpha=0.5)
-ax7.plot(xsame,data14,color='k')
+band_mub=ax7.fill_between(xsame,max42252,min42252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
+line_mub,=ax7.plot(xsame,r42mub252cen,'b',linewidth=1,alpha=0.5)
+ax7.plot(T252hup,y62,color='g')
+ax7.plot(T252hdown,y62,color='g')
 ax7.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.8,1.2])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax7.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax7.xaxis.get_ticklabels():
@@ -2910,12 +2375,13 @@ for label in ax7.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax8=fig.add_subplot(638)
-band_mub=ax8.fill_between(xsame,max12303,min12303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
-line_mub,=ax8.plot(xsame,r12mub303cen,'b',linewidth=1,alpha=0.5)
-ax8.plot(xsame,data11,color='k')
+band_mub=ax8.fill_between(xsame,max42303,min42303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
+line_mub,=ax8.plot(xsame,r42mub303cen,'b',linewidth=1,alpha=0.5)
+ax8.plot(T303hup,y62,color='g')
+ax8.plot(T303hdown,y62,color='g')
 ax8.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.8,1.4])
+plt.axis([80,230,-0.5,1.4])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax8.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax8.xaxis.get_ticklabels():
@@ -2924,12 +2390,13 @@ for label in ax8.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax9=fig.add_subplot(639)
-band_mub=ax9.fill_between(xsame,max12406,min12406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
-line_mub,=ax9.plot(xsame,r12mub406cen,'b',linewidth=1,alpha=0.5)
-ax9.plot(xsame,data7,color='k')
+band_mub=ax9.fill_between(xsame,max42406,min42406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
+line_mub,=ax9.plot(xsame,r42mub406cen,'b',linewidth=1,alpha=0.5)
+ax9.plot(T406hup,y62,color='g')
+ax9.plot(T406hdown,y62,color='g')
 ax9.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.8,1.5])
+plt.axis([80,230,-1.5,2.1])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax9.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax9.xaxis.get_ticklabels():
@@ -2938,12 +2405,19 @@ for label in ax9.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax10=fig.add_subplot(6,3,10)
-band_mub=ax10.fill_between(xsame,max1278,min1278,alpha=0.25,facecolor='b',edgecolor='',label=r'$54.4$')
-line_mub,=ax10.plot(xsame,r12mub78cen,'b',linewidth=1,alpha=0.5)
-ax10.plot(xsame,data54,color='k')
+band_mub=ax10.fill_between(xsame,max8222,min8222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
+line_mub,=ax10.plot(xsame,r82mub22cen,'b',linewidth=1,alpha=0.5)
+ax10.plot(T22up,y62,color='b')
+ax10.plot(T22down,y62,color='b')
+ax10.plot(T22hup,y62,color='g')
+ax10.plot(T22hdown,y62,color='g')
+#ax2.plot(energy,r62up)
+#ax2.plot(energy,r62down)
+#ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
+#ax2.plot(xsame,data)
 ax10.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,0.3,0.8])
+plt.axis([80,230,-3,2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax10.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax10.xaxis.get_ticklabels():
@@ -3092,13 +2566,13 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
                     wspace=0.35)
 
 
-fig.savefig("r12R42R82.pdf")
+fig.savefig("r32R42R82.pdf")
 
 energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
-fig=plt.figure(figsize=(9., 7.))
+fig=plt.figure(figsize=(9., 6.))
 #fig=plt.figure()
 ax2=fig.add_subplot(222)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
@@ -3119,7 +2593,7 @@ ax2.xaxis.tick_top()
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax2.xaxis.set_label_position('top') 
-ax2.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
+ax2.set_ylabel(r'$R^B_{62}(R^p_{62})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(7)
 for label in ax2.yaxis.get_ticklabels():
@@ -3140,7 +2614,7 @@ plt.axis([5,230,-2.,2.2])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax3.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
+ax3.set_ylabel(r'$R^B_{42}(R^p_{42})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
@@ -3154,7 +2628,7 @@ linetf,=ax1.plot(energy,kurtosis[:,2],color='r',alpha=0.3,zorder=2)
 exp=ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 bandtc=ax1.fill_between(energy,r32hdown,r32hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=2)
 linetc,=ax1.plot(energy,r32hcen,color='b',alpha=0.3,zorder=2)
-ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'This work at $T_{CF}$',r'This work at $T_c$',r'RHIC data 0-5%'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'fRG with $T_{_{CF}}$',r'fRG with $T_c$',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax1.set_xscale('symlog')
 plt.axis([5,230,0.,1.2])
 ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
@@ -3162,7 +2636,7 @@ ax1.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotatio
 ax1.xaxis.tick_top()
 ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.xaxis.set_label_position('top') 
-ax1.set_ylabel(r'$\chi^B_3/\chi^B_2$', fontsize=14, color='black')
+ax1.set_ylabel(r'$R^B_{32}(R^p_{32})$', fontsize=14, color='black')
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
@@ -3180,14 +2654,14 @@ plt.axis([5,230,-10000.,10000.])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax4.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax4.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
 fig.subplots_adjust(top=0.9, bottom=0.15, left=0.1, right=0.95, hspace=0.,
-                    wspace=0.35)
+                    wspace=0.25)
 
 
-fig.savefig("r12R4262.pdf")
+fig.savefig("r32toTv2.pdf")
 

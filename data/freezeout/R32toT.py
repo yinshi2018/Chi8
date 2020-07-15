@@ -81,6 +81,8 @@ deltat=0.05
 ctcen=1.247
 ctup=1.259
 ctdown=1.235
+cmu=1.110
+c=ctcen/cmu
 
 Tcup=[int(205/ctdown)-1,int(205/ctdown)-1,int(205/ctdown)-1,int(204/ctdown)-1,int(203/ctdown)-1,int(201/ctdown)-1,int(198/ctdown)-1,int(194/ctdown)-1,int(182/ctdown)-1]
 Tcdown=[int(205/ctup)-1,int(205/ctup)-1,int(205/ctup)-1,int(204/ctup)-1,int(203/ctup)-1,int(201/ctup)-1,int(198/ctup)-1,int(194/ctup)-1,int(182/ctup)-1]
@@ -184,7 +186,9 @@ for num in range(1,20):
        max8222=np.maximum(max8222,r8222[:,num])
        min8222=np.minimum(min8222,r8222[:,num])
 
-r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)
+r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)*c
+max22=max22*c
+min22=min22*c
 r42mub22cen=spline(T/ctcen,r42mub22cen,xsame)
 r62mub22cen=spline(T/ctcen,r62mub22cen,xsame)
 r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
@@ -341,7 +345,9 @@ for num in range(1,20):
        max8268=np.maximum(max8268,r8268[:,num])
        min8268=np.minimum(min8268,r8268[:,num])
 
-r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)
+r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)*c
+max68=max68*c
+min68=min68*c
 r42mub68cen=spline(T/ctcen,r42mub68cen,xsame)
 r62mub68cen=spline(T/ctcen,r62mub68cen,xsame)
 r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
@@ -491,7 +497,9 @@ for num in range(1,20):
        max8278=np.maximum(max8278,r8278[:,num])
        min8278=np.minimum(min8278,r8278[:,num])
 
-r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)
+r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)*c
+max78=max78*c
+min78=min78*c
 r42mub78cen=spline(T/ctcen,r42mub78cen,xsame)
 r62mub78cen=spline(T/ctcen,r62mub78cen,xsame)
 r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
@@ -645,7 +653,9 @@ for num in range(1,20):
        max82106=np.maximum(max82106,r82106[:,num])
        min82106=np.minimum(min82106,r82106[:,num])
 
-r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)
+r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)*c
+max106=max106*c
+min106=min106*c
 r42mub106cen=spline(T/ctcen,r42mub106cen,xsame)
 r62mub106cen=spline(T/ctcen,r62mub106cen,xsame)
 r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
@@ -796,7 +806,9 @@ for num in range(1,20):
        max82148=np.maximum(max82148,r82148[:,num])
        min82148=np.minimum(min82148,r82148[:,num])
 
-r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)
+r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)*c
+max148=max148*c
+min148=min148*c
 r42mub148cen=spline(T/ctcen,r42mub148cen,xsame)
 r62mub148cen=spline(T/ctcen,r62mub148cen,xsame)
 r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
@@ -1112,7 +1124,9 @@ for num in range(1,100):
        max82196=np.maximum(max82196,r82196[:,num])
        min82196=np.minimum(min82196,r82196[:,num])
 
-r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)
+r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)*c
+max196=max196*c
+min196=min196*c
 r42mub196cen=spline(T/ctcen,r42mub196cen,xsame)
 r62mub196cen=spline(T/ctcen,r62mub196cen,xsame)
 r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
@@ -1429,7 +1443,9 @@ for num in range(1,100):
        max82252=np.maximum(max82252,r82252[:,num])
        min82252=np.minimum(min82252,r82252[:,num])
 
-r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)
+r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)*c
+max252=max252*c
+min252=min252*c
 r42mub252cen=spline(T/ctcen,r42mub252cen,xsame)
 r62mub252cen=spline(T/ctcen,r62mub252cen,xsame)
 r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
@@ -1745,7 +1761,9 @@ for num in range(1,100):
        max82303=np.maximum(max82303,r82303[:,num])
        min82303=np.minimum(min82303,r82303[:,num])
 
-r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)
+r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)*c
+max303=max303*c
+min303=min303*c
 r42mub303cen=spline(T/ctcen,r42mub303cen,xsame)
 r62mub303cen=spline(T/ctcen,r62mub303cen,xsame)
 r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
@@ -2031,7 +2049,9 @@ for num in range(1,100):
        max82406=np.maximum(max82406,r82406[:,num])
        min82406=np.minimum(min82406,r82406[:,num])
 
-r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)
+r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)*c
+max406=max406*c
+min406=min406*c
 r42mub406cen=spline(T/ctcen,r42mub406cen,xsame)
 r62mub406cen=spline(T/ctcen,r62mub406cen,xsame)
 r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
