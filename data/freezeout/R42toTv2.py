@@ -205,8 +205,9 @@ dif22down=abs(min4222-0.900669)
 min22cen_index=np.argmin(dif22cen[80:300])+80
 min22up_index=np.argmin(dif22up[80:300])+80
 min22down_index=np.argmin(dif22down[80:300])+80
-print(min22up_index)
-print(min22down_index)
+print(min22cen_index)
+#print(min22up_index)
+#print(min22down_index)
 r3222cen=r32mub22cen[min22cen_index]
 r4222cen=r42mub22cen[min22cen_index]
 r6222cen=r62mub22cen[min22cen_index]
@@ -255,9 +256,7 @@ r8222down=np.min(r82)
 r8222uph=np.max(r82h)
 r8222downh=np.min(r82h)
 
-print(max8222)
-print(min8222)
-print(r8222)
+
 ####################################################################################################
 chi2mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi2.dat')
 chi3mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi3.dat')
@@ -363,8 +362,9 @@ dif68down=abs(min4268-0.792955)
 min68cen_index=np.argmin(dif68cen[80:300])+80
 min68up_index=np.argmin(dif68up[80:300])+80
 min68down_index=np.argmin(dif68down[80:300])+80
-print(min68up_index)
-print(min68down_index)
+print(min68cen_index)
+#print(min68up_index)
+#print(min68down_index)
 r3268cen=r32mub68cen[min68cen_index]
 #r3268hcen=r32mub68cen[min68cen_index+int(min68cen_index*deltat)]
 r3268hcen=r32mub68cen[Tcen[1]]
@@ -408,8 +408,7 @@ r8268up=np.max(r82)
 r8268down=np.min(r82)
 r8268uph=np.max(r82h)
 r8268downh=np.min(r82h)
-print(r6268up)
-print(r6268down)
+
 ####################################################################################################
 chi2mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi2.dat')
 chi3mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi3.dat')
@@ -515,8 +514,9 @@ dif78down=abs(min4278-0.632837)
 min78cen_index=np.argmin(dif78cen[80:300])+80
 min78up_index=np.argmin(dif78up[80:300])+80
 min78down_index=np.argmin(dif78down[80:300])+80
-print(min78up_index)
-print(min78down_index)
+print(min78cen_index)
+#print(min78up_index)
+#print(min78down_index)
 r3278cen=r32mub78cen[min78cen_index]
 #r3278hcen=r32mub78cen[min78cen_index+int(min78cen_index*deltat)]
 r3278hcen=r32mub78cen[Tcen[2]]
@@ -564,8 +564,7 @@ r8278up=np.max(r82)
 r8278down=np.min(r82)
 r8278uph=np.max(r82h)
 r8278downh=np.min(r82h)
-print(r6278up)
-print(r6278down)
+
 ####################################################################################################
 chi2mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi2.dat')
 chi3mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi3.dat')
@@ -671,8 +670,9 @@ dif106down=abs(min42106-0.739693)
 min106cen_index=np.argmin(dif106cen[80:300])+80
 min106up_index=np.argmin(dif106up[80:300])+80
 min106down_index=np.argmin(dif106down[80:300])+80
-print(min106up_index)
-print(min106down_index)
+print(min106cen_index)
+#print(min106up_index)
+#print(min106down_index)
 r32106cen=r32mub106cen[min106cen_index]
 #r32106hcen=r32mub106cen[min106cen_index+int(min106cen_index*deltat)]
 r32106hcen=r32mub106cen[Tcen[3]]
@@ -717,8 +717,7 @@ r82106down=np.min(r82)
 r82106uph=np.max(r82h)
 r82106downh=np.min(r82h)
 
-print(r62106up)
-print(r62106down)
+
 ####################################################################################################
 chi2mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi2.dat')
 chi3mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi3.dat')
@@ -824,8 +823,9 @@ dif148down=abs(min42148-0.196254)
 min148cen_index=np.argmin(dif148cen[80:300])+80
 min148up_index=np.argmin(dif148up[80:300])+80
 min148down_index=np.argmin(dif148down[80:300])+80
-print(min148up_index)
-print(min148down_index)
+print(min148cen_index)
+#print(min148up_index)
+#print(min148down_index)
 r32148cen=r32mub148cen[min148cen_index]
 #r32148hcen=r32mub148cen[min148cen_index+int(min148cen_index*deltat)]
 r32148hcen=r32mub148cen[Tcen[4]]
@@ -870,8 +870,6 @@ r82148down=np.min(r82)
 r82148uph=np.max(r82h)
 r82148downh=np.min(r82h)
 
-print(r62148up)
-print(r62148down)
 ####################################################################################################
 chi2mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi2.dat')
 chi3mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi3.dat')
@@ -1142,8 +1140,9 @@ dif196down=abs(min42196-0.140553)
 min196cen_index=np.argmin(dif196cen[80:300])+80
 min196up_index=np.argmin(dif196up[80:300])+80
 min196down_index=np.argmin(dif196down[80:300])+80
-print(min196up_index)
-print(min196down_index)
+print(min196cen_index)
+#print(min196up_index)
+#print(min196down_index)
 r32196cen=r32mub196cen[min196cen_index]
 #r32196hcen=r32mub196cen[min196cen_index+int(min196cen_index*deltat)]
 r32196hcen=r32mub196cen[Tcen[5]]
@@ -1188,8 +1187,7 @@ r82196down=np.min(r82)
 r82196uph=np.max(r82h)
 r82196downh=np.min(r82h)
 
-print(r62196up)
-print(r62196down)
+
 ####################################################################################################
 chi2mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi2.dat')
 chi3mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi3.dat')
@@ -1461,8 +1459,9 @@ dif252down=abs(min42252-1.468760)
 min252cen_index=np.argmin(dif252cen[80:300])+80
 min252up_index=np.argmin(dif252up[80:300])+80
 min252down_index=np.argmin(dif252down[80:300])+80
-print(min252up_index)
-print(min252down_index)
+print(min252cen_index)
+#print(min252up_index)
+#print(min252down_index)
 r32252cen=r32mub252cen[min252cen_index]
 #r32252hcen=r32mub252cen[min252cen_index+int(min252cen_index*deltat)]
 r32252hcen=r32mub252cen[Tcen[6]]
@@ -1507,8 +1506,7 @@ r82252down=np.min(r82)
 r82252uph=np.max(r82h)
 r82252downh=np.min(r82h)
 
-print(r62252up)
-print(r62252down)
+
 #####################################################################################################
 chi2mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi2.dat')
 chi3mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi3.dat')
@@ -1779,8 +1777,9 @@ dif303down=abs(min42303-0.695796)
 min303cen_index=np.argmin(dif303cen[80:300])+80
 min303up_index=np.argmin(dif303up[80:300])+80
 min303down_index=np.argmin(dif303down[80:300])+80
-print(min303up_index)
-print(min303down_index)
+print(min303cen_index)
+#print(min303up_index)
+#print(min303down_index)
 r32303cen=r32mub303cen[min303cen_index]
 #r32303hcen=r32mub303cen[min303cen_index+int(min303cen_index*deltat)]
 r32303hcen=r32mub303cen[Tcen[7]]
@@ -1825,8 +1824,7 @@ r82303down=np.min(r82)
 r82303uph=np.max(r82h)
 r82303downh=np.min(r82h)
 
-print(r62303up)
-print(r62303down)
+
 ####################################################################################################
 chi2mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi2.dat')
 chi3mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi3.dat')
@@ -2097,9 +2095,9 @@ dif406down=abs(min42406-1.766972)
 min406cen_index=np.argmin(dif406cen[80:300])+80
 min406up_index=np.argmin(dif406up[80:300])+80
 min406down_index=np.argmin(dif406down[80:300])+80
-print('T406')
-print(min406up_index)
-print(min406down_index)
+print(min406cen_index)
+#print(min406up_index)
+#print(min406down_index)
 r32406cen=r32mub406cen[min406cen_index]
 #r32406hcen=r32mub406cen[min406cen_index+int(min406cen_index*deltat)]
 r32406hcen=r32mub406cen[Tcen[8]]
@@ -2144,9 +2142,7 @@ r82406down=np.min(r82)
 r82406uph=np.max(r82h)
 r82406downh=np.min(r82h)
 
-print(r62406cen)
-print(r62406up)
-print(r62406down)
+
 #print(r62406uph)
 #print(r62406downh)
 ####################################################################################################
@@ -2236,9 +2232,7 @@ for i in range(0,9):
     r32errhdown[i]=r32hcen[i]-r32hdown[i]
 
 
-print(r82up)
-print(r82down)
-print(r82cen)
+
 
 
 for num in range(0,100):
@@ -2349,10 +2343,17 @@ for label in ax4.xaxis.get_ticklabels():
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+y=np.linspace(-100,100,100)
+T27=np.zeros(100)
+for i in range(0,100):
+    T27[i]=Tcen[4]
+
 ax5=fig.add_subplot(635)
 band_mub=ax5.fill_between(xsame,max42148,min42148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
 line_mub,=ax5.plot(xsame,r42mub148cen,'b',linewidth=1,alpha=0.5)
 ax5.plot(xsame,data27)
+ax5.plot(T27,y)
 #ax2.plot(energy,r62up)
 #ax2.plot(energy,r62down)
 #ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
@@ -2367,10 +2368,16 @@ for label in ax5.xaxis.get_ticklabels():
 for label in ax5.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+T19=np.zeros(100)
+for i in range(0,100):
+    T19[i]=Tcen[5]
+
 ax6=fig.add_subplot(636)
 band_mub=ax6.fill_between(xsame,max42196,min42196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
 line_mub,=ax6.plot(xsame,r42mub196cen,'b',linewidth=1,alpha=0.5)
 ax6.plot(xsame,data19)
+ax6.plot(T19,y)
 #ax2.plot(energy,r62up)
 #ax2.plot(energy,r62down)
 #ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
@@ -2385,10 +2392,17 @@ for label in ax6.xaxis.get_ticklabels():
 for label in ax6.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+T14=np.zeros(100)
+for i in range(0,100):
+    T14[i]=Tcen[6]
+
+
 ax7=fig.add_subplot(637)
 band_mub=ax7.fill_between(xsame,max42252,min42252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
 line_mub,=ax7.plot(xsame,r42mub252cen,'b',linewidth=1,alpha=0.5)
 ax7.plot(xsame,data14)
+ax7.plot(T14,y)
 ax7.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
