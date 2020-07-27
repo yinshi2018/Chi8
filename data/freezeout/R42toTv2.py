@@ -2150,24 +2150,41 @@ print(r62406down)
 #print(r62406uph)
 #print(r62406downh)
 ####################################################################################################
-r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
-r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
-r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
-r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
-r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
-r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
+#r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
+#r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
+#r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
+
+#r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
+#r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
+#r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
+
 r42hcen=[r4222hcen,r4268hcen,r4278hcen,r42106hcen,r42148hcen,r42196hcen,r42252hcen,r42303hcen,r42406hcen]
 r62hcen=[r6222hcen,r6268hcen,r6278hcen,r62106hcen,r62148hcen,r62196hcen,r62252hcen,r62303hcen,r62406hcen]
 r42hup=[r4222uph,r4268uph,r4278uph,r42106uph,r42148uph,r42196uph,r42252uph,r42303uph,r42406uph]
 r42hdown=[r4222downh,r4268downh,r4278downh,r42106downh,r42148downh,r42196downh,r42252downh,r42303downh,r42406downh]
 r62hup=[r6222uph,r6268uph,r6278uph,r62106uph,r62148uph,r62196uph,r62252uph,r62303uph,r62406uph]
 r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r62252downh,r62303downh,r62406downh]
-r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
-r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
-r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
+
+#r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
+#r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
+#r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
+
+r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148hcen,r62196hcen,r62252hcen,r62303cen,r62406cen]
+r62up=[r6222up,r6268up,r6278up,r62106up,r62148uph,r62196uph,r62252uph,r62303up,r62406up]
+r62down=[r6222down,r6268down,r6278down,r62106down,r62148downh,r62196downh,r62252downh,r62303down,r62406down]
+
+r42up=[r4222up,r4268up,r4278up,r42106up,r42148uph,r42196uph,r42252uph,r42303up,r42406up]
+r42down=[r4222down,r4268down,r4278down,r42106down,r42148downh,r42196downh,r42252downh,r42303down,r42406down]
+r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148hcen,r42196hcen,r42252hcen,r42303cen,r42406cen]
+
+r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148hcen,r82196hcen,r82252hcen,r82303cen,r82406cen]
+r82up=[r8222up,r8268up,r8278up,r82106up,r82148uph,r82196uph,r82252uph,r82303up,r82406up]
+r82down=[r8222down,r8268down,r8278down,r82106down,r82148downh,r82196downh,r82252downh,r82303down,r82406down]
+
 r82hcen=[r8222hcen,r8268hcen,r8278hcen,r82106hcen,r82148hcen,r82196hcen,r82252hcen,r82303hcen,r82406hcen]
 r82hup=[r8222uph,r8268uph,r8278uph,r82106uph,r82148uph,r82196uph,r82252uph,r82303uph,r82406uph]
 r82hdown=[r8222downh,r8268downh,r8278downh,r82106downh,r82148downh,r82196downh,r82252downh,r82303downh,r82406downh]
+
 r32cen=[r3222cen,r3268cen,r3278cen,r32106cen,r32148cen,r32196cen,r32252cen,r32303cen,r32406cen]
 r32up=[r3222up,r3268up,r3278up,r32106up,r32148up,r32196up,r32252up,r32303up,r32406up]
 r32down=[r3222down,r3268down,r3278down,r32106down,r32148down,r32196down,r32252down,r32303down,r32406down]
@@ -2219,8 +2236,8 @@ for i in range(0,9):
     r32errhdown[i]=r32hcen[i]-r32hdown[i]
 
 
-print(r82errup)
-print(r82errdown)
+print(r82up)
+print(r82down)
 print(r82cen)
 
 
@@ -2579,15 +2596,15 @@ value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
 # Create figure
-fig=plt.figure(figsize=(9., 6.))
+fig=plt.figure(figsize=(4.5, 8.))
 #fig=plt.figure()
-ax2=fig.add_subplot(222)
+ax2=fig.add_subplot(312)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+#point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 point62cen=ax2.fill_between(energy,r62down,r62up,color='blue',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 line62cen,=ax2.plot(energy,r62cen,color='r',alpha=0.3,zorder=2)
-point62h=ax2.fill_between(energy,r62hdown,r62hup,color='r',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
+#point62h=ax2.fill_between(energy,r62hdown,r62hup,color='r',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $T_c$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 plt.axis([5.,230.,-100.,100.])
@@ -2595,8 +2612,8 @@ ax2.set_xscale('symlog')
 ax2.set_yscale('symlog')
 #plt.xticks([])
 ax2.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
-ax2.xaxis.tick_top()
+#ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+#ax2.xaxis.tick_top()
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax2.xaxis.set_label_position('top') 
@@ -2607,54 +2624,38 @@ for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
-ax3=fig.add_subplot(223)
+ax3=fig.add_subplot(311)
 ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+#ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 ax3.fill_between(energy,r42down,r42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
-ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
+#ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
 ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax1.errorbar(energy,kurtosis[:,0],color='red')
 ax3.set_xscale('symlog')
-plt.axis([5,230,-2.,2.2])
+plt.axis([5,230,-1.,2.8])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
-ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+#ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+ax3.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+ax3.xaxis.tick_top()
+#ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax3.set_ylabel(r'$R^B_{42}(R^p_{42})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
-ax1=fig.add_subplot(221)
-errbartf=ax1.errorbar(energy,r32cen,yerr=[r32errdown,r32errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-errbartc=ax1.errorbar(energy,r32hcen,yerr=[r32errhdown,r32errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-bandtf=ax1.fill_between(energy,r32down,r32up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=1)
-linetf,=ax1.plot(energy,kurtosis[:,2],color='r',alpha=0.3,zorder=2)
-exp=ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-bandtc=ax1.fill_between(energy,r32hdown,r32hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=2)
-linetc,=ax1.plot(energy,r32hcen,color='b',alpha=0.3,zorder=2)
-ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'fRG with $T_{_{CF}}$',r'fRG with $T_c$',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-ax1.set_xscale('symlog')
-plt.axis([5,230,0.,1.2])
-ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax1.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
-ax1.xaxis.tick_top()
-ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax1.xaxis.set_label_position('top') 
-ax1.set_ylabel(r'$R^B_{32}(R^p_{32})$', fontsize=14, color='black')
-for label in ax1.yaxis.get_ticklabels():
-    label.set_fontsize(7)
 
-ax4=fig.add_subplot(224)
-#ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+
+ax4=fig.add_subplot(313)
+ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+#ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+#ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 ax4.fill_between(energy,r82down,r82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 ax4.plot(energy,r82cen,color='r',alpha=0.3,zorder=2)
-ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
+#ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 plt.axis([5,230,-10000.,10000.])
@@ -2662,12 +2663,12 @@ plt.axis([5,230,-10000.,10000.])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax4.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
+ax4.set_ylabel(r'$R^B_{82}(R^p_{82})$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
-fig.subplots_adjust(top=0.9, bottom=0.15, left=0.1, right=0.95, hspace=0.,
+fig.subplots_adjust(top=0.95, bottom=0.1, left=0.15, right=0.9, hspace=0.,
                     wspace=0.25)
 
 
