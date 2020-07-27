@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  14 JUL 2020 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  27 JUL 2020 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -560,18 +560,28 @@ PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42R62expansion-mu
 BoT.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
->] <./figures/Rm2-sqrtS.pdf, id=501, 650.43pt x 433.62pt>
+>] <./figures/Rm2-sqrtS.pdf, id=501, 325.215pt x 578.16pt>
 File: ./figures/Rm2-sqrtS.pdf Graphic file (type pdf)
 
 <use ./figures/Rm2-sqrtS.pdf>
-Package pdftex.def Info: ./figures/Rm2-sqrtS.pdf used on input line 519.
-(pdftex.def)             Requested size: 458.99689pt x 306.0065pt.
- [7 <./figures/R42R62R82-T-muB0to400.pdf>]
-Underfull \hbox (badness 1308) in paragraph at lines 630--631
+Package pdftex.def Info: ./figures/Rm2-sqrtS.pdf used on input line 520.
+(pdftex.def)             Requested size: 255.0pt x 453.34492pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 520--521
+ [][] 
+ []
+
+[7 <./figures/R42R62R82-T-muB0to400.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 534.
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 647--648
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-[8 <./figures/Rm2-sqrtS.pdf>] (./hyper-fluc.bbl [9]
+[8 <./figures/Rm2-sqrtS.pdf>] [9] (./hyper-fluc.bbl
 Underfull \hbox (badness 1668) in paragraph at lines 115--123
  []\OT1/cmr/m/n/9 A. K. Cy-rol, M. Mit-ter, J. M. Pawlowski,  and
  []
@@ -623,10 +633,10 @@ Underfull \hbox (badness 3635) in paragraph at lines 642--649
  []
 
 ) [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 720.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 774.
  (./hyper-fluc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 720.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 720.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 774.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 774.
 Package rerunfilecheck Info: File `hyper-fluc.out' has not changed.
 (rerunfilecheck)             Checksum: BFF86EE8FDC693675A7B34D9ED3F9C5E;989.
 
@@ -635,13 +645,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9649 strings out of 493014
- 137916 string characters out of 6133352
- 325529 words of memory out of 5000000
- 12914 multiletter control sequences out of 15000+600000
+ 9652 strings out of 493014
+ 137955 string characters out of 6133352
+ 292240 words of memory out of 5000000
+ 12915 multiletter control sequences out of 15000+600000
  15221 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,35p,1927b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,35p,1927b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -664,10 +674,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (11 pages, 672506 bytes).
+Output written on hyper-fluc.pdf (11 pages, 666174 bytes).
 PDF statistics:
- 991 PDF objects out of 1000 (max. 8388607)
- 657 compressed objects within 7 object streams
- 128 named destinations out of 1000 (max. 500000)
+ 976 PDF objects out of 1000 (max. 8388607)
+ 667 compressed objects within 7 object streams
+ 130 named destinations out of 1000 (max. 500000)
  140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

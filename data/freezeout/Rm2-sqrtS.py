@@ -25,53 +25,53 @@ data19=np.zeros(300)
 data14=np.zeros(300)
 data11=np.zeros(300)
 data7=np.zeros(300)
-y62=np.linspace(-3000,3000,1000)
-T22up=np.zeros(1000)
-T22down=np.zeros(1000)
-T68up=np.zeros(1000)
-T68down=np.zeros(1000)
-T78up=np.zeros(1000)
-T78down=np.zeros(1000)
-T106up=np.zeros(1000)
-T106down=np.zeros(1000)
-T148up=np.zeros(1000)
-T148down=np.zeros(1000)
-T196up=np.zeros(1000)
-T196down=np.zeros(1000)
-T252up=np.zeros(1000)
-T252down=np.zeros(1000)
-T303up=np.zeros(1000)
-T303down=np.zeros(1000)
-T406up=np.zeros(1000)
-T406down=np.zeros(1000)
-T22hup=np.zeros(1000)
-T22hdown=np.zeros(1000)
-T68hup=np.zeros(1000)
-T68hdown=np.zeros(1000)
-T78hup=np.zeros(1000)
-T78hdown=np.zeros(1000)
-T106hup=np.zeros(1000)
-T106hdown=np.zeros(1000)
-T148hup=np.zeros(1000)
-T148hdown=np.zeros(1000)
-T196hup=np.zeros(1000)
-T196hdown=np.zeros(1000)
-T252hup=np.zeros(1000)
-T252hdown=np.zeros(1000)
-T303hup=np.zeros(1000)
-T303hdown=np.zeros(1000)
-T406hup=np.zeros(1000)
-T406hdown=np.zeros(1000)
+y62=np.linspace(-5000,5000,100)
+T22up=np.zeros(100)
+T22down=np.zeros(100)
+T68up=np.zeros(100)
+T68down=np.zeros(100)
+T78up=np.zeros(100)
+T78down=np.zeros(100)
+T106up=np.zeros(100)
+T106down=np.zeros(100)
+T148up=np.zeros(100)
+T148down=np.zeros(100)
+T196up=np.zeros(100)
+T196down=np.zeros(100)
+T252up=np.zeros(100)
+T252down=np.zeros(100)
+T303up=np.zeros(100)
+T303down=np.zeros(100)
+T406up=np.zeros(100)
+T406down=np.zeros(100)
+T22hup=np.zeros(100)
+T22hdown=np.zeros(100)
+T68hup=np.zeros(100)
+T68hdown=np.zeros(100)
+T78hup=np.zeros(100)
+T78hdown=np.zeros(100)
+T106hup=np.zeros(100)
+T106hdown=np.zeros(100)
+T148hup=np.zeros(100)
+T148hdown=np.zeros(100)
+T196hup=np.zeros(100)
+T196hdown=np.zeros(100)
+T252hup=np.zeros(100)
+T252hdown=np.zeros(100)
+T303hup=np.zeros(100)
+T303hdown=np.zeros(100)
+T406hup=np.zeros(100)
+T406hdown=np.zeros(100)
 for num in range(0,300):
-    data200[num]=0.122302
-    data62[num]=0.325439
-    data54[num]=0.346852
-    data39[num]=0.441900
-    data27[num]=0.553053
-    data19[num]=0.642055
-    data14[num]=0.782208
-    data11[num]=0.783562
-    data7[num]=0.798587
+    data200[num]=0.900669
+    data62[num]=0.792955	
+    data54[num]=0.632837
+    data39[num]=0.739693	
+    data27[num]=0.196254	
+    data19[num]=0.140553
+    data14[num]=1.468760
+    data11[num]=0.695796
+    data7[num]=	1.766972
 
 
 energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
@@ -81,6 +81,8 @@ deltat=0.05
 ctcen=1.247
 ctup=1.259
 ctdown=1.235
+cmu=1.110
+c=ctcen/cmu
 
 Tcup=[int(205/ctdown)-1,int(205/ctdown)-1,int(205/ctdown)-1,int(204/ctdown)-1,int(203/ctdown)-1,int(201/ctdown)-1,int(198/ctdown)-1,int(194/ctdown)-1,int(182/ctdown)-1]
 Tcdown=[int(205/ctup)-1,int(205/ctup)-1,int(205/ctup)-1,int(204/ctup)-1,int(203/ctup)-1,int(201/ctup)-1,int(198/ctup)-1,int(194/ctup)-1,int(182/ctup)-1]
@@ -190,19 +192,22 @@ for num in range(1,20):
        max8222=np.maximum(max8222,r8222[:,num])
        min8222=np.minimum(min8222,r8222[:,num])
 
-r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)
+r32mub22cen=spline(T/ctcen,r32mub22cen,xsame)*c
+max22=max22*c
+min22=min22*c
 r42mub22cen=spline(T/ctcen,r42mub22cen,xsame)
 r62mub22cen=spline(T/ctcen,r62mub22cen,xsame)
 r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
 
-dif22cen=abs(r32mub22cen-0.122302)
-dif22up=abs(max22-0.122302)
-dif22down=abs(min22-0.122302)
+dif22cen=abs(r42mub22cen-0.900669)
+dif22up=abs(max4222-0.900669)
+dif22down=abs(min4222-0.900669)
 min22cen_index=np.argmin(dif22cen[80:300])+80
 min22up_index=np.argmin(dif22up[80:300])+80
 min22down_index=np.argmin(dif22down[80:300])+80
-print(min22up_index)
-print(min22down_index)
+print(min22cen_index)
+#print(min22up_index)
+#print(min22down_index)
 r3222cen=r32mub22cen[min22cen_index]
 r4222cen=r42mub22cen[min22cen_index]
 r6222cen=r62mub22cen[min22cen_index]
@@ -251,10 +256,7 @@ r8222down=np.min(r82)
 r8222uph=np.max(r82h)
 r8222downh=np.min(r82h)
 
-print(r6222up)
-print(r6222down)
-print(r6222uph)
-print(r6222downh)
+
 ####################################################################################################
 chi2mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi2.dat')
 chi3mub68cen=np.loadtxt(r'./mub68/cmucen/final/buffer/chi3.dat')
@@ -347,19 +349,22 @@ for num in range(1,20):
        max8268=np.maximum(max8268,r8268[:,num])
        min8268=np.minimum(min8268,r8268[:,num])
 
-r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)
+r32mub68cen=spline(T/ctcen,r32mub68cen,xsame)*c
+max68=max68*c
+min68=min68*c
 r42mub68cen=spline(T/ctcen,r42mub68cen,xsame)
 r62mub68cen=spline(T/ctcen,r62mub68cen,xsame)
 r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 
-dif68cen=abs(r32mub68cen-0.325439)
-dif68up=abs(max68-0.325439)
-dif68down=abs(min68-0.325439)
+dif68cen=abs(r42mub68cen-0.792955)
+dif68up=abs(max4268-0.792955)
+dif68down=abs(min4268-0.792955)
 min68cen_index=np.argmin(dif68cen[80:300])+80
 min68up_index=np.argmin(dif68up[80:300])+80
 min68down_index=np.argmin(dif68down[80:300])+80
-print(min68up_index)
-print(min68down_index)
+print(min68cen_index)
+#print(min68up_index)
+#print(min68down_index)
 r3268cen=r32mub68cen[min68cen_index]
 #r3268hcen=r32mub68cen[min68cen_index+int(min68cen_index*deltat)]
 r3268hcen=r32mub68cen[Tcen[1]]
@@ -403,8 +408,7 @@ r8268up=np.max(r82)
 r8268down=np.min(r82)
 r8268uph=np.max(r82h)
 r8268downh=np.min(r82h)
-print(r6268up)
-print(r6268down)
+
 ####################################################################################################
 chi2mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi2.dat')
 chi3mub78cen=np.loadtxt(r'./mub78/cmucen/final/buffer/chi3.dat')
@@ -497,19 +501,22 @@ for num in range(1,20):
        max8278=np.maximum(max8278,r8278[:,num])
        min8278=np.minimum(min8278,r8278[:,num])
 
-r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)
+r32mub78cen=spline(T/ctcen,r32mub78cen,xsame)*c
+max78=max78*c
+min78=min78*c
 r42mub78cen=spline(T/ctcen,r42mub78cen,xsame)
 r62mub78cen=spline(T/ctcen,r62mub78cen,xsame)
 r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 
-dif78cen=abs(r32mub78cen-0.346852)
-dif78up=abs(max78-0.346852)
-dif78down=abs(min78-0.346852)
+dif78cen=abs(r42mub78cen-0.632837)
+dif78up=abs(max4278-0.632837)
+dif78down=abs(min4278-0.632837)
 min78cen_index=np.argmin(dif78cen[80:300])+80
 min78up_index=np.argmin(dif78up[80:300])+80
 min78down_index=np.argmin(dif78down[80:300])+80
-print(min78up_index)
-print(min78down_index)
+print(min78cen_index)
+#print(min78up_index)
+#print(min78down_index)
 r3278cen=r32mub78cen[min78cen_index]
 #r3278hcen=r32mub78cen[min78cen_index+int(min78cen_index*deltat)]
 r3278hcen=r32mub78cen[Tcen[2]]
@@ -557,8 +564,7 @@ r8278up=np.max(r82)
 r8278down=np.min(r82)
 r8278uph=np.max(r82h)
 r8278downh=np.min(r82h)
-print(r6278up)
-print(r6278down)
+
 ####################################################################################################
 chi2mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi2.dat')
 chi3mub106cen=np.loadtxt(r'./mub106/cmucen/final/buffer/chi3.dat')
@@ -651,19 +657,22 @@ for num in range(1,20):
        max82106=np.maximum(max82106,r82106[:,num])
        min82106=np.minimum(min82106,r82106[:,num])
 
-r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)
+r32mub106cen=spline(T/ctcen,r32mub106cen,xsame)*c
+max106=max106*c
+min106=min106*c
 r42mub106cen=spline(T/ctcen,r42mub106cen,xsame)
 r62mub106cen=spline(T/ctcen,r62mub106cen,xsame)
 r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
 
-dif106cen=abs(r32mub106cen-0.441900)
-dif106up=abs(max106-0.441900)
-dif106down=abs(min106-0.441900)
+dif106cen=abs(r42mub106cen-0.739693)
+dif106up=abs(max42106-0.739693)
+dif106down=abs(min42106-0.739693)
 min106cen_index=np.argmin(dif106cen[80:300])+80
 min106up_index=np.argmin(dif106up[80:300])+80
 min106down_index=np.argmin(dif106down[80:300])+80
-print(min106up_index)
-print(min106down_index)
+print(min106cen_index)
+#print(min106up_index)
+#print(min106down_index)
 r32106cen=r32mub106cen[min106cen_index]
 #r32106hcen=r32mub106cen[min106cen_index+int(min106cen_index*deltat)]
 r32106hcen=r32mub106cen[Tcen[3]]
@@ -708,8 +717,7 @@ r82106down=np.min(r82)
 r82106uph=np.max(r82h)
 r82106downh=np.min(r82h)
 
-print(r62106up)
-print(r62106down)
+
 ####################################################################################################
 chi2mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi2.dat')
 chi3mub148cen=np.loadtxt(r'./mub148/cmucen/final/buffer/chi3.dat')
@@ -802,19 +810,22 @@ for num in range(1,20):
        max82148=np.maximum(max82148,r82148[:,num])
        min82148=np.minimum(min82148,r82148[:,num])
 
-r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)
+r32mub148cen=spline(T/ctcen,r32mub148cen,xsame)*c
+max148=max148*c
+min148=min148*c
 r42mub148cen=spline(T/ctcen,r42mub148cen,xsame)
 r62mub148cen=spline(T/ctcen,r62mub148cen,xsame)
 r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
 
-dif148cen=abs(r32mub148cen-0.553053)
-dif148up=abs(max148-0.553053)
-dif148down=abs(min148-0.553053)
+dif148cen=abs(r42mub148cen-0.196254)
+dif148up=abs(max42148-0.196254)
+dif148down=abs(min42148-0.196254)
 min148cen_index=np.argmin(dif148cen[80:300])+80
 min148up_index=np.argmin(dif148up[80:300])+80
 min148down_index=np.argmin(dif148down[80:300])+80
-print(min148up_index)
-print(min148down_index)
+print(min148cen_index)
+#print(min148up_index)
+#print(min148down_index)
 r32148cen=r32mub148cen[min148cen_index]
 #r32148hcen=r32mub148cen[min148cen_index+int(min148cen_index*deltat)]
 r32148hcen=r32mub148cen[Tcen[4]]
@@ -859,8 +870,6 @@ r82148down=np.min(r82)
 r82148uph=np.max(r82h)
 r82148downh=np.min(r82h)
 
-print(r62148up)
-print(r62148down)
 ####################################################################################################
 chi2mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi2.dat')
 chi3mub196cen=np.loadtxt(r'./mub196/cmucen/final/buffer/chi3.dat')
@@ -1118,19 +1127,22 @@ for num in range(1,100):
        max82196=np.maximum(max82196,r82196[:,num])
        min82196=np.minimum(min82196,r82196[:,num])
 
-r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)
+r32mub196cen=spline(T/ctcen,r32mub196cen,xsame)*c
+max196=max196*c
+min196=min196*c
 r42mub196cen=spline(T/ctcen,r42mub196cen,xsame)
 r62mub196cen=spline(T/ctcen,r62mub196cen,xsame)
 r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 
-dif196cen=abs(r32mub196cen-0.642055)
-dif196up=abs(max196-0.642055)
-dif196down=abs(min196-0.642055)
+dif196cen=abs(r42mub196cen-0.140553)
+dif196up=abs(max42196-0.140553)
+dif196down=abs(min42196-0.140553)
 min196cen_index=np.argmin(dif196cen[80:300])+80
 min196up_index=np.argmin(dif196up[80:300])+80
 min196down_index=np.argmin(dif196down[80:300])+80
-print(min196up_index)
-print(min196down_index)
+print(min196cen_index)
+#print(min196up_index)
+#print(min196down_index)
 r32196cen=r32mub196cen[min196cen_index]
 #r32196hcen=r32mub196cen[min196cen_index+int(min196cen_index*deltat)]
 r32196hcen=r32mub196cen[Tcen[5]]
@@ -1175,8 +1187,7 @@ r82196down=np.min(r82)
 r82196uph=np.max(r82h)
 r82196downh=np.min(r82h)
 
-print(r62196up)
-print(r62196down)
+
 ####################################################################################################
 chi2mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi2.dat')
 chi3mub252cen=np.loadtxt(r'./mub252/cmucen/final/buffer/chi3.dat')
@@ -1435,19 +1446,22 @@ for num in range(1,100):
        max82252=np.maximum(max82252,r82252[:,num])
        min82252=np.minimum(min82252,r82252[:,num])
 
-r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)
+r32mub252cen=spline(T/ctcen,r32mub252cen,xsame)*c
+max252=max252*c
+min252=min252*c
 r42mub252cen=spline(T/ctcen,r42mub252cen,xsame)
 r62mub252cen=spline(T/ctcen,r62mub252cen,xsame)
 r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 
-dif252cen=abs(r32mub252cen-0.782208)
-dif252up=abs(max252-0.782208)
-dif252down=abs(min252-0.782208)
+dif252cen=abs(r42mub252cen-1.468760)
+dif252up=abs(max42252-1.468760)
+dif252down=abs(min42252-1.468760)
 min252cen_index=np.argmin(dif252cen[80:300])+80
 min252up_index=np.argmin(dif252up[80:300])+80
 min252down_index=np.argmin(dif252down[80:300])+80
-print(min252up_index)
-print(min252down_index)
+print(min252cen_index)
+#print(min252up_index)
+#print(min252down_index)
 r32252cen=r32mub252cen[min252cen_index]
 #r32252hcen=r32mub252cen[min252cen_index+int(min252cen_index*deltat)]
 r32252hcen=r32mub252cen[Tcen[6]]
@@ -1492,8 +1506,7 @@ r82252down=np.min(r82)
 r82252uph=np.max(r82h)
 r82252downh=np.min(r82h)
 
-print(r62252up)
-print(r62252down)
+
 #####################################################################################################
 chi2mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi2.dat')
 chi3mub303cen=np.loadtxt(r'./mub303/cmucen/final/buffer/chi3.dat')
@@ -1751,19 +1764,22 @@ for num in range(1,100):
        max82303=np.maximum(max82303,r82303[:,num])
        min82303=np.minimum(min82303,r82303[:,num])
 
-r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)
+r32mub303cen=spline(T/ctcen,r32mub303cen,xsame)*c
+max303=max303*c
+min303=min303*c
 r42mub303cen=spline(T/ctcen,r42mub303cen,xsame)
 r62mub303cen=spline(T/ctcen,r62mub303cen,xsame)
 r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 
-dif303cen=abs(r32mub303cen-0.783562)
-dif303up=abs(max303-0.783562)
-dif303down=abs(min303-0.783562)
+dif303cen=abs(r42mub303cen-0.695796)
+dif303up=abs(max42303-0.695796)
+dif303down=abs(min42303-0.695796)
 min303cen_index=np.argmin(dif303cen[80:300])+80
 min303up_index=np.argmin(dif303up[80:300])+80
 min303down_index=np.argmin(dif303down[80:300])+80
-print(min303up_index)
-print(min303down_index)
+print(min303cen_index)
+#print(min303up_index)
+#print(min303down_index)
 r32303cen=r32mub303cen[min303cen_index]
 #r32303hcen=r32mub303cen[min303cen_index+int(min303cen_index*deltat)]
 r32303hcen=r32mub303cen[Tcen[7]]
@@ -1808,8 +1824,7 @@ r82303down=np.min(r82)
 r82303uph=np.max(r82h)
 r82303downh=np.min(r82h)
 
-print(r62303up)
-print(r62303down)
+
 ####################################################################################################
 chi2mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi2.dat')
 chi3mub406cen=np.loadtxt(r'./mub406/cmucen/final/buffer/chi3.dat')
@@ -2067,20 +2082,22 @@ for num in range(1,100):
        max82406=np.maximum(max82406,r82406[:,num])
        min82406=np.minimum(min82406,r82406[:,num])
 
-r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)
+r32mub406cen=spline(T/ctcen,r32mub406cen,xsame)*c
+max406=max406*c
+min406=min406*c
 r42mub406cen=spline(T/ctcen,r42mub406cen,xsame)
 r62mub406cen=spline(T/ctcen,r62mub406cen,xsame)
 r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 
-dif406cen=abs(r32mub406cen-0.798587)
-dif406up=abs(max406-0.798587)
-dif406down=abs(min406-0.798587)
+dif406cen=abs(r42mub406cen-1.766972)
+dif406up=abs(max42406-1.766972)
+dif406down=abs(min42406-1.766972)
 min406cen_index=np.argmin(dif406cen[80:300])+80
 min406up_index=np.argmin(dif406up[80:300])+80
 min406down_index=np.argmin(dif406down[80:300])+80
-print('T406')
-print(min406up_index)
-print(min406down_index)
+print(min406cen_index)
+#print(min406up_index)
+#print(min406down_index)
 r32406cen=r32mub406cen[min406cen_index]
 #r32406hcen=r32mub406cen[min406cen_index+int(min406cen_index*deltat)]
 r32406hcen=r32mub406cen[Tcen[8]]
@@ -2125,30 +2142,45 @@ r82406down=np.min(r82)
 r82406uph=np.max(r82h)
 r82406downh=np.min(r82h)
 
-print(r62406cen)
-print(r62406up)
-print(r62406down)
+
 #print(r62406uph)
 #print(r62406downh)
 ####################################################################################################
-r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
-r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
-r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
-r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
-r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
-r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
+#r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
+#r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
+#r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
+
+#r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
+#r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
+#r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
+
 r42hcen=[r4222hcen,r4268hcen,r4278hcen,r42106hcen,r42148hcen,r42196hcen,r42252hcen,r42303hcen,r42406hcen]
 r62hcen=[r6222hcen,r6268hcen,r6278hcen,r62106hcen,r62148hcen,r62196hcen,r62252hcen,r62303hcen,r62406hcen]
 r42hup=[r4222uph,r4268uph,r4278uph,r42106uph,r42148uph,r42196uph,r42252uph,r42303uph,r42406uph]
 r42hdown=[r4222downh,r4268downh,r4278downh,r42106downh,r42148downh,r42196downh,r42252downh,r42303downh,r42406downh]
 r62hup=[r6222uph,r6268uph,r6278uph,r62106uph,r62148uph,r62196uph,r62252uph,r62303uph,r62406uph]
 r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r62252downh,r62303downh,r62406downh]
-r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
-r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
-r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
+
+#r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
+#r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
+#r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
+
+r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148hcen,r62196hcen,r62252hcen,r62303cen,r62406cen]
+r62up=[r6222up,r6268up,r6278up,r62106up,r62148uph,r62196uph,r62252uph,r62303up,r62406up]
+r62down=[r6222down,r6268down,r6278down,r62106down,r62148downh,r62196downh,r62252downh,r62303down,r62406down]
+
+r42up=[r4222up,r4268up,r4278up,r42106up,r42148uph,r42196uph,r42252uph,r42303up,r42406up]
+r42down=[r4222down,r4268down,r4278down,r42106down,r42148downh,r42196downh,r42252downh,r42303down,r42406down]
+r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148hcen,r42196hcen,r42252hcen,r42303cen,r42406cen]
+
+r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148hcen,r82196hcen,r82252hcen,r82303cen,r82406cen]
+r82up=[r8222up,r8268up,r8278up,r82106up,r82148uph,r82196uph,r82252uph,r82303up,r82406up]
+r82down=[r8222down,r8268down,r8278down,r82106down,r82148downh,r82196downh,r82252downh,r82303down,r82406down]
+
 r82hcen=[r8222hcen,r8268hcen,r8278hcen,r82106hcen,r82148hcen,r82196hcen,r82252hcen,r82303hcen,r82406hcen]
 r82hup=[r8222uph,r8268uph,r8278uph,r82106uph,r82148uph,r82196uph,r82252uph,r82303uph,r82406uph]
 r82hdown=[r8222downh,r8268downh,r8278downh,r82106downh,r82148downh,r82196downh,r82252downh,r82303downh,r82406downh]
+
 r32cen=[r3222cen,r3268cen,r3278cen,r32106cen,r32148cen,r32196cen,r32252cen,r32303cen,r32406cen]
 r32up=[r3222up,r3268up,r3278up,r32106up,r32148up,r32196up,r32252up,r32303up,r32406up]
 r32down=[r3222down,r3268down,r3278down,r32106down,r32148down,r32196down,r32252down,r32303down,r32406down]
@@ -2200,21 +2232,10 @@ for i in range(0,9):
     r32errhdown[i]=r32hcen[i]-r32hdown[i]
 
 
-#print(min22cen_index)
-#print(min68cen_index)
-#print(min78cen_index)
-#print(min106cen_index)
-#print(min148cen_index)
-#print(min196cen_index)
-#print(min252cen_index)
-#print(min303cen_index)
-#print(min406cen_index)
-print(r62hdown)
-print(r62hup)
-print(r62hcen)
 
 
-for num in range(0,1000):
+
+for num in range(0,100):
     T22up[num]=min22up_index
     T22down[num]=min22down_index
     T68up[num]=min68up_index
@@ -2280,8 +2301,7 @@ for label in ax1.yaxis.get_ticklabels():
 ax2=fig.add_subplot(632)
 band_mub=ax2.fill_between(xsame,max4222,min4222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
 line_mub,=ax2.plot(xsame,r42mub22cen,'b',linewidth=1,alpha=0.5)
-ax2.plot(T22hup,y62,color='g')
-ax2.plot(T22hdown,y62,color='g')
+ax2.plot(xsame,data200)
 ax2.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
@@ -2296,8 +2316,7 @@ for label in ax2.yaxis.get_ticklabels():
 ax3=fig.add_subplot(633)
 band_mub=ax3.fill_between(xsame,max4268,min4268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
 line_mub,=ax3.plot(xsame,r42mub68cen,'b',linewidth=1,alpha=0.5)
-ax3.plot(T68hup,y62,color='g')
-ax3.plot(T68hdown,y62,color='g')
+ax3.plot(xsame,data62)
 
 ax3.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
@@ -2313,8 +2332,7 @@ for label in ax3.yaxis.get_ticklabels():
 ax4=fig.add_subplot(634)
 band_mub=ax4.fill_between(xsame,max42106,min42106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
 line_mub,=ax4.plot(xsame,r42mub106cen,'b',linewidth=1,alpha=0.5)
-ax4.plot(T106hup,y62,color='g')
-ax4.plot(T106hdown,y62,color='g')
+ax4.plot(xsame,data39)
 ax4.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
@@ -2325,11 +2343,19 @@ for label in ax4.xaxis.get_ticklabels():
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+y=np.linspace(-100,100,100)
+T27=np.zeros(100)
+for i in range(0,100):
+    T27[i]=Tcen[4]
+
 ax5=fig.add_subplot(635)
 band_mub=ax5.fill_between(xsame,max42148,min42148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
 line_mub,=ax5.plot(xsame,r42mub148cen,'b',linewidth=1,alpha=0.5)
-ax5.plot(T148hup,y62,color='g')
-ax5.plot(T148hdown,y62,color='g')
+ax5.plot(xsame,data27)
+ax5.plot(T27,y)
+#ax2.plot(energy,r62up)
+#ax2.plot(energy,r62down)
 #ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
 #ax2.plot(xsame,data)
 ax5.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
@@ -2342,11 +2368,18 @@ for label in ax5.xaxis.get_ticklabels():
 for label in ax5.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+T19=np.zeros(100)
+for i in range(0,100):
+    T19[i]=Tcen[5]
+
 ax6=fig.add_subplot(636)
 band_mub=ax6.fill_between(xsame,max42196,min42196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
 line_mub,=ax6.plot(xsame,r42mub196cen,'b',linewidth=1,alpha=0.5)
-ax6.plot(T196hup,y62,color='g')
-ax6.plot(T196hdown,y62,color='g')
+ax6.plot(xsame,data19)
+ax6.plot(T19,y)
+#ax2.plot(energy,r62up)
+#ax2.plot(energy,r62down)
 #ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
 #ax2.plot(xsame,data)
 ax6.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
@@ -2359,11 +2392,17 @@ for label in ax6.xaxis.get_ticklabels():
 for label in ax6.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+
+T14=np.zeros(100)
+for i in range(0,100):
+    T14[i]=Tcen[6]
+
+
 ax7=fig.add_subplot(637)
 band_mub=ax7.fill_between(xsame,max42252,min42252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
 line_mub,=ax7.plot(xsame,r42mub252cen,'b',linewidth=1,alpha=0.5)
-ax7.plot(T252hup,y62,color='g')
-ax7.plot(T252hdown,y62,color='g')
+ax7.plot(xsame,data14)
+ax7.plot(T14,y)
 ax7.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
 plt.axis([80,230,0,1.2])
@@ -2377,11 +2416,10 @@ for label in ax7.yaxis.get_ticklabels():
 ax8=fig.add_subplot(638)
 band_mub=ax8.fill_between(xsame,max42303,min42303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
 line_mub,=ax8.plot(xsame,r42mub303cen,'b',linewidth=1,alpha=0.5)
-ax8.plot(T303hup,y62,color='g')
-ax8.plot(T303hdown,y62,color='g')
+ax8.plot(xsame,data11)
 ax8.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-0.5,1.4])
+plt.axis([80,230,0,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax8.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax8.xaxis.get_ticklabels():
@@ -2392,11 +2430,10 @@ for label in ax8.yaxis.get_ticklabels():
 ax9=fig.add_subplot(639)
 band_mub=ax9.fill_between(xsame,max42406,min42406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
 line_mub,=ax9.plot(xsame,r42mub406cen,'b',linewidth=1,alpha=0.5)
-ax9.plot(T406hup,y62,color='g')
-ax9.plot(T406hdown,y62,color='g')
+ax9.plot(xsame,data7)
 ax9.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-1.5,2.1])
+plt.axis([80,230,0,2.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax9.set_ylabel(r'$\chi^B_4/\chi^B_2$', fontsize=14, color='black')
 for label in ax9.xaxis.get_ticklabels():
@@ -2411,13 +2448,13 @@ ax10.plot(T22up,y62,color='b')
 ax10.plot(T22down,y62,color='b')
 ax10.plot(T22hup,y62,color='g')
 ax10.plot(T22hdown,y62,color='g')
-#ax2.plot(energy,r62up)
-#ax2.plot(energy,r62down)
-#ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
+#ax2.plot(energy,r82up)
+#ax2.plot(energy,r82down)
+#ax2.errorbar(energy,r82cen,yerr=r82err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
 #ax2.plot(xsame,data)
 ax10.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-3,2])
+plt.axis([80,230,-3.,2.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax10.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax10.xaxis.get_ticklabels():
@@ -2434,7 +2471,7 @@ ax11.plot(T68hup,y62,color='g')
 ax11.plot(T68hdown,y62,color='g')
 ax11.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-4,3])
+plt.axis([80,230,-4.,2.5])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax11.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax11.xaxis.get_ticklabels():
@@ -2452,7 +2489,7 @@ ax12.plot(T106hup,y62,color='g')
 ax12.plot(T106hdown,y62,color='g')
 ax12.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-7,4])
+plt.axis([80,230,-6.,4.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax12.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax12.xaxis.get_ticklabels():
@@ -2469,7 +2506,7 @@ ax13.plot(T148hup,y62,color='g')
 ax13.plot(T148hdown,y62,color='g')
 ax13.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-13,8])
+plt.axis([80,230,-13.,8.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax13.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax13.xaxis.get_ticklabels():
@@ -2486,7 +2523,7 @@ ax14.plot(T196hup,y62,color='g')
 ax14.plot(T196hdown,y62,color='g')
 ax14.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-30,25])
+plt.axis([80,230,-30.,20.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax14.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax14.xaxis.get_ticklabels():
@@ -2504,7 +2541,7 @@ ax15.plot(T252hup,y62,color='g')
 ax15.plot(T252hdown,y62,color='g')
 ax15.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-70,70])
+plt.axis([80,230,-80,50])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax15.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax15.xaxis.get_ticklabels():
@@ -2521,7 +2558,7 @@ ax16.plot(T303hup,y62,color='g')
 ax16.plot(T303hdown,y62,color='g')
 ax16.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-180,180])
+plt.axis([80,230,-200,200])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax16.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax16.xaxis.get_ticklabels():
@@ -2538,7 +2575,7 @@ ax17.plot(T406hup,y62,color='g')
 ax17.plot(T406hdown,y62,color='g')
 ax17.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-1700,2700])
+plt.axis([80,230,-1800,3000])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax17.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax17.xaxis.get_ticklabels():
@@ -2566,30 +2603,41 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
                     wspace=0.35)
 
 
-fig.savefig("R42R82.pdf")
+fig.savefig("R42toT2.pdf")
 
 energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
-fig=plt.figure(figsize=(9., 6.))
+blackline=np.linspace(0,300,100)
+r42line=np.zeros(100)
+r62line=np.zeros(100)
+for i in range(1,100):
+    r42line[i]=1
+
+for i in range(1,100):
+    r62line[i]=0
+
+# Create figure
+fig=plt.figure(figsize=(4.5, 8.))
 #fig=plt.figure()
-ax2=fig.add_subplot(222)
+ax2=fig.add_subplot(312)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+#point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 point62cen=ax2.fill_between(energy,r62down,r62up,color='blue',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 line62cen,=ax2.plot(energy,r62cen,color='r',alpha=0.3,zorder=2)
-point62h=ax2.fill_between(energy,r62hdown,r62hup,color='r',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
+#point62h=ax2.fill_between(energy,r62hdown,r62hup,color='r',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $T_c$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.plot(blackline,r62line,'k',linewidth='0.5')
 plt.axis([5.,230.,-100.,100.])
 ax2.set_xscale('symlog')
 ax2.set_yscale('symlog')
 #plt.xticks([])
 ax2.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
-ax2.xaxis.tick_top()
+#ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+#ax2.xaxis.tick_top()
 plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax2.xaxis.set_label_position('top') 
@@ -2600,66 +2648,54 @@ for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
-ax3=fig.add_subplot(223)
-ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-ax3.fill_between(energy,r42down,r42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
-ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
+ax3=fig.add_subplot(311)
+errbartf=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+#ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+bandtf=ax3.fill_between(energy,r42down,r42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
+linetf,=ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
+#ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
 ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax1.errorbar(energy,kurtosis[:,0],color='red')
+ax3.plot(blackline,r42line,'k',linewidth='0.5')
+ax3.legend(((errbartf,bandtf,linetf),exp),(r'fRG',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
-plt.axis([5,230,-2.,2.2])
+plt.axis([5,230,-0.5,2.8])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
-ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+#ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
+ax3.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
+ax3.xaxis.tick_top()
+#ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax3.set_ylabel(r'$R^B_{42}(R^p_{42})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
-ax1=fig.add_subplot(221)
-errbartf=ax1.errorbar(energy,kurtosis[:,2],yerr=[r32errdown,r32errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-errbartc=ax1.errorbar(energy,r32hcen,yerr=[r32errhdown,r32errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-bandtf=ax1.fill_between(energy,r32down,r32up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=1)
-linetf,=ax1.plot(energy,kurtosis[:,2],color='r',alpha=0.3,zorder=2)
-exp=ax1.errorbar(energy,kurtosis[:,2],yerr=kurtosis[:,3],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-bandtc=ax1.fill_between(energy,r32hdown,r32hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=2)
-linetc,=ax1.plot(energy,r32hcen,color='b',alpha=0.3,zorder=2)
-ax1.legend(((errbartf,bandtf,linetf),(errbartc,bandtc,linetc),exp),(r'fRG with $T_{_{CF}}$',r'fRG with $T_c$',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-ax1.set_xscale('symlog')
-plt.axis([5,230,0.,1.2])
-ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax1.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
-ax1.xaxis.tick_top()
-ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax1.xaxis.set_label_position('top') 
-ax1.set_ylabel(r'$R^B_{32}(R^p_{32})$', fontsize=14, color='black')
-for label in ax1.yaxis.get_ticklabels():
-    label.set_fontsize(7)
 
-ax4=fig.add_subplot(224)
+
+ax4=fig.add_subplot(313)
 ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+#ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+#ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 ax4.fill_between(energy,r82down,r82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 ax4.plot(energy,r82cen,color='r',alpha=0.3,zorder=2)
-ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
-ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
+#ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
+#ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
+ax4.plot(blackline,r62line,'k',linewidth='0.5')
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
-plt.axis([5,230,-10000.,10000.])
+plt.axis([5,230,-10000.,1000.])
 #plt.yticks([-10000,-9000,-8000,-7000,-6000,-5000,-4000,-3000,-2000,-1000,-900,-800,-700,-600,-500,-400,-300,-200,-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax4.set_ylabel(r'$R^B_{82}$', fontsize=14, color='black')
+ax4.set_ylabel(r'$R^B_{82}(R^p_{82})$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
 
 
-fig.subplots_adjust(top=0.9, bottom=0.15, left=0.1, right=0.95, hspace=0.,
+fig.subplots_adjust(top=0.95, bottom=0.1, left=0.15, right=0.9, hspace=0.,
                     wspace=0.25)
 
 
