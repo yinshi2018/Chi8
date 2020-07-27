@@ -2595,6 +2595,15 @@ energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
 erro62=[1.01682,0.480246]
 # Create figure
+blackline=np.linspace(0,300,100)
+r42line=np.zeros(100)
+r62line=np.zeros(100)
+for i in range(1,100):
+    r42line[i]=1
+
+for i in range(1,100):
+    r62line[i]=0
+
 # Create figure
 fig=plt.figure(figsize=(4.5, 8.))
 #fig=plt.figure()
@@ -2607,6 +2616,7 @@ line62cen,=ax2.plot(energy,r62cen,color='r',alpha=0.3,zorder=2)
 #line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $T_c$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.plot(blackline,r62line,'k',linewidth='0.5')
 plt.axis([5.,230.,-100.,100.])
 ax2.set_xscale('symlog')
 ax2.set_yscale('symlog')
@@ -2625,14 +2635,16 @@ for label in ax2.yaxis.get_ticklabels():
 
 
 ax3=fig.add_subplot(311)
-ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+errbartf=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-ax3.fill_between(energy,r42down,r42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
+bandtf=ax3.fill_between(energy,r42down,r42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
+linetf,=ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
 #ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
 ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax1.errorbar(energy,kurtosis[:,0],color='red')
+ax3.plot(blackline,r42line,'k',linewidth='0.5')
+ax3.legend(((errbartf,bandtf,linetf),exp),(r'fRG',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
 plt.axis([5,230,-1.,2.8])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
@@ -2656,6 +2668,7 @@ ax4.fill_between(energy,r82down,r82up,color='r',alpha=0.25,facecolor='r',edgecol
 ax4.plot(energy,r82cen,color='r',alpha=0.3,zorder=2)
 #ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
+ax4.plot(blackline,r62line,'k',linewidth='0.5')
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 plt.axis([5,230,-10000.,10000.])
