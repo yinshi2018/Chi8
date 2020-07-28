@@ -2276,24 +2276,19 @@ for num in range(0,100):
 # Create figure
 fig=plt.figure(figsize=(12, 18.5))
 #fig=plt.figure()
+
 ax1=fig.add_subplot(631)
-ax1.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=1)
-ax1.plot(energy,r62cen,color='blue',label=r'$T_f$')
-ax1.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='green',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1,zorder=2)
-ax1.plot(energy,r62hcen,color='green',label=r'$T_f+10$')
-y=range(-60,60,10)
-ax1.set_xscale('log')
-ax1.set_yscale('symlog')
-#ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-plt.axis([5,230,-60.,60.])
-ax1.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax1.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
-plt.yticks(y)
-#ax1.set_xticks([200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7])
-ax1.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
-ax1.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'])
+band_mub=ax1.fill_between(xsame,max8278,min8278,alpha=0.25,facecolor='b',edgecolor='',label=r'$54.4$')
+line_mub,=ax1.plot(xsame,r82mub78cen,'b',linewidth=1,alpha=0.5)
+ax1.plot(T78up,y62,color='b')
+ax1.plot(T78down,y62,color='b')
+ax1.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+#ax2.set_xscale('log')
+plt.axis([80,230,-5,3])
+#ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
+ax1.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax1.xaxis.get_ticklabels():
-    label.set_fontsize(7)
+    label.set_fontsize(10)
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
@@ -2489,7 +2484,7 @@ ax12.plot(T106hup,y62,color='g')
 ax12.plot(T106hdown,y62,color='g')
 ax12.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-6.,4.])
+plt.axis([80,230,-8.,4.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax12.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax12.xaxis.get_ticklabels():
@@ -2523,7 +2518,7 @@ ax14.plot(T196hup,y62,color='g')
 ax14.plot(T196hdown,y62,color='g')
 ax14.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-30.,20.])
+plt.axis([80,230,-30.,30.])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax14.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax14.xaxis.get_ticklabels():
@@ -2541,7 +2536,7 @@ ax15.plot(T252hup,y62,color='g')
 ax15.plot(T252hdown,y62,color='g')
 ax15.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-80,50])
+plt.axis([80,230,-80,70])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax15.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax15.xaxis.get_ticklabels():
@@ -2558,7 +2553,7 @@ ax16.plot(T303hup,y62,color='g')
 ax16.plot(T303hdown,y62,color='g')
 ax16.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-200,200])
+plt.axis([80,230,-200,220])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax16.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
 for label in ax16.xaxis.get_ticklabels():
@@ -2665,6 +2660,8 @@ ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 #ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
 ax3.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
 ax3.xaxis.tick_top()
+ax3.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
+ax3.xaxis.set_label_position('top') 
 #ax3.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax3.set_ylabel(r'$R^B_{42}(R^p_{42})$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
@@ -2693,9 +2690,10 @@ ax4.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
 ax4.set_ylabel(r'$R^B_{82}(R^p_{82})$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
+print(r62down)
+print(r62up)
 
-
-fig.subplots_adjust(top=0.95, bottom=0.1, left=0.15, right=0.9, hspace=0.,
+fig.subplots_adjust(top=0.93, bottom=0.08, left=0.15, right=0.9, hspace=0.,
                     wspace=0.25)
 
 
