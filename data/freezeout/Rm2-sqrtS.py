@@ -199,6 +199,27 @@ r42mub22cen=spline(T/ctcen,r42mub22cen,xsame)
 r62mub22cen=spline(T/ctcen,r62mub22cen,xsame)
 r82mub22cen=spline(T/ctcen,r82mub22cen,xsame)
 
+
+dif6222minc=np.zeros(300)
+dif6222minu=np.zeros(300)
+dif6222mind=np.zeros(300)
+dif6222minc=abs(r62mub22cen+0.5)
+dif6222minu=abs(max6222+0.5)
+dif6222mind=abs(min6222+0.5)
+min6222cindex=np.argmin(dif6222minc[80:300])+80
+min6222uindex=np.argmin(dif6222minu[80:300])+80
+min6222dindex=np.argmin(dif6222mind[80:300])+80
+r62minc=r62mub22cen[min6222cindex]
+r62minu=max6222[min6222uindex]
+r62mind=min6222[min6222dindex]
+erru=r62minu-r62minc
+errd=r62minc-r62mind
+print(r62minc)
+print(erru)
+print(errd)
+
+
+
 dif22cen=abs(r42mub22cen-0.900669)
 dif22up=abs(max4222-0.900669)
 dif22down=abs(min4222-0.900669)
@@ -2619,13 +2640,14 @@ fig=plt.figure(figsize=(4.5, 8.))
 ax2=fig.add_subplot(312)
 point62cen=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-point62cen=ax2.fill_between(energy,r62down,r62up,color='blue',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
+band62cen=ax2.fill_between(energy,r62down,r62up,color='blue',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
 line62cen,=ax2.plot(energy,r62cen,color='r',alpha=0.3,zorder=2)
 #point62h=ax2.fill_between(energy,r62hdown,r62hup,color='r',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #line62h,=ax2.plot(energy,r62hcen,color='b',alpha=0.3,zorder=1)
+min62=ax2.errorbar(energy[0],r62minc,yerr=[[errd],[erru]],color='g',marker='s',linestyle='',markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-#ax2.legend(((point62cen,line62cen),(point62h,line62h),exp),(r'This work at $T_f$',r'This work at $T_c$',r'RHIC data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-ax2.plot(blackline,r62line,'k',linewidth='0.5')
+ax2.legend(((point62cen,band62cen,line62cen),exp,min62),(r'fRG',r'STAR data',r'minimum value'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
 plt.axis([5.,230.,-100.,100.])
 ax2.set_xscale('symlog')
 ax2.set_yscale('symlog')
@@ -2651,8 +2673,8 @@ linetf,=ax3.plot(energy,r42cen,color='r',alpha=0.3,zorder=2)
 #ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
 ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-#ax1.errorbar(energy,kurtosis[:,0],color='red')
-ax3.plot(blackline,r42line,'k',linewidth='0.5')
+#ax3.errorbar(energy,kurtosis[:,0],color='red')
+ax3.plot(blackline,r42line,dashes=[4,2],color='m',linewidth='1')
 ax3.legend(((errbartf,bandtf,linetf),exp),(r'fRG',r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
 plt.axis([5,230,-0.5,2.8])
@@ -2672,14 +2694,15 @@ for label in ax3.yaxis.get_ticklabels():
 
 
 ax4=fig.add_subplot(313)
-ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+errbartf=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-ax4.fill_between(energy,r82down,r82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-ax4.plot(energy,r82cen,color='r',alpha=0.3,zorder=2)
+bandtf=ax4.fill_between(energy,r82down,r82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
+linetf,=ax4.plot(energy,r82cen,color='r',alpha=0.3,zorder=2)
 #ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
-ax4.plot(blackline,r62line,'k',linewidth='0.5')
+ax4.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
+ax4.legend([(errbartf,bandtf,linetf)],[r'fRG'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 plt.axis([5,230,-10000.,1000.])
