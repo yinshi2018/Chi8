@@ -2686,7 +2686,7 @@ plt.axis([5,230,-10000.,1000.])
 #plt.yticks([-10000,-9000,-8000,-7000,-6000,-5000,-4000,-3000,-2000,-1000,-900,-800,-700,-600,-500,-400,-300,-200,-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
-ax4.set_xlabel('$\sqrt{S_{NN}}\,[\mathrm{GeV}]$', fontsize=14, color='black')
+ax4.set_xlabel('$\sqrt{s_{\mathrm{NN}}}\,[\mathrm{GeV}]$', fontsize=14, color='black')
 ax4.set_ylabel(r'$R^B_{82}(R^p_{82})$', fontsize=14, color='black')
 for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(7)
