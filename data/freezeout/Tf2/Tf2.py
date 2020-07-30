@@ -83,15 +83,15 @@ for num in range(0,300):
     data7[num]=	1.766972
 
 for num in range(0,100):
-    Tf22[num]=156.
-    Tf68[num]=156.
-    Tf78[num]=140.
+    Tf22[num]=158.
+    Tf68[num]=158.
+    Tf78[num]=158.
     Tf106[num]=158.
     Tf148[num]=157.
-    Tf196[num]=129.
-    Tf252[num]=124.
-    Tf303[num]=124.
-    Tf406[num]=114.
+    Tf196[num]=156.
+    Tf252[num]=153.
+    Tf303[num]=150.
+    Tf406[num]=138.
 
 
 
@@ -244,9 +244,9 @@ print(errd)
 dif22cen=abs(r42mub22cen-0.900669)
 dif22up=abs(max4222-0.900669)
 dif22down=abs(min4222-0.900669)
-min22cen_index=156
+min22cen_index=158
 min22up_index=158
-min22down_index=154
+min22down_index=158
 
 print(min22cen_index)
 #print(min22up_index)
@@ -402,9 +402,9 @@ r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 dif68cen=abs(r42mub68cen-0.792955)
 dif68up=abs(max4268-0.792955)
 dif68down=abs(min4268-0.792955)
-min68cen_index=140
-min68up_index=143
-min68down_index=137
+min68cen_index=158
+min68up_index=158
+min68down_index=158
 print(min68cen_index)
 #print(min68up_index)
 #print(min68down_index)
@@ -554,9 +554,9 @@ r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 dif78cen=abs(r42mub78cen-0.632837)
 dif78up=abs(max4278-0.632837)
 dif78down=abs(min4278-0.632837)
-min78cen_index=140
-min78up_index=143
-min78down_index=137
+min78cen_index=158
+min78up_index=158
+min78down_index=158
 print(min78cen_index)
 #print(min78up_index)
 #print(min78down_index)
@@ -1180,9 +1180,9 @@ r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 dif196cen=abs(r42mub196cen-0.140553)
 dif196up=abs(max42196-0.140553)
 dif196down=abs(min42196-0.140553)
-min196cen_index=129
-min196up_index=129
-min196down_index=128
+min196cen_index=156
+min196up_index=156
+min196down_index=156
 print(min196cen_index)
 #print(min196up_index)
 #print(min196down_index)
@@ -1499,9 +1499,9 @@ r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 dif252cen=abs(r42mub252cen-1.468760)
 dif252up=abs(max42252-1.468760)
 dif252down=abs(min42252-1.468760)
-min252cen_index=124
-min252up_index=125
-min252down_index=123
+min252cen_index=153
+min252up_index=153
+min252down_index=153
 print(min252cen_index)
 #print(min252up_index)
 #print(min252down_index)
@@ -1817,9 +1817,9 @@ r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 dif303cen=abs(r42mub303cen-0.695796)
 dif303up=abs(max42303-0.695796)
 dif303down=abs(min42303-0.695796)
-min303cen_index=124
-min303up_index=125
-min303down_index=123
+min303cen_index=150
+min303up_index=150
+min303down_index=150
 print(min303cen_index)
 #print(min303up_index)
 #print(min303down_index)
@@ -2135,9 +2135,9 @@ r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 dif406cen=abs(r42mub406cen-1.766972)
 dif406up=abs(max42406-1.766972)
 dif406down=abs(min42406-1.766972)
-min406cen_index=114
-min406up_index=115
-min406down_index=113
+min406cen_index=138
+min406up_index=138
+min406down_index=138
 print(min406cen_index)
 #print(min406up_index)
 #print(min406down_index)
@@ -2476,34 +2476,34 @@ for label in ax9.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax10=fig.add_subplot(6,3,10)
-band_mub=ax10.fill_between(xsame,max8222,min8222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
-line_mub,=ax10.plot(xsame,r82mub22cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax10.fill_between(xsame,max6222,min6222,alpha=0.25,facecolor='b',edgecolor='',label=r'$200$')
+line_mub,=ax10.plot(xsame,r62mub22cen,'b',linewidth=1,alpha=0.5)
 ax10.plot(T22up,y62,color='b')
 ax10.plot(T22down,y62,color='b')
-#ax2.plot(energy,r82up)
-#ax2.plot(energy,r82down)
-#ax2.errorbar(energy,r82cen,yerr=r82err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
+#ax2.plot(energy,r62up)
+#ax2.plot(energy,r62down)
+#ax2.errorbar(energy,r62cen,yerr=r62err,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'$$')
 #ax2.plot(xsame,data)
 ax10.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-3.,2.])
+plt.axis([80,230,-0.5,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax10.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax10.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax10.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax10.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax11=fig.add_subplot(6,3,11)
-band_mub=ax11.fill_between(xsame,max8268,min8268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
-line_mub,=ax11.plot(xsame,r82mub68cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax11.fill_between(xsame,max6268,min6268,alpha=0.25,facecolor='b',edgecolor='',label=r'$62.4$')
+line_mub,=ax11.plot(xsame,r62mub68cen,'b',linewidth=1,alpha=0.5)
 ax11.plot(T68up,y62,color='b')
 ax11.plot(T68down,y62,color='b')
 ax11.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-4.,2.5])
+plt.axis([80,230,-0.5,1.2])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax11.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax11.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax11.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax11.yaxis.get_ticklabels():
@@ -2511,45 +2511,45 @@ for label in ax11.yaxis.get_ticklabels():
 
 
 ax12=fig.add_subplot(6,3,12)
-band_mub=ax12.fill_between(xsame,max82106,min82106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
-line_mub,=ax12.plot(xsame,r82mub106cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax12.fill_between(xsame,max62106,min62106,alpha=0.25,facecolor='b',edgecolor='',label=r'$39$')
+line_mub,=ax12.plot(xsame,r62mub106cen,'b',linewidth=1,alpha=0.5)
 ax12.plot(T106up,y62,color='b')
 ax12.plot(T106down,y62,color='b')
 ax12.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-8.,4.])
+plt.axis([80,230,-1,1.4])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax12.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax12.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax12.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax12.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax13=fig.add_subplot(6,3,13)
-band_mub=ax13.fill_between(xsame,max82148,min82148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
-line_mub,=ax13.plot(xsame,r82mub148cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax13.fill_between(xsame,max62148,min62148,alpha=0.25,facecolor='b',edgecolor='',label=r'$27$')
+line_mub,=ax13.plot(xsame,r62mub148cen,'b',linewidth=1,alpha=0.5)
 ax13.plot(T148up,y62,color='b')
 ax13.plot(T148down,y62,color='b')
 ax13.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-13.,8.])
+plt.axis([80,230,-1,1.5])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax13.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax13.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax13.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax13.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax14=fig.add_subplot(6,3,14)
-band_mub=ax14.fill_between(xsame,max82196,min82196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
-line_mub,=ax14.plot(xsame,r82mub196cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax14.fill_between(xsame,max62196,min62196,alpha=0.25,facecolor='b',edgecolor='',label=r'$19.6$')
+line_mub,=ax14.plot(xsame,r62mub196cen,'b',linewidth=1,alpha=0.5)
 ax14.plot(T196up,y62,color='b')
 ax14.plot(T196down,y62,color='b')
 ax14.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-30.,30.])
+plt.axis([80,230,-2.2,1.7])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax14.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax14.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax14.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax14.yaxis.get_ticklabels():
@@ -2557,45 +2557,45 @@ for label in ax14.yaxis.get_ticklabels():
 
 
 ax15=fig.add_subplot(6,3,15)
-band_mub=ax15.fill_between(xsame,max82252,min82252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
-line_mub,=ax15.plot(xsame,r82mub252cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax15.fill_between(xsame,max62252,min62252,alpha=0.25,facecolor='b',edgecolor='',label=r'$14.5$')
+line_mub,=ax15.plot(xsame,r62mub252cen,'b',linewidth=1,alpha=0.5)
 ax15.plot(T252up,y62,color='b')
 ax15.plot(T252down,y62,color='b')
 ax15.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-80,70])
+plt.axis([80,230,-10,5])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax15.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax15.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax15.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax15.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax16=fig.add_subplot(6,3,16)
-band_mub=ax16.fill_between(xsame,max82303,min82303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
-line_mub,=ax16.plot(xsame,r82mub303cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax16.fill_between(xsame,max62303,min62303,alpha=0.25,facecolor='b',edgecolor='',label=r'$11.5$')
+line_mub,=ax16.plot(xsame,r62mub303cen,'b',linewidth=1,alpha=0.5)
 ax16.plot(T303up,y62,color='b')
 ax16.plot(T303down,y62,color='b')
 ax16.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-200,220])
+plt.axis([80,230,-10,5])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax16.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax16.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax16.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax16.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 ax17=fig.add_subplot(6,3,17)
-band_mub=ax17.fill_between(xsame,max82406,min82406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
-line_mub,=ax17.plot(xsame,r82mub406cen,'b',linewidth=1,alpha=0.5)
+band_mub=ax17.fill_between(xsame,max62406,min62406,alpha=0.25,facecolor='b',edgecolor='',label=r'$7.7$')
+line_mub,=ax17.plot(xsame,r62mub406cen,'b',linewidth=1,alpha=0.5)
 ax17.plot(T406up,y62,color='b')
 ax17.plot(T406down,y62,color='b')
 ax17.legend(loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.set_xscale('log')
-plt.axis([80,230,-1800,3000])
+plt.axis([80,230,-60,50])
 #ax2.set_xlabel('$\sqrt{S_{NN}}$', fontsize=14, color='black')
-ax17.set_ylabel(r'$\chi^B_8/\chi^B_2$', fontsize=14, color='black')
+ax17.set_ylabel(r'$\chi^B_6/\chi^B_2$', fontsize=14, color='black')
 for label in ax17.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax17.yaxis.get_ticklabels():
@@ -2621,7 +2621,7 @@ fig.subplots_adjust(top=0.9, bottom=0.15, left=0.16, right=0.95, hspace=0.35,
                     wspace=0.35)
 
 
-fig.savefig("Tfv1.pdf")
+fig.savefig("Tfv2.pdf")
 
 energyrhic=[200.,54.4]
 value62=[-2.54509,1.20229]
@@ -2650,15 +2650,15 @@ min62=ax2.errorbar(energy[0],r62minc,yerr=[[errd],[erru]],color='g',marker='s',l
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='b',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 ax2.legend(((point62cen,band62cen,line62cen),exp,min62),(r'fRG',r'STAR preliminary',r'fRG: minimum'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax2.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
-plt.axis([5.,230.,-100.,100.])
+plt.axis([5.,230.,-30.,10.])
 ax2.set_xscale('symlog')
 #plt.axis([5.,230.,-10.,20.])
-ax2.set_yscale('symlog')
+#ax2.set_yscale('symlog')
 #plt.xticks([])
 ax2.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 #ax2.set_xticklabels(['406','303','252','196','148','106','78','68','22'],rotation=60,fontsize=7)
 #ax2.xaxis.tick_top()
-plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
+#plt.yticks([-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50])
 ax2.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax2.xaxis.set_label_position('top') 
 ax2.set_ylabel(r'$R^B_{62}(R^p_{62})$', fontsize=14, color='black')
@@ -2724,5 +2724,5 @@ fig.subplots_adjust(top=0.93, bottom=0.08, left=0.15, right=0.9, hspace=0.,
                     wspace=0.25)
 
 
-fig.savefig("Tf1.pdf")
+fig.savefig("Tf.pdf")
 

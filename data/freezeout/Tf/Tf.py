@@ -83,15 +83,15 @@ for num in range(0,300):
     data7[num]=	1.766972
 
 for num in range(0,100):
-    Tf22[num]=156.
-    Tf68[num]=156.
-    Tf78[num]=140.
+    Tf22[num]=158.
+    Tf68[num]=158.
+    Tf78[num]=158.
     Tf106[num]=158.
     Tf148[num]=157.
-    Tf196[num]=129.
-    Tf252[num]=124.
-    Tf303[num]=124.
-    Tf406[num]=114.
+    Tf196[num]=156.
+    Tf252[num]=153.
+    Tf303[num]=150.
+    Tf406[num]=138.
 
 
 
@@ -244,9 +244,9 @@ print(errd)
 dif22cen=abs(r42mub22cen-0.900669)
 dif22up=abs(max4222-0.900669)
 dif22down=abs(min4222-0.900669)
-min22cen_index=156
+min22cen_index=158
 min22up_index=158
-min22down_index=154
+min22down_index=158
 
 print(min22cen_index)
 #print(min22up_index)
@@ -402,9 +402,9 @@ r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 dif68cen=abs(r42mub68cen-0.792955)
 dif68up=abs(max4268-0.792955)
 dif68down=abs(min4268-0.792955)
-min68cen_index=140
-min68up_index=143
-min68down_index=137
+min68cen_index=158
+min68up_index=158
+min68down_index=158
 print(min68cen_index)
 #print(min68up_index)
 #print(min68down_index)
@@ -554,9 +554,9 @@ r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 dif78cen=abs(r42mub78cen-0.632837)
 dif78up=abs(max4278-0.632837)
 dif78down=abs(min4278-0.632837)
-min78cen_index=140
-min78up_index=143
-min78down_index=137
+min78cen_index=158
+min78up_index=158
+min78down_index=158
 print(min78cen_index)
 #print(min78up_index)
 #print(min78down_index)
@@ -1180,9 +1180,9 @@ r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 dif196cen=abs(r42mub196cen-0.140553)
 dif196up=abs(max42196-0.140553)
 dif196down=abs(min42196-0.140553)
-min196cen_index=129
-min196up_index=129
-min196down_index=128
+min196cen_index=156
+min196up_index=156
+min196down_index=156
 print(min196cen_index)
 #print(min196up_index)
 #print(min196down_index)
@@ -1499,9 +1499,9 @@ r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 dif252cen=abs(r42mub252cen-1.468760)
 dif252up=abs(max42252-1.468760)
 dif252down=abs(min42252-1.468760)
-min252cen_index=124
-min252up_index=125
-min252down_index=123
+min252cen_index=153
+min252up_index=153
+min252down_index=153
 print(min252cen_index)
 #print(min252up_index)
 #print(min252down_index)
@@ -1817,9 +1817,9 @@ r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 dif303cen=abs(r42mub303cen-0.695796)
 dif303up=abs(max42303-0.695796)
 dif303down=abs(min42303-0.695796)
-min303cen_index=124
-min303up_index=125
-min303down_index=123
+min303cen_index=150
+min303up_index=150
+min303down_index=150
 print(min303cen_index)
 #print(min303up_index)
 #print(min303down_index)
@@ -2135,9 +2135,9 @@ r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 dif406cen=abs(r42mub406cen-1.766972)
 dif406up=abs(max42406-1.766972)
 dif406down=abs(min42406-1.766972)
-min406cen_index=114
-min406up_index=115
-min406down_index=113
+min406cen_index=138
+min406up_index=138
+min406down_index=138
 print(min406cen_index)
 #print(min406up_index)
 #print(min406down_index)
