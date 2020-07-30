@@ -84,10 +84,10 @@ for num in range(0,300):
 
 for num in range(0,100):
     Tf22[num]=156.
-    Tf68[num]=156.
+    Tf68[num]=140.
     Tf78[num]=140.
-    Tf106[num]=158.
-    Tf148[num]=157.
+    Tf106[num]=140.
+    Tf148[num]=140.
     Tf196[num]=129.
     Tf252[num]=124.
     Tf303[num]=124.
@@ -710,9 +710,9 @@ r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
 dif106cen=abs(r42mub106cen-0.739693)
 dif106up=abs(max42106-0.739693)
 dif106down=abs(min42106-0.739693)
-min106cen_index=158
-min106up_index=158
-min106down_index=158
+min106cen_index=140
+min106up_index=143
+min106down_index=137
 print(min106cen_index)
 #print(min106up_index)
 #print(min106down_index)
@@ -863,9 +863,9 @@ r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
 dif148cen=abs(r42mub148cen-0.196254)
 dif148up=abs(max42148-0.196254)
 dif148down=abs(min42148-0.196254)
-min148cen_index=157
-min148up_index=157
-min148down_index=157
+min148cen_index=140
+min148up_index=143
+min148down_index=137
 print(min148cen_index)
 #print(min148up_index)
 #print(min148down_index)
