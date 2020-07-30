@@ -83,15 +83,15 @@ for num in range(0,300):
     data7[num]=	1.766972
 
 for num in range(0,100):
-    Tf22[num]=158.
-    Tf68[num]=158.
-    Tf78[num]=158.
-    Tf106[num]=158.
-    Tf148[num]=157.
-    Tf196[num]=129.
-    Tf252[num]=153.
-    Tf303[num]=124.
-    Tf406[num]=138.
+    Tf22[num]=157.
+    Tf68[num]=141.
+    Tf78[num]=140.
+    Tf106[num]=135.
+    Tf148[num]=133.
+    Tf196[num]=131.
+    Tf252[num]=127.
+    Tf303[num]=121.
+    Tf406[num]=111.
 
 
 
@@ -244,9 +244,9 @@ print(errd)
 dif22cen=abs(r42mub22cen-0.900669)
 dif22up=abs(max4222-0.900669)
 dif22down=abs(min4222-0.900669)
-min22cen_index=158
-min22up_index=158
-min22down_index=158
+min22cen_index=157
+min22up_index=157
+min22down_index=157
 
 print(min22cen_index)
 #print(min22up_index)
@@ -402,9 +402,9 @@ r82mub68cen=spline(T/ctcen,r82mub68cen,xsame)
 dif68cen=abs(r42mub68cen-0.792955)
 dif68up=abs(max4268-0.792955)
 dif68down=abs(min4268-0.792955)
-min68cen_index=158
-min68up_index=158
-min68down_index=158
+min68cen_index=141
+min68up_index=141
+min68down_index=141
 print(min68cen_index)
 #print(min68up_index)
 #print(min68down_index)
@@ -554,9 +554,9 @@ r82mub78cen=spline(T/ctcen,r82mub78cen,xsame)
 dif78cen=abs(r42mub78cen-0.632837)
 dif78up=abs(max4278-0.632837)
 dif78down=abs(min4278-0.632837)
-min78cen_index=158
-min78up_index=158
-min78down_index=158
+min78cen_index=140
+min78up_index=140
+min78down_index=140
 print(min78cen_index)
 #print(min78up_index)
 #print(min78down_index)
@@ -710,9 +710,9 @@ r82mub106cen=spline(T/ctcen,r82mub106cen,xsame)
 dif106cen=abs(r42mub106cen-0.739693)
 dif106up=abs(max42106-0.739693)
 dif106down=abs(min42106-0.739693)
-min106cen_index=158
-min106up_index=158
-min106down_index=158
+min106cen_index=135
+min106up_index=135
+min106down_index=135
 print(min106cen_index)
 #print(min106up_index)
 #print(min106down_index)
@@ -863,9 +863,9 @@ r82mub148cen=spline(T/ctcen,r82mub148cen,xsame)
 dif148cen=abs(r42mub148cen-0.196254)
 dif148up=abs(max42148-0.196254)
 dif148down=abs(min42148-0.196254)
-min148cen_index=157
-min148up_index=157
-min148down_index=157
+min148cen_index=133
+min148up_index=133
+min148down_index=133
 print(min148cen_index)
 #print(min148up_index)
 #print(min148down_index)
@@ -1180,9 +1180,9 @@ r82mub196cen=spline(T/ctcen,r82mub196cen,xsame)
 dif196cen=abs(r42mub196cen-0.140553)
 dif196up=abs(max42196-0.140553)
 dif196down=abs(min42196-0.140553)
-min196cen_index=156
-min196up_index=156
-min196down_index=156
+min196cen_index=131
+min196up_index=131
+min196down_index=131
 print(min196cen_index)
 #print(min196up_index)
 #print(min196down_index)
@@ -1499,9 +1499,9 @@ r82mub252cen=spline(T/ctcen,r82mub252cen,xsame)
 dif252cen=abs(r42mub252cen-1.468760)
 dif252up=abs(max42252-1.468760)
 dif252down=abs(min42252-1.468760)
-min252cen_index=153
-min252up_index=153
-min252down_index=153
+min252cen_index=127
+min252up_index=127
+min252down_index=127
 print(min252cen_index)
 #print(min252up_index)
 #print(min252down_index)
@@ -1529,7 +1529,9 @@ r42252up=np.max(r42)
 r42252down=np.min(r42)
 r42252uph=np.max(r42h)
 r42252downh=np.min(r42h)
-
+print(r42252cen)
+print(r42252up)
+print(r42252down)
 r62=[max62252[min252up_index],max62252[min252down_index],min62252[min252up_index],min62252[min252down_index]]
 #r62h=[max62252[min252up_index+int(min252up_index*deltat)],max62252[min252down_index+int(min252down_index*deltat)],min62252[min252up_index+int(min252up_index*deltat)],min62252[min252down_index+int(min252down_index*deltat)]]
 r62h=[max62252[Tcup[6]],max62252[Tcdown[6]],min62252[Tcup[6]],min62252[Tcdown[6]]]
@@ -1817,9 +1819,9 @@ r82mub303cen=spline(T/ctcen,r82mub303cen,xsame)
 dif303cen=abs(r42mub303cen-0.695796)
 dif303up=abs(max42303-0.695796)
 dif303down=abs(min42303-0.695796)
-min303cen_index=150
-min303up_index=150
-min303down_index=150
+min303cen_index=121
+min303up_index=121
+min303down_index=121
 print(min303cen_index)
 #print(min303up_index)
 #print(min303down_index)
@@ -2135,9 +2137,9 @@ r82mub406cen=spline(T/ctcen,r82mub406cen,xsame)
 dif406cen=abs(r42mub406cen-1.766972)
 dif406up=abs(max42406-1.766972)
 dif406down=abs(min42406-1.766972)
-min406cen_index=138
-min406up_index=138
-min406down_index=138
+min406cen_index=111
+min406up_index=111
+min406down_index=111
 print(min406cen_index)
 #print(min406up_index)
 #print(min406down_index)
@@ -2208,17 +2210,17 @@ r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r
 #r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
 #r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
 
-r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148hcen,r62196hcen,r62252hcen,r62303cen,r62406cen]
-r62up=[r6222up,r6268up,r6278up,r62106up,r62148uph,r62196uph,r62252uph,r62303up,r62406up]
-r62down=[r6222down,r6268down,r6278down,r62106down,r62148downh,r62196downh,r62252downh,r62303down,r62406down]
+r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
+r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
+r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
 
-r42up=[r4222up,r4268up,r4278up,r42106up,r42148uph,r42196uph,r42252uph,r42303up,r42406up]
-r42down=[r4222down,r4268down,r4278down,r42106down,r42148downh,r42196downh,r42252downh,r42303down,r42406down]
-r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148hcen,r42196hcen,r42252hcen,r42303cen,r42406cen]
+r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
+r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
+r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
 
-r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148hcen,r82196hcen,r82252hcen,r82303cen,r82406cen]
-r82up=[r8222up,r8268up,r8278up,r82106up,r82148uph,r82196uph,r82252uph,r82303up,r82406up]
-r82down=[r8222down,r8268down,r8278down,r82106down,r82148downh,r82196downh,r82252downh,r82303down,r82406down]
+r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
+r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
+r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
 
 r82hcen=[r8222hcen,r8268hcen,r8278hcen,r82106hcen,r82148hcen,r82196hcen,r82252hcen,r82303hcen,r82406hcen]
 r82hup=[r8222uph,r8268uph,r8278uph,r82106uph,r82148uph,r82196uph,r82252uph,r82303uph,r82406uph]

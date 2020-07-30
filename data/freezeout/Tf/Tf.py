@@ -2208,17 +2208,17 @@ r62hdown=[r6222downh,r6268downh,r6278downh,r62106downh,r62148downh,r62196downh,r
 #r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
 #r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
 
-r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148hcen,r62196hcen,r62252hcen,r62303cen,r62406cen]
-r62up=[r6222up,r6268up,r6278up,r62106up,r62148uph,r62196uph,r62252uph,r62303up,r62406up]
-r62down=[r6222down,r6268down,r6278down,r62106down,r62148downh,r62196downh,r62252downh,r62303down,r62406down]
+r62cen=[r6222cen,r6268cen,r6278cen,r62106cen,r62148cen,r62196cen,r62252cen,r62303cen,r62406cen]
+r62up=[r6222up,r6268up,r6278up,r62106up,r62148up,r62196up,r62252up,r62303up,r62406up]
+r62down=[r6222down,r6268down,r6278down,r62106down,r62148down,r62196down,r62252down,r62303down,r62406down]
 
-r42up=[r4222up,r4268up,r4278up,r42106up,r42148uph,r42196uph,r42252uph,r42303up,r42406up]
-r42down=[r4222down,r4268down,r4278down,r42106down,r42148downh,r42196downh,r42252downh,r42303down,r42406down]
-r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148hcen,r42196hcen,r42252hcen,r42303cen,r42406cen]
+r42up=[r4222up,r4268up,r4278up,r42106up,r42148up,r42196up,r42252up,r42303up,r42406up]
+r42down=[r4222down,r4268down,r4278down,r42106down,r42148down,r42196down,r42252down,r42303down,r42406down]
+r42cen=[r4222cen,r4268cen,r4278cen,r42106cen,r42148cen,r42196cen,r42252cen,r42303cen,r42406cen]
 
-r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148hcen,r82196hcen,r82252hcen,r82303cen,r82406cen]
-r82up=[r8222up,r8268up,r8278up,r82106up,r82148uph,r82196uph,r82252uph,r82303up,r82406up]
-r82down=[r8222down,r8268down,r8278down,r82106down,r82148downh,r82196downh,r82252downh,r82303down,r82406down]
+r82cen=[r8222cen,r8268cen,r8278cen,r82106cen,r82148cen,r82196cen,r82252cen,r82303cen,r82406cen]
+r82up=[r8222up,r8268up,r8278up,r82106up,r82148up,r82196up,r82252up,r82303up,r82406up]
+r82down=[r8222down,r8268down,r8278down,r82106down,r82148down,r82196down,r82252down,r82303down,r82406down]
 
 r82hcen=[r8222hcen,r8268hcen,r8278hcen,r82106hcen,r82148hcen,r82196hcen,r82252hcen,r82303hcen,r82406hcen]
 r82hup=[r8222uph,r8268uph,r8278uph,r82106uph,r82148uph,r82196uph,r82252uph,r82303uph,r82406uph]
