@@ -95,6 +95,9 @@ for num in range(0,100):
 
 
 
+
+
+
 energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
 #############################################################################################################################################
 xsame=np.linspace(0.,299.,300)
@@ -4723,12 +4726,12 @@ for num in range(0,100):
     T406hdown[num]=Tcdown[8]
 ####################################################################################################
 ax2=fig.add_subplot(312)
-point62cen2=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-band62cen2=ax2.fill_between(energy,r62down,r62up,color='g',alpha=0.25,facecolor='g',edgecolor='',zorder=2)
-line62cen2,=ax2.plot(energy,r62cen,color='g',alpha=0.3,zorder=2)
+point62cen2=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='grey',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+band62cen2=ax2.fill_between(energy,r62down,r62up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
+line62cen2,=ax2.plot(energy,r62cen,color='grey',alpha=0.3,zorder=2)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='b',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-#ax2.legend(((point62cen1,band62cen1,line62cen1),(point62cen2,band62cen2,line62cen2),exp),(r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$',r'STAR preliminary'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-ax2.legend([(exp)],[r'STAR preliminary'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.legend(((point62cen1,band62cen1,line62cen1),(point62cen2,band62cen2,line62cen2),exp),(r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$',r'STAR preliminary'),loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+#ax2.legend([(exp)],[r'STAR preliminary'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax2.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
 plt.axis([5.,230.,-100.,100.])
 ax2.set_xscale('symlog')
@@ -4745,16 +4748,16 @@ for label in ax2.yaxis.get_ticklabels():
 
 
 ax3=fig.add_subplot(311)
-errbartf422=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+errbartf422=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='grey',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-bandtf422=ax3.fill_between(energy,r42down,r42up,color='g',alpha=0.25,facecolor='g',edgecolor='',zorder=2)
-linetf422,=ax3.plot(energy,r42cen,color='g',alpha=0.3,zorder=2)
+bandtf422=ax3.fill_between(energy,r42down,r42up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
+linetf422,=ax3.plot(energy,r42cen,color='grey',alpha=0.3,zorder=2)
 #ax3.fill_between(energy,r42hdown,r42hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax3.plot(energy,r42hcen,color='b',alpha=0.3,zorder=1)
 exp=ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax3.errorbar(energy,kurtosis[:,0],color='red')
 ax3.plot(blackline,r42line,dashes=[4,2],color='m',linewidth='1')
-ax3.legend([(errbartf421,bandtf421,linetf421),(errbartf422,bandtf422,linetf422),exp],[r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$',r'STAR data'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax3.legend([(errbartf421,bandtf421,linetf421),(errbartf422,bandtf422,linetf422),exp],[r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$',r'STAR data'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax3.legend((exp),(r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
 plt.axis([5,230,-0.5,2.8])
@@ -4774,15 +4777,15 @@ for label in ax3.yaxis.get_ticklabels():
 
 
 ax4=fig.add_subplot(313)
-errbartf822=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
+errbartf822=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='grey',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
-bandtf822=ax4.fill_between(energy,r82down,r82up,color='g',alpha=0.25,facecolor='g',edgecolor='',zorder=2)
-linetf822,=ax4.plot(energy,r82cen,color='g',alpha=0.3,zorder=2)
+bandtf822=ax4.fill_between(energy,r82down,r82up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
+linetf822,=ax4.plot(energy,r82cen,color='grey',alpha=0.3,zorder=2)
 #ax4.fill_between(energy,r82hdown,r82hup,color='b',alpha=0.25,facecolor='b',edgecolor='',zorder=1)
 #ax4.plot(energy,r82hcen,color='b',alpha=0.3,zorder=1)
 ax4.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
-#ax4.legend([(errbartf821,bandtf821,linetf821),(errbartf822,bandtf822,linetf822)],[r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax4.legend([(errbartf821,bandtf821,linetf821),(errbartf822,bandtf822,linetf822)],[r'fRG with parameterization $T_f$',r'fRG with interpolation $T_f$'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 #plt.axis([5,230,-10000.,1000.])
