@@ -35,8 +35,8 @@ ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
-
-ax1.legend((parapoint,(exppoint,expline),intpoint),(r'Parameterization',r'Experiment',r'Interpolation'),loc=2,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+mpl.rcParams['legend.numpoints'] = 1
+ax1.legend([parapoint,(exppoint,expline),intpoint],[r'Parameterization',r'Experiment',r'Interpolation'],loc=2,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
