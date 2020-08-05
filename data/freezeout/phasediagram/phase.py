@@ -29,15 +29,25 @@ exppoint=ax1.errorbar(expdata[:,2],expdata[:,1],xerr=[expdata[:,6],expdata[:,7]]
 paraline,=ax1.plot(muB, T,label=r'Parameterization')
 parapoint=ax1.scatter(paradata[:,0],paradata[:,1],color='b',label=r'Freeze-out',zorder=2)
 intpoint=ax1.scatter(intdata[:,0],intdata[:,1],color='g',zorder=3)
-ax1.axis([0,600,100,200])
+ax1.axis([0,800,55,200])
 
 ax1.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 mpl.rcParams['legend.numpoints'] = 1
-ax1.legend([(parapoint,paraline),exppoint,intpoint],[r'Parameterization',r'Experiment',r'Interpolation'],loc=2,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
+ax1.legend([(parapoint,paraline),exppoint,intpoint],[r'Parameterization',r'Experiment',r'Interpolation'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
+plt.axes([0.245, 0.212, 0.29, 0.27]) #不用figure的形式则无须用set
+exppoint=plt.errorbar(expdata[:,2],expdata[:,1],xerr=[expdata[:,6],expdata[:,7]],yerr=[expdata[:,4],expdata[:,5]],color='r',marker='s',linestyle='',linewidth=1,markersize=5,fillstyle='full',label=r'Experiment',zorder=1)
+#expline,=plt.plot(expdata[:,2],expdata[:,1],color='r',zorder=1)
+paraline,=plt.plot(muB, T,label=r'Parameterization')
+parapoint=plt.scatter(paradata[:,0],paradata[:,1],color='b',label=r'Freeze-out',zorder=2)
+intpoint=plt.scatter(intdata[:,0],intdata[:,1],color='g',zorder=3)
 
+x=range(150,171,5)
+plt.xticks(fontsize=8)
+plt.yticks(x,fontsize=8)
+plt.axis([0.,200.,150.,170.])
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
 for label in ax1.yaxis.get_ticklabels():
