@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{55}%
+\begin{thebibliography}{58}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -631,28 +631,6 @@
   {http://arxiv.org/abs/1710.09425} {arXiv:1710.09425 [nucl-th]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1710.09425;%%
-\bibitem [{\citenamefont {Fu}\ and\ \citenamefont
-  {Pawlowski}(2015)}]{Fu:2015naa}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.-j.}\ \bibnamefont
-  {Fu}}\ and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Pawlowski}},\ }\href {\doibase 10.1103/PhysRevD.92.116006} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
-  {D92}},\ \bibinfo {pages} {116006} (\bibinfo {year} {2015})},\ \Eprint
-  {http://arxiv.org/abs/1508.06504} {arXiv:1508.06504 [hep-ph]} \BibitemShut
-  {NoStop}%
-%%CITATION = ARXIV:1508.06504;%%
-\bibitem [{\citenamefont {Fu}\ \emph {et~al.}(2019)\citenamefont {Fu},
-  \citenamefont {Pawlowski},\ and\ \citenamefont {Rennecke}}]{Fu:2018swz}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.-j.}\ \bibnamefont
-  {Fu}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Pawlowski}}, \
-  and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Rennecke}},\ }\href
-  {\doibase 10.1103/PhysRevD.100.111501} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo
-  {pages} {111501} (\bibinfo {year} {2019})},\ \Eprint
-  {http://arxiv.org/abs/1809.01594} {arXiv:1809.01594 [hep-ph]} \BibitemShut
-  {NoStop}%
 \bibitem [{\citenamefont {Lo}\ \emph {et~al.}(2013)\citenamefont {Lo},
   \citenamefont {Friman}, \citenamefont {Kaczmarek}, \citenamefont {Redlich},\
   and\ \citenamefont {Sasaki}}]{Lo:2013hla}%
@@ -667,6 +645,45 @@
   (\bibinfo {year} {2013})},\ \Eprint {http://arxiv.org/abs/1307.5958}
   {arXiv:1307.5958 [hep-lat]} \BibitemShut {NoStop}%
 %%CITATION = ARXIV:1307.5958;%%
+\bibitem [{\citenamefont {Pawlowski}(2011)}]{Pawlowski:2010ht}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Pawlowski}},\ }\bibfield  {booktitle} {\emph {\bibinfo {booktitle}
+  {{Proceedings, 9th Conference on Quark Confinement and the Hadron Spectrum:
+  Madrid, Spain, 30 Aug-3 Sep 2010}}},\ }\href {\doibase 10.1063/1.3574945}
+  {\bibfield  {journal} {\bibinfo  {journal} {AIP Conf. Proc.}\ }\textbf
+  {\bibinfo {volume} {1343}},\ \bibinfo {pages} {75} (\bibinfo {year}
+  {2011})},\ \Eprint {http://arxiv.org/abs/1012.5075} {arXiv:1012.5075
+  [hep-ph]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1012.5075;%%
+\bibitem [{\citenamefont {Haas}\ \emph {et~al.}(2013)\citenamefont {Haas},
+  \citenamefont {Stiele}, \citenamefont {Braun}, \citenamefont {Pawlowski},\
+  and\ \citenamefont {Schaffner-Bielich}}]{Haas:2013qwp}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~M.}\ \bibnamefont
+  {Haas}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Stiele}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Braun}}, \bibinfo
+  {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Pawlowski}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Schaffner-Bielich}},\ }\href
+  {\doibase 10.1103/PhysRevD.87.076004} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {D87}},\ \bibinfo {pages}
+  {076004} (\bibinfo {year} {2013})},\ \Eprint {http://arxiv.org/abs/1302.1993}
+  {arXiv:1302.1993 [hep-ph]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1302.1993;%%
+\bibitem [{\citenamefont {Herbst}\ \emph {et~al.}(2014)\citenamefont {Herbst},
+  \citenamefont {Mitter}, \citenamefont {Pawlowski}, \citenamefont {Schaefer},\
+  and\ \citenamefont {Stiele}}]{Herbst:2013ufa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~K.}\ \bibnamefont
+  {Herbst}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Mitter}},
+  \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Pawlowski}}, \bibinfo
+  {author} {\bibfnamefont {B.-J.}\ \bibnamefont {Schaefer}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Stiele}},\ }\href {\doibase
+  10.1016/j.physletb.2014.02.045} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Lett.}\ }\textbf {\bibinfo {volume} {B731}},\ \bibinfo {pages} {248}
+  (\bibinfo {year} {2014})},\ \Eprint {http://arxiv.org/abs/1308.3621}
+  {arXiv:1308.3621 [hep-ph]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1308.3621;%%
 \bibitem [{\citenamefont {Pawlowski}\ and\ \citenamefont
   {Rennecke}(2014)}]{Pawlowski:2014zaa}%
   \BibitemOpen
@@ -678,4 +695,26 @@
   {http://arxiv.org/abs/1403.1179} {arXiv:1403.1179 [hep-ph]} \BibitemShut
   {NoStop}%
 %%CITATION = ARXIV:1403.1179;%%
+\bibitem [{\citenamefont {Fu}\ and\ \citenamefont
+  {Pawlowski}(2015)}]{Fu:2015naa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.-j.}\ \bibnamefont
+  {Fu}}\ and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Pawlowski}},\ }\href {\doibase 10.1103/PhysRevD.92.116006} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+  {D92}},\ \bibinfo {pages} {116006} (\bibinfo {year} {2015})},\ \Eprint
+  {http://arxiv.org/abs/1508.06504} {arXiv:1508.06504 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1508.06504;%%
+\bibitem [{\citenamefont {Rennecke}\ and\ \citenamefont
+  {Schaefer}(2017)}]{Rennecke:2016tkm}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Rennecke}}\ and\ \bibinfo {author} {\bibfnamefont {B.-J.}\ \bibnamefont
+  {Schaefer}},\ }\href {\doibase 10.1103/PhysRevD.96.016009} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume}
+  {D96}},\ \bibinfo {pages} {016009} (\bibinfo {year} {2017})},\ \Eprint
+  {http://arxiv.org/abs/1610.08748} {arXiv:1610.08748 [hep-ph]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1610.08748;%%
 \end{thebibliography}%

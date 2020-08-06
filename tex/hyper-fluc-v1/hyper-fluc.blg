@@ -30,45 +30,45 @@ Warning--missing journal in Pandav:2020uzx
 Warning--missing journal in Vovchenko:2020tsr
 Warning--missing journal in Bluhm:2020mpc
 Warning--missing journal in Isserstedt:2019pgx
-You've used 57 entries,
+You've used 60 entries,
             5847 wiz_defined-function locations,
-            2089 strings with 27169 characters,
-and the built_in function-call counts, 56326 in all, are:
-= -- 3662
-> -- 1346
-< -- 368
-+ -- 433
-- -- 333
-* -- 9141
-:= -- 5504
-add.period$ -- 55
-call.type$ -- 57
-change.case$ -- 221
-chr.to.int$ -- 63
-cite$ -- 64
-duplicate$ -- 5326
-empty$ -- 4194
-format.name$ -- 791
-if$ -- 11041
+            2119 strings with 28089 characters,
+and the built_in function-call counts, 59548 in all, are:
+= -- 3870
+> -- 1429
+< -- 389
++ -- 459
+- -- 353
+* -- 9680
+:= -- 5813
+add.period$ -- 58
+call.type$ -- 60
+change.case$ -- 233
+chr.to.int$ -- 66
+cite$ -- 67
+duplicate$ -- 5627
+empty$ -- 4434
+format.name$ -- 840
+if$ -- 11678
 int.to.chr$ -- 3
-int.to.str$ -- 64
-missing$ -- 667
-newline$ -- 256
-num.names$ -- 165
-pop$ -- 2083
+int.to.str$ -- 67
+missing$ -- 704
+newline$ -- 269
+num.names$ -- 174
+pop$ -- 2192
 preamble$ -- 1
-purify$ -- 275
+purify$ -- 290
 quote$ -- 0
-skip$ -- 1988
+skip$ -- 2099
 stack$ -- 0
-substring$ -- 1434
-swap$ -- 5110
-text.length$ -- 149
+substring$ -- 1509
+swap$ -- 5409
+text.length$ -- 159
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 774
+type$ -- 817
 warning$ -- 8
-while$ -- 166
+while$ -- 175
 width$ -- 0
-write$ -- 574
+write$ -- 606
 (There were 8 warnings)
