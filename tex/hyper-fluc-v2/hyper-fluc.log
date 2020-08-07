@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  6 AUG 2020 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  7 AUG 2020 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -679,9 +679,9 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (12 pages, 679975 bytes).
+Output written on hyper-fluc.pdf (12 pages, 685983 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
+ 1066 PDF objects out of 1200 (max. 8388607)
  726 compressed objects within 8 object streams
  144 named destinations out of 1000 (max. 500000)
  140 words of extra memory for PDF output out of 10000 (max. 10000000)
