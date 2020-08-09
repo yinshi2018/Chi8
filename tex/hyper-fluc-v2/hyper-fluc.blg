@@ -23,52 +23,52 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-Warning--missing journal in Braun:2020ada
-Warning--missing journal in Borsanyi:2020fev
 Warning--missing journal in Adam:2020unf
 Warning--missing journal in Pandav:2020uzx
+Warning--missing journal in Braun:2020ada
+Warning--missing journal in Borsanyi:2020fev
 Warning--missing journal in Vovchenko:2020tsr
 Warning--missing journal in Bluhm:2020mpc
 Warning--missing journal in Isserstedt:2019pgx
-You've used 60 entries,
+You've used 67 entries,
             5847 wiz_defined-function locations,
-            2119 strings with 28089 characters,
-and the built_in function-call counts, 59548 in all, are:
-= -- 3870
-> -- 1429
-< -- 389
-+ -- 459
-- -- 353
-* -- 9680
-:= -- 5813
-add.period$ -- 58
-call.type$ -- 60
-change.case$ -- 233
-chr.to.int$ -- 66
-cite$ -- 67
-duplicate$ -- 5627
-empty$ -- 4434
-format.name$ -- 840
-if$ -- 11678
-int.to.chr$ -- 3
-int.to.str$ -- 67
-missing$ -- 704
-newline$ -- 269
-num.names$ -- 174
-pop$ -- 2192
+            2177 strings with 29642 characters,
+and the built_in function-call counts, 66179 in all, are:
+= -- 4340
+> -- 1560
+< -- 428
++ -- 504
+- -- 383
+* -- 10738
+:= -- 6485
+add.period$ -- 65
+call.type$ -- 67
+change.case$ -- 261
+chr.to.int$ -- 72
+cite$ -- 74
+duplicate$ -- 6258
+empty$ -- 4944
+format.name$ -- 918
+if$ -- 12985
+int.to.chr$ -- 4
+int.to.str$ -- 74
+missing$ -- 782
+newline$ -- 294
+num.names$ -- 195
+pop$ -- 2419
 preamble$ -- 1
-purify$ -- 290
+purify$ -- 325
 quote$ -- 0
-skip$ -- 2099
+skip$ -- 2342
 stack$ -- 0
-substring$ -- 1509
-swap$ -- 5409
-text.length$ -- 159
+substring$ -- 1685
+swap$ -- 6008
+text.length$ -- 171
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 817
+type$ -- 909
 warning$ -- 8
-while$ -- 175
+while$ -- 196
 width$ -- 0
-write$ -- 606
+write$ -- 674
 (There were 8 warnings)
