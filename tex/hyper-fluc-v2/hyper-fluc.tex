@@ -146,6 +146,10 @@ prd,
 \title{Hyper-order baryon number fluctuations at finite temperature and density}
 
 
+
+\affiliation{Key Laboratory of Quark \& Lepton Physics (MOE) and Institute of Particle Physics,
+Central China Normal University, Wuhan 430079, China}
+
 \author{Wei-jie Fu}
 \affiliation{School of Physics, Dalian University of Technology, Dalian, 116024,
   P.R. China}
@@ -180,8 +184,8 @@ Central China Normal University, Wuhan 430079, China}
              %  but any date may be explicitly specified
 
 \begin{abstract}
-We study the generalized susceptibilities from kurtosis which is known as the $\chi^B_4/\chi^B_2$ to the $\chi^B_8/\chi^B_2$. The results are obtained under the finite temperature and baryon density. We give the comparison of our results with the lattice QCD results under the vanishing $\mu_B$. We get the numerical results under the Polyakov-quark-meson (PQM) model with the functional renormalisation group (FRG) approch.
 
+We study the fourth-order baryon number fluctuation $R^{B}_{42}$ and hyper-order ones $R^{B}_{n2}$ ($n=6,8,10$) at finite temperature and density in the low energy effective theory within the functional renormalization group approach. The calculated results are compared with lattice QCD simulations, and a quantitative agreement is observed. Furthermore, based on a well-established set of chemical freeze-out temperature and baryon chemical potential, the dependence of $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$ on the collision energy is obtained, which is compared with recent experimental measurements of the kurtosis and sixth-order cumulants of the net-proton distributions from the STAR collaboration.
 
 \end{abstract}
 %\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
@@ -205,20 +209,11 @@ Lots of effort have been made to study the QCD phase structure at finite tempera
 
 Within the Beam Energy Scan (BES) Program at the Relativistic Heavy Ion Collider (RHIC), significant fluctuation measurements have been performed in Phase I, involving the skewness and kurtosis of the net-proton, net-charge, net-kaon multiplicity distributions \cite{Adamczyk:2013dal,Adamczyk:2014fia,Luo:2015ewa,Adamczyk:2017wsl}, second-order off-diagonal cumulants, i.e., correlations of net-proton, net-charge, net-kaon multiplicity distributions \cite{Adam:2019xmk}. Remarkably, very recently the STAR collaboration has reported the first evidence of a non-monotonic variation in kurtosis $\times$ variance of the net-proton number distribution as a function of the collision energy with $3.0\sigma$ significance for central collisions \cite{Adam:2020unf}. Moreover, the measurement has also been extended to the sixth-order cumulant of net-proton and net-charge distributions, and preliminary results have been obtained \cite{Nonaka:2020crv,Pandav:2020uzx}.
 
+The study of fluctuations of conserved charges, e.g., the baryon number, electric charge and the strangeness, has always been an active area of theoretical research. Significant progress in this direction has been made within the lattice QCD simulations \cite{Bazavov:2012vg,Borsanyi:2013hza,Borsanyi:2014ewa,Bazavov:2017dus,Bazavov:2017tot,Borsanyi:2018grb,Bazavov:2020bjn}, in particular in the regime of high $T$ and low $\mu_B$ in the phase diagram. It is, however, difficult to extend lattice simulations to high-$\mu_B$ region due to the sign problem. Remarkably, recent first-principle QCD calculations at finite temperature and density, within both the functional renormalization group (fRG) and Dyson-Schwinger equations (DSE), indicate that the location of CEP is presumably in a region of $450\,\mathrm{MeV} \lesssim\mu_B\lesssim 650\,\mathrm{MeV}$ \cite{Fischer:2018sdj,Fu:2019hdw,Isserstedt:2019pgx,Gao:2020qsj}. Therefore, it is reasonable to expected that the high-$\mu_B$ region is quite relevant to the physics of CEP. In fact, there is a wealth of research works concerning the fluctuations and correlations of conserved charges, e.g., within the functional continuum field approaches such as DSE \cite{Xin:2014ela,Isserstedt:2019pgx} and fRG \cite{Skokov:2010wb,Skokov:2010uh,Morita:2014fda,Fu:2015naa,Fu:2015amv,Fu:2015naa,Almasi:2017bhq,Fu:2018qsk,Fu:2018swz}, and also in the low energy effective theory \cite{Fu:2009wy,Fu:2010ay,Karsch:2010hm,Schaefer:2011ex,Li:2018ygx}.
 
+In recent years, some of us have investigated skewness and kurtosis of baryon number distributions \cite{Fu:2015naa,Fu:2015amv,Fu:2016tey}, and baryon-strangeness correlations \cite{Fu:2018qsk,Fu:2018swz} in the QCD-improved low energy effective theory (LEFT) within the fRG approach. In the present work, we would like to improve on these previous studies, and more importantly focus on hyper-order baryon number fluctuations. Here we use the terminology ``hyper-order'' to denote orders higher than the fourth one. We will compare our calculations with recent results of lattice simulations in the regime of low $\mu_B$, and also experimental data in \cite{Adam:2020unf,Nonaka:2020crv,Pandav:2020uzx}. Implications of the comparison will be discussed in detail.
 
-
-
-
-
-
-
-
-
-
-
-
-
+This paper is organized as follows: In \sec{sec:FRG} we give a brief introduction about the fRG flows of QCD and low energy effective theory and their mutual relationship. Thermodynamics and the hyper-order baryon number fluctuations are discussed in \sec{sec:hyper-fluc}. In \sec{sec:num}, first of all, we match the scale between QCD and the low energy effective theory, and then, the calculated results are compared with the lattice QCD simulations and experimental measurements. A summary with conclusions is given in \sec{sec:summary}. Moreover, details of glue potential and flow equations are presented in \app{app:gluepot} and \app{app:flowV}, respectively.
 
 
 
@@ -248,7 +243,7 @@ To be specific, the flow equation for QCD, which describes the evolution of its 
   &-\mathrm{Tr}\Big(G_{q\bar q,k}\partial_t R_{q,k}\Big)+\frac{1}{2}\mathrm{Tr}\Big(G_{\phi\phi,k}\partial_t R_{\phi,k}\Big)\,,\label{eq:QCDflow}
 \end{align}
 %
-with $\Phi=(A, c, \bar c, q,\bar q,\phi)$, where $G$'s and $R$'s are the propagators and regulators of different fields, respectively. Note that the scale dependence of these quantities is explicitly indicated with a suffix $k$. The RG time in \Eq{eq:QCDflow} is defined by $t=\ln(k/\Lambda)$, with the initial UV scale $\Lambda$. We are not going to discuss details of the QCD flow in \Eq{eq:QCDflow} here, and interested readers are strongly suggested to refer to, e.g.,  \cite{Braun:2007bx,Braun:2008pi,Braun:2009gm,Mitter:2014wpa,Braun:2014ata,Cyrol:2016tym,Cyrol:2017ewj,Cyrol:2017qkl,Fu:2019hdw,Braun:2020ada} for recent progress in understanding of QCD or Yang-Mills theory in the vacuum and at finite temperature and density within the fRG approach, and also \cite{Berges:2000ew,Pawlowski:2005xe,Schaefer:2006sr,Gies:2006wv,Rosten:2010vm,Braun:2011pp,Pawlowski:2014aha} for QCD related review articles of fRG.
+with $\Phi=(A, c, \bar c, q,\bar q,\phi)$, where $G$'s and $R$'s are the propagators and regulators of different fields, respectively. Note that the scale dependence of these quantities is explicitly indicated with a suffix $k$. The RG time in \Eq{eq:QCDflow} is defined by $t=\ln(k/\Lambda)$, with the initial UV scale $\Lambda$. We are not going to discuss details of the QCD flow in \Eq{eq:QCDflow} here, and interested readers are strongly suggested to refer to, e.g.,  \cite{Braun:2007bx,Braun:2008pi,Braun:2009gm,Mitter:2014wpa,Braun:2014ata,Cyrol:2016tym,Cyrol:2017ewj,Cyrol:2017qkl,Fu:2019hdw,Braun:2020ada} for recent progress in understanding of QCD or Yang-Mills theory in the vacuum and at finite temperature and density within the fRG approach, and also \cite{Berges:2000ew,Pawlowski:2005xe,Schaefer:2006sr,Gies:2006wv,Rosten:2010vm,Braun:2011pp,Pawlowski:2014aha,Dupuis:2020fhh} for QCD related review articles of fRG.
 
 As mentioned above, the transition of the degrees of freedom, from the partonic ones in the perturbative regime of high energy to the hadronic ones in the nonperturbative region of low energy, is realized through the dynamical hadronization in the fRG approach. With the help of the technique of dynamical hadronization, composite operators of resonated channels, e.g., the $\sigma$-$\pi$ channel, i.e., the scalar-pseudoscalar one in the low energy QCD, which are most relevant to the dynamics of the system, are bosonized or Hubbard-Stratonovich transformed successively with the evolution of RG scale. For more details, see, e.g., \cite{Gies:2001nw,Gies:2002hq,Pawlowski:2005xe,Floerchinger:2009uf,Fu:2019hdw}. 
 
@@ -588,7 +583,7 @@ and the relevant result as a function of ${\mu_B}_{_{CF}}$ is shown by the red d
 
 In \Fig{fig:Rm2-sqrtS} we show the dependence of baryon number fluctuations $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$ on the center-of-mass collision energy, which is calculated in the LEFT within the fRG approach with the freeze-out: I and freeze-out: II as shown in \Tab{tab:freeze-out-para}, respectively. The theoretical results are also confronted with experimental measurement of cumulants of the net-proton distributions in the beam energy scan experiments from the STAR collaboration. The kurtosis of the net-proton distributions $R^{p}_{42}$ are measured in Au+Au collisions with centrality 0-5\%, transverse momentum range $0.4< p_T\,(\mathrm{GeV}/c)\,<2.0$, and rapidity $|y|<0.5$, cf. \cite{Adam:2020unf} for more details. Moreover, preliminary results for the six-order cumulant of the net-proton distribution $R^{p}_{62}$ are also presented in the middle plot of \Fig{fig:Rm2-sqrtS}, which are obtained at two values of the collision energy, i.e., $\sqrt{s_{NN}}$=200 GeV and 54.4 GeV with centrality 0-40\% \cite{Nonaka:2020crv,Pandav:2020uzx}. 
 
-As shown in \Fig{fig:Rm2-sqrtS}, the theoretical result of the fourth-order fluctuation calculated in the fRG-LEFT approach is in qualitative agreement with the experimental measurement of the kurtosis of net-proton distributions. In particular, a nonmonotonic behavior in the low collision energy regime, say below $\sim 20$ GeV, is also found in the fRG calculation with both freeze-out lines, which reveals that the strength of the chiral crossover is increased rapidly in this region. Moreover, the nonmonotonic behavior is also observed in the sixth-order and eighth-order baryon number fluctuations as functions of the collision energy. However, it should be note that the errors of both $R^{B}_{42}$ and $R^{B}_{62}$ within the fRG approach, as indicated by the red and gray bands in \Fig{fig:Rm2-sqrtS}, increases significantly in the low energy region, and the situation becomes even worse in the case of $R^{B}_{82}$. The red or gray error bands in \Fig{fig:Rm2-sqrtS} indicate the systematic errors of theoretical calculation in the fRG-LEFT approach, which stem from errors in the scale matching as encoded in the coefficients $c_{_{T}}$ and $c_{\mu}$ in \Eq{eq:rescale}. Comparing the red bands with the gray ones, one finds that errors of the freeze-out temperature lead to significant errors of baryon number fluctuations predicted in the low collision energy regime, and hence a determination of freeze-out temperature with high precision in the region is highly required in the future. It is also of interest to compare theoretical and experimental results for the six-order baryon or proton fluctuations, which is accessible for two values of collision energy, i.e., $\sqrt{s_{NN}}$=200 GeV and 54.4 GeV. One observes that there has been yet a remarkable deviation between the theory and experiment. However, we find that, for the highest collision energy $\sqrt{s_{NN}}$=200 GeV, the value of $R^{B}_{62}$ within the fRG approach is negative though very close to zero, which is qualitatively consistent with the experimental measurement.
+As shown in \Fig{fig:Rm2-sqrtS}, the theoretical result of the fourth-order fluctuation calculated in the fRG-LEFT approach is in qualitative agreement with the experimental measurement of the kurtosis of net-proton distributions. In particular, a nonmonotonic behavior in the low collision energy regime, say below $\sim 20$ GeV, is also found in the fRG calculation with both freeze-out lines, which reveals that the strength of the chiral crossover is increased rapidly in this region. Moreover, the nonmonotonic behavior is also observed in the sixth-order and eighth-order baryon number fluctuations as functions of the collision energy. However, it should be noted that the errors of both $R^{B}_{42}$ and $R^{B}_{62}$ within the fRG approach, as indicated by the red and gray bands in \Fig{fig:Rm2-sqrtS}, increases significantly in the low energy region, and the situation becomes even worse in the case of $R^{B}_{82}$. The red or gray error bands in \Fig{fig:Rm2-sqrtS} indicate the systematic errors of theoretical calculation in the fRG-LEFT approach, which stem from errors in the scale matching as encoded in the coefficients $c_{_{T}}$ and $c_{\mu}$ in \Eq{eq:rescale}. Comparing the red bands with the gray ones, one finds that errors of the freeze-out temperature lead to significant errors of baryon number fluctuations predicted in the low collision energy regime, and hence a determination of freeze-out temperature with high precision in the region is highly required in the future. It is also of interest to compare theoretical and experimental results for the six-order baryon or proton fluctuations, which is accessible for two values of collision energy, i.e., $\sqrt{s_{NN}}$=200 GeV and 54.4 GeV. One observes that there has been yet a remarkable deviation between the theory and experiment. However, we find that, for the highest collision energy $\sqrt{s_{NN}}$=200 GeV, the value of $R^{B}_{62}$ within the fRG approach is negative though very close to zero, which is qualitatively consistent with the experimental measurement.
 
 %As we have discussed above, the overall agreement between the theory and experiment for the fourth-order fluctuations is reasonable and natural, since the experimental data of $R^{p}_{42}$ have been used to fix the freeze-out temperature, except for few values of the collision energy. With the setting-up in hand, one can use the fRG-LEFT approach to predict the dependence of hyper-order fluctuations on the collision energy, as shown in the middle and bottom panels of \Fig{fig:Rm2-sqrtS}. A crude estimate for the systematic error of theoretical calculation is indicated by the red bands in \Fig{fig:Rm2-sqrtS}, which directly results from errors of the scale matching coefficients $c_{_{T}}$ and $c_{\mu}$ in \Eq{eq:rescale}. We find that, with the decrease of collision energy, $R^{B}_{62}$ in LEFT goes down crossing the zero line, and finally bumps up at the last collision energy. It should, however, be noticed that the relevant error for $R^{B}_{62}$ increases rapidly when the collision energy is below $\sim 20$ GeV. One observes that 
 
@@ -598,24 +593,18 @@ As shown in \Fig{fig:Rm2-sqrtS}, the theoretical result of the fourth-order fluc
 %\end{align}
 %From now on unless explicitly specified, values of temperature in the following, e.g., in legends of figures, are always referred to $T$, and the relevant $T_{_{LEFT}}$ in the LEFT could be inferred from Eqs. (\ref{eq:rescale}) and (\ref{eq:cT}).
 
- 
-
-
-
-
-
-
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{summary and outlook}
+\section{summary and conclusions}
 \label{sec:summary}
 
+In this work we have studied the baryon number fluctuations in the LEFT within the fRG approach, putting emphasis on the hyper-order ones. The order of baryon number fluctuations has been computed up to the $10^{\mathrm{th}}$ order for the first time with fRG. In our calculations, quantum, thermal and density fluctuations are successively encoded through the evolution of flow equations. Moreover, nontrivial dispersion relation for the quark and meson fields, momentum scale dependence of the quark-meson scattering, and fluctuations of Polyakov loop are also taken into account in this work.
+
+The scale between the LEFT and QCD is matched via a comparison of the temperature dependence of $R^{B}_{42}=\chi^{B}_{4}/\chi^{B}_{2}$ at vanishing $\mu_B$ between the LEFT and lattice results, as well as a comparison of the curvature of phase boundary. Accordingly, it allows us to employ the LEFT within the fRG approach to make predictions for the $\mu_B$-dependence of $R^{B}_{42}$, and the hyper-order baryon number fluctuations at finite temperature and density. In turn, relevant predictions of LEFT are compared with results of lattice QCD simulations. We find that the $T$- and $\mu_B$-dependence of hyper-order baryon number fluctuations, $\mu_B$-dependence of $R^{B}_{42}$ obtained in the fRG-LEFT approach, are in quantitative accordance with the lattice results by the Wuppertal-Budapest collaboration within errors. There is still a sizable quantitative deviation in comparison to relevant results by the HotQCD collaboration, but a qualitative consistency is observed.
+
+Furthermore, by employing the commonly used chemical freeze-out temperature and baryon chemical potential in \cite{Andronic:2017pug}, we obtain baryon number fluctuations $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$ as functions of the collision energy, which are compared with experimental measurements of the kurtosis and sixth-order cumulants of the net-proton distributions from the STAR collaboration. Remarkably, the dependence of the fourth-order baryon number fluctuation $R^{B}_{42}$ on the collision energy obtained in the fRG-LEFT approach, is qualitative consistent with the experimental measured dependence of the kurtosis of net-proton distributions on the collision energy for central collisions. And a nonmonotonic behavior of $R^{B}_{42}$ as a function of $\sqrt{s_{\mathrm{NN}}}$ is found in the fRG calculation. It should, however, be cautioned that errors of $R^{B}_{42}$ and $R^{B}_{62}$ increase significantly in the low collision energy region. And when the order of baryon number fluctuations is increased up to the $8^{\mathrm{th}}$, the theoretical calculation with current setup is losing its capability of making predictions, as a consequence of the significant errors of $R^{B}_{82}$ at most values of collision energy. Apparently, in order to improve on the computation in this work in the future, and decrease the errors of calculated baryon number fluctuations, especially in the low collision energy regime, on the one hand, the systematic errors of theoretical calculations should be reduced, and on the other hand, chemical freeze-out data with high precision are highly required.
 
 
 
@@ -625,6 +614,8 @@ As shown in \Fig{fig:Rm2-sqrtS}, the theoretical result of the fourth-order fluc
 \begin{acknowledgments}
 
 The work was supported by the National Natural Science Foundation of China under Contracts Nos. 11775041.
+
+......
 
 \end{acknowledgments}
 
