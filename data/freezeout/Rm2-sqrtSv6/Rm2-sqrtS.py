@@ -6272,9 +6272,9 @@ r82mub399cen=spline(T/ctcen,r82mub399cen,xsame)
 dif399cen=abs(r42mub399cen-1.766972)
 dif399up=abs(max42399-1.766972)
 dif399down=abs(min42399-1.766972)
-min399cen_index=135
-min399up_index=135
-min399down_index=135
+min399cen_index=144
+min399up_index=144
+min399down_index=144
 print(min399cen_index)
 #print(min399up_index)
 #print(min399down_index)
@@ -6465,7 +6465,7 @@ ax4.legend([(errbartf821,bandtf821,linetf821),(errbartf822,bandtf822,linetf822)]
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 #plt.axis([5,230,-10000.,1000.])
-plt.axis([5,230,-2000,1000])
+plt.axis([5,230,-2000,2000])
 #plt.yticks([-10000,-9000,-8000,-7000,-6000,-5000,-4000,-3000,-2000,-1000,-900,-800,-700,-600,-500,-400,-300,-200,-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,-1,0,1,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000])
 ax4.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
 ax4.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],rotation=60,fontsize=7)
