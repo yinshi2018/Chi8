@@ -11,6 +11,7 @@ from scipy.interpolate import spline
 
 
 
+
 mpl.style.use('classic')
 
 # Data for plotting
@@ -100,7 +101,7 @@ for num in range(0,100):
 
 energy=[200.,62.4,54.4,39.,27.,19.6,14.5,11.5,7.7]
 #############################################################################################################################################
-xsame=np.linspace(0.,299.,300)
+xsame=np.linspace(1.,300.,300)
 deltat=0.05
 ctcen=1.247
 ctup=1.259
@@ -116,8 +117,8 @@ Tcen=[int(205/ctcen)-1,int(205/ctcen)-1,int(205/ctcen)-1,int(204/ctcen)-1,int(20
 #Tcen=[int(191/ctcen),int(190/ctcen),int(190/ctcen),int(189/ctcen),int(187/ctcen),int(185/ctcen),int(180/ctcen),int(174/ctcen),int(159/ctcen)]
 
 print(xsame)
-print(Tcup)
-print(T)
+#print(Tcup)
+#print(T)
 
 ct=np.linspace(ctdown,ctup,10)
 chi2mub22cen=np.loadtxt(r'./mub22/cmucen/final/buffer/chi2.dat')
@@ -4717,6 +4718,8 @@ for num in range(0,100):
     T406hdown[num]=Tcdown[8]
 ####################################################################################################
 #STAR
+xsame=np.linspace(1.,300.,2991)
+print(xsame[1591])
 T27up=np.zeros(100)
 T27down=np.zeros(100)
 T69up=np.zeros(100)
@@ -4760,10 +4763,10 @@ r32mub27down=chi3mub27down/chi2mub27down
 r42mub27down=chi4mub27down/chi2mub27down
 r62mub27down=chi6mub27down/chi2mub27down
 r82mub27down=chi8mub27down/chi2mub27down
-r3227=np.zeros((300,20))
-r4227=np.zeros((300,20))
-r6227=np.zeros((300,20))
-r8227=np.zeros((300,20))
+r3227=np.zeros((2991,20))
+r4227=np.zeros((2991,20))
+r6227=np.zeros((2991,20))
+r8227=np.zeros((2991,20))
 for t in range(0,20):
     if t<10:
        r3227[:,t]=spline(T/ct[t],r32mub27up,xsame)
@@ -4837,9 +4840,9 @@ r62mub27cen=spline(T/ctcen,r62mub27cen,xsame)
 r82mub27cen=spline(T/ctcen,r82mub27cen,xsame)
 
 
-dif6227minc=np.zeros(300)
-dif6227minu=np.zeros(300)
-dif6227mind=np.zeros(300)
+dif6227minc=np.zeros(2991)
+dif6227minu=np.zeros(2991)
+dif6227mind=np.zeros(2991)
 dif6227minc=abs(r62mub27cen+0.5)
 dif6227minu=abs(max6227+0.5)
 dif6227mind=abs(min6227+0.5)
@@ -4860,9 +4863,10 @@ print(errd)
 dif27cen=abs(r42mub27cen-0.900669)
 dif27up=abs(max4222-0.900669)
 dif27down=abs(min4222-0.900669)
-min27cen_index=168
-min27up_index=168
-min27down_index=168
+xsame=xsame.tolist()
+min27cen_index=xsame.index(164.3)
+min27up_index=xsame.index(164.3+5.3)
+min27down_index=xsame.index(164.3-5.3)
 
 print(min27cen_index)
 #print(min22up_index)
@@ -4943,10 +4947,10 @@ r32mub69down=chi3mub69down/chi2mub69down
 r42mub69down=chi4mub69down/chi2mub69down
 r62mub69down=chi6mub69down/chi2mub69down
 r82mub69down=chi8mub69down/chi2mub69down
-r3269=np.zeros((300,20))
-r4269=np.zeros((300,20))
-r6269=np.zeros((300,20))
-r8269=np.zeros((300,20))
+r3269=np.zeros((2991,20))
+r4269=np.zeros((2991,20))
+r6269=np.zeros((2991,20))
+r8269=np.zeros((2991,20))
 for t in range(0,20):
     if t<10:
        r3269[:,t]=spline(T/ct[t],r32mub69up,xsame)
@@ -5017,9 +5021,9 @@ r82mub69cen=spline(T/ctcen,r82mub69cen,xsame)
 dif69cen=abs(r42mub69cen-0.792955)
 dif69up=abs(max4269-0.792955)
 dif69down=abs(min4269-0.792955)
-min69cen_index=164
-min69up_index=164
-min69down_index=164
+min69cen_index=xsame.index(160.3)
+min69up_index=xsame.index(160.3+4.9)
+min69down_index=xsame.index(160.3-4.9)
 print(min69cen_index)
 #print(min69up_index)
 #print(min69down_index)
@@ -5095,10 +5099,10 @@ r32mub104down=chi3mub104down/chi2mub104down
 r42mub104down=chi4mub104down/chi2mub104down
 r62mub104down=chi6mub104down/chi2mub104down
 r82mub104down=chi8mub104down/chi2mub104down
-r32104=np.zeros((300,20))
-r42104=np.zeros((300,20))
-r62104=np.zeros((300,20))
-r82104=np.zeros((300,20))
+r32104=np.zeros((2991,20))
+r42104=np.zeros((2991,20))
+r62104=np.zeros((2991,20))
+r82104=np.zeros((2991,20))
 for t in range(0,20):
     if t<10:
        r32104[:,t]=spline(T/ct[t],r32mub104up,xsame)
@@ -5169,9 +5173,9 @@ r82mub104cen=spline(T/ctcen,r82mub104cen,xsame)
 dif104cen=abs(r42mub104cen-0.739693)
 dif104up=abs(max42104-0.739693)
 dif104down=abs(min42104-0.739693)
-min104cen_index=160
-min104up_index=160
-min104down_index=160
+min104cen_index=xsame.index(156.4)
+min104up_index=xsame.index(156.4+5.4)
+min104down_index=xsame.index(156.4-5.4)
 print(min104cen_index)
 #print(min104up_index)
 #print(min104down_index)
@@ -5247,10 +5251,10 @@ r32mub151down=chi3mub151down/chi2mub151down
 r42mub151down=chi4mub151down/chi2mub151down
 r62mub151down=chi6mub151down/chi2mub151down
 r82mub151down=chi8mub151down/chi2mub151down
-r32151=np.zeros((300,20))
-r42151=np.zeros((300,20))
-r62151=np.zeros((300,20))
-r82151=np.zeros((300,20))
+r32151=np.zeros((2991,20))
+r42151=np.zeros((2991,20))
+r62151=np.zeros((2991,20))
+r82151=np.zeros((2991,20))
 for t in range(0,20):
     if t<10:
        r32151[:,t]=spline(T/ct[t],r32mub151up,xsame)
@@ -5321,9 +5325,9 @@ r82mub151cen=spline(T/ctcen,r82mub151cen,xsame)
 dif151cen=abs(r42mub151cen-0.196254)
 dif151up=abs(max42151-0.196254)
 dif151down=abs(min42151-0.196254)
-min151cen_index=160
-min151up_index=160
-min151down_index=160
+min151cen_index=xsame.index(155.0)
+min151up_index=1591
+min151down_index=xsame.index(149.9)
 print(min151cen_index)
 #print(min151up_index)
 #print(min151down_index)
@@ -5471,10 +5475,10 @@ r32mub195down4=chi3mub195down4/chi2mub195down4
 r42mub195down4=chi4mub195down4/chi2mub195down4
 r62mub195down4=chi6mub195down4/chi2mub195down4
 r82mub195down4=chi8mub195down4/chi2mub195down4
-r32195=np.zeros((300,100))
-r42195=np.zeros((300,100))
-r62195=np.zeros((300,100))
-r82195=np.zeros((300,100))
+r32195=np.zeros((2991,100))
+r42195=np.zeros((2991,100))
+r62195=np.zeros((2991,100))
+r82195=np.zeros((2991,100))
 for t in range(0,100):
     if t<10:
        r32195[:,t]=spline(T/ct[t],r32mub195up,xsame)
@@ -5638,9 +5642,9 @@ r82mub195cen=spline(T/ctcen,r82mub195cen,xsame)
 dif195cen=abs(r42mub195cen-0.140553)
 dif195up=abs(max42195-0.140553)
 dif195down=abs(min42195-0.140553)
-min195cen_index=158
-min195up_index=158
-min195down_index=158
+min195cen_index=xsame.index(153.9)
+min195up_index=1581
+min195down_index=xsame.index(153.9-5.2)
 print(min195cen_index)
 #print(min195up_index)
 #print(min195down_index)
@@ -5788,10 +5792,10 @@ r32mub292down4=chi3mub292down4/chi2mub292down4
 r42mub292down4=chi4mub292down4/chi2mub292down4
 r62mub292down4=chi6mub292down4/chi2mub292down4
 r82mub292down4=chi8mub292down4/chi2mub292down4
-r32292=np.zeros((300,100))
-r42292=np.zeros((300,100))
-r62292=np.zeros((300,100))
-r82292=np.zeros((300,100))
+r32292=np.zeros((2991,100))
+r42292=np.zeros((2991,100))
+r62292=np.zeros((2991,100))
+r82292=np.zeros((2991,100))
 for t in range(0,100):
     if t<10:
        r32292[:,t]=spline(T/ct[t],r32mub292up,xsame)
@@ -5955,9 +5959,9 @@ r82mub292cen=spline(T/ctcen,r82mub292cen,xsame)
 dif292cen=abs(r42mub292cen-0.695796)
 dif292up=abs(max42292-0.695796)
 dif292down=abs(min42292-0.695796)
-min292cen_index=151
-min292up_index=151
-min292down_index=151
+min292cen_index=xsame.index(149.4)
+min292up_index=1536
+min292down_index=xsame.index(149.4-5.2)
 print(min292cen_index)
 #print(min292up_index)
 #print(min292down_index)
@@ -6105,10 +6109,10 @@ r32mub399down4=chi3mub399down4/chi2mub399down4
 r42mub399down4=chi4mub399down4/chi2mub399down4
 r62mub399down4=chi6mub399down4/chi2mub399down4
 r82mub399down4=chi8mub399down4/chi2mub399down4
-r32399=np.zeros((300,100))
-r42399=np.zeros((300,100))
-r62399=np.zeros((300,100))
-r82399=np.zeros((300,100))
+r32399=np.zeros((2991,100))
+r42399=np.zeros((2991,100))
+r62399=np.zeros((2991,100))
+r82399=np.zeros((2991,100))
 for t in range(0,100):
     if t<10:
        r32399[:,t]=spline(T/ct[t],r32mub399up,xsame)
@@ -6272,9 +6276,9 @@ r82mub399cen=spline(T/ctcen,r82mub399cen,xsame)
 dif399cen=abs(r42mub399cen-1.766972)
 dif399up=abs(max42399-1.766972)
 dif399down=abs(min42399-1.766972)
-min399cen_index=144
-min399up_index=144
-min399down_index=144
+min399cen_index=xsame.index(144.3)
+min399up_index=1481
+min399down_index=xsame.index(144.3-4.8)
 print(min399cen_index)
 #print(min399up_index)
 #print(min399down_index)
@@ -6397,14 +6401,14 @@ for num in range(0,100):
 STARenergy=[200.,62.4,39.,27.,19.6,11.5,7.7]
 ####################################################################################################
 ax2=fig.add_subplot(312)
-point62cen1=ax2.errorbar(STARenergy,STARr62cen,yerr=[STARr62errdown,STARr62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-band62cen1=ax2.fill_between(STARenergy,STARr62down,STARr62up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-line62cen1,=ax2.plot(STARenergy,STARr62cen,color='r',alpha=0.3,zorder=2)
+point62cen1=ax2.errorbar(STARenergy,STARr62cen,yerr=[STARr62errdown,STARr62errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+band62cen1=ax2.fill_between(STARenergy,STARr62down,STARr62up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=1)
+line62cen1,=ax2.plot(STARenergy,STARr62cen,color='r',alpha=0.3,zorder=1)
 point62cen2=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='grey',marker='s',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 band62cen2=ax2.fill_between(energy,r62down,r62up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
 line62cen2,=ax2.plot(energy,r62cen,color='grey',alpha=0.3,zorder=2)
 exp=ax2.errorbar(energyrhic,value62,yerr=erro62,color='b',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
-ax2.legend(((point62cen1,band62cen1,line62cen1),(point62cen2,band62cen2,line62cen2),exp),(r'fRG-LEFT freezeout: I',r'fRG-LEFT freezeout: II',r'STAR preliminary'),loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax2.legend(((point62cen1,band62cen1,line62cen1),(point62cen2,band62cen2,line62cen2),exp),(r'fRG-LEFT freezeout: STAR',r'fRG-LEFT freezeout: Andronic et al.',r'STAR preliminary'),loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 ax2.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
 plt.axis([5.,230.,-100.,100.])
@@ -6422,9 +6426,9 @@ for label in ax2.yaxis.get_ticklabels():
 
 
 ax3=fig.add_subplot(311)
-errbartf421=ax3.errorbar(STARenergy,STARr42cen,yerr=[STARr42errdown,STARr42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-bandtf421=ax3.fill_between(STARenergy,STARr42down,STARr42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-linetf421,=ax3.plot(STARenergy,STARr42cen,color='r',alpha=0.3,zorder=2)
+errbartf421=ax3.errorbar(STARenergy,STARr42cen,yerr=[STARr42errdown,STARr42errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+bandtf421=ax3.fill_between(STARenergy,STARr42down,STARr42up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=1)
+linetf421,=ax3.plot(STARenergy,STARr42cen,color='r',alpha=0.3,zorder=1)
 errbartf422=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='grey',marker='s',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 bandtf422=ax3.fill_between(energy,r42down,r42up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
 linetf422,=ax3.plot(energy,r42cen,color='grey',alpha=0.3,zorder=2)
@@ -6432,7 +6436,7 @@ linetf422,=ax3.plot(energy,r42cen,color='grey',alpha=0.3,zorder=2)
 exp=ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 #ax3.errorbar(energy,kurtosis[:,0],color='red')
 ax3.plot(blackline,r42line,dashes=[4,2],color='m',linewidth='1')
-ax3.legend([(errbartf421,bandtf421,linetf421),(errbartf422,bandtf422,linetf422),exp],[r'fRG-LEFT freezeout: I',r'fRG-LEFT freezeout: II',r'STAR data'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax3.legend([(errbartf421,bandtf421,linetf421),(errbartf422,bandtf422,linetf422),exp],[r'fRG-LEFT freezeout: STAR',r'fRG-LEFT freezeout: Andronic et al.',r'STAR data'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax3.legend((exp),(r'STAR data'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
 plt.axis([5,230,-0.5,2.8])
@@ -6452,16 +6456,16 @@ for label in ax3.yaxis.get_ticklabels():
 
 
 ax4=fig.add_subplot(313)
-errbartf821=ax4.errorbar(STARenergy,STARr82cen,yerr=[STARr82errdown,STARr82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
-bandtf821=ax4.fill_between(STARenergy,STARr82down,STARr82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=2)
-linetf821,=ax4.plot(STARenergy,STARr82cen,color='r',alpha=0.3,zorder=2)
+errbartf821=ax4.errorbar(STARenergy,STARr82cen,yerr=[STARr82errdown,STARr82errup],color='r',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
+bandtf821=ax4.fill_between(STARenergy,STARr82down,STARr82up,color='r',alpha=0.25,facecolor='r',edgecolor='',zorder=1)
+linetf821,=ax4.plot(STARenergy,STARr82cen,color='r',alpha=0.3,zorder=1)
 
 errbartf822=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='grey',marker='s',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 bandtf822=ax4.fill_between(energy,r82down,r82up,color='grey',alpha=0.25,facecolor='grey',edgecolor='',zorder=2)
 linetf822,=ax4.plot(energy,r82cen,color='grey',alpha=0.3,zorder=2)
 
 ax4.plot(blackline,r62line,dashes=[4,2],color='m',linewidth='1')
-ax4.legend([(errbartf821,bandtf821,linetf821),(errbartf822,bandtf822,linetf822)],[r'fRG-LEFT freezeout: I',r'fRG-LEFT freezeout: II'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax4.legend([(errbartf821,bandtf821,linetf821),(errbartf822,bandtf822,linetf822)],[r'fRG-LEFT freezeout: STAR',r'fRG-LEFT freezeout: Andronic et al.'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax4.set_xscale('symlog')
 ax4.set_yscale('symlog')
 #plt.axis([5,230,-10000.,1000.])
