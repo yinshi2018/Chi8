@@ -176,7 +176,7 @@ ax1.axis([120,230,0,1.2])
 ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
-ax1.legend(((band_FRG,line_FRG),(band_HotQCD,line_HotQCD),band_HotQCD17,points_WB),(r'fRG',r'HotQCD (2020)',r'HotQCD (2017)',r'WB'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG,line_FRG),(band_HotQCD,line_HotQCD),band_HotQCD17,points_WB),(r'fRG-LEFT',r'HotQCD (2020)',r'HotQCD (2017)',r'WB'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 
 for label in ax1.xaxis.get_ticklabels():

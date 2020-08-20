@@ -196,7 +196,7 @@ ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG full $T=155$ MeV',r'fRG full $T=160$ MeV',r'fRG expansion $T=155$ MeV',r'fRG expansion $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax1.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
