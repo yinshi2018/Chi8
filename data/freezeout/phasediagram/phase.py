@@ -12,6 +12,9 @@ from scipy.interpolate import spline
 mpl.style.use('classic')
 #t = np.linspace(50, 160, 100)
 muB = np.linspace(1, 800, 100)
+muBstar=np.linspace(1,800,160)
+sevenpointstar=np.loadtxt('./sevenpointfitphase.dat')
+fourpointstar=np.loadtxt('./fourpointfitphase.dat')
 # print(x, y)
 T=np.zeros(100)
 #muB= np.meshgrid(mub)
@@ -29,6 +32,8 @@ exppoint=ax1.errorbar(expdata[:,2],expdata[:,1],xerr=[expdata[:,6],expdata[:,7]]
 starpoint=ax1.errorbar(stardata[:,1],stardata[:,3],xerr=[stardata[:,2],stardata[:,2]],yerr=[stardata[:,4],stardata[:,4]],color='r',ecolor='r',marker='o',linestyle='',linewidth=1.,markersize=7,alpha=0.5,fillstyle='full',label=r'STAR',zorder=1)
 
 paraline,=ax1.plot(muB,T,dashes=[4,2],color='b',alpha=0.5,label=r'Parameterization')
+star7,=ax1.plot(muBstar,sevenpointstar,dashes=[4,2],color='m',alpha=0.5,label=r'STAR 7 point')
+star4,=ax1.plot(muBstar,fourpointstar,dashes=[4,2],color='g',alpha=0.5,label=r'STAR 4 point')
 #parapoint=ax1.scatter(paradata[:,0],paradata[:,1],color='r',marker='o',alpha=0.5,label=r'Freeze-out',zorder=2)
 intpoint=ax1.scatter(intdata[:,0],intdata[:,1],color='k',marker='s',alpha=0.3,zorder=3)
 ax1.axis([0,800,55,200])
@@ -38,12 +43,14 @@ ax1.set_ylabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 mpl.rcParams['legend.numpoints'] = 1
-ax1.legend([(paraline,exppoint),starpoint,intpoint],[r'Andronic et al.',r'STAR',r'freezeout: Andronic et al.'],loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
+ax1.legend([(paraline,exppoint),starpoint,intpoint,star7,star4],[r'Andronic et al.',r'STAR',r'freezeout: Andronic et al.',r'STAR 7 points fitting',r'STAR 4 points fitting'],loc=1,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
 plt.axes([0.245, 0.212, 0.29, 0.27]) #不用figure的形式则无须用set
 exppoint=plt.errorbar(expdata[:,2],expdata[:,1],xerr=[expdata[:,6],expdata[:,7]],yerr=[expdata[:,4],expdata[:,5]],color='b',ecolor='b',marker='p',linestyle='',linewidth=1.,markersize=7,alpha=0.5,fillstyle='full',label=r'Experiment',zorder=1)
 starpoint=plt.errorbar(stardata[:,1],stardata[:,3],xerr=[stardata[:,2],stardata[:,2]],yerr=[stardata[:,4],stardata[:,4]],color='r',ecolor='r',marker='o',linestyle='',linewidth=1.,markersize=7,alpha=0.5,fillstyle='full',label=r'STAR',zorder=1)
 #expline,=plt.plot(expdata[:,2],expdata[:,1],color='r',zorder=1)
 paraline,=plt.plot(muB,T,dashes=[4,2],color='b',alpha=0.5,label=r'Parameterization')
+star7,=plt.plot(muBstar,sevenpointstar,dashes=[4,2],color='m',alpha=0.5,label=r'STAR 7 point')
+star4,=plt.plot(muBstar,fourpointstar,dashes=[4,2],color='g',alpha=0.5,label=r'STAR 4 point')
 #parapoint=plt.scatter(paradata[:,0],paradata[:,1],color='r',marker='o',alpha=0.5,label=r'Freeze-out',zorder=2)
 intpoint=plt.scatter(intdata[:,0],intdata[:,1],color='k',marker='s',alpha=0.3,zorder=3)
 
