@@ -54,11 +54,11 @@ star4,=plt.plot(muBstar,fourpointstar,dashes=[1,0.5],color='g',alpha=0.5,label=r
 #parapoint=plt.scatter(paradata[:,0],paradata[:,1],color='r',marker='o',alpha=0.5,label=r'Freeze-out',zorder=2)
 intpoint=plt.scatter(intdata[:,0],intdata[:,1],color='k',marker='s',alpha=0.3,zorder=3)
 
-y=range(140,171,5)
+y=range(130,171,10)
 x=range(0,401,100)
 plt.xticks(x,fontsize=8)
 plt.yticks(y,fontsize=8)
-plt.axis([0.,410.,140.,170.])
+plt.axis([0.,450.,130.,170.])
 #plt.axis([0.,450.,120.,170.])
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)
