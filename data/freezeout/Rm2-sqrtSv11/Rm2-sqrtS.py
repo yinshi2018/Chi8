@@ -4741,7 +4741,7 @@ for i in range(1,100):
 #fig=plt.figure(figsize=(4.5, 8.))
 #fig=plt.figure()
 ax2=fig.add_subplot(312)
-point62cen1=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
+point62cen1=ax2.errorbar(energy,r62cen,yerr=[r62errdown,r62errup],color='g',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
 #point62h=ax2.errorbar(energy,r62hcen,yerr=[r62errhdown,r62errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 #band62cen1=ax2.fill_between(energy,r62down,r62up,color='m',alpha=0.25,facecolor='m',edgecolor='',zorder=2)
 line62cen1,=ax2.plot(energy,r62cen,color='g',alpha=0.3,zorder=2)
@@ -4769,7 +4769,7 @@ for label in ax2.yaxis.get_ticklabels():
 
 
 ax3=fig.add_subplot(311)
-errbartf421=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
+errbartf421=ax3.errorbar(energy,r42cen,yerr=[r42errdown,r42errup],color='g',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
 #ax3.errorbar(energy,r42hcen,yerr=[r42errhdown,r42errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 #bandtf421=ax3.fill_between(energy,r42down,r42up,color='m',alpha=0.25,facecolor='m',edgecolor='',zorder=2)
 linetf421,=ax3.plot(energy,r42cen,color='g',alpha=0.3,zorder=2)
@@ -4797,7 +4797,7 @@ for label in ax3.yaxis.get_ticklabels():
 
 
 ax4=fig.add_subplot(313)
-errbartf821=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
+errbartf821=ax4.errorbar(energy,r82cen,yerr=[r82errdown,r82errup],color='g',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,capsize=1,elinewidth=3,zorder=2)
 #ax4.errorbar(energy,r82cen,yerr=[r82errup,r82errdown],color='g',marker='o',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=2)
 #ax4.errorbar(energy,r82hcen,yerr=[r82errhdown,r82errhup],color='b',marker='^',linestyle='',linewidth=1,markersize=5,fillstyle='full',alpha=0.5,zorder=1)
 #bandtf821=ax4.fill_between(energy,r82down,r82up,color='m',alpha=0.25,facecolor='m',edgecolor='',zorder=2)

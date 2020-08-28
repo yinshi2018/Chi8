@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  12 AUG 2020 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  28 AUG 2020 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -559,14 +559,14 @@ PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/R42R62expansion-mu
 BoT.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
->] <./figures/phasediagram.pdf, id=574, 325.215pt x 252.945pt>
+>] <./figures/phasediagram.pdf, id=594, 325.215pt x 252.945pt>
 File: ./figures/phasediagram.pdf Graphic file (type pdf)
 
 <use ./figures/phasediagram.pdf>
 Package pdftex.def Info: ./figures/phasediagram.pdf used on input line 538.
 (pdftex.def)             Requested size: 244.79782pt x 190.40302pt.
 
-<./figures/Rm2-sqrtS.pdf, id=579, 325.215pt x 578.16pt>
+<./figures/Rm2-sqrtS.pdf, id=599, 325.215pt x 578.16pt>
 File: ./figures/Rm2-sqrtS.pdf Graphic file (type pdf)
 
 <use ./figures/Rm2-sqrtS.pdf>
@@ -699,9 +699,9 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (14 pages, 724763 bytes).
+Output written on hyper-fluc.pdf (14 pages, 742931 bytes).
 PDF statistics:
- 1287 PDF objects out of 1440 (max. 8388607)
+ 1335 PDF objects out of 1440 (max. 8388607)
  891 compressed objects within 9 object streams
  172 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
