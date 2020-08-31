@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  28 AUG 2020 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  31 AUG 2020 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -566,7 +566,7 @@ File: ./figures/phasediagram.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figures/phasediagram.pdf used on input line 538.
 (pdftex.def)             Requested size: 244.79782pt x 190.40302pt.
 
-<./figures/Rm2-sqrtS.pdf, id=599, 325.215pt x 578.16pt>
+<./figures/Rm2-sqrtS.pdf, id=603, 325.215pt x 578.16pt>
 File: ./figures/Rm2-sqrtS.pdf Graphic file (type pdf)
 
 <use ./figures/Rm2-sqrtS.pdf>
@@ -586,13 +586,13 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasediagram.pdf):
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 557.
 
-[9 <./figures/Rm2-sqrtS.pdf>]
-Underfull \hbox (badness 1308) in paragraph at lines 616--617
+[9 <./figures/Rm2-sqrtS.pdf>] [10]
+Underfull \hbox (badness 1308) in paragraph at lines 638--639
 []\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
  []
 
-[10]
-Underfull \hbox (badness 1242) in paragraph at lines 660--664
+
+Underfull \hbox (badness 1242) in paragraph at lines 682--686
 \OT1/cmr/m/n/10 Note that the parametriza-tion of glue po-ten-tial in
  []
 
@@ -635,7 +635,7 @@ Underfull \hbox (badness 1675) in paragraph at lines 630--637
 m/n/9 , 2831 (2007)[],
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 663--669
  []\OT1/cmr/m/n/9 O. J. Ros-ten, []Phys. Rept. \OT1/cmr/bx/n/9 511\OT1/cmr/m/n/
 9 , 177 (2012)[],
@@ -646,7 +646,7 @@ Underfull \hbox (badness 2277) in paragraph at lines 700--704
  []\OT1/cmr/m/n/9 N. Dupuis, L. Canet, A. Eich-horn, W. Met-zner,
  []
 
-[13]
+
 Underfull \hbox (badness 1137) in paragraph at lines 925--931
  []\OT1/cmr/m/n/9 P. M. Lo, B. Friman, O. Kacz-marek, K. Redlich,
  []
@@ -658,10 +658,10 @@ Underfull \hbox (badness 3635) in paragraph at lines 925--931
  []
 
 ) [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 821.
  (./hyper-fluc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 821.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 821.
 Package rerunfilecheck Info: File `hyper-fluc.out' has not changed.
 (rerunfilecheck)             Checksum: 8752A1B28A6AC3FB2D8915C573B1CA0B;988.
 
@@ -670,13 +670,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9827 strings out of 493014
- 141307 string characters out of 6133352
- 311309 words of memory out of 5000000
- 13047 multiletter control sequences out of 15000+600000
- 15221 words of font info for 58 fonts, out of 8000000 for 9000
+ 9826 strings out of 493014
+ 141294 string characters out of 6133352
+ 325418 words of memory out of 5000000
+ 13046 multiletter control sequences out of 15000+600000
+ 15567 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,36p,2093b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,36p,1927b,650s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
@@ -697,12 +697,13 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (14 pages, 742931 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on hyper-fluc.pdf (14 pages, 751588 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
- 891 compressed objects within 9 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 1360 PDF objects out of 1440 (max. 8388607)
+ 910 compressed objects within 10 object streams
+ 171 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
