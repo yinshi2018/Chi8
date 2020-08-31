@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  31 AUG 2020 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.6)  31 AUG 2020 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,12 +483,12 @@ LaTeX Info: Redefining \nameref on input line 142.
 Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 142.
 \openout3 = `hyper-flucNotes.bib'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 188.
+LaTeX Font Info:    Try loading font information for U+msa on input line 182.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 188.
+LaTeX Font Info:    Try loading font information for U+msb on input line 182.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -497,17 +497,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: ./figures/QCD_equation.pdf Graphic file (type pdf)
 
 <use ./figures/QCD_equation.pdf>
-Package pdftex.def Info: ./figures/QCD_equation.pdf used on input line 230.
+Package pdftex.def Info: ./figures/QCD_equation.pdf used on input line 224.
 (pdftex.def)             Requested size: 229.49844pt x 41.31046pt.
- [2 <./figures/QCD_equation.pdf>]
-Overfull \hbox (4.18263pt too wide) in paragraph at lines 257--257
+
+Overfull \hbox (4.18263pt too wide) in paragraph at lines 251--251
 [] 
  []
 
-LaTeX Font Info:    Try loading font information for U+bbold on input line 259.
+[2 <./figures/QCD_equation.pdf>]
+LaTeX Font Info:    Try loading font information for U+bbold on input line 253.
+
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Underfull \hbox (badness 1092) in paragraph at lines 289--293
+Underfull \hbox (badness 1092) in paragraph at lines 283--287
 \OT1/cmr/m/n/10 with $^^@[][^^H] = \OML/cmm/m/it/10 ^^N[]\OT1/cmr/m/n/10 ^^@[][
 ^^H]\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 ^^H[
 ]\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 ^^H[])$, where dif-fer-ent
@@ -517,7 +519,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 289--293
 File: ./figures/R42R62R82-T-muB0.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0.pdf>
-Package pdftex.def Info: ./figures/R42R62R82-T-muB0.pdf used on input line 399.
+Package pdftex.def Info: ./figures/R42R62R82-T-muB0.pdf used on input line 393.
 
 (pdftex.def)             Requested size: 510.0pt x 132.22302pt.
 
@@ -525,14 +527,14 @@ Package pdftex.def Info: ./figures/R42R62R82-T-muB0.pdf used on input line 399.
 File: ./figures/R102-T-muB0.pdf Graphic file (type pdf)
 
 <use ./figures/R102-T-muB0.pdf>
-Package pdftex.def Info: ./figures/R102-T-muB0.pdf used on input line 408.
+Package pdftex.def Info: ./figures/R102-T-muB0.pdf used on input line 402.
 (pdftex.def)             Requested size: 229.49844pt x 178.50378pt.
  [5]
 <./figures/R42R62-muBoT.pdf, id=316, 650.43pt x 252.945pt>
 File: ./figures/R42R62-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62-muBoT.pdf>
-Package pdftex.def Info: ./figures/R42R62-muBoT.pdf used on input line 468.
+Package pdftex.def Info: ./figures/R42R62-muBoT.pdf used on input line 462.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
 <./figures/R42R62expansion-muBoT.pdf, id=321, 650.43pt x 252.945pt>
@@ -540,7 +542,7 @@ File: ./figures/R42R62expansion-muBoT.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62expansion-muBoT.pdf>
 Package pdftex.def Info: ./figures/R42R62expansion-muBoT.pdf used on input line
- 478.
+ 472.
 (pdftex.def)             Requested size: 458.99689pt x 178.50378pt.
 
 <./figures/R42R62R82-T-muB0to400.pdf, id=330, 975.645pt x 252.945pt>
@@ -548,7 +550,7 @@ File: ./figures/R42R62R82-T-muB0to400.pdf Graphic file (type pdf)
 
 <use ./figures/R42R62R82-T-muB0to400.pdf>
 Package pdftex.def Info: ./figures/R42R62R82-T-muB0to400.pdf used on input line
- 487.
+ 481.
 (pdftex.def)             Requested size: 510.0pt x 132.22302pt.
  [6 <./figures/R42R62R82-T-muB0.pdf> <./figures/R102-T-muB0.pdf
 
@@ -563,17 +565,17 @@ e
 File: ./figures/phasediagram.pdf Graphic file (type pdf)
 
 <use ./figures/phasediagram.pdf>
-Package pdftex.def Info: ./figures/phasediagram.pdf used on input line 538.
+Package pdftex.def Info: ./figures/phasediagram.pdf used on input line 532.
 (pdftex.def)             Requested size: 244.79782pt x 190.40302pt.
 
 <./figures/Rm2-sqrtS.pdf, id=603, 325.215pt x 578.16pt>
 File: ./figures/Rm2-sqrtS.pdf Graphic file (type pdf)
 
 <use ./figures/Rm2-sqrtS.pdf>
-Package pdftex.def Info: ./figures/Rm2-sqrtS.pdf used on input line 547.
+Package pdftex.def Info: ./figures/Rm2-sqrtS.pdf used on input line 541.
 (pdftex.def)             Requested size: 255.0pt x 453.34492pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 547--548
+Overfull \hbox (9.0pt too wide) in paragraph at lines 541--542
  [][] 
  []
 
@@ -584,15 +586,10 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasediagram.pdf):
 >]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 557.
+ on input line 551.
 
 [9 <./figures/Rm2-sqrtS.pdf>] [10]
-Underfull \hbox (badness 1308) in paragraph at lines 638--639
-[]\OT1/cmr/m/n/10 The work was sup-ported by the Na-tional Nat-u-
- []
-
-
-Underfull \hbox (badness 1242) in paragraph at lines 682--686
+Underfull \hbox (badness 1242) in paragraph at lines 676--680
 \OT1/cmr/m/n/10 Note that the parametriza-tion of glue po-ten-tial in
  []
 
@@ -658,10 +655,10 @@ Underfull \hbox (badness 3635) in paragraph at lines 925--931
  []
 
 ) [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 821.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 815.
  (./hyper-fluc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 821.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 821.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 815.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 815.
 Package rerunfilecheck Info: File `hyper-fluc.out' has not changed.
 (rerunfilecheck)             Checksum: 8752A1B28A6AC3FB2D8915C573B1CA0B;988.
 
@@ -670,10 +667,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9826 strings out of 493014
- 141294 string characters out of 6133352
+ 9827 strings out of 493014
+ 141305 string characters out of 6133352
  325418 words of memory out of 5000000
- 13046 multiletter control sequences out of 15000+600000
+ 13047 multiletter control sequences out of 15000+600000
  15567 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,14n,36p,1927b,650s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -700,7 +697,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on hyper-fluc.pdf (14 pages, 751588 bytes).
+Output written on hyper-fluc.pdf (14 pages, 751145 bytes).
 PDF statistics:
  1360 PDF objects out of 1440 (max. 8388607)
  910 compressed objects within 10 object streams
