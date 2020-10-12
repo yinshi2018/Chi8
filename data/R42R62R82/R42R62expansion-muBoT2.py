@@ -279,7 +279,7 @@ ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.4,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax1.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
@@ -402,6 +402,18 @@ powerl[96]=powerl[90]
 powerl[97]=powerl[90]
 powerl[98]=powerl[90]
 
+powerh[73]=powerh[72]
+powerh[74]=powerh[72]
+powerh[75]=powerh[72]
+powerh[76]=powerh[72]
+powerh[77]=powerh[72]
+powerh[78]=powerh[72]
+powerh[79]=powerh[72]
+powerh[80]=powerh[72]
+powerh[81]=powerh[72]
+powerh[82]=powerh[72]
+print(powerh)
+print(powerh[72])
 line_FRG_T155,=ax2.plot(mubfrg*cmu/(195.0*ct),R62195,'--',dashes=(5,2),color='k',linewidth=1.5,alpha=0.5,zorder=2)
 band_FRG_T155=ax2.fill_between(xsame2,powerh,powerl,alpha=0.3,facecolor='r',edgecolor='',zorder=1,label=r'This work T=155 MeV')
 xup160=mub*cmu2/(198.*ct1)
@@ -420,7 +432,7 @@ exp_FRG_T155,=ax2.plot(mub*cmu/(195*ct),chi6f[194,:]/chi2f[194,:],'--',dashes=(5
 exp_FRG_T160,=ax2.plot(mub*cmu/(200*ct),chi6f[199,:]/chi2f[199,:],'--',dashes=(1,2),color='b',linewidth=1.,alpha=0.5,zorder=2)
 
 
-ax2.axis([0,3,-5,5])
+ax2.axis([0,3,-5,8.5])
 
 ax2.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax2.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
