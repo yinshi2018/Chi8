@@ -231,7 +231,7 @@ ax3.fill_between(T,R82[0,:]+errR822[0,:],R82[0,:]-errR822[0,:],alpha=0.25,faceco
 #ax1.errorbar(mub/158.,R42[:,56],yerr=errR422[:,56],color='blue',marker='o',linestyle='',linewidth=2,markersize=2,fillstyle='none',alpha=1,label=r'HotQCD')
 #ax2.fill_between(hotQCDR62[:,0]/156,hotQCDR62[:,1],hotQCDR62[:,2],alpha=0.25,facecolor='green',edgecolor='',label=r'HotQCD cont. est')
 ax3.errorbar(WBchix,WBchi8/WBchi2,yerr=R82erro,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'Wuppertal-Budaspest')
-
+HRG,=ax3.plot(HRGR82[:,0],HRGR82[:,1],'-',color='k',linewidth=1,alpha=1)
 ax3.axis([80,230,-3,2.5])
 
 
@@ -242,7 +242,7 @@ plt.plot(Tfrg/ct,r82,'-',color='r',linewidth=1)#,label=r'$T=194\,\mathrm{MeV}$')
 plt.errorbar(WBchix,WBchi8/WBchi2,yerr=R82erro,color='blue',marker='o',linestyle='',linewidth=2,markersize=5,fillstyle='none',alpha=1)#,label=r'Wuppertal-Budaspest')
 plt.fill_between(T,R82[0,:]+errR82[0,:],R82[0,:]-errR82[0,:],alpha=0.25,facecolor='green',edgecolor='')#,label=r'HotQCD cont. est')
 plt.plot(T,c8/c2,'g-',linewidth=1,markersize=5,alpha=0.5)#,label=r'$mid$')
-HRG,=ax3.plot(HRGR82[:,0],HRGR82[:,1],'-',color='k',linewidth=1,alpha=1)
+plt.plot(HRGR82[:,0],HRGR82[:,1],'-',color='k',linewidth=1,alpha=1)
 x=range(120,230,20)
 plt.xticks(x,fontsize=5.2)
 plt.yticks(fontsize=5.2)
