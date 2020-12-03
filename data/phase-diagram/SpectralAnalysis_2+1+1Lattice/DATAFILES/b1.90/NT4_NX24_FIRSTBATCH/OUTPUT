@@ -1,0 +1,221 @@
+
+**********************************************************
+***   ENDIAN CHECK: EXPECT: 12.34.56.78                ***
+***                 IS    : 12.34.56.78                ***
+***                                                    ***
+***   CURRENT MACHINE IS LITTLE-ENDIAN                 ***
+**********************************************************
+
+**********************************************************
+***   GET THE COMMAND LINE PARAMETERS AND CHECK CONS.  ***
+**********************************************************
+
+
+
+**********************************************************
+***   PARAMETERS FOR THIS RUN ARE                      ***
+***                                                    ***
+***   HARD-WIRED SU(  3)                               ***
+***                                                    ***
+***       NDIMS:   4                                   ***
+***                                                    ***
+***       TOTAXLEN[  0]=  24                           ***
+***       TOTAXLEN[  1]=  24                           ***
+***       TOTAXLEN[  2]=  24                           ***
+***       TOTAXLEN[  3]=   4                           ***
+***                                                    ***
+***       AXANISO [  0]=+1.0000e+00                    ***
+***       AXANISO [  1]=+1.0000e+00                    ***
+***       AXANISO [  2]=+1.0000e+00                    ***
+***       AXANISO [  3]=+1.0000e+00                    ***
+***                                                    ***
+***       AXPARTS[  0]=   1                            ***
+***       AXPARTS[  1]=   1                            ***
+***       AXPARTS[  2]=   1                            ***
+***       AXPARTS[  3]=   1                            ***
+***                                                    ***
+***       COMMAND LINE BOUNDARY LENGTH:   1            ***
+***                                                    ***
+***       CHECKERBOARD SEPARATION DIST:   2            ***
+***                                                    ***
+***       NFIELDS:   1                                 ***
+***                                                    ***
+***       FTYPE[FLD:  0]= 21                           ***
+***                                                    ***
+***       BNDCOND[FLD:  0][DIM:  0]=  1                ***
+***       BNDCOND[FLD:  0][DIM:  1]=  1                ***
+***       BNDCOND[FLD:  0][DIM:  2]=  1                ***
+***       BNDCOND[FLD:  0][DIM:  3]=  1                ***
+***                                                    ***
+***       FIELDINITIAL[  0]:  0                        ***
+***                                                    ***
+***       PARAMETERS[FLD:  0][PARAM:  0]= +4.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  1]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  2]= +1.9000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  3]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  4]= +4.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  5]= +2.0000e+02  ***
+***       PARAMETERS[FLD:  0][PARAM:  6]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  7]= +1.0000e+01  ***
+***       PARAMETERS[FLD:  0][PARAM:  8]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM:  9]= +3.0000e+01  ***
+***       PARAMETERS[FLD:  0][PARAM: 10]= +2.6000e+02  ***
+***       PARAMETERS[FLD:  0][PARAM: 11]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 12]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 13]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 14]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 15]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 16]= +4.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 17]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 18]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 19]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 20]= +1.2800e+02  ***
+***       PARAMETERS[FLD:  0][PARAM: 21]= +5.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 22]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 23]= +1.2000e+01  ***
+***       PARAMETERS[FLD:  0][PARAM: 24]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 25]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 26]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 27]= +3.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 28]= +5.0000e-02  ***
+***       PARAMETERS[FLD:  0][PARAM: 29]= +1.0000e-16  ***
+***       PARAMETERS[FLD:  0][PARAM: 30]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 31]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 32]= +1.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 33]= +5.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 34]= +1.1000e+01  ***
+***       PARAMETERS[FLD:  0][PARAM: 35]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 36]= +0.0000e+00  ***
+***       PARAMETERS[FLD:  0][PARAM: 37]= +0.0000e+00  ***
+***                                                    ***
+***       RUNLEVEL:  2                                 ***
+***                                                    ***
+***       RANDGEN :  3                                 ***
+***                                                    ***
+***       SEED    :      314159265                     ***
+***                                                    ***
+***       SAVECONF:  0                                 ***
+***                                                    ***
+***       MAX COMPUTER TIME: +4.0000e+00              ***
+***                                                    ***
+***                                                    ***
+**********************************************************
+
+**********************************************************
+***  YOU HAVE CHOSEN           MEASUREMENTS FOR SUN    ***
+**********************************************************
+
+
+**********************************************************
+***  NO BOUNDARIES SET: WE WILL USE SPECIAL NO BNDARY  ***
+***  E.O.M ROUTINES FOR THIS CASE                      ***
+**********************************************************
+**********************************************************
+***   STATISTICS FOR THIS RUN ARE AS FOLLOWS           ***
+***                                                    ***
+***     FULL LATTICE:          2.9663e-02 GB           ***
+***                                                    ***
+***     NODE WITHOUT BOUND:    2.9663e-02 GB           ***
+***     NODE WITH BOUND:       2.9663e-02 GB           ***
+***                                                    ***
+***     MPIFFT FTLAT (  0)     0.0000e+00 GB           ***
+***                                                    ***
+***           BNDCOM           2.8125e-01 GB           ***
+***                      -------------------           ***
+***   TOTAL PER NODE:          4.9841e-01 GB           ***
+***                                                    ***
+***                                                    ***
+***                                                    ***
+**********************************************************
+
+**********************************************************
+***   INITIALIZE THE FIELD ARRAYS                      ***
+**********************************************************
+
+**********************************************************
+***   MPI GEOMETRY                                     ***
+**********************************************************
+
+**********************************************************
+***   BOUNDARY EXCHANGE PREPARATIONS                   ***
+**********************************************************
+
+**********************************************************
+***   CHECKERBOARD LOOKUP TABLES                       ***
+**********************************************************
+
+**********************************************************
+***   GAMMA MATRICES FOR   4 DIMENSIONS ARE COMPLEX    ***
+***     4 x   4 MATRICES                               ***
+**********************************************************
+
+**********************************************************
+***   SUN LOOKUP TABLES                                ***
+**********************************************************
+
+**********************************************************
+***                                                    ***
+***   SUN CORRELATOR MEASUREMENTS                     ***
+***                                                    ***
+***     MEASURE FROM CONFIG:  30                       ***
+***        MEASURE HOW MANY: 260                       ***
+***        MEASURE FROM FRM:  11                       ***
+***                                                    ***
+***        MEASURE JACKNIFE:   5                       ***
+***                                                    ***
+***                                                    ***
+***     PLAQUETTE:   1                                 ***
+***     POLYAKOVL:   0                                 ***
+***     POLL-CORR:   0                                 ***
+***     WILSONTMP:   0                                 ***
+***     WILSONSPT:   0                                 ***
+***     WLINETEMP:   4                                 ***
+***     WLINESPAT:   0                                 ***
+***                                                    ***
+***    TEMPORAL EXTEND FROM T:   1    (1-NT)           ***
+***                      TO T:  12    (1-NT)           ***
+***     SPATIAL EXTEND FROM X:   1    (1-NX)           ***
+***                      TO X:   1    (1-NX)           ***
+***     SPATIAL BINNING NUM  : 129                     ***
+***                     MAX  : 5.00e+00              ***
+***                                                    ***
+***     GAUGEFIXING ALG:   0                           ***
+***                 DIR:   3                           ***
+***                 OR : 5.00e-02                          ***
+***                 TOL: 1.00e-16                    ***
+***                                                    ***
+***     TEMP SLICES MEASUREMENTS:   1                  ***
+***     SPAT SLICES MEASUREMENTS:   1                  ***
+***                                                    ***
+***     NODES PER CONFIGURATION:   1               ***
+***                                                    ***
+***                                                    ***
+***     PATH TO DATA:    ./MEASUREMENTS-LOG-NOCUT/
+***     FILENAMES   :    BQCD-LANDAU
+***     PATH TO RESULTS: ./MEASUREMENTS-LOG-NOCUT-AVG/
+***                                                    ***
+***                                                    ***
+**********************************************************
+
+**********************************************************
+***   USING THE RANDOM NUMBER GENERATOR:   3           ***
+***                                                    ***
+***   ALL MPI NODES ARE INDEPENDENT                    ***
+***                                                    ***
+***                                                    ***
+***                                                    ***
+***                                                    ***
+**********************************************************
+
+**********************************************************
+***   INITIALIZING FIELD   0                           ***
+**********************************************************
+
+**********************************************************
+***   INITIALIZATION TOOK 0.00000e+00 SECONDS          ***
+**********************************************************
+
+**********************************************************
+***   GENERATING THE ERRORS FOR THE SUN CORRELATORS    ***
+**********************************************************
+

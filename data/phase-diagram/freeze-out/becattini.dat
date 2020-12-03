@@ -1,0 +1,13 @@
+# colliding enery, freeze-out chemical potential, error for \muB, freeze-out temperature, error for T
+# Without afterburner
+4.75   563     15     122.1   4.0
+7.6    437     20     139.6   3.7
+8.7    385     11     148.2   3.8
+17.3   265     10     150.4   3.9
+2760   0       0      155.0   3.7
+# With afterburner
+#4.75   588     32     130.5   12.3
+#7.6    424     11     157.7   4.3
+#8.7    371     12     163.3   5.0
+#17.3   244     6      162.3   2.7
+#2760   0       0      163.8   3.3

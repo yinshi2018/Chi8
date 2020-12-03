@@ -1,0 +1,11 @@
+Thank you for your interest in our work. Please find attached the data file for the phase line (the shaded blue region in the plot is just to illustrate the width of the transition, the actual phase diagram with errors are the black lines).
+The format is the following:
+
+1. col: mu_B [MeV]
+2. col: T [MeV]
+3. col: uncertainty of T in negative direction
+4. col: uncertainty of T in positive direction
+
+i.e. to plot the data in gnuplot use:
+
+plot "pd_data.dat" u 1:2:($2-$3):($2+$4) w yerr

@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: hyper-fluc.aux
+The style file: apsrev4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: hyper-flucNotes.bib
+Database file #2: ref-lib.bib
+Repeated entry---line 449 of file ref-lib.bib
+ : @article{Borsanyi:2020fev
+ :                          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "WP"
+Warning--I didn't find a database entry for "hotQCD"
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--missing journal in Adam:2020unf
+Warning--missing journal in Pandav:2020uzx
+Warning--missing journal in Gao:2020qsj
+Warning--missing journal in Fu:2018qsk
+Warning--missing journal in Dupuis:2020fhh
+Warning--missing journal in Gao:2020fbl
+Warning--missing journal in BraunMunzinger:2003zd
+Warning--missing journal in Vovchenko:2020tsr
+Warning--missing journal in Bluhm:2020mpc
+Warning--missing journal in Braun:2020ada
+You've used 92 entries,
+            5847 wiz_defined-function locations,
+            2375 strings with 34391 characters,
+and the built_in function-call counts, 91854 in all, are:
+= -- 6035
+> -- 2194
+< -- 585
++ -- 704
+- -- 531
+* -- 14910
+:= -- 8982
+add.period$ -- 90
+call.type$ -- 92
+change.case$ -- 361
+chr.to.int$ -- 95
+cite$ -- 102
+duplicate$ -- 8636
+empty$ -- 6862
+format.name$ -- 1298
+if$ -- 18071
+int.to.chr$ -- 6
+int.to.str$ -- 99
+missing$ -- 1076
+newline$ -- 376
+num.names$ -- 270
+pop$ -- 3358
+preamble$ -- 1
+purify$ -- 450
+quote$ -- 0
+skip$ -- 3270
+stack$ -- 0
+substring$ -- 2390
+swap$ -- 8318
+text.length$ -- 244
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 1258
+warning$ -- 11
+while$ -- 269
+width$ -- 0
+write$ -- 900
+(There was 1 error message)
