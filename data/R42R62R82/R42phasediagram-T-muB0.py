@@ -156,9 +156,9 @@ for num1 in range(0,101):
 
 #print(chi2mub0[200])
 # Create figure
-fig=plt.figure(figsize=(9., 3.5))
+fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
-ax1=fig.add_subplot(121)
+ax1=fig.add_subplot(111)
 band_FRG=ax1.fill_betweenx(r42,Tfrg/ct1,Tfrg/ct2,alpha=0.25,facecolor='r',edgecolor='r',label=r'This work')
 #ax1.axvspan(Tfrg/ct1,Tfrg/ct2 , r42, alpha=0.5, color='red')
 line_FRG,=ax1.plot(Tfrg/ct,r42,'-',color='r',linewidth=1,alpha=0.5)#,label=r'ct between 1.24 and 1.26')
@@ -189,6 +189,12 @@ for label in ax1.xaxis.get_ticklabels():
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
+fig.subplots_adjust(top=0.9, bottom=0.15, left=0.131, right=0.96, hspace=0.35, wspace=0.25)
+
+fig.savefig("R42-T-muB0.pdf")
+
+
+
 muB=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB.dat')
 
 pb_Nf2p1=np.loadtxt('../phase-diagram/Nf2p1/CEP/pb-Nf2p1.dat')
@@ -206,9 +212,9 @@ T_CEP_Nf2=np.loadtxt('../phase-diagram/Nf2/CEP/CEPT.dat')
 ct=1.0915
 cmu=0.995
 # Create figure
-
+fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
-ax2=fig.add_subplot(122)
+ax2=fig.add_subplot(111)
 #ax1=plt.subplot(111)
 
 line_Nf2,=ax2.plot(pb_Nf2[:,0]/cmu,Tc_Nf2/ct,'r--',linewidth=1.5,markersize=5,zorder=6,label=r'$N_f=2$')
@@ -239,6 +245,6 @@ for label in ax2.xaxis.get_ticklabels():
 for label in ax2.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
-fig.subplots_adjust(top=0.9, bottom=0.15, left=0.07, right=0.96, hspace=0.35, wspace=0.25)
+fig.subplots_adjust(top=0.9, bottom=0.15, left=0.135, right=0.96, hspace=0.35, wspace=0.25)
+fig.savefig("Rescalephasediagram.pdf")
 
-fig.savefig("R42phasediagram-T-muB0.pdf")
