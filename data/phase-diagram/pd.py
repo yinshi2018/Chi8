@@ -27,16 +27,17 @@ Tc_Nf2=np.loadtxt('Nf2/CEP/Tc.dat')
 muB_CEP_Nf2=np.loadtxt('Nf2/CEP/CEPmuB.dat')
 T_CEP_Nf2=np.loadtxt('Nf2/CEP/CEPT.dat')
 
-
+ct=1.0915
+cmu=0.995
 # Create figure
 fig=plt.figure(figsize=(4.5, 3.5))
 #fig=plt.figure()
 ax1=fig.add_subplot(111)
 #ax1=plt.subplot(111)
 
-line_Nf2,=ax1.plot(pb_Nf2[:,0],Tc_Nf2,'r--',linewidth=1.5,markersize=5,zorder=1,label=r'$N_f=2$')
-CEP_Nf2,=ax1.plot(muB_CEP_Nf2,T_CEP_Nf2,'r*',markersize=8,label=r'CEP: $N_f=2$')
-band_Nf2=ax1.fill_between(pb_Nf2[:,0],pb_Nf2[:,1],pb_Nf2[:,2],color='gray',alpha=.4,label=r'$N_f=2$')
+line_Nf2,=ax1.plot(pb_Nf2[:,0]/cmu,Tc_Nf2/ct,'r--',linewidth=1.5,markersize=5,zorder=6,label=r'$N_f=2$')
+CEP_Nf2,=ax1.plot(muB_CEP_Nf2/cmu,T_CEP_Nf2/ct,'r*',markersize=8,zorder=6,label=r'CEP: $N_f=2$')
+band_Nf2=ax1.fill_between(pb_Nf2[:,0]/cmu,pb_Nf2[:,1]/ct,pb_Nf2[:,2]/ct,color='gray',alpha=.4,zorder=6,label=r'$N_f=2$')
 
 
 line_Nf2p1,=ax1.plot(pb_Nf2p1[:,0],Tc_Nf2p1,'k--',dashes=(5,2),linewidth=1.5,markersize=5,zorder=5,label=r'$N_f=2+1$')
@@ -55,7 +56,7 @@ ax1.axis([0,1000,0,200])
 ax1.set_xlabel(r'$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax1.set_ylabel(r'$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 
-ax1.legend(((band_Nf2,line_Nf2),(band_Nf2p1,line_Nf2p1),CEP_Nf2,CEP_Nf2p1),(r'$N_f=2$',r'$N_f=2+1$',r'CEP: $N_f=2$',r'CEP: $N_f=2+1$'),loc=4,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_Nf2,line_Nf2),(band_Nf2p1,line_Nf2p1),CEP_Nf2,CEP_Nf2p1),(r'rescaled $N_f=2$',r'$N_f=2+1$',r'CEP: $N_f=2$',r'CEP: $N_f=2+1$'),loc=4,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
     label.set_fontsize(10)

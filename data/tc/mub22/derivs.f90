@@ -809,7 +809,7 @@ subroutine derivs(x,y,dydx)
   dydx((Nv+1)+(Nh+1)+Nz+1)=dcdt
   dydx((Nv+1)+(Nh+1)+Nz+2)=dkappadt
 
-  goto 100
+!  goto 100
 
   open(unit=101,file='./buffer/k1.dat')
   write(101, "(e20.9)")k*hc

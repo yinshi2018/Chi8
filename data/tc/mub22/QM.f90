@@ -12,7 +12,7 @@ program QM
   real(16) Vtotal0,fpi0,Zphi0
   real(16) Ti,dT,mu_down,mu_up,mudelta
   integer i,iTmax,j,jmumax,m,mm,i_mm,j1
-  parameter(iTmax=300,jmumax=0)
+  parameter(iTmax=1,jmumax=0)
   real(16) pre_res(0:jmumax,0:iTmax),T_res(0:iTmax),mu_res(0:jmumax,0:iTmax),pre_com(jmumax)
   real(16) mu_bound(0:iTmax),mu_bound_low,mu_bound_high
   real(16) T_MeV,muB_MeV
@@ -38,7 +38,7 @@ program QM
 
   dT=1.Q+0
 
-  muBi=22.3123Q+0/hc*1.110Q+0
+  muBi=0.Q+00!22.3123Q+0/hc*1.110Q+0
 
 
   sigma_UV=100.Q+0/hc
