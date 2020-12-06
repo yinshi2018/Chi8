@@ -196,6 +196,7 @@ fig.savefig("R42-T-muB0.pdf")
 
 
 muB=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB.dat')
+muB4=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB4.dat')
 
 pb_Nf2p1=np.loadtxt('../phase-diagram/Nf2p1/CEP/pb-Nf2p1.dat')
 Tc_Nf2p1=np.loadtxt('../phase-diagram/Nf2p1/CEP/Tc.dat')
@@ -230,10 +231,10 @@ band_Nf2p1=ax2.fill_between(pb_Nf2p1[:,0],pb_Nf2p1[:,1],pb_Nf2p1[:,2],color='blu
 
 ax2.plot(muB,muB/2.,'k:',linewidth=1.,markersize=5)
 ax2.plot(muB,muB/3.,'k:',linewidth=1.,markersize=5)
-ax2.plot(muB,muB/4.,'k:',linewidth=1.,markersize=5)
-ax2.text(220, 170, r'$\frac{\mu_B}{T}=2$',fontsize=10, color='k')
+ax2.plot(muB4,muB4/4.,'k:',linewidth=1.,markersize=5)
+ax2.text(230, 170, r'$\frac{\mu_B}{T}=2$',fontsize=10, color='k')
 ax2.text(400, 170, r'$\frac{\mu_B}{T}=3$',fontsize=10, color='k')
-ax2.text(600, 170, r'$\frac{\mu_B}{T}=4$',fontsize=10, color='k')
+ax2.text(570, 170, r'$\frac{\mu_B}{T}=4$',fontsize=10, color='k')
 ax2.axis([0,1000,0,200])
 #ax1.set_xscale('log')
 
