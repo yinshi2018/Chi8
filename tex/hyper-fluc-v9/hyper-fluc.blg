@@ -23,6 +23,7 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
+Warning--missing journal in Dainese:2019xrz
 Warning--missing journal in Adam:2020unf
 Warning--missing journal in Pandav:2020uzx
 Warning--missing journal in Gao:2020qsj
@@ -32,46 +33,47 @@ Warning--missing journal in Dupuis:2020fhh
 Warning--missing journal in BraunMunzinger:2003zd
 Warning--missing journal in Vovchenko:2020tsr
 Warning--missing journal in Bluhm:2020mpc
+Warning--missing journal in Bluhm:2020rha
 Warning--missing journal in Braun:2020ada
-You've used 90 entries,
+You've used 94 entries,
             5847 wiz_defined-function locations,
-            2347 strings with 33850 characters,
-and the built_in function-call counts, 90469 in all, are:
-= -- 5913
-> -- 2190
-< -- 576
-+ -- 700
-- -- 531
-* -- 14730
-:= -- 8819
-add.period$ -- 88
-call.type$ -- 90
-change.case$ -- 352
-chr.to.int$ -- 93
-cite$ -- 100
-duplicate$ -- 8495
-empty$ -- 6749
-format.name$ -- 1298
-if$ -- 17803
-int.to.chr$ -- 6
-int.to.str$ -- 97
-missing$ -- 1057
-newline$ -- 367
-num.names$ -- 264
-pop$ -- 3303
+            2378 strings with 34913 characters,
+and the built_in function-call counts, 94897 in all, are:
+= -- 6157
+> -- 2333
+< -- 604
++ -- 745
+- -- 567
+* -- 15497
+:= -- 9237
+add.period$ -- 92
+call.type$ -- 94
+change.case$ -- 368
+chr.to.int$ -- 96
+cite$ -- 106
+duplicate$ -- 8913
+empty$ -- 7077
+format.name$ -- 1383
+if$ -- 18669
+int.to.chr$ -- 7
+int.to.str$ -- 101
+missing$ -- 1107
+newline$ -- 382
+num.names$ -- 276
+pop$ -- 3472
 preamble$ -- 1
-purify$ -- 440
+purify$ -- 460
 quote$ -- 0
-skip$ -- 3213
+skip$ -- 3346
 stack$ -- 0
-substring$ -- 2351
-swap$ -- 8201
-text.length$ -- 244
+substring$ -- 2426
+swap$ -- 8613
+text.length$ -- 261
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 1236
-warning$ -- 11
-while$ -- 263
+type$ -- 1298
+warning$ -- 13
+while$ -- 273
 width$ -- 0
-write$ -- 878
-(There were 11 warnings)
+write$ -- 913
+(There were 13 warnings)

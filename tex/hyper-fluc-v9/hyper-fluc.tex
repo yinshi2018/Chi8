@@ -1,0 +1,983 @@
+\documentclass[%
+reprint,
+superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose,
+%preprint,
+showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+amsmath,amssymb,
+aps,
+%pra,
+%prb,
+prd,
+%prl,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{float}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{bbold}
+\usepackage{braket}
+\usepackage{amssymb,amsmath}
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+
+\usepackage{color}
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{array}
+
+
+\newcommand{\Tr}{\ensuremath{\operatorname{Tr}}}
+\newcommand{\tr}{\ensuremath{\operatorname{tr}}}
+\newcommand{\Omegaqq}{\ensuremath{\Omega_{\bar{q}q}}}
+\newcommand{\vev}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\einh}[1]{\ensuremath{\,\text{#1}}}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+
+
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\definecolor{bjcol}{rgb}{1,.44,0.13}
+
+% color def's
+
+\definecolor{blue}{rgb}{0,0,1}
+\newcommand{\colb}[1]{{\color{blue} #1}}
+\definecolor{green}{rgb}{0,1,0}
+\newcommand{\colg}[1]{{\color{green} #1}}
+\definecolor{red}{rgb}{1,0,0}
+\newcommand{\colr}[1]{{\color{red} #1}}
+\newcommand{\colJ}[1]{{\color{cyan} #1}}
+\definecolor{gray}{rgb}{.5,.5,.5}
+\newcommand{\drop}[1]{{\sout{ {\color{gray} #1}}}}
+\definecolor{darkgreen}{rgb}{.0,.5,.0}
+\newcommand{\colL}[1]{{\color{darkgreen} #1}}
+
+
+\def\Fig#1{Fig.~\ref{#1}} \def\Tab#1{Tab.~\ref{#1}}
+\def\Figs#1{Figs.~\ref{#1}} \def\Tab#1{Tab.~\ref{#1}}
+\def\Eqs#1{Eqs.~(\ref{#1})}
+\def\Eq#1{Eq.~(\ref{#1})}
+\def\eq#1{(\ref{#1})}
+\def\eqref#1{(\ref{#1})}
+\def\fig#1{Fig.~\ref{#1}}
+\def\tab#1{Tab.~\ref{#1}}
+\def\eqs#1{(\ref{#1})}
+\def\Eqs#1{(\ref{#1})}
+\def\sec#1{Sec.~\ref{#1}}
+\def\app#1{Appendix~\ref{#1}}
+\newcommand{\Phibar}{\ensuremath{\bar{\Phi}}}
+\newcommand{\LPQM}{\ensuremath{\mathcal{L}_{\textrm{PQM}}}\xspace}
+
+\def\dbar{{\mathchar'26\mkern-12mu d}}
+\def\lA0{{\langle A_0 \rangle}}
+\def\bA0{{\bar{A}_0}}
+\def\lLA{{\langle L[A_0] \rangle}}
+\def\lL{{\langle L \rangle}}
+\def\lLc{{\langle L^\dagger \rangle}}
+\def\lLAc{{\langle L^\dagger[A_0] \rangle}}
+
+
+\def\dr{{D\!\llap{/}}\,}
+\def\Dr{{D\!\llap{/}}\,}
+\def\ipv{\vec{p}\llap{/}}
+\def\pslash{p\llap{/}}
+
+\def\0#1#2{\frac{#1}{#2}}
+
+\newcommand{\bsig}{\ensuremath{\bar{\sigma}}}
+\newcommand{\lsm}{L\ensuremath{\sigma}M\xspace}
+\newcommand{\pT}{\ensuremath{T_0}}
+\newcommand{\Tl}{\ensuremath{T_\chi}}
+\newcommand{\Ts}{\ensuremath{T_\chi^s}}
+\newcommand{\Tchi}{\ensuremath{T_\chi}}
+\newcommand{\Td}{\ensuremath{T_d}}
+\newcommand{\Tc}{\ensuremath{T_c}}
+\newcommand{\muc}{\ensuremath{\mu_c}}
+\newcommand{\coloronl}{(color online)\xspace}
+
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\def\qbar{\bar{q}}
+\newcommand{\sx}{\sigma_{x}}
+\newcommand{\sy}{\sigma_{y}}
+
+%%%%%%%%%%%%% Hypersetup %%%%%%%%%%%%%
+
+\newcommand{\gettitle}{Chiral and effective $U(1)_{\rm A}$ symmetry restoration in QCD}
+
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\sectionautorefname}{Sec.}
+\renewcommand{\subsectionautorefname}{Subsec.}
+%\renewcommand{\appendixautorefname}{App.}
+\def\appendixautorefname{App.}
+
+%\hypersetup{
+%	colorlinks,
+%	linkcolor={blue!75!black},
+%	citecolor={blue!75!black},
+%	urlcolor={blue!75!black},
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	pdftitle={\gettitle},
+%	pdfauthor={},
+%	pdfkeywords={Renormalization group} {HIC}
+%	{Correlations functions} {hyperfluctuations},
+%	bookmarksopen=true,
+%	bookmarksopenlevel=2,
+%	bookmarksnumbered=true
+%}
+
+
+%%%%%%%%%%%%%% for corrections %%%%%%%%%%%
+\newcommand{\colwj}[1]{\textcolor{Purple}{#1}}
+\newcommand{\colxf}[1]{\textcolor{cyan}{#1}}
+\newcommand{\coljan}[1]{\textcolor{red}{#1}}
+\newcommand{\colfab}[1]{\textcolor{magenta}{#1}}
+\newcommand{\colrui}[1]{\textcolor{green}{#1}}
+\newcommand{\colnu}[1]{\textcolor{blue}{#1}}
+\newcommand{\colshi}[1]{\textcolor{Plum}{#1}}
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{./figures/}{./}}
+
+\begin{document}
+	
+\preprint{}
+	
+\title{Hyper-order baryon number fluctuations at finite temperature and density}
+	
+	
+	
+\affiliation{Key Laboratory of Quark \& Lepton Physics (MOE) and Institute of Particle Physics,
+		Central China Normal University, Wuhan 430079, China}
+	
+\author{Wei-jie Fu}
+\affiliation{School of Physics, Dalian University of Technology, Dalian, 116024,
+		P.R. China}
+	
+\author{Xiaofeng Luo}
+\affiliation{Key Laboratory of Quark \& Lepton Physics (MOE) and Institute of Particle Physics,
+		Central China Normal University, Wuhan 430079, China}
+\author{Jan M. Pawlowski}
+\affiliation{Institut f\"ur Theoretische Physik, Universit\"at Heidelberg, Philosophenweg 16, 69120 Heidelberg, Germany}
+	\affiliation{ExtreMe Matter Institute EMMI, GSI, Planckstra{\ss}e 1, D-64291 Darmstadt, Germany}
+	
+\author{Fabian Rennecke}
+\affiliation{Physics Department, Brookhaven National Laboratory, Upton, NY 11973, USA}
+	
+\author{Rui Wen}
+\affiliation{School of Physics, Dalian University of Technology, Dalian, 116024,
+		P.R. China}
+	
+\author{Shi Yin}
+\affiliation{School of Physics, Dalian University of Technology, Dalian, 116024,
+		P.R. China}
+	
+	
+%\date{\today}% It is always \today, today,
+%  but any date may be explicitly specified
+	
+\begin{abstract}
+Phase transitions in QCD can manifest themselves in the fluctuations of particle numbers. They have been shown to be especially sensitive to a possible critical endpoint in the phase diagram at finite density, where the transition is of second order. The behaviour of these observables needs to be understood across the whole range of temperatures and densities accessible in heavy-ion experiments in order to draw accurate conclusions from the experimental data. To this end, we study the fourth- to tenth order (hyper-order) baryon number fluctuations at finite temperature and density in a  QCD-assisted effective theory that accurately captures the quantum- and in-medium effects of QCD at low energies.
+Our results are in agreement with both lattice QCD simulations and the hadron resonance gas within their respective region of validity. By computing baryon number fluctuations at different collision energies, we can not only compare with recent experimental measurements of the kurtosis and the sixth-order cumulant of the net-proton distribution from the STAR collaboration, but also make predictions for hyper-order fluctuations that have not been measured yet. The underlying physics, implications for the interpretation of the experimental results and necessary upgrades of our analysis are discussed in detail.
+		
+\end{abstract}
+%\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+\pacs{11.30.Rd, %Chiral symmetries
+		11.10.Wx, %Finite-temperature field theory
+		05.10.Cc, %Renormalization group methods
+		12.38.Mh  %Quark-gluon plasma
+}                             % Classification Scheme.
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+%display desired
+\maketitle
+%\tableofcontents
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\section{Introduction}\label{sec:int}
+\coljan{Please use english english, not american one in order to have it uniform}
+	
+	
+One of the most intriguing open questions concerning the QCD phase diagram is the potential existence of a second order critical end point (CEP) at higher densities. Unravelling the existence of the  CEP, as well as its location and the associated critical dynamics, plays a pivotal role in understanding phases of strongly interacting nuclear matter under extreme conditions. For works on the phase structure of QCD, covering Experiment and Theory see  \cite{Stephanov:2007fk, Friman:2011zz, Luo:2017faz, Dainese:2019xrz, Bzdak:2019pkr, Fischer:2018sdj, Fu:2019hdw} \coljan{Lattice, CBM/NICA is missing}, where theory covers first principles functional approaches and lattice simulations.
+	
+Critical observables, such as fluctuations of conserved charges, diverge due to the critical dynamics in the proximity of the CEP \cite{Stephanov:2008qz}. Accordingly, these are natural observables for locating the CEP  as well as revealing its dynamics \cite{Luo:2017faz,Adam:2020unf}. It has been proposed in \cite{Stephanov:1999zu, Stephanov:2008qz, Stephanov:2011pb}, that non-monotonic variations of conserved charge fluctuations as functions of the beam energy could signal the presence of a CEP. Within the Beam Energy Scan (BES) Program at the Relativistic Heavy Ion Collider (RHIC), significant fluctuation measurements have been performed in Phase I (2010-2017), involving the skewness and kurtosis of the net-proton, net-charge and net-kaon multiplicity distributions  \cite{Adamczyk:2013dal,Adamczyk:2014fia,Luo:2015ewa,Adamczyk:2017wsl}, and second-order off-diagonal cumulants, i.e.,  correlations between net-proton, net-charge and net-kaon multiplicity distributions \cite{Adam:2019xmk}. Remarkably, very recently the STAR collaboration has reported the first evidence of a non-monotonic variation in the kurtosis $\times$ variance of the net-proton number distribution as a function of the collision energy with $3.1\,\sigma$ significance for central collisions \cite{Adam:2020unf}. The measurements have been extended to the sixth-order cumulant of net-proton and net-charge distributions, for preliminary results see  \cite{Nonaka:2020crv,Pandav:2020uzx}.
+	
+Remarkably, recent first-principle QCD calculations at finite temperature and density, within both the functional renormalisation group (fRG) and Dyson-Schwinger equations (DSE), indicate that the location of CEP is presumably in a region of $450\,\mathrm{MeV} \lesssim\mu_B\lesssim 650\,\mathrm{MeV}$ \cite{Fischer:2018sdj, Fu:2019hdw, Isserstedt:2019pgx, Gao:2020qsj, Gao:2020fbl}. This suggests that the possibility to observe interesting features of the phase diagram, such as a CEP, requires explorations of the high-$\mu_B$ in the region with $\mu_B/T_c\gtrsim 4$. Fluctuations and correlations of conserved charges have been intensively studied within functional approaches. In the present work, we build upon previous investigations  of the skewness and kurtosis of baryon number distributions \cite{Fu:2015naa, Fu:2015amv, Fu:2016tey}, and baryon-strangeness correlations \cite{Fu:2018qsk, Fu:2018swz} within QCD-assisted low energy effective theories (LEFT) with the fRG. For further  investigations within the functional renormalisation group approach to low energy effective theories see e.g.\  \cite{Skokov:2010wb, Skokov:2010uh, Morita:2014fda, Almasi:2017bhq}, the Dyson-Schwinger approach has been used in e.g.\  \cite{Xin:2014ela, Isserstedt:2019pgx}, for mean-field investigations see e.g.\ \cite{Fu:2009wy, Fu:2010ay, Karsch:2010hm, Schaefer:2011ex, Li:2018ygx}. These functional works can be adjusted and benchmarked with results from lattice QCD simulations  \cite{Bazavov:2012vg, Borsanyi:2013hza, Borsanyi:2014ewa, Bazavov:2017dus, Bazavov:2017tot, Borsanyi:2018grb, Bazavov:2020bjn}, at high temperatures, $T\gtrsim T_c$, and vanishing $\mu_B$. In turn, at finite-$\mu_B$, and in particular for $\mu_B/T_C\gtrsim 3$, lattice simulations are obstructed by the sign problem. 
+	
+Apart from systematically improving the approach and results within the QCD-assisted LEFT approach in  \cite{Fu:2015naa, Fu:2015amv, Fu:2016tey}, we also provide results for  hyper-order baryon number fluctuations (orders higher than four). The reliability of the results for these fluctuations is qualitatively improved by utilising imput from QCD (hence  `QCD-assisted') and heavy-ion phenomenology. This includes scale-matching relations benchmarked and tested in two- and 2+1 flavour QCD with results from \cite{Fu:2019hdw} . 
+
+More specifically, we use first-principles QCD results on the $T$-dependence of the kurtosis and the $\mu_B$-dependence of the chiral phase boundary to map the in-medium scales of the LEFT onto QCD. This will improve the reliability of our predictions for the hyper-order fluctuations. Furthermore, phenomenological freeze-out curves will be used to map our results in terms of $T$ and $\mu_B$ onto the beam energies of heavy-ion collisions. This allows us to compare our calculations with recent results of lattice simulations in the regime of low $\mu_B$ and experimental data in \cite{Adam:2020unf, Nonaka:2020crv, Pandav:2020uzx}, but also to make predictions for hyper-order fluctuations. Implications of the comparison will be discussed in detail.
+	
+The present QCD-assisted LEFT approach has various advantages. Most importantly, it is directly embedded in QCD as the relevant low-energy degrees of freedom emerge dynamically from systematically integrating-out the fast partonic modes of QCD \cite{Mitter:2014wpa, Braun:2014ata, Rennecke:2015eba, Cyrol:2017ewj, Fu:2019hdw}. In addition, such an approach allows us to capture both critical and non-critical effects in the QCD phase diagram. In particular, we can disentangle clear \textit{signatures} of the critical region close to a CEP from \textit{indications} for a CEP: 
+	
+The former \textit{signatures} (smoking guns) are given by critical scaling and divergences in the (hyper-order) fluctuations. In turn, the latter \textit{indications} are provided by the aforementioned non-monotonous behaviour of the fluctuations: they necessarily arise in the critical region, but can also present far away from it. The occurrence of the latter in the QCD-assisted LEFT used here offers compelling evidence for this, and is discussed in detail. In conclusion, this clear distinction is indispensable for the accurate interpretation of the experimental results, especially since there is also evidence that critical physics can only be observed in a very small region around the CEP, see e.g.\ \cite{Schaefer:2006ds}. 
+	
+This paper is organized as follows: In \autoref{sec:FRG} we give a brief introduction to the fRG approach to QCD and low energy effective theories, including their mutual relationship. Thermodynamics and the hyper-order baryon number fluctuations are discussed in \autoref{sec:hyper-fluc}. In \autoref{sec:num}, we first introduce a systematic scale-matching procedure between QCD and the low energy effective theory. We then present our numerical results and compare them to lattice QCD simulations and experimental measurements. A summary with conclusions is given in \autoref{sec:summary}. Technical details regarding the RG flow equations are presented in the appendices.
+	
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\section{QCD and emergent low energy effective theories}
+\label{sec:FRG}
+	
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.45\textwidth]{QCD_equation}
+\caption{Diagrammatic representation of the QCD flow equation. The lines stand for the full propagators of gluon, ghost, quark, and mesons, respectively. The arrows in quark and meson lines indicate the quark number (baryon number) flow. The crossed circles represent the infrared regulators.}\label{fig:QCD_equation}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	
+At low momentum scales the quark-gluon dynamics of QCD successively decouple due to the QCD mass gap and spontaneous chiral symmetry breaking. This decoupling also applies to most dynamical (hadronic) low energy degrees of freedom at even lower energies, finally leaving us with dynamical pions and hence with chiral perturbation theory. Indeed, this successive decpoupling is at the root of the success of chiral effective field theory. 
+	
+The functional renormalisation group approach to QCD with its successive integrating-out of momentum modes is ideally suited to follow and study this decoupling. Diagrammatically, this is already seen within the flow equation for the QCD effective action, depicted in \autoref{fig:QCD_equation}. The different lines stand for the full non-perturbative propagators of gluons, ghosts, quarks and emergent low-energy degrees of freedom (hadrons in our case), where the loop momentum $q$ is restricted by the infrared cutoff scale $k$, $q^2\lesssim k^2$. In this setup, emergent bound states can be incorporated systematically by dynamical hadronisation \cite{Gies:2001nw, Gies:2002hq, Pawlowski:2005xe, Floerchinger:2009uf}. For quantitative QCD applications in the vacuum see \cite{Braun:2014ata, Rennecke:2015eba, Mitter:2014wpa, Cyrol:2017ewj}, for further conceptual developments and the application to the QCD phase structure important for the present work see \cite{Fu:2019hdw}. The decoupling is apparent in this framework as the propagators carry the mass gaps $m_\textrm{gap}$ of gluons and quarks and for cutoff scales $k\ll m_\textrm{gap}$ of a given field the respective loop tends towards zero. 
+	
+More importantly, in this way the emergent low energy effective theory is naturally embedded in QCD, and its ultraviolet parameters (at $\Lambda\lesssim1$\,GeV) as well as further input may be directly computed from QCD, leading to \textit{QCD-assisted} low energy effective theories. For more details see in particular \cite{Fu:2019hdw}, and the recent review \cite{Dupuis:2020fhh}. Most prominently this embedding has been used for determining the temperature-dependence of the Polyakov loop potential, see \cite{Haas:2013qwp, Herbst:2013ufa}. This setup was then applied to the computation of fluctuations in \cite{Fu:2015amv, Fu:2015naa, Fu:2016tey, Wen:2018nkn, Yin:2019ebz}. 
+	
+	
+In summary this entails, that for sufficiently small momenta $k^2$, temperatures $T$, and also density or quark chemical potential $\mu_q$, the gluon (and ghost) loop in \autoref{fig:QCD_equation} decouple from the dynamics, and only provide a non-trivial glue background at finite temperature and chemical potential. The latter is taken into account with the Polyakov loop potential discussed in detail below. 
+	
+\subsection{Two-flavour setup}\label{sec:Nf2LEFT}
+
+For the physics of fluctuations we are interested in $k,T, \mu_B\lesssim 1$\,GeV. We restrict ourselves to $k\lesssim 700$\,MeV and temperatures and quark chemical potentials $T,\mu_q \lesssim 200$\,MeV. In this regime we are left with the light quarks $q=(u,d)$ and the strange quark $s$. The latter, while changing the momentum-scale running of the correlation functions, has subleading effects on the form of the fluctuations. Hence, the effect of the momentum-scale running induced by strange fluctuations will be mimic here by an appropriate scale matching detailed in \autoref{subsec:scale}. 
+
+We also inlcude the lowest lying hadronic resonances, the pion ${\bm\pi}=(\pi^\pm,\pi^0)$, and for symmetry reasons, the scalar resonance $\sigma$ as effective low energy degrees of freedom. 
+Within QCD flows these fields are emergent low energy degrees of freedom at cutoff scales $k\simeq 1$\,GeV, that are taken care of with dynamical hadronisation in e.g.\ \cite{Fu:2019hdw}. At the present low energy scales $k\leq 400$\,MeV they are fully dynamical, and hence are part of the effective action at the initial cutoff scale. The other members of the lowest lying multiplet as well as further hadronic resonances produce rather subleading contributions to the offshell dynamics and hence are dropped. The mesonic fields are stored in an O(4) scalar field $\phi=(\sigma, {\bm\pi})$. 
+
+Quantum, thermal and density fluctuations with scales $k\lesssim \Lambda= 700$\,MeV are taken into account within the fRG, whose dynamics is now reduced to the last two loops in \autoref{fig:QCD_equation}. The respective effective action of QCD in the low energy regime is approximated by 
+%
+\begin{align}
+\Gamma_k=&\int_x \bigg\{Z_{q,k}\bar{q} \Big [\gamma_\mu \partial_\mu -\gamma_0(\hat\mu+igA_0) \Big ]q+\frac{1}{2}Z_{\phi,k}(\partial_\mu \phi)^2 \nonumber\\[2ex]
+&\hspace{.3cm}+h_k\,\bar{q}\,
+\left(\tau^0\sigma+\bm\tau
+\cdot\bm{\pi}\right)\,q +V_k(\rho,A_0)-c\sigma \bigg\}\,,\label{eq:action}
+\end{align}
+%
+with $\int_{x}=\int_0^{1/T}d x_0 \int d^3 x$ and $\tau=1/2 (\mathbb{1}, i \gamma_5 \bm \sigma)$. In \eq{eq:action}, $Z_{q,k}$ and $Z_{\phi,k}$ are the wave function renormalisations for the light quarks and the meson respectively. Further running couplings considered are the Yukawa coupling $h_k$, the scattering between quarks and mesons, as well as the effective potential $V_k(\rho,A_0)$, that describes the multi-scattering of mesons in the non-trivial glue background present at finite temperature and chemical potential.
+	
+The flow equation for the effective action \eq{eq:action}, and that for $V_k, h_k, Z_{\phi,q}$ is described in \autoref{app:fRG} and \autoref{app:flowV}. The initial condition for $\Gamma_k$ at the initial cutoff scale $k=700$\,MeV is described in \autoref{app:Ini}. 
+	
+The potential $V_k(\rho, A_0)$ has contributions $V_{\mathrm{glue},k}(A_0)$ from offshell glue fluctuations (first two diagrams in \autoref{fig:QCD_equation}), and contributions $V_{\mathrm{mat},k}(\rho,A_0)$ from the quark loop (third diagram in \autoref{fig:QCD_equation}). This leads us to 
+%
+\begin{align}
+V_k(\rho,A_0)=&V_{\mathrm{glue},k}(A_0)+V_{\mathrm{mat},k}(\rho,A_0)\,,\label{eq:Vtotal}
+\end{align}
+%
+The first contribution is typically reformulated in terms of the Polyakov loop $L(A_0)$, while the latter is directly computed from the present low energy flow. This allows us to trade the $A_0$-dependence for that of the traced Polyakov loop, $L(A_0), \bar L(A_0)$, see \autoref{app:gluepot}, \eq{eq:Lloop}, leading us to to the final form of our potential, 
+%
+\begin{align}
+V_k(\rho, L,\bar L)= V_k(\rho, A_0)\,. 
+\end{align}
+More details about $V_{\mathrm{glue},k}$ used in this work can be found in \autoref{app:gluepot}. 
+	
+\subsection{$2+1$-favour scale matching in $2$-flavour QCD}\label{subsec:scale}
+	
+The current QCD-assisted LEFT setup enables us to compute thermodynamic observables and in particular hyper-order baryon number fluctuations. However, as already briefly discussed in \autoref{sec:Nf2LEFT}, we have dropped the dynamics of the strange quark. While we expect sub-dominant effects on hyper-fluctuations, the $s$-quark influences the momentum running of the correlations in the ultraviolet. 
+	
+Importantly, in \cite{Fu:2019hdw} it has been observed on the basis of genuine $N_f=2$ and $N_f=2+1$ flavour computations in QCD, that the latter effect is well approximated by a respective universal scale-matching of the two-flavour results even in QCD. Such a scale-matching has already led to a rather quantitative agreement of thermodyanmics and kurtosis within the current LEFT setup with lattice results, see \cite{Fu:2015amv, Fu:2015naa, Fu:2016tey}. 
+	
+\subsubsection{Two- to 2+1-flavour scale matching in QCD}	
+Given its relevance for the predictive power of the present LEFT within a QCD scale matching procedure we briefly recall the respective results in \cite{Fu:2019hdw}: There, the phase boundary of two- and $2+1$-flavour QCD has been computed within the fRG approach. The results there allows us to evaluate the reliability of even linear scale-matchings of temperatures and chemical potentials in two- and 2+1-flavour QCD introduced by 
+%
+\begin{align}
+T^{(N_f=2)} &=c_{_{T}}\,T^{(N_f=2+1)} \,, \quad \mu_B^{(N_f=2)} =c_{\mu_B}\,\mu_{B}^{(N_f=2+1)} \,,\label{eq:rescale}
+\end{align}
+%
+With such a linear scale-matching the scaling factors $c_{_{T}}, c_{\mu_B}$ can be determined by evaluating the relations at a specific temperature and chemical potential. 
+
+For the scale matching we naturally take $(T,\mu_B)=(T_c,0)$, the crossover temperature at vanishing chemical potential. In \cite{Fu:2019hdw} the crossover temperatures have been determined with thermal susceptibilities of the renormalised light chiral condensate. Then, the linear rescaling of the two-favour chiral crossover temperature to the 2+1-flavour crossover temperature is done with 
+%
+\begin{align}\label{eq:cTQCD}
+T_c^{(N_f=2)} = c_T^{\textrm{QCD}}\, T_c^{(N_f=2+1)}\,, \qquad  c_T^{\textrm{QCD}}=1.1\,. 
+\end{align} 
+%
+For the matching of the chemical potentials we use the curvature $\kappa$ of the phase boundary at vanishing $\mu_B=0$, 
+%
+\begin{align}
+\frac{T_c(\mu_B)}{T_c}&=1-\kappa \left(\frac{\mu_B}{T_c}\right)^2+\lambda \left(\frac{\mu_B}{T_c}\right)^4+\cdots\,.\label{eq:curv}
+\end{align}
+% 
+Adjusting the two-flavour curvature $-\kappa\, \mu_B^2/T_c^2$ to the 2+1-flavour one leads us to the relation 
+%
+\begin{align}
+c^\textrm{QCD}_{\mu_B}&=c^{\textrm{QCD}}_{_{T}}\left(\frac{\kappa^{(N_f=2+1)}}{\kappa^{(N_f=2)}}\right)^{1/2}\,, \qquad c_{\mu_B}^\textrm{QCD}=0.99 \,.\label{eq:cmuQCD}
+\end{align}
+%
+The value $c_{\mu_B}^\textrm{QCD}\approx 1$ entails that the change in the curvature coefficient $\kappa$ is balanced by that of the temperature scale.  
+
+The fourth order expansion coefficient $\lambda$ is found to be very small in both functional, \cite{Fu:2019hdw, Gao:2020fbl, Gao:2020qsj} as well as lattice computations, \cite{Bazavov:2018mes,Borsanyi:2020fev}. Moreover, the results for the phase boundary at finite chemical potential in \cite{Fu:2019hdw, Gao:2020fbl, Gao:2020qsj, Fischer:2018sdj} reveal that the phase boundary is still described well by the leading  order expansion with $\mu_B^2$-terms. We estimate, that this prediction is quantitatively reliable within $\mu_B/T\lesssim 4$, using results from \cite{Fu:2019hdw, Gao:2020fbl, Gao:2020qsj, Fischer:2018sdj, Braun:2019aow}. This covers the regime studied in the present work. 
+
+Now we apply the two scale-matching relations in \eq{eq:rescale} with the coefficients \eq{eq:cTQCD} and \eq{eq:cmuQCD} to the two- and 2+1-flavour data of the QCD phase boundary in \cite{Fu:2019hdw}. This leads us to \autoref{fig:QCD-scalematching}. In conclusion, this impressive agreement provides non-trivial support for the scale-matching analysis done in QCD. 
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.45\textwidth]{QCD-scalematching}
+\caption{Phase boundaries of $N_f=2$-flavour QCD within a $N_f=2+1$-flavour scale matching at the crossover temperature and $\mu_B=0$.}\label{fig:QCD-scalematching}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\subsubsection{Two- to 2+1-flavour scale matching in LEFTs}	
+
+
+	
+The convincing quantitative accuracy of the linear scale-matching analysis presented here for QCD also sustains its use in the LEFT within the present work. Note however, that we cannot simply take over the above QCD-relations for the present LEFT, which lacks the backcoupling of the glue-dynamics on both, large temperature and chemical potential physics. Still, the dominance of the leading order term $-\kappa \mu_B^2/T_c^2$ in the model reflects the same property in QCD. This allows us to employ a respective linear scale-matching for $\mu_B/T\lesssim 4$ as studied in the present work. 
+	
+	
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.45\textwidth]{T-adjust}
+\caption{Temperature scale maching LEFT-QCD with $R_{42}$ in \eq{eq:Rmn} with $c_{_{T}}=1.247(12)$, using the lattice results of \cite{Borsanyi:2018grb}. The $T/T_c$-dependence of $R_{42}$ is a prediction of the QCD-assisted LEFT used in the present work, and agrees quantitatively with the lattice results.}\label{fig:T-adjust}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+Analogously to QCD we choose the chiral crossover temperature at vanishing chemical potential, $(T,\mu_B)=(T_c,0)$ for fixing the scale factors $(c_{_T}, c_{\mu_B})$. Moreover, in the present work we are interested in fluctuations of conserved charges. Hence, instead of the renormalised condensate we use the kurtosis of baryon number fluctuations, or rather $R_{42}^B=\chi_4^B/\chi_2^B$, for the definition see \eq{eq:Rmn} and \eq{eq:suscept} with \eq{eq:chiB2}, \eq{eq:chiB4}. This leads us to the following determination of $c_T$: While the temperature-dependence of $R^{B}_{42}$ is a prediction of the LEFT, its absolute temperature has to be adjusted. This is done by minimising the $\chi^2$ of the difference between the lattice result and the LEFT-prediction as a function of the rescaled absolute temperature $c_T T_c$, leading us to 
+%
+\begin{align}
+c_{_{T}}=1.247(12)\,,\label{eq:c_T-LEFT}
+\end{align}
+%
+The respective result for $R_{42}$ is shown in \Fig{fig:T-adjust} in comparision to the lattice result from \cite{Borsanyi:2018grb}, and the two curves match quantitatively supporting the predictive power of the LEFT. 
+	
+For the scale-matching of $\mu_B$ with the curvature $-\kappa \mu_B^2/T_c^2$ we have a plethora of results from state of the art functional approaches: $\kappa=0.0142(2)$ in  \cite{Fu:2019hdw}, $\kappa=0.0150(7)$ in \cite{Gao:2020qsj} and $\kappa=0.0147(5)$ in \cite{Gao:2020fbl}, the very recent update of \cite{Gao:2020fbl}. Lattice results are provided with $\kappa=0.015(4)$ in \cite{Bazavov:2018mes}, $\kappa=0.0149(21)$ in \cite{Bellwied:2015rza}, $\kappa=0.0153(18)$ in \cite{Borsanyi:2020fev}. Both, functional and lattice results agree within the respective (statistical and systematic) errors with a $\kappa\approx 0.015$. 
+
+
+Having adjusted the temperature with results from the WB-collaboration, \cite{Bellwied:2015rza}, we use $\kappa=0.0153$ from \cite{Borsanyi:2020fev} for internal consistency. Note that the results presented here, do only change marginally, if using one a $\kappa$ in the range $\kappa=(0.042 - 0.053)$. Within the current LEFT including quantum, thermal and density fluctuations below $700$\,MeV, we obtain $\kappa_{_\textrm{LEFT}}=0.0193$. In comparison, $\kappa_{_\textrm{LEFT}}$ is large than the two-flavour QCD result in \cite{Fu:2019hdw} with $\kappa=0.0179(8)$. This reflects the lack of glue-dynamics in the LEFT. We use this in the relation \eq{eq:cmuQCD} instead of $\kappa^{(N_f=2)}$, and arrive at  
+%
+\begin{align}
+c_{\mu_B}=c_{_{T}}\left(\frac{\kappa^{N_f=(2+1)}}{\kappa_{_{\textrm{LEFT}}}}\right)^{1/2}=1.110(66)\,, \label{eq:cmu-LEFT}
+\end{align}
+%
+with the LEFT-$c_{_T}$ from \eq{eq:c_T-LEFT}. 
+	
+In summary, in this section we have utilised the scale-matching relations \eq{eq:rescale} between two- and 2+1-flavour QCD derived from the two- and 2+1-flavour QCD results in \cite{Fu:2019hdw}. These relations were applied to the present QCD-assisted LEFT. The scale matching was done with two observables relevant for the fluctuation physics studied here: $R^{B}_{42}$ as a function of $T$ and the curvature of phase boundary $\kappa$, both at vanishing chemical potential. This led us to the coefficients \eq{eq:c_T-LEFT} and \eq{eq:cmu-LEFT} in \eq{eq:rescale}.
+	
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=1\textwidth]{R42R62R82-T-muB0}
+\caption{$R^{B}_{42}=\chi^{B}_{4}/\chi^{B}_{2}$ (left panel), $R^{B}_{62}=\chi^{B}_{6}/\chi^{B}_{2}$ (middle panel), and $R^{B}_{82}=\chi^{B}_{8}/\chi^{B}_{2}$ (right panel) as functions of the temperature with vanishing baryon chemical potential ($\mu_B=0$). Results obtained with the low energy effective theory within fRG approach are compared with lattice results from the HotQCD collaboration \cite{Bazavov:2017dus,Bazavov:2017tot,Bazavov:2020bjn} and the Wuppertal-Budapest collaboration \cite{Borsanyi:2018grb}. The inset in the plot of $R^{B}_{82}$ shows its zoom-out view.}\label{fig:R42R62R82-T-muB0}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\section{Thermodynamics and Hyper-order baryon number fluctuations}
+\label{sec:hyper-fluc}
+	
+
+The thermodynamical potential density in the LEFT at finite temperature and nonzero baryon chemical potential is readily obtained from the effective action in \eq{eq:action} or rather from its integrated flow: we evaluate the effective action on the solution of the quantum equations of motion (EoMs). In the present work we consider only homogeneous (constant) solutions,  $(\sigma_\textrm{EoM}, A_{0,\textrm{EoM}})$ with
+%
+\begin{align}\label{eq:EoMs}
+\frac{\partial V(\rho, L,\bar L)}{\partial \sigma} =   \frac{\partial V(\rho, L,\bar L)}{\partial L} = \frac{\partial V(\rho, L,\bar L)}{\partial \bar L} =0\,, 
+\end{align}
+%
+while the quark fields vanish, $q,\bar q=0$. We also note that homogeneous solutions have to be taken with a grain of salt for larger chemical potentials with $\mu_B/T\gtrsim 4$, see \cite{Fu:2019hdw}. With these preparations we are led to the grand potential $\Omega[T,\mu_B]= V_{k=0}(\rho, L,\bar L)$, the effective potential, evaluated at vanishing cutoff scale $k=0$. It reads   
+%
+\begin{align}
+\Omega[T,\mu_B]=&V_{\mathrm{glue}}(L, \bar L)+V_{\mathrm{mat}}(\rho, L, \bar L)-c\sigma\,,\label{eq:Omega}
+\end{align}
+where the gluonic background field $A_0$ in \eq{eq:Vtotal} has been reformulated in terms of the Polyakov loop $L$ and its complex conjugate $\bar L$. As mentioned before, the matter sector of the effective potential is integrated out towards the IR limit $k=0$, for details see \hyperref[app:flowV]{App.~\ref{app:flowV}}. In turn, the glue sector is independent of $k$, see \hyperref[app:gluepot]{App.~\ref{app:gluepot}}. The pressure of the system follows directly from the thermodynamical potential,
+%
+\begin{align}
+p=&-\Omega[T,\mu_B]\,.\label{eq:pres}
+\end{align}
+%
+The generalised susceptibilities of the baryon number $\chi^B_n$ qre defined through the $n$-order derivatives of the pressure w.r.t.\ the baryon chemical potential, to wit,
+%
+\begin{align}
+\chi_n^{B}&=\frac{\partial^n}{\partial (\mu_B/T)^n}\frac{p}{T^4}\,.\label{eq:suscept}
+\end{align}
+%
+It is advantageous to consider the ratio between the $m$- and $n$-th order susceptibilities, defined by,   
+%
+\begin{align}
+R_{mn}^{B}&=\frac{\chi_m^{B}}{\chi_n^{B}}\,.\label{eq:Rmn}
+\end{align}
+%
+The generalized susceptibilities are related to various cumulants of the baryon number distribution, which can be measured in heavy-ion collision experiments through the cumulants of its proxy, i.e., the net proton distribution, see, e.g. \cite{Luo:2017faz} for details. For the lowest four orders, one is led to
+%
+\begin{align}
+\chi^B_1=&\frac{1}{VT^3}\braket{N_B}\,,\label{eq:chiB1}\\[2ex]
+\chi^B_2=& \frac{1}{VT^3}\braket{(\delta N_B)^2}\,,\label{eq:chiB2}\\[2ex]
+\chi^B_3=&\frac{1}{VT^3}\braket{(\delta N_B)^3}\,,\\[2ex]
+\chi^B_4=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^4}-3\braket{(\delta N_B)^2}^2\Big)\,,\label{eq:chiB4}
+\end{align}
+%
+with $\braket{\cdots}$ denoting the ensemble average and $\delta N_B=N_B-\braket{N_B}$. Thus the mean value of the net baryon number of the system is given by $M=VT^3\chi_1^{B}$, the variance $\sigma^2=VT^3\chi_2^{B}$, skewness $S=\chi_3^{B}/(\chi_2^{B}\sigma)$, and the kurtosis $\kappa=\chi_4^{B}/(\chi_2^{B}\sigma^2)$, respectively.
+
+	
+
+
+In this work the emphasis is, however, put on the baryon number fluctuations of order higher than the fourth, i.e., $\chi_n^{B}$'s ($n>4$), which are named hyper-order baryon number fluctuations. As same as the low-order ones, the hyper-order susceptibilities are also connected to their respective cumulants, and their relations, taking the fifth through eighth ones for instance, are given as follows
+{\allowdisplaybreaks
+%
+\begin{align}
+\chi^B_5=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^5}-10\braket{(\delta N_B)^2}\braket{(\delta N_B)^3}\Big)\,,\\[2ex]
+\chi^B_6=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^6}-15\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-10\braket{(\delta N_B)^3}^2+30\braket{(\delta N_B)^2}^3\Big)\,,\\[2ex]
+\chi^B_7=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^7}-21\braket{(\delta N_B)^5}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-35\braket{(\delta N_B)^4}\braket{(\delta N_B)^3}\nonumber\\[2ex]
+&+210\braket{(\delta N_B)^3}\braket{(\delta N_B)^2}^2\Big)\,,\\[2ex]
+\chi^B_8=&\frac{1}{VT^3}\Big(\braket{(\delta N_B)^8}-28\braket{(\delta N_B)^6}\braket{(\delta N_B)^2}\nonumber\\[2ex]
+&-56\braket{(\delta N_B)^5}\braket{(\delta N_B)^3}-35\braket{(\delta N_B)^4}^2\nonumber\\[2ex]
+&+420\braket{(\delta N_B)^4}\braket{(\delta N_B)^2}^2\nonumber\\[2ex]
+&+560\braket{(\delta N_B)^3}^2\braket{(\delta N_B)^2}-630\braket{(\delta N_B)^2}^4\Big)\,.
+\end{align}
+%
+}
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=1.\textwidth]{R42R62R82-T-muB0to400}
+\caption{$R^{B}_{42}$ (left panel), $R^{B}_{62}$ (middle panel), and $R^{B}_{82}$ (right panel) as functions of the temperature at several values of $\mu_B$. Insets in each plot show their respective zoom-out view.}\label{fig:R42R62R82-T-muB0to400}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[b]
+\includegraphics[width=0.45\textwidth]{R102-T-muB0}
+\caption{$R^{B}_{10,2}=\chi^{B}_{10}/\chi^{B}_{2}$ as a function of the temperature with $\mu_B=0$, predicted by the LEFT within the fRG approach.}\label{fig:R102-T-muB0}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+Different aspects of hyper-order fluctuations have been studied in mean-field approximations in the past, see e.g.\ \cite{Wagner:2009pm, Karsch:2010hm, Schaefer:2011ex}. However, due to the decisive role that non-perturbative quantum fluctuations play for these quantities, a treatment beyond mean-field, as in the present work, is necessary for their accurate description.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\section{Numerical results and discussions}
+\label{sec:num}
+
+In this section we present and discuss our numerical results on hyper-fluctuations at the freeze-out curve. At vanishing chemical potential the lower orders are compared to results from lattice calculations. We then discuss the implications of our predictions for the hyper-order baryon number fluctuations for decreasing collision energies (increasing chemical potential)  for heavy-ion collision experiments. 
+	
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hyper-order baryon number fluctuations at vanishing density: benchmarks and predictions}
+\label{subsec:hyper-order0}
+	
+	
+
+
+We start our discussion of the numerical results in our QCD-assisted low energy effective theory with benchmark results at vanishing chemical potential, $\mu_B=0$. We have already seen in \autoref{subsec:scale}, that the fourth order fluctuations $R_{42}$, \eq{eq:Rmn}, agrees quantitatively with the respective lattice result, see \autoref{fig:T-adjust} and \autoref{fig:R42R62R82-T-muB0}, left panel. We emphasise again  that the thermal dependence of $R_{42}$ is a prediction of the present LEFT. Now we also compare the hyper-fluctuations $R_{62}, R_{82}$ with the respective lattice results: In the middle and right panels of \Fig{fig:R42R62R82-T-muB0} we show the temperature-dependence of $R^{B}_{62}=\chi^{B}_{6}/\chi^{B}_{2}$ and $R^{B}_{82}=\chi^{B}_{8}/\chi^{B}_{2}$ at vanishing $\mu_B$. We depict both, our numerical results and lattice results from the hotQCD collaboration, \cite{Bazavov:2017dus,Bazavov:2017tot,Bazavov:2020bjn}, and the Wuppertal-Budapest collaboration, \cite{Borsanyi:2018grb}. 
+
+With the increase of the order of fluctuations, the errors of lattice results increase significantly. Moreover, the eighth-order fluctuations $R^{B}_{82}$ obtained by the two collaborations show a significant quantitative difference, although their form is qualitatively consistent with each other. In conclusion, the hyper-order baryon number fluctuations computed in the current setup are in qualitative agreement with both lattice results. However, our results single out the lattice results of the Wuppertal-Budapest collaboration, with which we observe quantitative agreement. This situation is very reminiscent of the pressure prediction in \cite{Herbst:2013ufa}: similarly to the current situation with lattice predictions of hyper-fluctuations, the pressure predictions of the lattice collaborations had not converged yet. A less advanced version of the current QCD-assisted LEFT framework then predicted the correct pressure result. 
+
+We have also computed the hyper-order fluctuations within a simple hadron resonance gas model \cite{BraunMunzinger:2003zd} and found them to be essentially equal to one with only a very minor monotonic increase with $T$ for $T \lesssim 140$~MeV. This is in quantitative agreement with our findings. In summary, the current setup passes all benchmark tests quantitatively and provides the full temperature-dependence of hyper-fluctuations. 
+
+We have also computed even higher order baryon number fluctuations. In \Fig{fig:R102-T-muB0} we show our result of the temperature-dependence of the tenth order ratio $R^{B}_{10,2}=\chi^{B}_{10}/\chi^{B}_{2}$ at vanishing chemical potential, $\mu_B=0$. So far no lattice results for the tenth-order fluctuation are available, and the dependence of $R^{B}_{10,2}$ on the temperature in \Fig{fig:R102-T-muB0} is  a prediction by the current QCD-assisted LEFT and awaits confirmation by other calculations, e.g., lattice QCD, in the future.
+
+
+
+
+
+
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=0.9\textwidth]{R42R62-muBoT}
+\caption{$R^{B}_{42}$ (left panel) and $R^{B}_{62}$ (right panel) as functions of $\mu_B/T$ with $T=155$ MeV and $T=160$ MeV. The results with the QCD-assisted LEFT are  compared to that from lattice QCD by the HotQCD collaboration \cite{Bazavov:2020bjn} and the Wuppertal-Budapest collaboration \cite{Borsanyi:2018grb}. Note that the comparison of $R^{B}_{42}$ between HotQCD and LEFT is presented in the inlays, in order to improve the readability of presentation.}\label{fig:R42R62-muBoT}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+
+
+	
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\includegraphics[width=0.9\textwidth]{R42R62expansion-muBoT}
+\caption{Comparison between the direct full calculation of baryon number fluctuations $R^{B}_{42}$ (left panel) and $R^{B}_{62}$ (right panel) via \Eq{eq:suscept} and the Taylor expansion in \eq{eq:chiBTay}. Both calculations are performed within the QCD-assisted LEFT, and $R^{B}_{42}$, $R^{B}_{62}$ are plotted as functions of $\mu_B/T$ with $T=155$ MeV and $T=160$ MeV.}\label{fig:R42R62expansion-muBoT}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\subsection{Hyper-order baryon number fluctuations at finite  density}
+\label{subsec:hyper-ordermuB}
+With successfully passing the benchmark test, we proceed to results for baryon number fluctuations at finite chemical potential. The respective results will allow us to finally compare the theoretical predictions at the freeze-out curve with the experimental measurements in \autoref{subsec:freezout}. 
+
+Equally important is the self-consistent evaluation of the reliability of a Taylor expansion in baryon-chemical potential that underlies the extension of lattice results at vanishing chemical potential to $\mu_B\neq 0$. This is particularly important for predictions of the location of the critical endpoint based on such an expansion. Note in this contect that the current QCD-assisted low energy effective model successively looses quantitative reliability for $\mu_B/T\gtrsim 2$. Still,  structural results on the convergence of the Taylor expansion as well as on signatures for the CEP carry over to QCD. 
+
+First we investigate the temperature-dependence of the baryon number fluctuations for different chemical potential. This also allows us to discuss the reliability bounds of the current LEFT-setup for increasing chemical potential. In \Fig{fig:R42R62R82-T-muB0to400} we show the temperature-dependence of the ratios $R^{B}_{42}$, $R^{B}_{62}$ and $R^{B}_{82}$ for chemical potentials $\mu_B=0, 100, 160, 200, 300, 400$. As expected, the magnitude and the error of the fluctuations grow with the increasing chemical potential. Both effects are more pronounced for higher order fluctuations. Hence, we expect that the current LEFT-setup is gradually losing its predictive power for fluctuations on the freeze-out curve 
+due  to the rapid increase of the computational error for higher-order fluctuations at large baryon chemical potential, e.g., $R^{B}_{82}$ with $\mu_B\gtrsim 200$ MeV. All results of the consequent investigations have to be evaluated with this estimate on our systematic error.  
+
+For the evaluation of the reliability regime of the Taylor expansion about vanishing chemical potential we consider the Taylor expansion of the pressure in \Eq{eq:pres} in powers of $\hat{\mu}_{B}\equiv\mu_B/T$ around $\hat{\mu}_{B}=0$. This leads us to 
+%
+\begin{align}
+\frac{p(\mu_B)}{T^4}&=\frac{p(0)}{T^4}+\sum_{i=1}^{\infty}\frac{\chi^B_{2i}(0)}{(2i)!}\,\hat{\mu}_{B}^{2i}\,,\label{eq:cmu}
+\end{align}
+%
+with the expansion coefficients $\chi^B_{2i}(0)=\chi^B_{2i}(\mu_B=0)$, the hyper-fluctuations of the baryon charge. In \eq{eq:cmu} we have suppressed the temperature-dependence of all functions for the sake of readability. Truncating the Taylor expansion in \eq{eq:cmu} at the eighth order, $\hat{\mu}_{B}^{8}$, and employing \eq{eq:suscept}, we obtain the expanded baryon number fluctuations, 
+%
+\begin{align}
+\chi^B_2(\mu_B)\simeq&\chi^B_2(0)+\frac{\chi^B_4(0)}{2!}\hat{\mu}_{B}^{2}+\frac{\chi^B_6(0)}{4!}\hat{\mu}_{B}^{4}+\frac{\chi^B_8(0)}{6!}\hat{\mu}_{B}^{6}\,,\nonumber \\[2ex]
+\chi^B_4(\mu_B)\simeq&\chi^B_4(0)+\frac{\chi^B_6(0)}{2!}\hat{\mu}_{B}^{2}+\frac{\chi^B_8(0)}{4!}\hat{\mu}_{B}^{4}\,,\nonumber\\[2ex]
+\chi^B_6(\mu_B)\simeq&\chi^B_6(0)+\frac{\chi^B_8(0)}{2!}\hat{\mu}_{B}^{2}\,.\label{eq:chiBTay}
+\end{align}
+%
+In \Fig{fig:R42R62-muBoT} we show the ratios $R_{42}=\chi^B_4/\chi^B_2$ and $R_{62}=\chi^B_6/\chi^B_2$ based on the Taylor expansion. We show results for two temperatures,  $T=155$\,MeV (close to the crossover temperature $T_c$ at $\mu_B=0$) and $T=160$\,MeV (slightly above $T_c$). As an input we use the fluctuations at vanishing chemical potential, viz. $\chi^B_{i}(0)$ ($i=$2, 4, 6, 8) from the current setup as well as from the lattice (HotQCD collaboration \cite{Bazavov:2020bjn} and Wuppertal-Budapest collaboration \cite{Borsanyi:2018grb}), depicted already in \Fig{fig:R42R62R82-T-muB0}. As expected, the LEFT-results for the $\mu_B$-dependence of $R^{B}_{42}$ and $R^{B}_{62}$ agrees qualitatively with both lattice results. Moreover, it agrees quantitatively with the Wuppertal-Budapest result.   
+
+Importantly, the $\chi^B_n(\mu_B)$'s in \Eq{eq:suscept} can  also be computed directly within the current QCD-assisted LEFT without resorting to the Taylor expansion. The results are presented in \Fig{fig:R42R62-muBoT} for the same temperatures, 
+$T=155$\,MeV and $T=160$\,MeV in comparison with the respective results from the Taylor expansion in the LEFT up to the 8th order.  
+
+We observe that the result for $R^{B}_{42}$ from the Taylor expansion up to the eighth order in \eq{eq:chiBTay} agrees quantitatively with that from the full calculation for $\mu_B/T\lesssim 1.2$. Not surprisingly, this reliability regime is reduced significantly for the hyper-order fluctuation $R^{B}_{62}$ to $\mu_B/T\lesssim 0.8$. \coljan{In including also our prediction for the tenth order, the respective  reliability regimes are extended to $\mu_B/T\lesssim ??$ and $\mu_B/T\lesssim ??$ for $R_{42}$ and $R_{62}$ respectively. {\bf Please provide the respective results!}} 
+
+We also observe that the results from the Taylor expansion fail to even agree qualitatively for $\mu_B/T_c \gtrsim 1.5-2$, see \Fig{fig:R42R62expansion-muBoT}. If aiming at tendencies for hyper-fluctuations, or even fluctuations such as in particular the kurtosis, the Taylor expansion fails even qualitatively for $\mu_B/T_c \gtrsim 1.5$. 
+Moreover, this disagreement is not reduced significantly with the tenth order. \coljan{\bf Please confirm} In conclusion, for $\mu_B\gtrsim 300$\,MeB, the extrapolation of fluctuations of conserved charged within a Taylor expansion lost its predictive power, at least within the present, already quite high, order. 
+
+This raises the important question of whether one can manage to describe the peculiar behaviour of the full result within a resummation of the Taylor series. If possible and stable against variations within the present QCD-assisted LEFT, it would be suggestive that the same  resummation formula also works for QCD-data for hyper-fluctuations at vanishing density. Together with work on hyper-fluctuations in an extension of the functional QCD-work in \cite{Fu:2019hdw} this could finally provide a quantitatively reliable extrapolation approach for fluctuation observables in QCD. 
+
+\subsection{Determination of the  freeze-out curve}
+\label{subsec:freezeoutCurve}	
+
+The quantitatively successful benchmark tests analysed in \autoref{subsec:hyper-order0}, and the evaluation of baryon number fluctuations at finite chemical potential 
+in \autoref{subsec:hyper-ordermuB} allows us now to discuss our main goal: the comparison of theoretical predictions on the baryon number fluctuations with experimental measurement. 
+
+To begin with, a direct comparison between the theory and experiment is a very  challenging task. This is due to the fact that experimental data are affected by many factors. First, this concerns the acceptance of the detector such as the transverse momentum $p_T$ range, rapidity window and the centrality dependence \cite{Adamczyk:2013dal,Luo:2015ewa,Adam:2020unf,Nonaka:2020crv,Pandav:2020uzx}, see \cite{Luo:2017faz,Adamczyk:2017iwn} for more details. Second, the physics setup used in theory and experiment may differ by the presence of volume fluctuations \cite{Luo:2013bmi}, the question of global baryon number conservation \cite{Braun-Munzinger:2016yjz,Vovchenko:2020tsr}, the inclusion of resonance decays \cite{Nahrgang:2014fza}, and others. All these different effects and experimental restrictions give rise to  non-critical contributions to fluctuation observables in experiments, and pinning down their contributions plays a pivotal role in identifying the critical signals in the BES experiment. Additionally, due to critical slowing down, nonequilibrium effects become important in the vicinity of the CEP \cite{Berdnikov:1999ph}, which necessitates a theoretical description of the dynamics of critical fluctuations. For more details about recent progress on the dynamics of critical fluctuations in QCD, see \cite{Bluhm:2020mpc} and references therein. We emphasise, however, that the present results are well outside the critical region of the present QCD-assisted LEFT, and therefore are not subject to critical dynamics. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{figure}[t]
+\includegraphics[width=0.48\textwidth]{phasediagram}
+\caption{Chemical freeze-out temperature and baryon chemical potential in the $T-\mu_B$ plane. The blue pentagons and red circles show the freeze-out data from Andronic {\it et al.} \cite{Andronic:2017pug} and STAR experiment \cite{Adamczyk:2017iwn}, respectively. The blue dashed line represents the parametrisation of blue pentagons through Eqs. (\ref{eq:muBCFparatri}) and (\ref{eq:TCFparatri}). The red solid and green dotted lines show the parametrisation of the STAR data based on all the seven data points, and only the four data points in the middle region ($100\,\mathrm{MeV}\lesssim\mu_B\lesssim 300\,\mathrm{MeV}$), respectively. The gray squares are obtained by interpolating the blue pentagons. The inlay zooms in the low-$\mu_B$ region.}\label{fig:phasediagram}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+In this work we will not take into account the non-critical and dynamical effects discussed above. Instead, we assume that the measured cumulants of the net-proton multiplicity distribution at a given collision energy is in one-by-one correspondence to the calculated fluctuations in \Eq{eq:suscept} with one value of $T$ or $\mu_B$ (with other collision parameters e.g., the centrality and rapidity range fixed). Then, it is suggestive to attribute the values of $T$ and $\mu_B$ to be the ones when the chemical freeze-out occurs, viz. $T_{_{CF}}$ and ${\mu_B}_{_{CF}}$. Such an approach for the comparison is usually employed in fluctuation studies of equilibrium QCD matter within functional methods or lattice simulations, see e.g.\ \cite{Fu:2015amv, Fu:2016tey, Isserstedt:2019pgx, Bazavov:2020bjn}. \coljan{What about Redlich et al?}
+
+In this work we adopt the freeze-out temperatures and baryon chemical potentials from \cite{Andronic:2017pug} and from the STAR experiment \cite{Adamczyk:2017iwn}, which are shown in \Fig{fig:phasediagram} by the blue pentagons and red circles, respectively. They are both obtained from the analysis of hadron yields in the statistical hadron resonance gas model, see the  aforementioned references for more details. The freeze-out data in \cite{Andronic:2017pug} has also been parameterised as functions of the collision energy as follows 
+%
+\begin{subequations}\label{eq:freeze-outFit}
+%
+\begin{align}
+{\mu_B}_{_{CF}}&=\frac{a}{1+0.288\sqrt{s_{\mathrm{NN}}}},\label{eq:muBCFparatri}
+\end{align}
+%
+with $a=1307.5$ MeV, and
+%
+\begin{align}
+T_{_{CF}}&=\frac{T^{lim}_{_{CF}}}{1+\exp\big(2.60-\ln(\sqrt{s_{\mathrm{NN}}})/0.45\big)},\label{eq:TCFparatri}
+\end{align}
+%
+\end{subequations}
+%
+with $T^{lim}_{_{CF}}=158.4$ MeV. This parametrisation is depicted with the blue dashed line in \Fig{fig:phasediagram}. We use the same parametrisation functions in \eq{eq:freeze-outFit} to fit the freeze-out data in STAR experiment, i.e., the red circle points in \Fig{fig:phasediagram}. For this fit we invoke two procedures, called STAR I \& II in the following: \\[-2ex] 
+For the first one, STAR I, we simply take all 7 data points available. The corresponding freeze-out curve is depicted by the red solid line in \autoref{fig:phasediagram}. 
+
+For the construction of the second one, STAR II, we shall argue that some of the data points are potentially flawed, or rather await a physics explanation, and should be dropped accordingly in a fit based on \eq{eq:freeze-outFit} based on the statistical model. Accordingly, we drop the first two data points at small chemical potential as well as the last one at the largest available chemical potential $\mu_B\sim 400$. From general considerations we do not expect the freeze-out curve to rise with increasing chemical potential. Moreover, the physically motivated fit formula does not describe signatures changes of the curvature of the freeze-out curve. For a respective discussion and possible explanation for the only apparent rise see \cite{Bluhm:2020rha}. The last data point is also not well-described by the fitting procedure described here. While this may indicate the onset of a regime with different physics/phases. In this case it should not be used for the fit \eq{eq:freeze-outFit}. It may also indicate the onset of a regime of rapidly worsening systematics. In this case more points are needed in this regime.   
+
+The freeze-out line of STAR II is depicted by the green dotted line in \autoref{fig:phasediagram}. In comparison to STAR I, STAR II is located at slightly lower temperature. which is more pronounced when $\mu_B\gtrsim 200$\,MeV. 
+
+
+
+\subsection{Hyper-order baryon number fluctuations on the  freeze-out curve}
+\label{subsec:freezout}	
+
+This completes our setup, which enables us to compute hyper-fluctuations along the freeze-out line within the QCD-assisted LEFT. Before we discuss the numerical results, we emphasise once more, that it follows from the analysis of \autoref{subsec:hyper-ordermuB}, that the simple extrapolation with the Taylor expansion about $\mu_B=0$ lacks predictive power for $\mu_B\gtrsim 300$\,MeV, that is $\sqrt{s}\lesssim 11$\,GeV. Moreover, 
+is lacks predictive power for tendencies for even smaller chemical potentials, $\mu_B\gtrsim 200$\,MeV, that is $\sqrt{s}\lesssim 20$\,GeV. 
+
+
+In \Fig{fig:Rm2-sqrtS} we show the dependence of baryon number fluctuations $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$ on the center-of-mass collision energy for the freeze-out line from Andronic {\it et al.} \cite{Andronic:2017pug} and for STAR I. Note that the freeze-out line from Andronic {\it et al.} is obtained from an interpolation of the freeze-out data, the gray squares in \autoref{fig:phasediagram}. 
+
+In \autoref{fig:Rm2-sqrtS2} we show the same observables, the $\sqrt{s}$- or chemical potential  dependence of baryon number fluctuations $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$, for the freeze-out line of STAR II. \coljan{We have singled out the results for this freeze-out curve as the best-informed computation.} \coljan{\bf Do you agree with this statement}. 
+
+In both figures, \autoref{fig:Rm2-sqrtS} and \autoref{fig:Rm2-sqrtS2}, we also show the experimental measurement of cumulants of the net-proton distributions in the beam energy scan experiments from the STAR collaboration. The kurtosis of the net-proton distributions $R^{p}_{42}$ are measured in Au+Au collisions with centrality 0-5\%, transverse momentum range $0.4< p_T\,(\mathrm{GeV}/c)\,<2.0$, and rapidity $|y|<0.5$, cf. \cite{Adam:2020unf} for more details. Moreover, preliminary results for the six-order cumulant of the net-proton distribution $R^{p}_{62}$ are also presented in the middle plot of \Fig{fig:Rm2-sqrtS}, which are obtained at two values of the collision energy, i.e., $\sqrt{s_{NN}}$=200 GeV and 54.4 GeV with centrality 0-40\% \cite{Nonaka:2020crv,Pandav:2020uzx}. 
+
+
+%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.45\textwidth]{Rm2-sqrtS}
+\caption{Baryon number fluctuations $R^{B}_{42}$ (top), $R^{B}_{62}$ (middle), and $R^{B}_{82}$ (bottom) as functions of the collision energy, calculated in LEFT within the fRG approach with the freeze-out parameters from Andronic {\it et al.} \cite{Andronic:2017pug} and STAR experiment \cite{Adamczyk:2017iwn}, where the parametrisation of STAR freeze-out data is based on all the seven data points as shown in \Fig{fig:phasediagram} and is designated as freeze-out: STAR I. Experimental data of cumulants from the STAR collaboration are also shown for comparison, where $R^{p}_{42}$ (top) are the kurtosis of the net-proton distributions measured in Au+Au central (0-5\%) collisions \cite{Adam:2020unf}, and $R^{p}_{62}$ (middle) is the preliminary result on the six-order cumulant of the net-proton distribution at $\sqrt{s_{\mathrm{NN}}}$=200 GeV and 54.4 GeV with centrality 0-40\% \cite{Nonaka:2020crv,Pandav:2020uzx}. The horizontal dashed lines indicate positions of unity for $R^{B}_{42}$($R^{p}_{42}$), zeros for $R^{B}_{62}$($R^{p}_{62}$) and $R^{B}_{82}$.}\label{fig:Rm2-sqrtS}\vspace{-0.5cm}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.45\textwidth]{Rm2-sqrtS2}
+\caption{Baryon number fluctuations $R^{B}_{42}$ (top), $R^{B}_{62}$ (middle), and $R^{B}_{82}$ (bottom) as functions of the collision energy, calculated in LEFT within the fRG approach with the freeze-out parameters from STAR experiment \cite{Adamczyk:2017iwn}, where the parametrisation of STAR freeze-out data is based on only the four data points in the middle region ($100\,\mathrm{MeV}\lesssim\mu_B\lesssim 300\,\mathrm{MeV}$) as shown in \Fig{fig:phasediagram}, and is designated as freeze-out: STAR II. Experimental data of cumulants from the STAR collaboration are also shown for comparison, where $R^{p}_{42}$ (top) are the kurtosis of the net-proton distributions measured in Au+Au central (0-5\%) collisions \cite{Adam:2020unf}, and $R^{p}_{62}$ (middle) is the preliminary result on the six-order cumulant of the net-proton distribution at $\sqrt{s_{\mathrm{NN}}}$=200 GeV and 54.4 GeV with centrality 0-40\% \cite{Nonaka:2020crv,Pandav:2020uzx}. The horizontal dashed lines indicate positions of unity for $R^{B}_{42}$($R^{p}_{42}$), zeros for $R^{B}_{62}$($R^{p}_{62}$) and $R^{B}_{82}$.}\label{fig:Rm2-sqrtS2}\vspace{-0.5cm}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\includegraphics[width=0.48\textwidth]{R51-sqrtS}
+\caption{Baryon number fluctuation $R^{B}_{51}$ as a function of the collision energy, calculated in LEFT within the fRG approach with the freeze-out parameters from STAR experiment \cite{Adamczyk:2017iwn}, where the parametrisation of STAR freeze-out data is based on only the four data points in the middle region ($100\,\mathrm{MeV}\lesssim\mu_B\lesssim 300\,\mathrm{MeV}$) as shown in \Fig{fig:phasediagram}, and is designated as freeze-out: STAR II. .}\label{fig:R51-sqrtS}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+
+
+
+The theoretical results for the fourth-order fluctuations $R_{42}$ from the present QCD-assisted LEFT for all freeze-out curves considered are compatible with the respective experimental measurement of the kurtosis of net-proton distributions, see \autoref{fig:Rm2-sqrtS}, \autoref{fig:Rm2-sqrtS2}. 
+
+In particular, we find a non-monotonic behavior in the low collision energy regime below $\sim 20$ GeV for all freeze-out curves. Importantly, this regime cannot be accessed within the extrapolation of the Taylor expansion. 
+
+While the non-monotonic behavior present for all parametrisations of the freeze-out curve, it is significantly weaker for STAR I. This originates in the slightly larger freeze-out temperature of STAR I, in particular in the region of high $\mu_B$, as shown in \Fig{fig:phasediagram}. This shows that even small variations in the freeze-out temperature have a substantial effect on the fluctuations in this regime. The underlying reason is that the freeze-out happens in or close to the crossover region, where the fluctuations vary significantly, see \Fig{fig:R42R62R82-T-muB0to400}. 
+
+This entails that extrapolations based on a Taylor expansion are bound to fail in this regime. Consequently this calls for qualitatively improved direct theoretical computations in this regime. This is work in progress and we hope to report on the respective results soon. 
+
+Another interesting property of the current LEFT setting is, that the strong non-monotonic behavior of our results for $R^{B}_{42}$ at small  beam-energies in the top panel of \Fig{fig:Rm2-sqrtS} does not arise from critical physics: in the LEFT used here, the CEP is at significantly larger $\mu_B$ \coljan{ \bf Please provide the CEP location of our LEFT!}. Moreover, it is well established that the critical region is only very small. It is already small within mean-field computations within low energy effective theories, and even shrinks considerably, if taking into account quantum, thermal and density equilibrium fluctuations, see \cite{Schaefer:2006ds}. Moreover, this does not change if taking transport processes into account, see 
+\cite{Bluhm:2018qkf}. 
+
+In the present LEFT the non-monotonous behaviour originates from two effects: First, correlations are enhanced since the chiral crossover becomes sharper with increasing $\mu_B$. This leads to a stronger non-monotonic behavior of $R^{B}_{42}$ as a function of $T$, see \Fig{fig:R42R62R82-T-muB0to400}. While this sharpening is also present in the vicinity of a CEP, it is no smoking gun for it. Second, the freeze-out temperature is shifted away from the pseudo-critical temperature towards small beam-energies, thereby probing different regimes of the cumulants. 
+	
+Naturally, these two effects also lead to a non-monotonic behavior in the sixth- and eighth-order baryon number fluctuations as functions of the collision energy, see the center and bottom panels of \Fig{fig:Rm2-sqrtS} and \Fig{fig:Rm2-sqrtS2}. However, it should be noted that the error of our results increases significantly in the low energy region. These errors include an estimate for the  systematic error of the QCD-assisted LEFT-approach. This systematic error stems from the uncertainty in the matching of the in-medium scales of the LEFT and QCD, encoded in the coefficients $c_{_{T}}$ and $c_{\mu}$ in \Eq{eq:rescale}. Moreover, for larger chemical potential the current LEFT lacks the back-reaction of the $\mu_B$-dependence of the glue-dynamics. While inherently small, it still may play a r$\hat{\textrm{o}}$le. 
+
+For $\sqrt{s_{NN}}$=200 GeV and 54.4 GeV we can compare our results for $R^{B}_{62}$ to preliminary STAR data \cite{Nonaka:2020crv,Pandav:2020uzx}. As opposed to $R^{B}_{42}$, we find large deviations between our and the experimental results. At the highest beam energy, $\sqrt{s_{NN}}$=200 GeV, we at least agree qualitatively in that $R^{B}_{42}$ is negative. \coljan{In our opinion these large deviations at small chemical potential points at a lack of a complete physics interpretation of the experimental data. }
+	
+In summary, the analysis above leads us to the important conclusion, that in the present QCD-assisted LEFT the non-monotonous behavior occurs already safely away from the critical region. We emphasise, that  the non-universal properties of the LEFT such as the existence and location of the CEP may not quantitatively agree with QCD as the latter regime lies outside the LEFT-regime with quantitative reliability. Still, the present LEFT probably has the same qualitative non-universal properties at large chemical potential, and it certainly has the same universal ones. 
+
+This is a highly relevant observation, since a non-monotonic behavior, e.g., of $R^{B}_{42}$ as a function of  $\sqrt{s_{NN}}$ has been proposed as an experimental signature of a CEP \cite{Stephanov:1999zu, Stephanov:2011pb}. However, as already stated in the introduction, the non-monotonic behavior is only a potential \textit{indication} for a CEP: while the fluctuations definitely are non-monotonous in the vicinity of a CEP, our results unequivocally demonstrate that \emph{not only} critical behavior  leads to non-monotonic behaviour. It may \emph{also} occurs at finite $\mu_B$ far away from a CEP, and it does in the present LEFT. Of course, whether or not the same situation also holds true in QCD remains to be seen. 
+
+In any case, the non-monotonous behaviour of fluctuations are only \textit{indicative} of a CEP, but do not provide a clear \textit{signature} or smoking gun. The latter requires the extraction of critical scaling. 
+
+
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\section{summary and conclusions}
+\label{sec:summary}
+	\coljan{\bf I'm here} 
+	
+\coljan{\bf summary not touched yet}
+In this work we have studied the baryon number fluctuations in the LEFT within the fRG approach, putting emphasis on the hyper-order ones. The order of baryon number fluctuations has been computed up to the $10^{\mathrm{th}}$ order for the first time beyond mean-field. In our calculations, quantum, thermal and density fluctuations are successively encoded through the evolution of flow equations. Moreover, nontrivial dispersion relation for the quark and meson fields, momentum scale dependence of the quark-meson scattering, and fluctuations of Polyakov loop are also taken into account in this work.
+	
+The scale between the LEFT and QCD is matched via a comparison of the temperature dependence of $R^{B}_{42}=\chi^{B}_{4}/\chi^{B}_{2}$ at vanishing $\mu_B$ between the LEFT and lattice results, as well as a comparison of the curvature of phase boundary. Accordingly, it allows us to employ the LEFT within the fRG approach to make predictions for the $\mu_B$-dependence of $R^{B}_{42}$, and the hyper-order baryon number fluctuations at finite temperature and density. In turn, relevant predictions of LEFT are compared with results of lattice QCD simulations. We find that the $T$- and $\mu_B$-dependence of hyper-order baryon number fluctuations, $\mu_B$-dependence of $R^{B}_{42}$ obtained in the fRG-LEFT approach, are in quantitative accordance with the lattice results by the Wuppertal-Budapest collaboration within errors. There is still a sizable quantitative deviation in comparison to relevant results by the HotQCD collaboration, but a qualitative consistency is observed.
+	
+Furthermore, by employing the commonly used chemical freeze-out temperature and baryon chemical potential from Andronic {\it et al.} \cite{Andronic:2017pug} and STAR experiment \cite{Adamczyk:2017iwn}, we obtain baryon number fluctuations $R^{B}_{42}$, $R^{B}_{62}$, and $R^{B}_{82}$ as functions of the collision energy, which are compared with experimental measurements of the kurtosis and sixth-order cumulants of the net-proton distributions from the STAR collaboration. Remarkably, the dependence of the fourth-order baryon number fluctuation $R^{B}_{42}$ on the collision energy obtained in the fRG-LEFT approach, is qualitative consistent with the experimental measured dependence of the kurtosis of net-proton distributions on the collision energy for central collisions. And a nonmonotonic behavior of $R^{B}_{42}$ as a function of $\sqrt{s_{\mathrm{NN}}}$ is found in the fRG calculation. It should, however, be cautioned that errors of $R^{B}_{42}$ and $R^{B}_{62}$ increase significantly in the low collision energy region. And when the order of baryon number fluctuations is increased up to the $8^{\mathrm{th}}$, the theoretical calculation with current setup is losing its capability of making predictions, as a consequence of the significant errors of $R^{B}_{82}$ for large range of collision energy. Apparently, in order to improve on the computation in this work in the future, and decrease the errors of calculated baryon number fluctuations, especially in the low collision energy regime, on the one hand, the systematic errors of theoretical calculations should be reduced, and on the other hand, chemical freeze-out data with high precision are highly required.
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\begin{acknowledgments}
+		
+We thank Nu Xu for discussions. The work was supported by the National Natural Science Foundation of China under Contracts Nos. 11775041. The work is also supported by EMMI, the BMBF grant 05P18VHFCA, and by the DFG Collaborative Research Centre SFB 1225 (ISOQUANT). This work is supported by Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy EXC-2181/1 - 390900948 (the Heidelberg STRUCTURES Cluster of Excellence).
+		
+\end{acknowledgments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\appendix
+	
+\section{The fRG-approach to QCD \& LEFTs}\label{app:fRG}
+	
+The flow equation for QCD describes the evolution of its effective action with the infrared cutoff scale $k$. This formulation with \textit{dynamical hadronisation}, \cite{Gies:2001nw, Gies:2002hq, Pawlowski:2005xe, Floerchinger:2009uf, Fu:2019hdw} has been developped in \cite{Mitter:2014wpa,Braun:2014ata,Cyrol:2017ewj,Fu:2019hdw}, its current form has been described and further developped in \cite{Fu:2019hdw}. The derivation of the respective flow equation is detailed there, and reads, 
+%
+\begin{align}
+\partial_t\Gamma_k[\Phi]=&\frac{1}{2}\mathrm{Tr}\Big(G_{AA,k}\partial_t R_{A,k}\Big)-\mathrm{Tr}\Big(G_{c\bar c,k}\partial_t R_{c,k}\Big)\nonumber\\[2ex]
+&-\mathrm{Tr}\Big(G_{q\bar q,k}\partial_t R_{q,k}\Big)+\frac{1}{2}\mathrm{Tr}\Big(G_{\phi\phi,k}\partial_t R_{\phi,k}\Big)\,,\label{eq:QCDflow}
+\end{align}
+%
+with $\Phi=(A, c, \bar c, q,\bar q,\phi)$, where $G$'s and $R$'s are the propagators and regulators of different fields, respectively. Diagrammatically it is depicted in \Fig{fig:QCD_equation}. For more works on QCD-flows at finite temperature and density see \cite{Braun:2007bx,Braun:2008pi,Braun:2009gm,Mitter:2014wpa,Braun:2014ata,Cyrol:2016tym,Cyrol:2017ewj,Cyrol:2017qkl,Fu:2019hdw,Braun:2020ada}, for reviews on QCD and LEFTs for QCD see    \cite{Berges:2000ew,Pawlowski:2005xe,Schaefer:2006sr,Gies:2006wv,Rosten:2010vm,Braun:2011pp,Pawlowski:2014aha,Dupuis:2020fhh}.
+	
+For scales $k\lesssim 1$ GeV, the gluon decouples due to its confinement-related mass gap from the system. The dynamics is taken over by the emergent composite degrees of freedom, e.g. mesons, in particular the $\pi$ meson, which is in essence the Goldstone boson related to the spontaneously breaking chiral symmetry in the low energy QCD, and is the lightest hadron of mass $\sim 140$ MeV in the vacuum. In this regime, the flow equation of the effective action in \Eq{eq:QCDflow} is reduced to 
+%
+\begin{align}
+\partial_t\Gamma_k[\Phi]=&-\mathrm{Tr}\Big(G_{q\bar q,k}\partial_t R_{q,k}\Big)+\frac{1}{2}\mathrm{Tr}\Big(G_{\phi\phi,k}\partial_t R_{\phi,k}\Big)\,,\label{eq:LEFTflow}
+\end{align}
+%
+where $R_{q,k}$ and $R_{\phi,k}$ are the regulators for the quark and meson fields, respectively. The full propagators in \eq{eq:LEFTflow} read
+%
+\begin{align}
+G_{q\bar q/\phi\phi,k}=&\left(\frac{1}{\Gamma^{(2)}_k[\Phi]+R_k}\right)_{q\bar q/\phi\phi}\,,\label{}
+\end{align}
+%
+with $\Gamma^{(2)}_k[\Phi]=\delta^2\Gamma_k[\Phi]/(\delta \Phi_{i_1}\delta \Phi_{i_2})$, where different species of fields are distinguished with the help of the subscripts in $\Phi_{i_1/i_2}$. 
+	
+In this work we employ  $3d$-flat or Litim regulators \cite{Litim:2000ci, Litim:2001up, Litim:2006ag}, 
+%
+\begin{align}\nonumber 
+R_{\phi,k}(q_0,\bm{q})&=Z_{\phi,k}\bm{q}^2 r_B(\bm{q}^2/k^2)\,, \\[2ex] 
+R_{q,k}(q_0,\bm{q})&=Z_{q,k}i\bm{\gamma} \cdot \bm{q} r_F(\bm{q}^2/k^2)\,, \label{eq:Rk}
+\end{align} 
+%
+with 
+%
+\begin{align}\nonumber 
+r_B(x)&=\left( \frac{1}{x}-1 \right)\Theta(1-x)\,,\\[2ex] 
+r_F(x)&=\left( \frac{1}{\sqrt{x}}-1 \right)\Theta(1-x)\,,  \label{eq:rk}
+\end{align} 
+%
+where $\Theta(x)$ denotes the Heaviside step function. 
+	
+Inserting the effective action \eq{eq:action} into the flow equation \eq{eq:LEFTflow}, one is led to the flow equation for the effective potential of the matter sector, as follows
+%
+\begin{align}
+\partial_t V_{\mathrm{mat},k}(\rho)=&\frac{k^4}{4\pi^2} \bigg [\big(N^2_f-1\big) l^{(B,4)}_{0}(\tilde{m}^{2}_{\pi,k},\eta_{\phi,k};T)\nonumber\\[2ex]
+&+l^{(B,4)}_{0}(\tilde{m}^{2}_{\sigma,k},\eta_{\phi,k};T)\nonumber\\[2ex]
+&-4N_c N_f l^{(F,4)}_{0}(\tilde{m}^{2}_{q,k},\eta_{q,k};T,\mu)\bigg]\,, \label{eq:flowV}
+\end{align}
+%
+where the threshold functions $l^{(B/F,4)}_{0}$ as well as other threshold functions in the following can be found in e.g., \cite{Fu:2019hdw,Yin:2019ebz}, and the dimensionless renormalized quark and meson masses read
+%
+\begin{align}
+\tilde{m}^{2}_{q,k}=&\frac{h^{2}_{k}\rho}{2k^2Z^{2}_{q,k}}\,, \qquad \tilde{m}^{2}_{\pi,k}=\frac{V'_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,, \\[2ex]
+\tilde{m}^{2}_{\sigma,k}=&\frac{V'_{\mathrm{mat},k}(\rho)+2\rho V''_{\mathrm{mat},k}(\rho)}{k^2 Z_{\phi,k}}\,.\label{}
+\end{align}
+%
+The anomalous dimensions for the quark and meson fields in \Eq{eq:flowV} are defined as
+%
+\begin{align}
+\eta_{q,k}&=-\frac{\partial_t Z_{q,k}}{Z_{q,k}}\,,\qquad
+\eta_{\phi,k}=-\frac{\partial_t Z_{\phi,k}}{Z_{\phi,k}}\,,
+\end{align}
+%
+respectively. Accordingly, projecting the flow in \Eq{eq:LEFTflow} onto the one-particle irreducible (1PI) two-point function of the meson, it is readily obtained that 
+%
+\begin{align}
+\eta_{\phi,k}&=-\frac{1}{3Z_{\phi,k}}\delta_{ij}\frac{\partial}{\partial (|\bm{p}|^2)}\frac{\delta^2 \partial_t \Gamma_k}{\delta \pi_i(-p) \delta \pi_j(p)}\Bigg|_{\substack{p_0=0\\ \bm{p}=0}}\,,\label{eq:etaphi}
+\end{align}
+%
+where the spacial component is employed. Note that in the case of finite temperature and density, the $\mathrm{O}(4)$ rotation symmetry in the 4-$d$ Euclidean space is broken, and as a matter of fact, the mesonic anomalous dimension extracted above is different from that projected onto the temporal component. In another word, $\eta_{\phi,k}$ is split into $\eta_{\phi,k}^{\perp}$ and $\eta_{\phi,k}^{\parallel}$, which are transverse and longitudinal to the heat bath, respectively, at finite temperature and density. The influences of the splitting of $\eta_{\phi,k}$ on the thermodynamics and baryon number fluctuations have been investigated in detail \cite{Yin:2019ebz}, and it has been found that the impact is small. Therefore, it is reasonable to disregard the splitting of anomalous dimensions, and $\eta_{\phi,k}=\eta_{\phi,k}^{\perp}=\eta_{\phi,k}^{\parallel}$, as well as that for the quark anomalous dimension in the following, is assumed throughout this work. In the same way, the quark anomalous dimension is obtained by projecting the relevant flow onto the vector channel of the 1PI quark-antiquark correlation function, as follows
+%
+\begin{align}
+\eta_{q}&=\frac{1}{4 Z_{q,k}}\nonumber\\[2ex]
+&\times\mathrm{Re}\left[\frac{\partial}{\partial (|\bm{p}|^2)}\mathrm{tr}
+\left(i \bm{\gamma}\cdot\bm{p}\left(-\frac{\delta^2}{\delta\bar{q}(p)
+\delta q(p)}\partial_t \Gamma_k\right)\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,,  \label{eq:etapsi}
+\end{align}
+%
+where the external spacial momentum is chosen to be zero as same as the mesonic one, since the vanishing momentum is most relevant to the flow of effective potential in \Eq{eq:flowV}. Note that the lowest mode of the fermionic Matsubara frequency is nonvanishing and we designate it here as $p_{0,ex}$, to be described in \app{app:flowV}. Moreover, the expression in the square bracket in \eq{eq:etapsi} is complex-valued, rather than real, when the chemical potential is nonzero. This artifact stems from the naive truncation of the external frequency, which is resolved through a resummation of the external frequency of the quark propagator \cite{Fu:2016tey}. The flow equation of the Yukawa coupling is readily obtained via the projection of the 1PI quark-antiquark correlation function on the scalar channel, which reads
+%
+\begin{align}
+\partial_t h_k&=\frac{1}{2 \sigma}\mathrm{Re}\left[\mathrm{tr}\left(-\frac{\delta^2}{\delta\bar{q}(p)
+\delta q(p)}\partial_t \Gamma_k\right)\right]\Bigg|_{\substack{p_{0,ex}\\ \bm{p}=0}}\,.  \label{eq:dth}
+\end{align}
+%
+The explicit expressions for the meson and quark anomalous dimensions, and the flow of the Yukawa coupling can be found in \app{app:flowV}.
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Flow equations for $V_k(\rho)$, $h_k$, and $\eta_{\phi,q}$}\label{app:flowV}
+	
+The flow equation for the effective potential of the matter sector is given in \Eq{eq:flowV}. In this work we use the Taylor expansion approach to solve this equation numerically. Expanding the potential around a $k$-dependent value $\kappa_k$, one arrives at 
+%
+\begin{align}
+V_{\mathrm{mat}, k}(\rho)&=\sum_{n=0}^{N_v}\frac{\lambda_{n,k}}{n!}(\rho-\kappa_k)^n\,, \label{eq:VTaylor}
+\end{align}
+%
+with the expansion coefficients $\lambda_{n,k}$'s, where $N_v$ is the maximal order of Taylor expansion included in the numerical calculation. It is more convenient to rewrite \Eq{eq:VTaylor} by means of the renormalized variables, i.e.,
+%
+\begin{align}
+\bar V_{\mathrm{mat}, k}(\bar \rho)&=\sum_{n=0}^{N_v}\frac{\bar\lambda_{n,k}}{n!}(\bar \rho-\bar \kappa_k)^n\,,\label{eq:VbarTaylor}
+\end{align}
+%
+with $\bar V_{\mathrm{mat}, k}(\bar \rho)=V_{\mathrm{mat}, k}(\rho)$, $\bar \rho=Z_{\phi,k} \rho$, $\bar \kappa_k=Z_{\phi,k}\kappa_k$, and $\bar \lambda_{n,k}=\lambda_{n,k}/(Z_{\phi,k})^n$. Inserting \Eq{eq:VbarTaylor} into the l.h.s. of \Eq{eq:flowV} leads us to
+%
+\begin{align}
+&\partial^n_{\bar \rho}\left(\partial_t\big|_{\rho} \bar V_{\mathrm{mat}, k}(\bar \rho)\right)\Big|_{\bar \rho=\bar \kappa_k}\nonumber\\[2ex]
+=&(\partial_t -n\eta_{\phi,k})\bar{\lambda}_{n,k}-(\partial_t \bar \kappa_k+\eta_{\phi,k}\bar \kappa_k)\bar \lambda_{n+1,k}\,.\label{eq:drhoV}
+\end{align}
+%
+In our calculation, the expansion point $\kappa_k$ in \Eq{eq:VTaylor} or $\bar \kappa_k$ in \Eq{eq:VbarTaylor} is chosen such that it is the minimum of the effective action in \Eq{eq:action}, which yields the equation of motion as follows
+%
+\begin{align}
+\frac{\partial}{\partial \bar \rho}\Big(\bar V_{\mathrm{mat}, k}(\bar \rho)-\bar c_k
+\bar \sigma \Big)\bigg \vert_{\bar\rho=\bar \kappa_k}&=0\,, \label{eq:Vstat}
+\end{align}
+%
+with $ \bar \sigma=Z_{\phi,k}^{1/2} \sigma$ and $\bar c_k=Z_{\phi,k}^{-1/2} c$, where $c$ is independent of the IR cutoff $k$. This expansion is usually called the physical running expansion, since the bare expansion point $\kappa_k$ is $k$-dependent as mentioned above. In contrast, another commonly used expansion approach is the fixed-point expansion, and as its name suggests, in this approach the bare expansion point is $k$-independent. For more discussions about these two different expansion approaches, and their advantages and disadvantages in the application of fRG calculations, see e.g.,  \cite{Pawlowski:2014zaa,Braun:2014ata, Fu:2015naa, Rennecke:2016tkm,Yin:2019ebz}. Combination of \Eq{eq:drhoV} and \Eq{eq:Vstat} leaves us with the flow equation for the expansion point, which reads
+%
+\begin{align}
+\partial_t \bar \kappa_k&=-\frac{\bar c_k^2}{\bar{\lambda}_{1,k}^3+\bar c_k^2\bar{\lambda}_{2,k}}\bigg[\partial_{\bar \rho}\left(\partial_t\big|_{\rho} \bar V_{\mathrm{mat}, k}(\bar \rho)\right)\Big|_{\bar \rho=\bar \kappa_k}\nonumber \\[2ex]
+&+\eta_{\phi,k}\left(\frac{\bar{\lambda}_{1,k}}{2}+\bar\kappa_k\bar{\lambda}_{2,k}\right)\bigg]\,.\label{eq:flowkappa}
+\end{align}
+%
+The meson anomalous dimension in \Eq{eq:etaphi} reads
+%
+\begin{align}
+\eta_{\phi,k}&=\frac{1}{6\pi^2}\Bigg\{\frac{4}{k^2} \bar{\kappa}_k(\bar{V}''_k(\bar{\kappa}_k))^2\mathcal{BB}_{(2,2)}(\tilde{m}^{2}_{\pi,k},\tilde{m}^{2}_{\sigma,k};T)\nonumber\\[2ex]
+&+N_c\bar{h}^{2}_{k}\bigg[\mathcal{F}_{(2)}(\tilde{m}^{2}_{q,k};T,\mu)(2\eta_{q,k}-3)\nonumber\\[2ex]
+&-4(\eta_{q,k}-2)\mathcal{F}_{(3)}(\tilde{m}^2_{q,k};T,\mu)\bigg]\Bigg\}\,, \label{eq:etaphi2}  
+\end{align} 
+%
+The quark anomalous dimension in \Eq{eq:etapsi} reads
+%
+\begin{align}
+\eta_{q,k}=&\frac{1}{24\pi^2N_f}(4-\eta_{\phi,k})\bar{h}^{2}_{k}\nonumber\\[2ex]
+&\times\bigg\{ (N^{2}_{f}-1)\mathcal{FB}_{(1,2)}(\tilde{m}^{2}_{q,k},\tilde{m}^{2}_{\pi,k};T,\mu,p_{0,ex})\nonumber\\[2ex]
+&+\mathcal{FB}_{(1,2)}(\tilde{m}^{2}_{q,k},\tilde{m}^{2}_{\sigma,k};T,\mu,p_{0,ex})\bigg\}\,, \label{eq:etapsi2}
+\end{align} 
+%
+where in the threshold function $\mathcal{FB}$'s we have employed $p_{0,ex}=\pi T$ for the finite temperature sector and $p_{0,ex}=\pi T\exp\{-k/(\pi T)\}$ for the vacuum sector. The modification for the vacuum sector is necessitated in order to suppress the artefact of temperature dependence of thermodynamics in the low temperature region \cite{Fu:2015naa}, which can be resolved by means of frequency summation of the quark external leg \cite{Fu:2016tey}. The flow of the Yukawa coupling in \Eq{eq:dth} is given by
+%
+\begin{align}
+\partial_t&\bar{h}_k=\left(\frac{1}{2}\eta_{\phi,k}+\eta_{q,k}\right)\bar{h}_k(\bar{\rho})\nonumber\\[2ex]
+&+\frac{\bar{h}^3_k}{4\pi^2N_f}\bigg[L^{(4)}_{(1,1)}(\tilde{m}^{2}_{q,k},\tilde{m}^{2}_{\sigma,k},\eta_{q,k},\eta_{\phi,k};T,\mu,p_{0,ex})\nonumber\\[2ex]
+&-(N^{2}_{f}-1)L^{(4)}_{(1,1)}(\tilde{m}^{2}_{q,k},\tilde{m}^{2}_{\pi,k},\eta_{q,k},\eta_{\phi,k};T,\mu,p_{0,ex})\bigg]\,.\label{eq:dth2}  
+\end{align} 
+%
+Note that explicit expressions of all the threshold functions mentioned above, such as $\mathcal{BB}$, $\mathcal{F}$'s, $\mathcal{FB}$'s, and $L$ can be found in e.g., \cite{Fu:2019hdw,Yin:2019ebz}.
+	
+To summarize, flow equations (\ref{eq:flowV}), (\ref{eq:drhoV}), (\ref{eq:flowkappa}), (\ref{eq:dth2}) supplemented with \Eq{eq:etaphi2} and \Eq{eq:etapsi2} constitute a closed set of ordinary differential equations, which is evolved from the UV cutoff $k=\Lambda$ to the IR limit $k=0$. 
+	
+\section{Initial conditions}
+\label{app:Ini}
+	
+The parameters of LEFT are given by initial values of the flow equations. To be specific, the effective potential of the matter sector at the UV cutoff reads
+%
+\begin{align}
+V_{\mathrm{mat}, k=\Lambda}(\rho)=\frac{\lambda_{k=\Lambda}}{2}\rho^2+\nu_{k=\Lambda}\rho\,,
+\end{align}
+%
+with $\lambda_{k=\Lambda}=11$ and $\nu_{k=\Lambda}=(0.830\,\mathrm{GeV})^2$. In addition, the initial value of the Yukawa coupling is $h_{k=\Lambda}=10.18$, and the explicit chiral symmetry breaking parameter is $c=2.82\times 10^{-3}\,\mathrm{GeV}^3$. These parameters are fixed by fitting the hadronic observables in vacuum, i.e., $f_\pi=92\,\mathrm{MeV}$, $m_q=306\,\mathrm{MeV}$, $m_\pi=136\,\mathrm{MeV}$,and $m_\sigma=483\,\mathrm{MeV}$.
+	
+\section{Glue potential}\label{app:gluepot}
+%
+%%%%%%%%%%%
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline & & & & &  \\[-2ex]
+\hline & & & & & \\[-1ex]
+& 1 & 2 & 3 & 4 & 5 \\[1ex]
+\hline & & & & &  \\[-2ex]
+$a_i$ &-44.14& 151.4 & -90.0677 &2.77173 &3.56403 \\[1ex]
+\hline & & & & &  \\[-2ex]
+$b_i$ &-0.32665 &-82.9823 &3.0 &5.85559  &              \\[1ex]
+\hline & & & & &  \\[-2ex]
+$c_i$ &-50.7961 &114.038 &-89.4596 &3.08718 &6.72812 \\[1ex]
+\hline & & & & &  \\[-2ex]
+$d_i$ & 27.0885 &-56.0859 &71.2225 &2.9715 &6.61433 \\[1ex]
+\hline
+\end{tabular}
+\caption{Values of the parameters in \eq{eq:xT} and \eq{eq:bT} for the glue potential.}
+\label{tab:gluepotCoeffs}
+\end{center}\vspace{-0.5cm}
+\end{table}
+%%%%%%%%%%%%
+%
+As we have discussed in \sec{sec:FRG}, the dynamics of the glue sector in QCD is partly imprinted in the glue potential $V_{\mathrm{glue},k}(A_0)$, cf. \Eq{eq:Vtotal}, when the RG scale is in the regime of LEFT. We neglect the scale dependence of the glue potential in this work, and assume
+%
+\begin{align}
+V_\mathrm{glue}(L,\bar{L})&=V_{\mathrm{glue},k=0}(A_0)=T^4 \bar V_\mathrm{glue}(L,\bar{L}),\label{}
+\end{align}
+%
+where we have introduced a dimensionless glue potential $\bar V_\mathrm{glue}$, and its dependence on the temporal background $A_0$ field is realized via the traced Polyakov loop $L$ and its conjugate $\bar{L}$, which reads
+%
+\begin{align}
+L(\bm{x})&=\frac{1}{N_c} \left\langle \Tr\, {\cal P}(\bm x)\right\rangle\,,\quad  \bar L (\bm{x})=\frac{1}{N_c} \langle \Tr\,{\cal P}^{\dagger}(\bm x)\rangle \,,\label{eq:Lloop}
+\end{align}
+%
+with 
+%
+\begin{align}
+{\cal P}(\bm x)&=\mathcal{P}\exp\Big(ig\int_0^{\beta}d\tau \hat A_0(\bm{x},\tau)\Big)\,, \label{eq:Ploop}
+\end{align}
+%
+where $\mathcal{P}$ on the r.h.s. is the path ordering operator. In this work we adopt the parametrisation of the glue potential in \cite{Lo:2013hla}, which reads
+%
+\begin{align}
+V_\text{glue}(L,\bar{L})=& -\frac{a(T)}{2} \bar L L + b(T)\ln M_H(L,\bar{L})\nonumber \\[2ex]
+&+ \frac{c(T)}{2} (L^3+\bar L^3) + d(T) (\bar{L} L)^2\,,
+\label{eq:polpot}
+\end{align}
+%
+with the $\mathrm{SU}(N_c)$ Haar measure
+%
+\begin{align}
+M_H (L, \bar{L})&= 1 -6 \bar{L}L + 4 (L^3+\bar{L}^3) - 3  (\bar{L}L)^2\,.
+\end{align}
+%
+Note that the parametrisation of glue potential in \Eq{eq:polpot}, as well as determination of relevant parameters in \Tab{tab:gluepotCoeffs}, is done based on lattice results of  $\mathrm{SU}(3)$ Yang-Mills theory at finite temperature, where not only the expectation value of the Polyakov loop and pressure, but also quadratic fluctuations of the Polyakov loop are taken into account \cite{Lo:2013hla}. The coefficients in \Eq{eq:polpot} are dependent on the temperature, which reads
+%
+\begin{align}
+x(T) &= \frac{x_1 + x_2/(t_r+1) + x_3/(t_r+1)^2}{1 + x_4/(t_r+1) + x_5/(t_r+1)^2}\,,\label{eq:xT}
+\end{align}
+%
+for $x\in \{a, c, d\}$, and 
+%
+\begin{align}
+b(T) &=b_1 (t_r+1)^{-b_4}\left (1 -e^{b_2/(t_r+1)^{b_3}} \right)\,,\label{eq:bT}
+\end{align}
+%
+with the reduced temperature $t_r=(T-T_c)/T_c$, and the parameters in \Eq{eq:xT} and \Eq{eq:bT} have been fixed in \cite{Lo:2013hla} and their values are also collected in \Tab{tab:gluepotCoeffs} for convenience.
+	
+Though the parametrisation of the glue potential in \Eq{eq:polpot} is based on results of the Yang-Mills theory, it has found that the unquenching effect in QCD is well captured, once a linear rescaling of the reduced temperature is made from the pure gauge theory to QCD \cite{Pawlowski:2010ht, Haas:2013qwp, Herbst:2013ufa}, as follows
+%
+\begin{align}
+(t_r)_{\text{\tiny{YM}}}&\rightarrow \alpha\,(t_r)_{\text{\tiny{glue}}}\,,\label{}
+\end{align}
+%
+with
+%
+\begin{align}
+(t_r)_{\text{\tiny{glue}}}&=
+(T-T_c^\text{\tiny{glue}})/T_c^\text{\tiny{glue}}\,,\label{}
+\end{align}
+%	
+where we have used $\alpha=0.7$ and $T_c^\text{\tiny{glue}}$=216 MeV (in unit of physical temperature via \Eq{eq:rescale}) in this work.
+	
+
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The \nocite command causes all entries in a bibliography to be
+% printed out whether or not they are actually referenced in the
+% text. This is appropriate for the sample file to show the different
+% styles of references, but authors most likely will not want to use
+% it.  \nocite{*}
+	
+%\bibliography{refspec}% Produces the bibliography via BibTeX.
+\bibliography{ref-lib}% Produces the bibliography via BibTeX.
+	
+	
+\end{document}
