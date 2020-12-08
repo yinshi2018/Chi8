@@ -280,7 +280,7 @@ ax1.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax1.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.4,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax1.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.3,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax1.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax1.xaxis.get_ticklabels():
@@ -288,7 +288,7 @@ for label in ax1.xaxis.get_ticklabels():
 for label in ax1.yaxis.get_ticklabels():
     label.set_fontsize(10)
 ########################################################################################################################################################
-ax2=fig.add_subplot(222)
+ax2=fig.add_subplot(223)
 powerh=np.zeros(100)
 powerl=np.zeros(100)
 x1=mubfrg*cmu2/(198.0*ct1)
@@ -432,13 +432,13 @@ bandexp_FRG_T155=ax2.fill_between(xsame,powerup155,powerdown155,alpha=0.3,faceco
 exp_FRG_T155,=ax2.plot(mub*cmu/(195*ct),chi6f[194,:]/chi2f[194,:],'--',dashes=(5,2),color='b',linewidth=1.,alpha=0.5,zorder=2)
 exp_FRG_T160,=ax2.plot(mub*cmu/(200*ct),chi6f[199,:]/chi2f[199,:],'--',dashes=(1,2),color='b',linewidth=1.,alpha=0.5,zorder=2)
 
-ax2.text(0.5, 5., r'up to $\chi^B_{8}$',fontsize=12., color='k')
+ax2.text(0.5, 3., r'up to $\chi^B_{8}$',fontsize=12., color='k')
 ax2.axis([0,3,-5,8.5])
 
 ax2.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
 ax2.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
 
-
+ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.3,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160)),(r'This work $T=155$ MeV',r'This work $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax2.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
@@ -454,7 +454,7 @@ for num1 in range(0,201):
         chi4f[num2,num1]=chi4frg[num2] +1./(2.*1.) *chi6frg[num2]* (4.*num1/Tfrg[num2])**2.+1./(4.*3.*2.*1.) *chi8frg[num2]* (4.*num1/Tfrg[num2])**4.+1./(6.*5.*4.*3.*2.*1.) *chi10frg[num2]* (4.*num1/Tfrg[num2])**6.   
         chi6f[num2,num1]=chi6frg[num2] +1./(2.*1.) *chi8frg[num2]* (4.*num1/Tfrg[num2])**2.+1./(4.*3.*2.*1.) *chi10frg[num2]* (4.*num1/Tfrg[num2])**4.
 
-ax3=fig.add_subplot(223)
+ax3=fig.add_subplot(222)
 powerh=np.zeros(100)
 powerl=np.zeros(100)
 x1=mubfrg*cmu2/(198.0*ct1)
@@ -577,10 +577,10 @@ ax3.text(2.0, 0.5, r'up to $\chi^B_{10}$',fontsize=12., color='k')
 ax3.axis([0,3,-1,1])
 
 ax3.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
-ax3.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
+#ax3.set_ylabel('$R^B_{42}$', fontsize=14, color='black')
 
 
-ax3.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+#ax3.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160),(bandexp_FRG_T155,exp_FRG_T155),(bandexp_FRG_T160,exp_FRG_T160)),(r'fRG-LEFT full $T=155$ MeV',r'fRG-LEFT full $T=160$ MeV',r'fRG-LEFT expansion $T=155$ MeV',r'fRG-LEFT expansion $T=160$ MeV'),loc=0,fontsize=7.,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 #ax3.legend(((line_FRG_T155),(line_FRG_T160),(exp_FRG_T155),(exp_FRG_T160)),(r'Calculation result $T=155$ MeV',r'Calculation result $T=160$ MeV',r'Expansion result $T=155$ MeV',r'Expansion result $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
 for label in ax3.xaxis.get_ticklabels():
@@ -750,11 +750,11 @@ exp_FRG_T155,=ax4.plot(mub*cmu/(195*ct),chi6f[194,:]/chi2f[194,:],'--',dashes=(5
 exp_FRG_T160,=ax4.plot(mub*cmu/(200*ct),chi6f[199,:]/chi2f[199,:],'--',dashes=(1,2),color='b',linewidth=1.,alpha=0.5,zorder=2)
 
 
-ax4.text(0.5, 5., r'up to $\chi^B_{10}$',fontsize=12., color='k')
+ax4.text(0.5, 3., r'up to $\chi^B_{10}$',fontsize=12., color='k')
 ax4.axis([0,3,-5,8.5])
 
 ax4.set_xlabel('$\mu_B/T$', fontsize=14, color='black')
-ax4.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
+#ax4.set_ylabel('$R^B_{62}$', fontsize=14, color='black')
 
 
 #ax4.legend(((band_FRG_T155,line_FRG_T155),(band_FRG_T160,line_FRG_T160)),(r'This work $T=155$ MeV',r'This work $T=160$ MeV'),loc=0,fontsize='x-small',frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
@@ -766,7 +766,7 @@ for label in ax4.yaxis.get_ticklabels():
     label.set_fontsize(10)
 
 fig.subplots_adjust(top=0.95, bottom=0.1, left=0.09, right=0.95, hspace=0.25,
-                    wspace=0.25)
+                    wspace=0.23)
 
 
 fig.savefig("R42R62expansion-muBoT4.pdf")
