@@ -48,7 +48,7 @@ line_FRG,=ax1.plot(Tfrg/ctcen,r102,'-',color='r',linewidth=1,alpha=0.5)
 ax1.axis([80,220,-23,20])
 
 ax1.set_xlabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
-ax1.set_ylabel('$R^B_{10,2}$', fontsize=14, color='black')
+ax1.set_ylabel('$R^B_{10\,\,2}$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 
