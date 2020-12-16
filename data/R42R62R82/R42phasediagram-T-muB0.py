@@ -197,6 +197,7 @@ fig.savefig("R42-T-muB0.pdf")
 
 muB=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB.dat')
 muB4=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB4.dat')
+muB5=np.loadtxt('../phase-diagram/Nf2p1/CEP/muB5.dat')
 
 pb_Nf2p1=np.loadtxt('../phase-diagram/Nf2p1/CEP/pb-Nf2p1.dat')
 Tc_Nf2p1=np.loadtxt('../phase-diagram/Nf2p1/CEP/Tc.dat')
@@ -218,8 +219,8 @@ fig=plt.figure(figsize=(4.5, 3.5))
 ax2=fig.add_subplot(111)
 #ax1=plt.subplot(111)
 
-line_Nf2,=ax2.plot(pb_Nf2[:,0]/cmu,Tc_Nf2/ct,'r--',linewidth=1.5,markersize=5,zorder=6,label=r'$N_f=2$')
-CEP_Nf2,=ax2.plot(muB_CEP_Nf2/cmu,T_CEP_Nf2/ct,'r*',markersize=8,zorder=6,label=r'CEP: $N_f=2$')
+line_Nf2,=ax2.plot(pb_Nf2[:,0]/cmu,Tc_Nf2/ct,'--',color='fuchsia',linewidth=1.5,markersize=5,zorder=6,label=r'$N_f=2$')
+CEP_Nf2,=ax2.plot(muB_CEP_Nf2/cmu,T_CEP_Nf2/ct,'*',color='fuchsia',markersize=8,zorder=6,label=r'CEP: $N_f=2$')
 band_Nf2=ax2.fill_between(pb_Nf2[:,0]/cmu,pb_Nf2[:,1]/ct,pb_Nf2[:,2]/ct,color='gray',alpha=.2,zorder=6,label=r'$N_f=2$')
 
 
@@ -227,11 +228,11 @@ line_Nf2p1,=ax2.plot(pb_Nf2p1[:,0],Tc_Nf2p1,'k--',dashes=(5,2),linewidth=1.5,mar
 CEP_Nf2p1,=ax2.plot(muB_CEP_Nf2p1,T_CEP_Nf2p1,'ko',markersize=8,label=r'CEP: $N_f=2+1$')
 band_Nf2p1=ax2.fill_between(pb_Nf2p1[:,0],pb_Nf2p1[:,1],pb_Nf2p1[:,2],color='blue',alpha=0.2,label=r'$N_f=2+1$')
 
-
+ax2.fill_between(muB5,muB5/4.,0,alpha=0.3,facecolor='gray',edgecolor='',zorder=1)
 
 ax2.plot(muB,muB/2.,'k:',linewidth=1.,markersize=5)
 ax2.plot(muB,muB/3.,'k:',linewidth=1.,markersize=5)
-ax2.plot(muB4,muB4/4.,'r:',linewidth=2.,markersize=5)
+ax2.plot(muB4,muB4/4.,'r',dashes=(5,2),linewidth=2.,markersize=5)
 ax2.text(230, 170, r'$\frac{\mu_B}{T}=2$',fontsize=10, color='k')
 ax2.text(400, 170, r'$\frac{\mu_B}{T}=3$',fontsize=10, color='k')
 ax2.text(570, 170, r'$\frac{\mu_B}{T}=4$',fontsize=10, color='k')
