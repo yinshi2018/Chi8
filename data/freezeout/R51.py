@@ -3149,7 +3149,7 @@ bandtf423=ax3.fill_between(energy,r51down,r51up,color='g',alpha=0.2,facecolor='g
 linetf423,=ax3.plot(energy,r51cen,color='g',alpha=0.3,zorder=2)
 #exp=ax3.errorbar(energy,kurtosis[:,0],yerr=kurtosis[:,1],color='c',marker='*',linestyle='',linewidth=1,markersize=10,fillstyle='full',alpha=0.5,zorder=3)
 ax3.plot(blackline,r42line,dashes=[4,2],color='m',linewidth='1')
-ax3.legend([(errbartf423,bandtf423,linetf423)],[r'fRG-LEFT freezeout: STAR II'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
+ax3.legend([(errbartf423,bandtf423,linetf423)],[r'fRG-LEFT freezeout: STAR Fit II'],loc=0,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 ax3.set_xscale('symlog')
 plt.axis([5,230,-8.,5.])
 ax3.set_xticks([7.7,11.5,14.5,19.6,27,39,54.4,62.4,200])
@@ -3159,7 +3159,7 @@ ax3.set_xticklabels(['7.7','11.5','14.5','19.6','27','39','54.4','62.4','200'],r
 #ax3.set_xlabel('$\mu_B\,[\mathrm{MeV}]$', fontsize=14, color='black')
 ax3.set_xlabel('$\sqrt{s_{\mathrm{NN}}}\,[\mathrm{GeV}]$', fontsize=14, color='black')
 #ax3.xaxis.set_label_position('top') 
-ax3.set_ylabel(r'$R^B_{51}$', fontsize=14, color='black')
+ax3.set_ylabel(r'$R^B_{51},\,R^p_{51}$', fontsize=14, color='black')
 #for label in ax1.xaxis.get_ticklabels():
 #    label.set_fontsize(10)
 for label in ax3.yaxis.get_ticklabels():
@@ -3168,6 +3168,6 @@ for label in ax3.yaxis.get_ticklabels():
 fig.subplots_adjust(top=0.95, bottom=0.18, left=0.13, right=0.95, hspace=0.1,
                     wspace=0.25)
 
-fig.savefig("R51.pdf")
+fig.savefig("R51v2.pdf")
 
 

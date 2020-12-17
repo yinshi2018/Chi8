@@ -43,7 +43,7 @@ ax1.set_ylabel('$T\,[\mathrm{MeV}]$', fontsize=14, color='black')
 
 #ax1.legend(loc=0,fontsize='x-small',frameon=False,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1)
 mpl.rcParams['legend.numpoints'] = 1
-ax1.legend([(paraline,exppoint),starpoint,intpoint,star7,star4],[r'Andronic et al.',r'STAR',r'freezeout: Andronic et al.',r'freezeout: STAR I',r'freezeout: STAR II'],loc=1,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
+ax1.legend([(paraline,exppoint),starpoint,intpoint,star7,star4],[r'Andronic et al.',r'STAR',r'freezeout: Andronic et al.',r'freezeout: STAR Fit I',r'freezeout: STAR Fit II'],loc=1,fontsize=7,frameon=True,shadow=True,handlelength=3.,borderpad=0.5,borderaxespad=1,numpoints=1,scatterpoints=1)
 plt.axes([0.245, 0.212, 0.29, 0.27]) #不用figure的形式则无须用set
 exppoint=plt.errorbar(expdata[:,2],expdata[:,1],xerr=[expdata[:,6],expdata[:,7]],yerr=[expdata[:,4],expdata[:,5]],color='b',ecolor='b',marker='p',linestyle='',linewidth=1.,markersize=7,alpha=0.5,fillstyle='full',label=r'Experiment',zorder=1)
 starpoint=plt.errorbar(stardata[:,1],stardata[:,3],xerr=[stardata[:,2],stardata[:,2]],yerr=[stardata[:,4],stardata[:,4]],color='r',ecolor='r',marker='o',linestyle='',linewidth=1.,markersize=7,alpha=0.5,fillstyle='full',label=r'STAR',zorder=1)
